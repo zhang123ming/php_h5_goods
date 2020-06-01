@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{if !empty($_W['page']['title'])}{$_W['page']['title']}{/if}</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	{php echo register_jssdk(false);}
+	<script type="text/javascript">
+				wx.ready(function () {
+					sharedata = {
+						title: "{if !empty($_W['page']['title'])}{$_W['page']['title']}{else}我发现另一个超级棒的微站！{/if}",
+						desc: "{if !empty($_W['styles']['desc'])}{$_W['styles']['desc']}{else}太棒了！有创意！好玩！{/if}",
+						link: "",
+						imgUrl: "{if !empty($_W['styles']['indexbgimg'])}{$_W['styles']['indexbgimg']}{else}{$_W['siteroot']}app/themes/qingcha_often01/images/empty.jpg{/if}",
+						success: function(){
+								 window.location.href="{if !empty($_W['styles']['url'])}{$_W['styles']['url']}{else}{/if}";
+						},
+						cancel: function(){
+							// alert("分享失败，可能是网络问题，一会儿再试试？");
+						}
+					};
+					wx.onMenuShareAppMessage(sharedata);
+					wx.onMenuShareTimeline(sharedata);
+				});
+			</script>
+		<link rel="stylesheet" href="{$_W['siteroot']}app/themes/qingcha_often03/css/index.css" />
+		<link rel="stylesheet" href="{$_W['siteroot']}app/themes/qingcha_often03/css/bootstrap.css">
+		<script src="{$_W['siteroot']}app/themes/qingcha_often03/js/jquery.min.js"></script>
+		<script src="{$_W['siteroot']}app/themes/qingcha_often03/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container-fluid">
+				<nav class="navbar navbar-default" role="navigation">
+				    <div class="container-fluid">
+				    <div class="navbar-header">
+				        <button type="button" class="navbar-toggle" data-toggle="collapse"
+				                data-target="#example-navbar-collapse">
+				            <span class="icon-bar"></span>
+				            <span class="icon-bar"></span>
+				            <span class="icon-bar"></span>
+				        </button>
+				        <img class="img-responsive left" src="{if empty($_W['styles']['logo'])} {$_W['siteroot']}app/themes/qingcha_often03/images/logo.png{else}{$_W['styles']['logo']}{/if}" >
+				        <a class="navbar-brand">{$_W['page']['title']}</a>
+				        
+				    </div>
+				    <div class="collapse navbar-collapse" id="example-navbar-collapse" style="background-color: #DCDCDC">
+				        <ul class="nav navbar-nav">
+						{loop $navs $key $nav}
+				            <li><a href="{$nav['url']}">{$nav['name']}</a></li>
+						{/loop}
+				        </ul>
+				    </div>
+				    </div>
+				</nav>
+			<div id="carousel-container" class="carousel slide">
+				{php $slides = app_slide(array('multiid'=>$multiid));}
+				<ol class="carousel-indicators">
+					{php $slideNum = 0;}
+					{loop $slides $row}
+					<li data-target="#carousel-container" data-slide-to="{$slideNum}"{if $slideNum == '0'} class="active"{/if}></li>
+					{php $slideNum++;}
+					{/loop}
+				</ol>
+
+				<div class="carousel-inner" role="listbox">
+					{loop $slides $row}
+					<div class="item{if $slides[0] == $row} active{/if}">
+						<a href="{$row['url']}">
+							<img src="{$row['thumb']}" title="{$row['title']}" style="width:100%; vertical-align:middle;">
+						</a>
+					</div>
+					{/loop}
+				</div>
+			</div>
+			<script>
+				require(['bootstrap', 'hammer'], function($, Hammer){
+					$('#carousel-container').carousel();
+					var mc = new Hammer($('#carousel-container').get(0));
+					mc.on("panleft", function(ev) {
+						$('#carousel-container').carousel('next');
+					});
+					mc.on("panright", function(ev) {
+						$('#carousel-container').carousel('prev');
+					});
+				});
+			</script>
+
+			<div class="text-center">
+				<h4 class="service">{if empty($_W['styles']['service'])}服务项目{else}{$_W['styles']['service']}{/if}</h1>
+			</div>
+			<div class="container-fluid">
+			{data module="site" func="site_category"}
+				<div class="col-xs-6">
+				<a class="service-h" href="{$row[linkurl]}">
+				{if $row['icon']}
+				<img class="img-responsive" src="{$row['icon']}"/>{else}
+                            <img class="img-responsive" src="{$_W['siteroot']}app/themes/qingcha_often03/images/bxjh_jtrg.png"/> {/if}
+				<span class="cstlayer">{$row[name]}</span>
+				</a></div>
+			{/data}
+			</div>
+		</div>
+
+	</body>
+</html>

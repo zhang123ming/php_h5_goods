@@ -1,0 +1,31 @@
+{template '_header'}
+{template 'commission/common'}
+<div class="fui-page fui-page-current page-commission-shares">
+    {if is_h5app()}
+    <div class="fui-header">
+        <div class="fui-header-left">
+            <a class="back"></a>
+        </div>
+        <div class="title">授权书</div>
+        <div class="fui-header-right"></div>
+    </div>
+    {/if}
+    <div class="fui-content">
+        <div id="refreshdiv" style="width: 100%;height: 40px;display: none;margin-top: 20px"><button type="button" id="refresh" class="btn btn-link" style="height: 25px;line-height: 25px;font-size: 15px;border: none;float: right;color: #ffa700;"> <i class="icon icon-refresh"></i> 重新生成</button></div>
+        <!-- 系统生成图片 开始 -->
+        <div class="img" id='posterimg'>
+	    <div class='fui-cell-group'>
+		<div class='fui-cell'>
+		    <div class='fui-cell-info text-center'><div class="fui-preloader"></div><br/>正在生成授权书，请稍后...</div>
+		</div>
+	    </div>
+	    <img src="" style="display:none;" />
+        </div>
+    </div>
+</div>
+<script language='javascript'>
+		require(['../addons/ewei_shopv2/plugin/commission/static/js/auth.js'], function (modal) {
+            modal.init();
+        });
+	</script>
+{template '_footer'}

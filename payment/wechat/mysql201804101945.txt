@@ -1,0 +1,89 @@
+2018-04-19 00:32:22:array (
+  'acid' => '91',
+  'uniacid' => 91,
+  'token' => 
+  array (
+    'B8Y8' => 1524069053,
+    'zDMu' => 1524069053,
+    'tX0a' => 1524069055,
+    'M1Ej' => 1524069112,
+    'QKsy' => 1524069138,
+    'hUr5' => 1524069141,
+  ),
+  'dest_url' => 'http%3A%2F%2Fs100.kemanduo.cc%2Fapp%2Findex.php%3Fi%3D91%26c%3Dentry%26m%3Dewei_shopv2%26do%3Dmobile%26r%3Darticle.list',
+  'oauth_openid' => 'oVykaw_T9KciBRiRk9spEPM9k4p4',
+  'oauth_acid' => '91',
+  'openid' => 'oVykaw_T9KciBRiRk9spEPM9k4p4',
+  'uid' => '5940',
+  'userinfo' => 'YToxNzp7czo5OiJzdWJzY3JpYmUiO2k6MTtzOjY6Im9wZW5pZCI7czoyODoib1Z5a2F3X1Q5S2NpQlJpUms5c3BFUE05azRwNCI7czo4OiJuaWNrbmFtZSI7czozNDoi5Y2i6Im65pa5IOiuqemXqOW6l+ebiOWIqee/u+S4pOeVqiI7czozOiJzZXgiO2k6MTtzOjg6Imxhbmd1YWdlIjtzOjU6InpoX0NOIjtzOjQ6ImNpdHkiO3M6Njoi5rex5ZyzIjtzOjg6InByb3ZpbmNlIjtzOjY6IuW5v+S4nCI7czo3OiJjb3VudHJ5IjtzOjY6IuS4reWbvSI7czoxMDoiaGVhZGltZ3VybCI7czoxMzY6Imh0dHA6Ly90aGlyZHd4LnFsb2dvLmNuL21tb3Blbi9KaWF2YVdaeFg0WXRqVWVpYWc0dVBYREhtbDRpYXNXdWg4NXVxRm9hYk5hZDJqQTF4RDlrcGliN0tpYU1XRDhCeTRSZ3VwRlNiOXA0ZUI2bkhub3BNN1Y2Y0phVllOSXJmNUZqRC8xMzIiO3M6MTQ6InN1YnNjcmliZV90aW1lIjtpOjE1MjM1MTc0NDQ7czo2OiJyZW1hcmsiO3M6MDoiIjtzOjc6Imdyb3VwaWQiO2k6MDtzOjEwOiJ0YWdpZF9saXN0IjthOjA6e31zOjE1OiJzdWJzY3JpYmVfc2NlbmUiO3M6MTY6IkFERF9TQ0VORV9PVEhFUlMiO3M6ODoicXJfc2NlbmUiO2k6MDtzOjEyOiJxcl9zY2VuZV9zdHIiO3M6MDoiIjtzOjY6ImF2YXRhciI7czoxMzY6Imh0dHA6Ly90aGlyZHd4LnFsb2dvLmNuL21tb3Blbi9KaWF2YVdaeFg0WXRqVWVpYWc0dVBYREhtbDRpYXNXdWg4NXVxRm9hYk5hZDJqQTF4RDlrcGliN0tpYU1XRDhCeTRSZ3VwRlNiOXA0ZUI2bkhub3BNN1Y2Y0phVllOSXJmNUZqRC8xMzIiO30=',
+)2018-04-19 00:32:31:array (
+  'acid' => '91',
+  'uniacid' => 91,
+  'token' => 
+  array (
+    'B8Y8' => 1524069053,
+    'tX0a' => 1524069055,
+    'M1Ej' => 1524069112,
+    'QKsy' => 1524069138,
+    'hUr5' => 1524069141,
+    'Fm55' => 1524069142,
+  ),
+  'dest_url' => 'http%3A%2F%2Fs100.kemanduo.cc%2Fapp%2Findex.php%3Fi%3D91%26c%3Dentry%26m%3Dewei_shopv2%26do%3Dmobile%26r%3Darticle.list',
+  'oauth_openid' => 'oVykaw_T9KciBRiRk9spEPM9k4p4',
+  'oauth_acid' => '91',
+  'openid' => 'oVykaw_T9KciBRiRk9spEPM9k4p4',
+  'uid' => '5940',
+  'userinfo' => 'YToxNzp7czo5OiJzdWJzY3JpYmUiO2k6MTtzOjY6Im9wZW5pZCI7czoyODoib1Z5a2F3X1Q5S2NpQlJpUms5c3BFUE05azRwNCI7czo4OiJuaWNrbmFtZSI7czozNDoi5Y2i6Im65pa5IOiuqemXqOW6l+ebiOWIqee/u+S4pOeVqiI7czozOiJzZXgiO2k6MTtzOjg6Imxhbmd1YWdlIjtzOjU6InpoX0NOIjtzOjQ6ImNpdHkiO3M6Njoi5rex5ZyzIjtzOjg6InByb3ZpbmNlIjtzOjY6IuW5v+S4nCI7czo3OiJjb3VudHJ5IjtzOjY6IuS4reWbvSI7czoxMDoiaGVhZGltZ3VybCI7czoxMzY6Imh0dHA6Ly90aGlyZHd4LnFsb2dvLmNuL21tb3Blbi9KaWF2YVdaeFg0WXRqVWVpYWc0dVBYREhtbDRpYXNXdWg4NXVxRm9hYk5hZDJqQTF4RDlrcGliN0tpYU1XRDhCeTRSZ3VwRlNiOXA0ZUI2bkhub3BNN1Y2Y0phVllOSXJmNUZqRC8xMzIiO3M6MTQ6InN1YnNjcmliZV90aW1lIjtpOjE1MjM1MTc0NDQ7czo2OiJyZW1hcmsiO3M6MDoiIjtzOjc6Imdyb3VwaWQiO2k6MDtzOjEwOiJ0YWdpZF9saXN0IjthOjA6e31zOjE1OiJzdWJzY3JpYmVfc2NlbmUiO3M6MTY6IkFERF9TQ0VORV9PVEhFUlMiO3M6ODoicXJfc2NlbmUiO2k6MDtzOjEyOiJxcl9zY2VuZV9zdHIiO3M6MDoiIjtzOjY6ImF2YXRhciI7czoxMzY6Imh0dHA6Ly90aGlyZHd4LnFsb2dvLmNuL21tb3Blbi9KaWF2YVdaeFg0WXRqVWVpYWc0dVBYREhtbDRpYXNXdWg4NXVxRm9hYk5hZDJqQTF4RDlrcGliN0tpYU1XRDhCeTRSZ3VwRlNiOXA0ZUI2bkhub3BNN1Y2Y0phVllOSXJmNUZqRC8xMzIiO30=',
+)2018-04-19 00:33:31:array (
+)2018-04-20 16:37:21:array (
+  'acid' => '91',
+  'uniacid' => 91,
+  'token' => 
+  array (
+    'pczN' => 1524213410,
+    'ZfIj' => 1524213411,
+    'K6ti' => 1524213422,
+    'S6NO' => 1524213425,
+    'RFBW' => 1524213436,
+    'O3JG' => 1524213441,
+  ),
+  'dest_url' => 'http%3A%2F%2Fs100.kemanduo.cc%2Fapp%2Findex.php%3Fi%3D91%26c%3Dmc',
+  'oauth_openid' => 'oVykaw_T9KciBRiRk9spEPM9k4p4',
+  'oauth_acid' => '91',
+  'openid' => 'oVykaw_T9KciBRiRk9spEPM9k4p4',
+  'uid' => '5940',
+)2018-04-20 16:37:34:array (
+  'acid' => '91',
+  'uniacid' => 91,
+  'token' => 
+  array (
+    'ZfIj' => 1524213411,
+    'K6ti' => 1524213422,
+    'S6NO' => 1524213425,
+    'RFBW' => 1524213436,
+    'O3JG' => 1524213441,
+    'XQFb' => 1524213441,
+  ),
+  'dest_url' => 'http%3A%2F%2Fs100.kemanduo.cc%2Fapp%2Findex.php%3Fi%3D91%26c%3Dmc',
+  'oauth_openid' => 'oVykaw_T9KciBRiRk9spEPM9k4p4',
+  'oauth_acid' => '91',
+  'openid' => 'oVykaw_T9KciBRiRk9spEPM9k4p4',
+  'uid' => '5940',
+)2018-04-20 16:37:40:array (
+  'acid' => '91',
+  'uniacid' => 91,
+  'token' => 
+  array (
+    'S6NO' => 1524213425,
+    'RFBW' => 1524213436,
+    'XQFb' => 1524213441,
+    'O3JG' => 1524213441,
+    'uzms' => 1524213454,
+    'n59b' => 1524213456,
+  ),
+  'dest_url' => 'http%3A%2F%2Fs100.kemanduo.cc%2Fapp%2Findex.php%3Fi%3D91%26c%3Dmc',
+  'oauth_openid' => 'oVykaw_T9KciBRiRk9spEPM9k4p4',
+  'oauth_acid' => '91',
+  'openid' => 'oVykaw_T9KciBRiRk9spEPM9k4p4',
+  'uid' => '5940',
+)

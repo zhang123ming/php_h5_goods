@@ -1,0 +1,49 @@
+{template '_header'}
+<style type="text/css">
+    .fui-body{
+        margin-top: 7rem;
+        text-align: center;
+    }
+    .bg-box{
+        margin:0 auto;
+        width: 80px;
+        height: 80px;
+    }
+    .bg-icon{
+        width: 80px;
+        height: 80px;
+    }
+    .button{
+        width:95%;
+        height:40px;
+        border-radius: 5px;
+        background:#E2CB04;
+        margin:0 auto;
+        text-align: center;
+        cursor:pointer;
+    }
+</style>
+<div class='fui-page  fui-page-current'>
+    <div class="fui-header">
+        <div class="fui-header-left">
+            <a class="back"></a>
+        </div>
+        <div class="title">线下转账</div>
+        <div class="fui-header-right">&nbsp;</div>
+    </div>
+    <div class='fui-body' >
+        <div class="bg-box">
+            <img class="bg-icon" src="../addons/ewei_shopv2/static/images/ye.png" >
+        </div>
+        <div class="text" style="color:#666;margin:10px auto;">收款姓名:{$_W['shopset']['trade']['collect_name']}</div>
+        <div class="text" style="color:#666;margin:10px auto;">银行卡号:{$_W['shopset']['trade']['collect_account']}</div>
+        <div class="text" style="color:#666;margin:10px auto 30px;">支行名称:{$_W['shopset']['trade']['collect_address']}</div>
+        <div class="button"><span style="line-height: 40px;color:#fff;font-weight: 700;">下一步</span></div>
+    </div>
+    <script language='javascript'>
+       $('.button').click(function(){
+            window.location.href='{php echo mobileUrl('member/collect/upload')}';
+       });
+    </script>
+</div>
+{template '_footer'}

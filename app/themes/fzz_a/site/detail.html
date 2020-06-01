@@ -1,0 +1,28 @@
+{template 'common/header'}
+<link href="{$_W['siteroot']}app/themes/fzz_a/css/xui.css" rel="stylesheet">
+<link href="{$_W['siteroot']}app/themes/fzz_a/css/detail.css" rel="stylesheet">
+<div class="x-box">
+	<div class="x-hd x-pic">
+		<img src="{$detail['thumb']}" class="thumb"/>
+		<div class="x-title x_toe">
+			{$detail['title']}
+		</div>
+	</div>
+	<div class="x-bd">
+		<div class="x-info">
+			<span class="author">
+				<b>作者：</b>{$detail['author']}
+			</span>
+			<span class="date">
+				{php echo date("Y年m月d日", $detail['createtime']);}
+			</span>
+			<span class="click">
+				{$detail['click']}
+			</span>
+		</div>
+		<div class="x-content">
+			{$detail['content']}
+		</div>
+	</div>
+</div>
+{template 'common/footer'}

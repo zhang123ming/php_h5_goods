@@ -1,0 +1,168 @@
+2018-11-14 13:17:05:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_3ZJw0eBk-_izJo57WMWeQn564GODHY4I4XmayO6fMrNiVDtzp3wc5pESr8qbeK-1lwxfk7ep6mkJumHkTOxAyjrsNKTY4qYNis5StUnM6OXayEsfbCxzWfPdRmTXSeWzej9_AL1HoCTv45SzQZAfAAAWFG'
+2018-11-14 13:17:05:'{"touser":"oLy3A1YViLEFjlDHOrBhu5QQLl9E","msgtype":"text","text":{"content":"您的订单已经成功支付，我们将尽快为您安排发货！！ 
+
+订单号：
+SH20181114131629987846
+商品名称：
+【KAROSS快美星天使】398元抢购7235元超值大礼包 
+
+商品数量：1
+下单时间：2018-11-14 13:16
+订单金额：398.00
+
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=order.detail&id=120133\'>点击查看详情</a>"}}'
+2018-11-14 13:17:06:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_3ZJw0eBk-_izJo57WMWeQn564GODHY4I4XmayO6fMrNiVDtzp3wc5pESr8qbeK-1lwxfk7ep6mkJumHkTOxAyjrsNKTY4qYNis5StUnM6OXayEsfbCxzWfPdRmTXSeWzej9_AL1HoCTv45SzQZAfAAAWFG'
+2018-11-14 13:17:06:'{"touser":"oLy3A1ZgylVQMH87IJtt3jsxbNdY","msgtype":"text","text":{"content":"下级付款通知
+
+恭喜您的 一级会员 ：豆豆
+下单订单号： SH20181114131629987846 
+订单金额：398 
+商品详情：【KAROSS快美星天使】398元抢购7235元超值大礼包(  单价: 398 数量: 1 总价: 398.00);  
+您获得佣金金额： 100
+下单时间：2018-11-14 13:17:05
+
+"}}'
+2018-11-15 18:19:59:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_P1h-inpSxDP-evpRU2OneYQzg7IWEHvjCkMDCGCsgwr6CkRo2jAVt7clzo669CC2Iz9ZxvUqjsCBrU4kocMeo8TBM5gvJSmsnjJ55leoy4VdmqQ8ZhxC9Py7KR2JEH9v8rjP3UmEkhqp2r7DQTUeADAKNO'
+2018-11-15 18:19:59:'{"touser":"oLy3A1WKg9vclxofKPkL01sTKIE0","msgtype":"text","text":{"content":"您的订单已经成功支付，我们将尽快为您安排发货！！ 
+
+订单号：
+SH20181115181918147156
+商品名称：
+每月15号前限时下单-物流仓储费用【仅限购买398礼包会员才能领取】 
+
+商品数量：1
+下单时间：2018-11-15 18:19
+订单金额：16.00
+
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=order.detail&id=121481\'>点击查看详情</a>"}}'
+2018-11-15 18:20:00:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_P1h-inpSxDP-evpRU2OneYQzg7IWEHvjCkMDCGCsgwr6CkRo2jAVt7clzo669CC2Iz9ZxvUqjsCBrU4kocMeo8TBM5gvJSmsnjJ55leoy4VdmqQ8ZhxC9Py7KR2JEH9v8rjP3UmEkhqp2r7DQTUeADAKNO'
+2018-11-15 18:20:00:'{"touser":"oLy3A1U7gYgOLyz3F-jdfU-rIeOI","msgtype":"text","text":{"content":"下级付款通知
+
+恭喜您的 一级会员 ：张维娟
+下单订单号： SH20181115181918147156 
+订单金额：16 
+商品详情：每月15号前限时下单-物流仓储费用【仅限购买398礼包会员才能领取】(  单价: 16 数量: 1 总价: 16.00);  
+您获得佣金金额： 0
+下单时间：2018-11-15 18:19:59
+
+"}}'
+2018-11-15 23:19:17:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_AGsHt8wY_4BPD0-1chqbIsXsFLBlyKStDZ-1v-OLDSN0Ulr7pg5sIfcg-I-UzpMaZilbTstVJsJHGKtEYgUZWZv3fxkqq5SOr5IhrSxiXTopyWjxh2yELFZgPl_5UzRuEN7LC8vpvZEcB1kaGFPfAIABAK'
+2018-11-15 23:19:17:'{"touser":"oLy3A1VpDM0ynPXOl6pYTYnxmVro","msgtype":"text","text":{"content":"您的订单已经成功支付，我们将尽快为您安排发货！！ 
+
+订单号：
+SH20181115231815441286
+商品名称：
+每月15号前限时下单-物流仓储费用【仅限购买398礼包会员才能领取】 
+
+商品数量：1
+下单时间：2018-11-15 23:18
+订单金额：16.00
+
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=order.detail&id=121738\'>点击查看详情</a>"}}'
+2018-11-15 23:19:18:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_AGsHt8wY_4BPD0-1chqbIsXsFLBlyKStDZ-1v-OLDSN0Ulr7pg5sIfcg-I-UzpMaZilbTstVJsJHGKtEYgUZWZv3fxkqq5SOr5IhrSxiXTopyWjxh2yELFZgPl_5UzRuEN7LC8vpvZEcB1kaGFPfAIABAK'
+2018-11-15 23:19:18:'{"touser":"oLy3A1S5iClKTtGiRY_kNa3Qc2Xk","msgtype":"text","text":{"content":"下级付款通知
+
+恭喜您的 一级会员 ：A000莉莉
+下单订单号： SH20181115231815441286 
+订单金额：16 
+商品详情：每月15号前限时下单-物流仓储费用【仅限购买398礼包会员才能领取】(  单价: 16 数量: 1 总价: 16.00);  
+您获得佣金金额： 0
+下单时间：2018-11-15 23:19:17
+
+"}}'
+2018-11-17 20:38:10:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_UHynkmjK2T64E21wU2OneYQzg7IWEHvjCkMDCEFcdvSIUHH0jOrZgvzHZLnX4S2WxqjbqBpQcojuijvETpaSrsCsvj67JYkXnOBQ_Au6ytisp66_7HlSofHCQ_UFPDgAGATDR'
+2018-11-17 20:38:10:'{"touser":"oLy3A1axmR1q6FW5sCI_8MOXfGyc","msgtype":"text","text":{"content":"您的订单已经成功支付，我们将尽快为您安排发货！！ 
+
+订单号：
+SH20181117203734186711
+商品名称：
+【KAROSS快美星天使】398元抢购7235元超值大礼包 
+
+商品数量：1
+下单时间：2018-11-17 20:37
+订单金额：398.00
+
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=order.detail&id=122872\'>点击查看详情</a>"}}'
+2018-11-17 20:38:11:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_UHynkmjK2T64E21wU2OneYQzg7IWEHvjCkMDCEFcdvSIUHH0jOrZgvzHZLnX4S2WxqjbqBpQcojuijvETpaSrsCsvj67JYkXnOBQ_Au6ytisp66_7HlSofHCQ_UFPDgAGATDR'
+2018-11-17 20:38:11:'{"touser":"oLy3A1fx2Nat_8yyJx1bdi_NRwPY","msgtype":"text","text":{"content":"下级付款通知
+
+恭喜您的 一级会员 ：萍姐
+下单订单号： SH20181117203734186711 
+订单金额：398 
+商品详情：【KAROSS快美星天使】398元抢购7235元超值大礼包(  单价: 398 数量: 1 总价: 398.00);  
+您获得佣金金额： 100
+下单时间：2018-11-17 20:38:10
+
+"}}'
+2018-11-18 16:15:36:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_B8GkDduMLtbsHPs-LU7Vc5BxACraMSb6d--wT7cj9qT53UtWZ13tUZXolwrAUQOe5tI0VF4lm7SNhEhpU5z5-iiE425au6qe2NkvKgOyjC_PGHabeeHYs6rv38369wkakvNti9VvZbFZhQXzBDChAGAHJI'
+2018-11-18 16:15:36:'{"touser":"oLy3A1UplEhyr2NQJoyRATKIUfpQ","msgtype":"text","text":{"content":"您的订单已经成功支付，我们将尽快为您安排发货！！ 
+
+订单号：
+SH20181103214228078262
+商品名称：
+【KAROSS快美星天使】398元抢购7235元超值大礼包 
+
+商品数量：1
+下单时间：2018-11-03 21:42
+订单金额：398.00
+
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=order.detail&id=110983\'>点击查看详情</a>"}}'
+2018-11-18 16:15:36:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_B8GkDduMLtbsHPs-LU7Vc5BxACraMSb6d--wT7cj9qT53UtWZ13tUZXolwrAUQOe5tI0VF4lm7SNhEhpU5z5-iiE425au6qe2NkvKgOyjC_PGHabeeHYs6rv38369wkakvNti9VvZbFZhQXzBDChAGAHJI'
+2018-11-18 16:15:36:'{"touser":"oLy3A1SzjjJUTwQ-va4GIRG2lQ2k","msgtype":"text","text":{"content":"下级付款通知
+
+恭喜您的 一级会员 ：小云
+下单订单号： SH20181103214228078262 
+订单金额：398 
+商品详情：【KAROSS快美星天使】398元抢购7235元超值大礼包(  单价: 398 数量: 1 总价: 398.00);  
+您获得佣金金额： 100
+下单时间：2018-11-18 16:15:36
+
+"}}'
+2018-11-18 19:04:37:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_LhFzD5huMI-yL4b7Gr3tHYJL9yXkR-gDz4YtmRQ0dbP8tu38xFoeCNiqTNMUAmHJpfKShCFeeK1z2pqfw2VrBlkCaIngT75Q-Lh874qE88Q9pfgt-Gu0jPwisDAKJTdADAVUE'
+2018-11-18 19:04:37:'{"touser":"oLy3A1Yh7hR37OGm8gZT7KlbkxPo","msgtype":"text","text":{"content":"您的订单已经成功支付，我们将尽快为您安排发货！！ 
+
+订单号：
+SH20181118190328657248
+商品名称：
+【KAROSS快美星天使】398元抢购7235元超值大礼包 
+
+商品数量：1
+下单时间：2018-11-18 19:03
+订单金额：398.00
+
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=order.detail&id=123350\'>点击查看详情</a>"}}'
+2018-11-18 19:04:38:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_LhFzD5huMI-yL4b7Gr3tHYJL9yXkR-gDz4YtmRQ0dbP8tu38xFoeCNiqTNMUAmHJpfKShCFeeK1z2pqfw2VrBlkCaIngT75Q-Lh874qE88Q9pfgt-Gu0jPwisDAKJTdADAVUE'
+2018-11-18 19:04:38:'{"touser":"oLy3A1ZgylVQMH87IJtt3jsxbNdY","msgtype":"text","text":{"content":"下级付款通知
+
+恭喜您的 一级会员 ：初阳绽放
+下单订单号： SH20181118190328657248 
+订单金额：398 
+商品详情：【KAROSS快美星天使】398元抢购7235元超值大礼包(  单价: 398 数量: 1 总价: 398.00);  
+您获得佣金金额： 100
+下单时间：2018-11-18 19:04:37
+
+"}}'
+2018-11-19 10:36:42:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_7uyDbW8h6jkmeoNxRNNNjpWI_r2nyqpwIgmZjdPaqPgfG-WWa9VpaRYDlYTKeS7t6wE_C5NV7vyWIey3TSXwO393dxvWl2XpD0NIKZFdWWLlrUqEseGEk9LqGU5tmooOkROG8EJgWGBCCuupIQMhABAWEA'
+2018-11-19 10:36:42:'{"touser":"oLy3A1baW7yIf5Dm6M2VrgLzlwbk","msgtype":"text","text":{"content":"您的订单已经成功支付，我们将尽快为您安排发货！！ 
+
+订单号：
+SH20181119103431888841
+商品名称：
+【KAROSS快美星天使】398元抢购7235元超值大礼包 
+
+商品数量：1
+下单时间：2018-11-19 10:34
+订单金额：398.00
+
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=order.detail&id=123774\'>点击查看详情</a>"}}'
+2018-11-19 10:36:42:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_7uyDbW8h6jkmeoNxRNNNjpWI_r2nyqpwIgmZjdPaqPgfG-WWa9VpaRYDlYTKeS7t6wE_C5NV7vyWIey3TSXwO393dxvWl2XpD0NIKZFdWWLlrUqEseGEk9LqGU5tmooOkROG8EJgWGBCCuupIQMhABAWEA'
+2018-11-19 10:36:42:'{"touser":"oLy3A1fx2Nat_8yyJx1bdi_NRwPY","msgtype":"text","text":{"content":"下级付款通知
+
+恭喜您的 一级会员 ：张艺豪妈妈
+下单订单号： SH20181119103431888841 
+订单金额：398 
+商品详情：【KAROSS快美星天使】398元抢购7235元超值大礼包(  单价: 398 数量: 1 总价: 398.00);  
+您获得佣金金额： 100
+下单时间：2018-11-19 10:36:41
+
+"}}'

@@ -1,0 +1,110 @@
+{template 'common/header'}
+<link href="{$_W['siteroot']}app/themes/fzz_a/css/xui.css" rel="stylesheet">
+<style>
+	.x-cell{
+		position: relative;
+		padding:10px 15px 0 15px;
+	}
+	.x-img{
+		width: 120px;
+		height:80px;
+		margin-right:10px;
+		vertical-align: middle;
+		text-align: center;
+		overflow: hidden;
+	}
+	.x-img img{
+		width: 100%;
+		height: 100%;
+	}
+	.x-txt{
+		overflow: hidden;
+	}
+	.x-tit{
+		height:60px;
+		overflow: hidden;
+		color: #000;
+		font-size: 15px;
+		/*font-weight: bold;*/
+	}
+	.x-info{
+		color: #9A9A9A;
+		position: relative;
+	}
+	.x-click {
+		position: absolute;
+		right: 0;
+		top: 0;
+		color: #EE3458;
+		background: url("{$_W['siteroot']}app/themes/ln_a/css/v.png") left center no-repeat;
+		padding-left: 28px;
+	}
+	.x-author{
+		margin-left:10px;
+	}
+	.x-item-0{
+		margin:0 0 15px 0;
+	}
+	.x-item-0 .x-cell{
+		padding: 0;
+	}
+	.x-item-0 .x-img{
+		height:230px;
+		width: 100%;
+		margin-right:0;
+	}
+	.x-item-0 .x-img img{
+		height:100%;
+		width: 100%;
+	}
+	.x-item-0 .x-txt{
+		background:none;
+		position: absolute;
+		bottom:0;
+		left:0;
+		right:0;
+		border:none;
+		padding:10px 20px;
+		background: rgba(0,0,0,0.5);
+		color: #fff;
+	}
+	.x-item-0 .x-tit{
+		color: #fff;
+		height:auto;
+	}
+	.x-item-0 .x-info{
+		margin-top: 5px;
+		color: #fff;
+		font-size: 12px;
+	}
+</style>
+<div class="xw">
+	<div class="x-box">
+		{data module="site" func="site_article" cid="$cid" assign="result" return="true"}
+		{loop $result['list'] $index $row}
+		<div class="x-item x-item-{$index}">
+			<a class="x-cell x_flex" href="{$row['linkurl']}">
+				<div class="x-img">
+					<img src="{$row['thumb']}" alt="">
+				</div>
+				<div class="x-txt x_f1">
+					<div class="x-tit">{$row['title']}</div>
+					<div class="x-info">
+						<span class="x-time">
+							{php echo date("m月d日", $row['createtime']);}
+						</span>
+						<span class="x-author">
+							{$row['author']}
+						</span>
+						<span class="x-click">
+							{$row['click']}
+						</span>
+					</div>
+				</div>
+			</a>
+		</div>
+		{/loop}
+	</div>
+</div>
+<div class="pager-position">{$result['pager']}</div>
+{template 'common/footer'}

@@ -1,0 +1,38 @@
+{template 'common/header'}
+{template 'slide'}
+<style type="text/css">
+	body{
+	font:{$_W['styles']['fontsize']} {$_W['styles']['fontfamily']};
+	color:{if empty($_W['styles']['fontcolor'])}#555{else}{$_W['styles']['fontcolor']}{/if};
+	background-image:url('{if empty($_W['styles']['indexbgimg'])}./themes/xcx_style/images/bg.jpg{else}{$_W['styles']['indexbgimg']}{/if}');
+	background-size:cover;
+	background-color:{if empty($_W['styles']['indexbgcolor'])}#ffffff{else}{$_W['styles']['indexbgcolor']}{/if};
+	{$_W['styles']['indexbgextra']}
+	}
+</style>
+<link href="./themes/xcx_style/images/index-common.css" rel="stylesheet" type="text/css">
+<div class="index-page" style="display:block;">
+	<!--导航 开始-->
+	<div id="constraint">
+		<div id="functionLink">
+			<ul>
+				{data func="site_navs" item="row"}
+				<li class="li0{$row['iteration']}">
+					<a href="{$row['url']}">
+						<img src="{if !empty($row['icon'])} {$_W['attachurl']}{$row['icon']} {else} ./themes/xcx_style/images/ico1.png{/if}" style="border-radius: 50%;" width="40" height="40">
+						<div class="clear">
+						</div>
+						<p style="color:#CCCC66;">
+							{$row['name']}
+						</p>
+					</a>
+				</li>
+				{/data}
+			</ul>
+		</div>
+	</div>
+	<!--导航 结束-->
+	<div class="clear">
+	</div>
+</div>
+{template 'common/footer'}

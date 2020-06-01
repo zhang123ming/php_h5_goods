@@ -1,0 +1,129 @@
+
+
+
+
+/* line 22, sass/screen.scss */
+#viewport-shadow {
+  position: relative;
+  width: 680px;
+  padding: 0 140px 70px;
+  background: url(../img/box-shadow.png) bottom no-repeat;
+}
+
+/* line 29, sass/screen.scss */
+#viewport, #box, .slide {
+ height: 520px;
+ background-color: #fff;
+/*  background-image: url(http://image.adingchina.com/hefuji_body_bg.png);*/
+}
+
+/* line 34, sass/screen.scss */
+#viewport {
+  overflow: hidden;
+}
+
+/* line 35, sass/screen.scss */
+
+
+/* line 37, sass/screen.scss */
+
+/* line 48, sass/screen.scss */
+/* line 48, sass/screen.scss 
+.goto-slide {
+  margin-left: 10px;
+  width: 14px;
+  height: 14px;
+  display: block;
+  float: left;
+  border: solid 1px #000;
+  background-color: #555;
+  border-radius: 8px;
+  -webkit-box-shadow: inset 0px 0px 8px #333;
+  -moz-box-shadow: inset 0px 0px 8px #333;
+  box-shadow: inset 0px 0px 8px #333;
+}
+
+/* line 66, sass/screen.scss 
+#next, #prev {
+  position: absolute;
+  top: 80px;
+  width: 30px;
+  height: 300px;
+  background: url(../img/next-prev-sprite.png) no-repeat;
+  display: block;
+  -webkit-transition: background .4s;
+  -moz-transition: background .4s;
+  transition: background .4s;
+}
+/* line 78, sass/screen.scss 
+#next:hover, #prev:hover {
+  background: url(../img/next-prev-sprite-hover.png) no-repeat;
+  border: none;
+}
+
+/* line 85, sass/screen.scss 
+#prev {
+  left: 90px;
+}
+
+/* line 86, sass/screen.scss 
+#next, #next:hover {
+  left: 840px;
+  background-position: -30px 0;
+}
+
+/* line 90, sass/screen.scss */
+#effect-switcher h2 {
+  border-bottom: solid 1px #555;
+  margin: 0 0 10px;
+}
+
+/* line 97, sass/screen.scss */
+#effect-list {
+  overflow: hidden;
+}
+/* line 99, sass/screen.scss */
+#effect-list li {
+  display: inline;
+}
+
+/* line 102, sass/screen.scss */
+.effect, .effect:hover {
+  display: block;
+  float: left;
+  margin: 0 10px 0 0;
+  border: solid 1px black;
+  border-radius: 7px;
+  padding: 10px 12px 6px;
+  color: #ccc;
+  text-decoration: none;
+  background-color: #555;
+  -webkit-box-shadow: inset 0px 0px 8px #000;
+  -moz-box-shadow: inset 0px 0px 8px #333;
+  box-shadow: inset 0px 0px 8px #333;
+}
+/* line 117, sass/screen.scss */
+.effect.current, .effect:hover.current {
+  color: #2edbac;
+}
+
+/* line 123, sass/screen.scss */
+#time-indicator {
+  width: 0px;
+  height: 3px;
+  background-color: #fff;
+  position: 1absolute;
+  top: 10px;
+  left: 0px;
+}
+
+/* line 132, sass/screen.scss */
+#credits {
+  margin: 20px 0 40px;
+  padding: 10px 0 0;
+  color: #555;
+  font-size: .9em;
+}
+#credits p{
+	line-height:24px
+}

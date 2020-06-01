@@ -1,0 +1,199 @@
+a{
+    color: #000;
+}
+.pic img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-color: #F5F5F5;
+}
+/*top-news*/
+.x-list{
+    padding:0 10px;
+    background-color: #fff;
+    margin-top:10px;
+}
+.x-list .hd{
+    line-height:50px;
+    padding-left:50px;
+    font-size:16px;
+    border-bottom:1px solid #E9E9E9;
+    font-weight: bold;
+    position: relative;
+}
+.x-list .hd span{
+    display: inline-block;
+}
+.x-list .hd img{
+    display: inline-block;
+}
+.x-list .hd .icon{
+    display: block;
+    position: absolute;
+    left:0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    font-size:30px;
+    text-align: center;
+}
+.x-list .hd .icon img{
+    display: block;
+    height: 100%;
+}
+.x-list .bd{
+    padding:10px 0;
+}
+.top-news .pic{
+    float: left;
+    margin-right:10px;
+    width: 30%;
+    min-height:80px;
+}
+.top-news .pic img{
+    border-radius: 5px;
+}
+.x-list .title{
+    padding-top:5px;
+    padding-bottom:5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    overflow: hidden;
+}
+.x-list .des{
+    color: #ababab;
+    line-height:22px;
+    max-height:66px;
+    overflow: hidden;
+}
+.x-news .pic{
+    float: right;
+    width: 33%;
+    margin-left:20px;
+    border:1px solid #e9e9e9;
+}
+.x-news .cell{
+    padding-bottom:15px;
+    border-bottom:1px solid #f4f4f4;;
+    margin-bottom:15px;
+}
+.x-news .cell:last-child{
+    border-bottom:none;
+}
+/*nav*/
+
+.x-nav{
+    position: relative;
+    min-height:280px;
+    margin-top:10px;
+    background-color: #fff;
+}
+.x-nav .x-item{
+    position: absolute;
+    display: block;
+}
+.x-item .icon,
+.x-item .tit,
+.x-item .des{
+    overflow: hidden;
+    position: absolute;
+}
+.x-item .icon{
+    font-size:50px;
+    text-align: center;
+}
+.x-item .icon img{
+    display: block;
+    height: 100%;
+}
+.x-item .tit{
+    font-size:16px;
+    font-weight: bold;
+}
+.x-item .des{
+    color: #919191;
+}
+.item-1{
+    top: 0;
+    left: 0;
+    width: 55%;
+    height: 120px;
+    border-bottom:1px solid #E9E9E9;
+    border-right:1px solid #E9E9E9;
+}
+.item-1 .icon{
+    width: 50%;
+    height: 70px;
+    left:10px;
+    top: 10px;
+}
+.item-1 .tit{
+    left:60%;
+    top:40px;
+}
+.item-1 .des{
+    left:10px;
+    bottom:10px;
+}
+.item-2,.item-3{
+    width: 45%;
+    height: 60px;
+    right: 0;
+    border-bottom:1px solid #E9E9E9;
+}
+.item-2{
+    top:0;
+}
+.item-3{
+    top:60px;
+}
+.item-2 .icon,
+.item-3 .icon{
+    top: 5px;
+    left: 10px;
+    height: 50px;
+    line-height: 50px;
+    min-width:50px;
+}
+.item-2 .des,
+.item-3 .des{
+    display: none;
+}
+.item-2 .tit,
+.item-3 .tit{
+    top: 15px;
+    left: 70px;
+}
+.item-4,.item-5{
+    height: 160px;
+    top: 120px;
+    width: 50%;
+}
+.item-4{
+    left: 0;
+    border-right:1px solid #E9E9E9;
+}
+.item-5{
+    right: 0;
+}
+.item-4 .icon,
+.item-5 .icon{
+    top: 65px;
+    left: 10px;
+    right: 10px;
+}
+.item-4 .tit,
+.item-5 .tit{
+    top: 10px;
+    left: 10px;
+}
+.item-4 .des,
+.item-5 .des{
+    top: 40px;
+    left: 10px;
+    right: 10px;
+}

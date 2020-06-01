@@ -1,0 +1,27 @@
+{template '_header'}
+{template 'commission/common'}
+<div class="fui-page fui-page-current page-commission-shares">
+    <div class="fui-header">
+        <div class="fui-header-left">
+            <a class="back"></a>
+        </div>
+        <div class="title">{if $level['level']>91}代理{/if}推广二维码</div>
+        <div class="fui-header-right"></div>
+    </div>
+     <!-- 系统生成图片 开始 -->
+    <!--<div class="fui-content" style="background: #fff;">-->
+    <!--    <div style="padding: 0;overflow: hidden;height: auto;">-->
+	   <!-- <div class='fui-cell-group'>-->
+    <!--        <img style="width:100%;" src="{$img}" />-->
+	   <!-- </div>-->
+    <!--    </div>-->
+    <!--</div>-->
+     <div class="fui-content">
+      <div style="width: 100%;height: 100%;overflow: hidden;">
+        <div style="height: 100%;width: 100%;">
+            <img style="width:100%;height: 100%" src="{$img}" />
+        </div>
+        </div>
+  </div>
+</div>
+{template '_footer'}

@@ -1,0 +1,4386 @@
+2020-05-20 17:34:09 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wfeYQTHqdUmMa-q5cJx5GAg]]></FromUserName>
+<CreateTime>1589967248</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000554202005200541576046]]></EventKey>
+</xml>
+
+2020-05-20 17:34:09 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wfeYQTHqdUmMa-q5cJx5GAg',
+    'createtime' => '1589967248',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000554202005200541576046',
+    'from' => 'oKdt4wfeYQTHqdUmMa-q5cJx5GAg',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589967248',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000554202005200541576046',
+    'redirection' => true,
+    'source' => 'subscribe',
+    'content' => 'EWEI_SHOPV2_POSTER',
+  ),
+  'module' => 'reply',
+  'rule' => '1033',
+  'priority' => '0',
+  'keyword' => 
+  array (
+    'id' => '2860',
+    'rid' => '1033',
+    'uniacid' => '267',
+    'module' => 'reply',
+    'content' => 'EWEI_SHOPV2_POSTER',
+    'type' => '1',
+    'displayorder' => '0',
+    'status' => '1',
+    'reply_type' => 
+    array (
+      0 => 'basic',
+    ),
+  ),
+  'reply_type' => 
+  array (
+    0 => 'basic',
+  ),
+)
+
+2020-05-20 17:34:09 response :
+------------
+Array:
+FromUserName : gh_93e9b49c2dea ;
+ToUserName : oKdt4wfeYQTHqdUmMa-q5cJx5GAg ;
+MsgType : text ;
+Content : 你好，感谢您的关注，“叶氏医药”为您提供的都是厂家直销的药品，价格实惠，正品保障！而且在本商城购买商品，我们都以自购省钱，分享赚钱的原则回馈给关注我们的每一个人。 ;
+
+2020-05-20 17:36:54 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wctCISSGel9_SYfu8_0NDjQ]]></FromUserName>
+<CreateTime>1589967413</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 17:36:54 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wctCISSGel9_SYfu8_0NDjQ',
+    'createtime' => '1589967413',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wctCISSGel9_SYfu8_0NDjQ',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589967413',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 17:36:54 response :
+------------
+
+2020-05-20 17:40:04 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wWqvdYuNrx9s4KmfCp7HDrI]]></FromUserName>
+<CreateTime>1589967604</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000569202005206286815113]]></EventKey>
+</xml>
+
+2020-05-20 17:40:04 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wWqvdYuNrx9s4KmfCp7HDrI',
+    'createtime' => '1589967604',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000569202005206286815113',
+    'from' => 'oKdt4wWqvdYuNrx9s4KmfCp7HDrI',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589967604',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000569202005206286815113',
+    'redirection' => true,
+    'source' => 'subscribe',
+    'content' => 'EWEI_SHOPV2_POSTER',
+  ),
+  'module' => 'reply',
+  'rule' => '1033',
+  'priority' => '0',
+  'keyword' => 
+  array (
+    'id' => '2860',
+    'rid' => '1033',
+    'uniacid' => '267',
+    'module' => 'reply',
+    'content' => 'EWEI_SHOPV2_POSTER',
+    'type' => '1',
+    'displayorder' => '0',
+    'status' => '1',
+    'reply_type' => 
+    array (
+      0 => 'basic',
+    ),
+  ),
+  'reply_type' => 
+  array (
+    0 => 'basic',
+  ),
+)
+
+2020-05-20 17:40:04 response :
+------------
+Array:
+FromUserName : gh_93e9b49c2dea ;
+ToUserName : oKdt4wWqvdYuNrx9s4KmfCp7HDrI ;
+MsgType : text ;
+Content : 你好，感谢您的关注，“叶氏医药”为您提供的都是厂家直销的药品，价格实惠，正品保障！而且在本商城购买商品，我们都以自购省钱，分享赚钱的原则回馈给关注我们的每一个人。 ;
+
+2020-05-20 17:40:15 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wXc0s5eklSpVYcQAcpK6YCQ]]></FromUserName>
+<CreateTime>1589967615</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 17:40:15 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wXc0s5eklSpVYcQAcpK6YCQ',
+    'createtime' => '1589967615',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wXc0s5eklSpVYcQAcpK6YCQ',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589967615',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 17:40:15 response :
+------------
+
+2020-05-20 17:40:31 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wXc0s5eklSpVYcQAcpK6YCQ]]></FromUserName>
+<CreateTime>1589967630</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 17:40:31 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wXc0s5eklSpVYcQAcpK6YCQ',
+    'createtime' => '1589967630',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wXc0s5eklSpVYcQAcpK6YCQ',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589967630',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 17:40:31 response :
+------------
+
+2020-05-20 17:42:00 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wR-04ipDOlQKdYd-EfUPlWY]]></FromUserName>
+<CreateTime>1589967720</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2020-05-20 17:43:05 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wfeYQTHqdUmMa-q5cJx5GAg]]></FromUserName>
+<CreateTime>1589967785</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 17:43:05 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wfeYQTHqdUmMa-q5cJx5GAg',
+    'createtime' => '1589967785',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wfeYQTHqdUmMa-q5cJx5GAg',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589967785',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 17:43:05 response :
+------------
+
+2020-05-20 17:43:12 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wfeYQTHqdUmMa-q5cJx5GAg]]></FromUserName>
+<CreateTime>1589967792</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 17:43:12 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wfeYQTHqdUmMa-q5cJx5GAg',
+    'createtime' => '1589967792',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wfeYQTHqdUmMa-q5cJx5GAg',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589967792',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 17:43:12 response :
+------------
+
+2020-05-20 17:43:26 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wfeYQTHqdUmMa-q5cJx5GAg]]></FromUserName>
+<CreateTime>1589967805</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=diypage&id=636]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 17:43:26 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wfeYQTHqdUmMa-q5cJx5GAg',
+    'createtime' => '1589967805',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=diypage&id=636',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wfeYQTHqdUmMa-q5cJx5GAg',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589967805',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=diypage&id=636',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 17:43:26 response :
+------------
+
+2020-05-20 17:43:37 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wfeYQTHqdUmMa-q5cJx5GAg]]></FromUserName>
+<CreateTime>1589967816</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=diypage&id=632]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 17:43:37 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wfeYQTHqdUmMa-q5cJx5GAg',
+    'createtime' => '1589967816',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=diypage&id=632',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wfeYQTHqdUmMa-q5cJx5GAg',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589967816',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=diypage&id=632',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 17:43:37 response :
+------------
+
+2020-05-20 17:47:41 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wWqvdYuNrx9s4KmfCp7HDrI]]></FromUserName>
+<CreateTime>1589968061</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 17:47:41 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wWqvdYuNrx9s4KmfCp7HDrI',
+    'createtime' => '1589968061',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wWqvdYuNrx9s4KmfCp7HDrI',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589968061',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 17:47:41 response :
+------------
+
+2020-05-20 17:48:06 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wWgZ46zv93Z1UXPmHT7q03s]]></FromUserName>
+<CreateTime>1589968086</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 17:48:06 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wWgZ46zv93Z1UXPmHT7q03s',
+    'createtime' => '1589968086',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wWgZ46zv93Z1UXPmHT7q03s',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589968086',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 17:48:06 response :
+------------
+
+2020-05-20 17:48:16 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wWqvdYuNrx9s4KmfCp7HDrI]]></FromUserName>
+<CreateTime>1589968096</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 17:48:16 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wWqvdYuNrx9s4KmfCp7HDrI',
+    'createtime' => '1589968096',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wWqvdYuNrx9s4KmfCp7HDrI',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589968096',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 17:48:16 response :
+------------
+
+2020-05-20 17:48:56 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wWgZ46zv93Z1UXPmHT7q03s]]></FromUserName>
+<CreateTime>1589968135</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 17:48:56 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wWgZ46zv93Z1UXPmHT7q03s',
+    'createtime' => '1589968135',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wWgZ46zv93Z1UXPmHT7q03s',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589968135',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 17:48:56 response :
+------------
+
+2020-05-20 17:49:15 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wWgZ46zv93Z1UXPmHT7q03s]]></FromUserName>
+<CreateTime>1589968155</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 17:49:15 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wWgZ46zv93Z1UXPmHT7q03s',
+    'createtime' => '1589968155',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wWgZ46zv93Z1UXPmHT7q03s',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589968155',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 17:49:15 response :
+------------
+
+2020-05-20 17:55:05 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wWloG4URNdzzpFzjJ0ZyVRM]]></FromUserName>
+<CreateTime>1589968505</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000570202005201810627516]]></EventKey>
+</xml>
+
+2020-05-20 17:55:05 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wWloG4URNdzzpFzjJ0ZyVRM',
+    'createtime' => '1589968505',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000570202005201810627516',
+    'from' => 'oKdt4wWloG4URNdzzpFzjJ0ZyVRM',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589968505',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000570202005201810627516',
+    'redirection' => true,
+    'source' => 'subscribe',
+    'content' => 'EWEI_SHOPV2_POSTER',
+  ),
+  'module' => 'reply',
+  'rule' => '1033',
+  'priority' => '0',
+  'keyword' => 
+  array (
+    'id' => '2860',
+    'rid' => '1033',
+    'uniacid' => '267',
+    'module' => 'reply',
+    'content' => 'EWEI_SHOPV2_POSTER',
+    'type' => '1',
+    'displayorder' => '0',
+    'status' => '1',
+    'reply_type' => 
+    array (
+      0 => 'basic',
+    ),
+  ),
+  'reply_type' => 
+  array (
+    0 => 'basic',
+  ),
+)
+
+2020-05-20 17:55:05 response :
+------------
+Array:
+FromUserName : gh_93e9b49c2dea ;
+ToUserName : oKdt4wWloG4URNdzzpFzjJ0ZyVRM ;
+MsgType : text ;
+Content : 你好，感谢您的关注，“叶氏医药”为您提供的都是厂家直销的药品，价格实惠，正品保障！而且在本商城购买商品，我们都以自购省钱，分享赚钱的原则回馈给关注我们的每一个人。 ;
+
+2020-05-20 17:55:53 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wWmI8S2Wn00yV0Dtou1-ghI]]></FromUserName>
+<CreateTime>1589968553</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 17:55:53 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wWmI8S2Wn00yV0Dtou1-ghI',
+    'createtime' => '1589968553',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wWmI8S2Wn00yV0Dtou1-ghI',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589968553',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 17:55:53 response :
+------------
+
+2020-05-20 18:04:06 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wdDM7-olTf4b591voCCC-HA]]></FromUserName>
+<CreateTime>1589969045</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000556202005204895143148]]></EventKey>
+</xml>
+
+2020-05-20 18:04:06 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wdDM7-olTf4b591voCCC-HA',
+    'createtime' => '1589969045',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000556202005204895143148',
+    'from' => 'oKdt4wdDM7-olTf4b591voCCC-HA',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589969045',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000556202005204895143148',
+    'redirection' => true,
+    'source' => 'subscribe',
+    'content' => 'EWEI_SHOPV2_POSTER',
+  ),
+  'module' => 'reply',
+  'rule' => '1033',
+  'priority' => '0',
+  'keyword' => 
+  array (
+    'id' => '2860',
+    'rid' => '1033',
+    'uniacid' => '267',
+    'module' => 'reply',
+    'content' => 'EWEI_SHOPV2_POSTER',
+    'type' => '1',
+    'displayorder' => '0',
+    'status' => '1',
+    'reply_type' => 
+    array (
+      0 => 'basic',
+    ),
+  ),
+  'reply_type' => 
+  array (
+    0 => 'basic',
+  ),
+)
+
+2020-05-20 18:04:06 response :
+------------
+Array:
+FromUserName : gh_93e9b49c2dea ;
+ToUserName : oKdt4wdDM7-olTf4b591voCCC-HA ;
+MsgType : text ;
+Content : 你好，感谢您的关注，“叶氏医药”为您提供的都是厂家直销的药品，价格实惠，正品保障！而且在本商城购买商品，我们都以自购省钱，分享赚钱的原则回馈给关注我们的每一个人。 ;
+
+2020-05-20 18:14:52 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wWjzxbOnCKAngJN7R8BZcEY]]></FromUserName>
+<CreateTime>1589969692</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 18:14:52 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wWjzxbOnCKAngJN7R8BZcEY',
+    'createtime' => '1589969692',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wWjzxbOnCKAngJN7R8BZcEY',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589969692',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 18:14:52 response :
+------------
+
+2020-05-20 18:17:14 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wWjzxbOnCKAngJN7R8BZcEY]]></FromUserName>
+<CreateTime>1589969834</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 18:17:14 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wWjzxbOnCKAngJN7R8BZcEY',
+    'createtime' => '1589969834',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wWjzxbOnCKAngJN7R8BZcEY',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589969834',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 18:17:14 response :
+------------
+
+2020-05-20 18:22:46 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wQ3ELiRAo4sFJ1e-sLAkNUs]]></FromUserName>
+<CreateTime>1589970166</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 18:22:46 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wQ3ELiRAo4sFJ1e-sLAkNUs',
+    'createtime' => '1589970166',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wQ3ELiRAo4sFJ1e-sLAkNUs',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589970166',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 18:22:46 response :
+------------
+
+2020-05-20 18:27:09 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4walU2yzmubrEUtBn6R_v6tY]]></FromUserName>
+<CreateTime>1589970428</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000552202005203494073102]]></EventKey>
+</xml>
+
+2020-05-20 18:27:09 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4walU2yzmubrEUtBn6R_v6tY',
+    'createtime' => '1589970428',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000552202005203494073102',
+    'from' => 'oKdt4walU2yzmubrEUtBn6R_v6tY',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589970428',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000552202005203494073102',
+    'redirection' => true,
+    'source' => 'subscribe',
+    'content' => 'EWEI_SHOPV2_POSTER',
+  ),
+  'module' => 'reply',
+  'rule' => '1033',
+  'priority' => '0',
+  'keyword' => 
+  array (
+    'id' => '2860',
+    'rid' => '1033',
+    'uniacid' => '267',
+    'module' => 'reply',
+    'content' => 'EWEI_SHOPV2_POSTER',
+    'type' => '1',
+    'displayorder' => '0',
+    'status' => '1',
+    'reply_type' => 
+    array (
+      0 => 'basic',
+    ),
+  ),
+  'reply_type' => 
+  array (
+    0 => 'basic',
+  ),
+)
+
+2020-05-20 18:27:09 response :
+------------
+Array:
+FromUserName : gh_93e9b49c2dea ;
+ToUserName : oKdt4walU2yzmubrEUtBn6R_v6tY ;
+MsgType : text ;
+Content : 你好，感谢您的关注，“叶氏医药”为您提供的都是厂家直销的药品，价格实惠，正品保障！而且在本商城购买商品，我们都以自购省钱，分享赚钱的原则回馈给关注我们的每一个人。 ;
+
+2020-05-20 18:34:20 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wabxEblfc7ITaJcMf0TgnDw]]></FromUserName>
+<CreateTime>1589970860</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000567202005206671925381]]></EventKey>
+</xml>
+
+2020-05-20 18:34:20 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wabxEblfc7ITaJcMf0TgnDw',
+    'createtime' => '1589970860',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000567202005206671925381',
+    'from' => 'oKdt4wabxEblfc7ITaJcMf0TgnDw',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589970860',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000567202005206671925381',
+    'redirection' => true,
+    'source' => 'subscribe',
+    'content' => 'EWEI_SHOPV2_POSTER',
+  ),
+  'module' => 'reply',
+  'rule' => '1033',
+  'priority' => '0',
+  'keyword' => 
+  array (
+    'id' => '2860',
+    'rid' => '1033',
+    'uniacid' => '267',
+    'module' => 'reply',
+    'content' => 'EWEI_SHOPV2_POSTER',
+    'type' => '1',
+    'displayorder' => '0',
+    'status' => '1',
+    'reply_type' => 
+    array (
+      0 => 'basic',
+    ),
+  ),
+  'reply_type' => 
+  array (
+    0 => 'basic',
+  ),
+)
+
+2020-05-20 18:34:20 response :
+------------
+Array:
+FromUserName : gh_93e9b49c2dea ;
+ToUserName : oKdt4wabxEblfc7ITaJcMf0TgnDw ;
+MsgType : text ;
+Content : 你好，感谢您的关注，“叶氏医药”为您提供的都是厂家直销的药品，价格实惠，正品保障！而且在本商城购买商品，我们都以自购省钱，分享赚钱的原则回馈给关注我们的每一个人。 ;
+
+2020-05-20 18:34:55 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wctCISSGel9_SYfu8_0NDjQ]]></FromUserName>
+<CreateTime>1589970894</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 18:34:55 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wctCISSGel9_SYfu8_0NDjQ',
+    'createtime' => '1589970894',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wctCISSGel9_SYfu8_0NDjQ',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589970894',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 18:34:55 response :
+------------
+
+2020-05-20 18:38:00 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wS4bAgkWHmrzxhoHqAqHWpY]]></FromUserName>
+<CreateTime>1589971080</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2020-05-20 18:42:19 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wd48kNeNj5rbgG4jYbNpS3U]]></FromUserName>
+<CreateTime>1589971338</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000556202005208236735335]]></EventKey>
+</xml>
+
+2020-05-20 18:42:19 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wd48kNeNj5rbgG4jYbNpS3U',
+    'createtime' => '1589971338',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000556202005208236735335',
+    'from' => 'oKdt4wd48kNeNj5rbgG4jYbNpS3U',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589971338',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000556202005208236735335',
+    'redirection' => true,
+    'source' => 'subscribe',
+    'content' => 'EWEI_SHOPV2_POSTER',
+  ),
+  'module' => 'reply',
+  'rule' => '1033',
+  'priority' => '0',
+  'keyword' => 
+  array (
+    'id' => '2860',
+    'rid' => '1033',
+    'uniacid' => '267',
+    'module' => 'reply',
+    'content' => 'EWEI_SHOPV2_POSTER',
+    'type' => '1',
+    'displayorder' => '0',
+    'status' => '1',
+    'reply_type' => 
+    array (
+      0 => 'basic',
+    ),
+  ),
+  'reply_type' => 
+  array (
+    0 => 'basic',
+  ),
+)
+
+2020-05-20 18:42:19 response :
+------------
+Array:
+FromUserName : gh_93e9b49c2dea ;
+ToUserName : oKdt4wd48kNeNj5rbgG4jYbNpS3U ;
+MsgType : text ;
+Content : 你好，感谢您的关注，“叶氏医药”为您提供的都是厂家直销的药品，价格实惠，正品保障！而且在本商城购买商品，我们都以自购省钱，分享赚钱的原则回馈给关注我们的每一个人。 ;
+
+2020-05-20 18:46:38 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wZZ9MaAB0BLaWokh5DyKAa8]]></FromUserName>
+<CreateTime>1589971597</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=diypage&id=632]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 18:46:38 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wZZ9MaAB0BLaWokh5DyKAa8',
+    'createtime' => '1589971597',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=diypage&id=632',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wZZ9MaAB0BLaWokh5DyKAa8',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589971597',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=diypage&id=632',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 18:46:38 response :
+------------
+
+2020-05-20 18:46:47 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wZZ9MaAB0BLaWokh5DyKAa8]]></FromUserName>
+<CreateTime>1589971606</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 18:46:47 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wZZ9MaAB0BLaWokh5DyKAa8',
+    'createtime' => '1589971606',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wZZ9MaAB0BLaWokh5DyKAa8',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589971606',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 18:46:47 response :
+------------
+
+2020-05-20 18:47:52 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4weSLJi6tZ4jWhu3iclrdvPI]]></FromUserName>
+<CreateTime>1589971671</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2020-05-20 18:47:52 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4weSLJi6tZ4jWhu3iclrdvPI',
+    'createtime' => '1589971671',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => '',
+    'from' => 'oKdt4weSLJi6tZ4jWhu3iclrdvPI',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589971671',
+    'type' => 'text',
+    'redirection' => true,
+    'source' => 'subscribe',
+    'content' => 'EWEI_SHOPV2_POSTER',
+  ),
+  'module' => 'reply',
+  'rule' => '1033',
+  'priority' => '0',
+  'keyword' => 
+  array (
+    'id' => '2860',
+    'rid' => '1033',
+    'uniacid' => '267',
+    'module' => 'reply',
+    'content' => 'EWEI_SHOPV2_POSTER',
+    'type' => '1',
+    'displayorder' => '0',
+    'status' => '1',
+    'reply_type' => 
+    array (
+      0 => 'basic',
+    ),
+  ),
+  'reply_type' => 
+  array (
+    0 => 'basic',
+  ),
+)
+
+2020-05-20 18:47:52 response :
+------------
+Array:
+FromUserName : gh_93e9b49c2dea ;
+ToUserName : oKdt4weSLJi6tZ4jWhu3iclrdvPI ;
+MsgType : text ;
+Content : 你好，感谢您的关注，“叶氏医药”为您提供的都是厂家直销的药品，价格实惠，正品保障！而且在本商城购买商品，我们都以自购省钱，分享赚钱的原则回馈给关注我们的每一个人。 ;
+
+2020-05-20 18:47:54 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4weSLJi6tZ4jWhu3iclrdvPI]]></FromUserName>
+<CreateTime>1589971673</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 18:47:54 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4weSLJi6tZ4jWhu3iclrdvPI',
+    'createtime' => '1589971673',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4weSLJi6tZ4jWhu3iclrdvPI',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589971673',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 18:47:54 response :
+------------
+
+2020-05-20 18:49:24 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wWmI8S2Wn00yV0Dtou1-ghI]]></FromUserName>
+<CreateTime>1589971764</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 18:49:24 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wWmI8S2Wn00yV0Dtou1-ghI',
+    'createtime' => '1589971764',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wWmI8S2Wn00yV0Dtou1-ghI',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589971764',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 18:49:24 response :
+------------
+
+2020-05-20 19:42:58 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wdDM7-olTf4b591voCCC-HA]]></FromUserName>
+<CreateTime>1589974978</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 19:42:58 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wdDM7-olTf4b591voCCC-HA',
+    'createtime' => '1589974978',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wdDM7-olTf4b591voCCC-HA',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589974978',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 19:42:58 response :
+------------
+
+2020-05-20 19:46:09 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wWjzxbOnCKAngJN7R8BZcEY]]></FromUserName>
+<CreateTime>1589975168</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 19:46:09 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wWjzxbOnCKAngJN7R8BZcEY',
+    'createtime' => '1589975168',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wWjzxbOnCKAngJN7R8BZcEY',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589975168',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 19:46:09 response :
+------------
+
+2020-05-20 19:48:03 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wWjzxbOnCKAngJN7R8BZcEY]]></FromUserName>
+<CreateTime>1589975283</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 19:48:03 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wWjzxbOnCKAngJN7R8BZcEY',
+    'createtime' => '1589975283',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wWjzxbOnCKAngJN7R8BZcEY',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589975283',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 19:48:03 response :
+------------
+
+2020-05-20 20:09:56 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wQkXUACZpsjePYKh76n5wFE]]></FromUserName>
+<CreateTime>1589976595</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[请帮帮我，谢谢你
+https://w.url.cn/s/AGwLc2J]]></Content>
+<MsgId>22762989411033595</MsgId>
+</xml>
+
+2020-05-20 20:09:56 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wQkXUACZpsjePYKh76n5wFE',
+    'createtime' => '1589976595',
+    'msgtype' => 'text',
+    'content' => '请帮帮我，谢谢你
+https://w.url.cn/s/AGwLc2J',
+    'msgid' => '22762989411033595',
+    'from' => 'oKdt4wQkXUACZpsjePYKh76n5wFE',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589976595',
+    'type' => 'text',
+    'event' => NULL,
+    'redirection' => false,
+    'source' => NULL,
+  ),
+)
+
+2020-05-20 20:09:56 response :
+------------
+
+2020-05-20 20:10:23 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wUYM1MnuM-_iH7F-1IEAsP0]]></FromUserName>
+<CreateTime>1589976623</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 20:10:23 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wUYM1MnuM-_iH7F-1IEAsP0',
+    'createtime' => '1589976623',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wUYM1MnuM-_iH7F-1IEAsP0',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589976623',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 20:10:23 response :
+------------
+
+2020-05-20 20:11:06 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wTouEjvDdZPPcvxJcafm5-c]]></FromUserName>
+<CreateTime>1589976665</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 20:11:06 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wTouEjvDdZPPcvxJcafm5-c',
+    'createtime' => '1589976665',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wTouEjvDdZPPcvxJcafm5-c',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589976665',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 20:11:06 response :
+------------
+
+2020-05-20 20:16:47 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wWRd8b7gAZ268A9h5S8QP-0]]></FromUserName>
+<CreateTime>1589977007</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 20:16:47 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wWRd8b7gAZ268A9h5S8QP-0',
+    'createtime' => '1589977007',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wWRd8b7gAZ268A9h5S8QP-0',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589977007',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 20:16:47 response :
+------------
+
+2020-05-20 20:16:58 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wY6SOJccG12yzhoa0psXgv0]]></FromUserName>
+<CreateTime>1589977018</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000552202005200246083523]]></EventKey>
+</xml>
+
+2020-05-20 20:16:58 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wY6SOJccG12yzhoa0psXgv0',
+    'createtime' => '1589977018',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000552202005200246083523',
+    'from' => 'oKdt4wY6SOJccG12yzhoa0psXgv0',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589977018',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000552202005200246083523',
+    'redirection' => true,
+    'source' => 'subscribe',
+    'content' => 'EWEI_SHOPV2_POSTER',
+  ),
+  'module' => 'reply',
+  'rule' => '1033',
+  'priority' => '0',
+  'keyword' => 
+  array (
+    'id' => '2860',
+    'rid' => '1033',
+    'uniacid' => '267',
+    'module' => 'reply',
+    'content' => 'EWEI_SHOPV2_POSTER',
+    'type' => '1',
+    'displayorder' => '0',
+    'status' => '1',
+    'reply_type' => 
+    array (
+      0 => 'basic',
+    ),
+  ),
+  'reply_type' => 
+  array (
+    0 => 'basic',
+  ),
+)
+
+2020-05-20 20:16:58 response :
+------------
+Array:
+FromUserName : gh_93e9b49c2dea ;
+ToUserName : oKdt4wY6SOJccG12yzhoa0psXgv0 ;
+MsgType : text ;
+Content : 你好，感谢您的关注，“叶氏医药”为您提供的都是厂家直销的药品，价格实惠，正品保障！而且在本商城购买商品，我们都以自购省钱，分享赚钱的原则回馈给关注我们的每一个人。 ;
+
+2020-05-20 20:17:30 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wUqWDK8WfYe6OaBfxtPaS5Q]]></FromUserName>
+<CreateTime>1589977050</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 20:17:30 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wUqWDK8WfYe6OaBfxtPaS5Q',
+    'createtime' => '1589977050',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wUqWDK8WfYe6OaBfxtPaS5Q',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589977050',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 20:17:30 response :
+------------
+
+2020-05-20 20:18:08 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wWRd8b7gAZ268A9h5S8QP-0]]></FromUserName>
+<CreateTime>1589977088</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 20:18:08 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wWRd8b7gAZ268A9h5S8QP-0',
+    'createtime' => '1589977088',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wWRd8b7gAZ268A9h5S8QP-0',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589977088',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 20:18:08 response :
+------------
+
+2020-05-20 20:22:42 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wVR2Xo6HOpFFgMdNwZZzz_o]]></FromUserName>
+<CreateTime>1589977362</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 20:22:42 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wVR2Xo6HOpFFgMdNwZZzz_o',
+    'createtime' => '1589977362',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wVR2Xo6HOpFFgMdNwZZzz_o',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589977362',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 20:22:42 response :
+------------
+
+2020-05-20 20:23:22 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wVR2Xo6HOpFFgMdNwZZzz_o]]></FromUserName>
+<CreateTime>1589977402</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 20:23:22 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wVR2Xo6HOpFFgMdNwZZzz_o',
+    'createtime' => '1589977402',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wVR2Xo6HOpFFgMdNwZZzz_o',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589977402',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 20:23:22 response :
+------------
+
+2020-05-20 20:27:02 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wa950BJ7iEjUGih4V66rhS8]]></FromUserName>
+<CreateTime>1589977621</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000570202005201574069212]]></EventKey>
+</xml>
+
+2020-05-20 20:27:02 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wa950BJ7iEjUGih4V66rhS8',
+    'createtime' => '1589977621',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000570202005201574069212',
+    'from' => 'oKdt4wa950BJ7iEjUGih4V66rhS8',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589977621',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000570202005201574069212',
+    'redirection' => true,
+    'source' => 'subscribe',
+    'content' => 'EWEI_SHOPV2_POSTER',
+  ),
+  'module' => 'reply',
+  'rule' => '1033',
+  'priority' => '0',
+  'keyword' => 
+  array (
+    'id' => '2860',
+    'rid' => '1033',
+    'uniacid' => '267',
+    'module' => 'reply',
+    'content' => 'EWEI_SHOPV2_POSTER',
+    'type' => '1',
+    'displayorder' => '0',
+    'status' => '1',
+    'reply_type' => 
+    array (
+      0 => 'basic',
+    ),
+  ),
+  'reply_type' => 
+  array (
+    0 => 'basic',
+  ),
+)
+
+2020-05-20 20:27:02 response :
+------------
+Array:
+FromUserName : gh_93e9b49c2dea ;
+ToUserName : oKdt4wa950BJ7iEjUGih4V66rhS8 ;
+MsgType : text ;
+Content : 你好，感谢您的关注，“叶氏医药”为您提供的都是厂家直销的药品，价格实惠，正品保障！而且在本商城购买商品，我们都以自购省钱，分享赚钱的原则回馈给关注我们的每一个人。 ;
+
+2020-05-20 20:33:00 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wa950BJ7iEjUGih4V66rhS8]]></FromUserName>
+<CreateTime>1589977980</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[好的谢谢]]></Content>
+<MsgId>22763011320521885</MsgId>
+</xml>
+
+2020-05-20 20:33:00 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wa950BJ7iEjUGih4V66rhS8',
+    'createtime' => '1589977980',
+    'msgtype' => 'text',
+    'content' => '好的谢谢',
+    'msgid' => '22763011320521885',
+    'from' => 'oKdt4wa950BJ7iEjUGih4V66rhS8',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589977980',
+    'type' => 'text',
+    'event' => NULL,
+    'redirection' => false,
+    'source' => NULL,
+  ),
+)
+
+2020-05-20 20:33:00 response :
+------------
+
+2020-05-20 20:34:12 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wVHFFoQTePIoNfdA7dx3BLQ]]></FromUserName>
+<CreateTime>1589978052</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 20:34:12 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wVHFFoQTePIoNfdA7dx3BLQ',
+    'createtime' => '1589978052',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wVHFFoQTePIoNfdA7dx3BLQ',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589978052',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 20:34:12 response :
+------------
+
+2020-05-20 20:40:10 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wZfS99DzithOCmac4UNqiDQ]]></FromUserName>
+<CreateTime>1589978410</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[qrscene_\u4e8c\u7ef4\u7801]]></EventKey>
+<Ticket><![CDATA[gQE08TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyUHI2Y05jRnJkVTExMDAwMGcwN3QAAgS9aJFeAwQAAAAA]]></Ticket>
+</xml>
+
+2020-05-20 20:40:11 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wZfS99DzithOCmac4UNqiDQ',
+    'createtime' => '1589978410',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'qrscene_\\u4e8c\\u7ef4\\u7801',
+    'ticket' => 'gQE08TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyUHI2Y05jRnJkVTExMDAwMGcwN3QAAgS9aJFeAwQAAAAA',
+    'from' => 'oKdt4wZfS99DzithOCmac4UNqiDQ',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589978410',
+    'type' => 'text',
+    'scene' => '二维码',
+    'redirection' => true,
+    'source' => 'qr',
+    'content' => '分享海报',
+  ),
+  'module' => 'ewei_shopv2',
+  'rule' => '1032',
+  'priority' => '0',
+  'keyword' => 
+  array (
+    'id' => '2854',
+    'rid' => '1032',
+    'uniacid' => '267',
+    'module' => 'ewei_shopv2',
+    'content' => '分享海报',
+    'type' => '1',
+    'displayorder' => '0',
+    'status' => '1',
+    'reply_type' => 
+    array (
+    ),
+  ),
+  'reply_type' => 
+  array (
+  ),
+)
+
+2020-05-20 20:40:11 response :
+------------
+Array:
+FromUserName : gh_93e9b49c2dea ;
+ToUserName : oKdt4wZfS99DzithOCmac4UNqiDQ ;
+MsgType : text ;
+Content : 感谢您的关注! ;
+
+2020-05-20 21:03:18 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wfzbBf5OZ6BeOjxnFU0oNmk]]></FromUserName>
+<CreateTime>1589979798</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 21:03:18 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wfzbBf5OZ6BeOjxnFU0oNmk',
+    'createtime' => '1589979798',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wfzbBf5OZ6BeOjxnFU0oNmk',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589979798',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 21:03:18 response :
+------------
+
+2020-05-20 21:06:18 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wRtD7X90i4Eym7ZsUbhJTa8]]></FromUserName>
+<CreateTime>1589979978</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000556202005207129859547]]></EventKey>
+</xml>
+
+2020-05-20 21:06:19 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wRtD7X90i4Eym7ZsUbhJTa8',
+    'createtime' => '1589979978',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000556202005207129859547',
+    'from' => 'oKdt4wRtD7X90i4Eym7ZsUbhJTa8',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589979978',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000556202005207129859547',
+    'redirection' => true,
+    'source' => 'subscribe',
+    'content' => 'EWEI_SHOPV2_POSTER',
+  ),
+  'module' => 'reply',
+  'rule' => '1033',
+  'priority' => '0',
+  'keyword' => 
+  array (
+    'id' => '2860',
+    'rid' => '1033',
+    'uniacid' => '267',
+    'module' => 'reply',
+    'content' => 'EWEI_SHOPV2_POSTER',
+    'type' => '1',
+    'displayorder' => '0',
+    'status' => '1',
+    'reply_type' => 
+    array (
+      0 => 'basic',
+    ),
+  ),
+  'reply_type' => 
+  array (
+    0 => 'basic',
+  ),
+)
+
+2020-05-20 21:06:19 response :
+------------
+Array:
+FromUserName : gh_93e9b49c2dea ;
+ToUserName : oKdt4wRtD7X90i4Eym7ZsUbhJTa8 ;
+MsgType : text ;
+Content : 你好，感谢您的关注，“叶氏医药”为您提供的都是厂家直销的药品，价格实惠，正品保障！而且在本商城购买商品，我们都以自购省钱，分享赚钱的原则回馈给关注我们的每一个人。 ;
+
+2020-05-20 21:08:13 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wRtD7X90i4Eym7ZsUbhJTa8]]></FromUserName>
+<CreateTime>1589980093</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 21:08:13 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wRtD7X90i4Eym7ZsUbhJTa8',
+    'createtime' => '1589980093',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wRtD7X90i4Eym7ZsUbhJTa8',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589980093',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 21:08:13 response :
+------------
+
+2020-05-20 21:09:28 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wUxPipt3Alb7P38uN2CapII]]></FromUserName>
+<CreateTime>1589980167</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=diypage&id=632]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 21:09:28 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wUxPipt3Alb7P38uN2CapII',
+    'createtime' => '1589980167',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=diypage&id=632',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wUxPipt3Alb7P38uN2CapII',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589980167',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=diypage&id=632',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 21:09:28 response :
+------------
+
+2020-05-20 21:09:45 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wUxPipt3Alb7P38uN2CapII]]></FromUserName>
+<CreateTime>1589980185</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 21:09:45 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wUxPipt3Alb7P38uN2CapII',
+    'createtime' => '1589980185',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wUxPipt3Alb7P38uN2CapII',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589980185',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 21:09:45 response :
+------------
+
+2020-05-20 21:11:34 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wSlrh4ZjTjE967l5NcgcaXM]]></FromUserName>
+<CreateTime>1589980293</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 21:11:34 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wSlrh4ZjTjE967l5NcgcaXM',
+    'createtime' => '1589980293',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wSlrh4ZjTjE967l5NcgcaXM',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589980293',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 21:11:34 response :
+------------
+
+2020-05-20 21:19:23 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wSlrh4ZjTjE967l5NcgcaXM]]></FromUserName>
+<CreateTime>1589980763</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 21:19:23 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wSlrh4ZjTjE967l5NcgcaXM',
+    'createtime' => '1589980763',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wSlrh4ZjTjE967l5NcgcaXM',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589980763',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 21:19:23 response :
+------------
+
+2020-05-20 21:20:30 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wSlrh4ZjTjE967l5NcgcaXM]]></FromUserName>
+<CreateTime>1589980830</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 21:20:30 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wSlrh4ZjTjE967l5NcgcaXM',
+    'createtime' => '1589980830',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wSlrh4ZjTjE967l5NcgcaXM',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589980830',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 21:20:30 response :
+------------
+
+2020-05-20 21:21:13 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wakML7QnRyem50g0YAUzzIc]]></FromUserName>
+<CreateTime>1589980872</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000565202005207048724736]]></EventKey>
+</xml>
+
+2020-05-20 21:21:13 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wakML7QnRyem50g0YAUzzIc',
+    'createtime' => '1589980872',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000565202005207048724736',
+    'from' => 'oKdt4wakML7QnRyem50g0YAUzzIc',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589980872',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000565202005207048724736',
+    'redirection' => true,
+    'source' => 'subscribe',
+    'content' => 'EWEI_SHOPV2_POSTER',
+  ),
+  'module' => 'reply',
+  'rule' => '1033',
+  'priority' => '0',
+  'keyword' => 
+  array (
+    'id' => '2860',
+    'rid' => '1033',
+    'uniacid' => '267',
+    'module' => 'reply',
+    'content' => 'EWEI_SHOPV2_POSTER',
+    'type' => '1',
+    'displayorder' => '0',
+    'status' => '1',
+    'reply_type' => 
+    array (
+      0 => 'basic',
+    ),
+  ),
+  'reply_type' => 
+  array (
+    0 => 'basic',
+  ),
+)
+
+2020-05-20 21:21:13 response :
+------------
+Array:
+FromUserName : gh_93e9b49c2dea ;
+ToUserName : oKdt4wakML7QnRyem50g0YAUzzIc ;
+MsgType : text ;
+Content : 你好，感谢您的关注，“叶氏医药”为您提供的都是厂家直销的药品，价格实惠，正品保障！而且在本商城购买商品，我们都以自购省钱，分享赚钱的原则回馈给关注我们的每一个人。 ;
+
+2020-05-20 21:21:44 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wakML7QnRyem50g0YAUzzIc]]></FromUserName>
+<CreateTime>1589980903</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 21:21:44 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wakML7QnRyem50g0YAUzzIc',
+    'createtime' => '1589980903',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wakML7QnRyem50g0YAUzzIc',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589980903',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 21:21:44 response :
+------------
+
+2020-05-20 21:22:01 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wWglStJQSwql_5vigbeWZxI]]></FromUserName>
+<CreateTime>1589980921</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 21:22:01 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wWglStJQSwql_5vigbeWZxI',
+    'createtime' => '1589980921',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wWglStJQSwql_5vigbeWZxI',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589980921',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 21:22:01 response :
+------------
+
+2020-05-20 21:22:30 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wSlrh4ZjTjE967l5NcgcaXM]]></FromUserName>
+<CreateTime>1589980950</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=diypage&id=636]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 21:22:30 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wSlrh4ZjTjE967l5NcgcaXM',
+    'createtime' => '1589980950',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=diypage&id=636',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wSlrh4ZjTjE967l5NcgcaXM',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589980950',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=diypage&id=636',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 21:22:30 response :
+------------
+
+2020-05-20 21:22:48 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wSlrh4ZjTjE967l5NcgcaXM]]></FromUserName>
+<CreateTime>1589980968</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 21:22:48 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wSlrh4ZjTjE967l5NcgcaXM',
+    'createtime' => '1589980968',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wSlrh4ZjTjE967l5NcgcaXM',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589980968',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 21:22:48 response :
+------------
+
+2020-05-20 21:23:02 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wakML7QnRyem50g0YAUzzIc]]></FromUserName>
+<CreateTime>1589980981</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 21:23:02 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wakML7QnRyem50g0YAUzzIc',
+    'createtime' => '1589980981',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wakML7QnRyem50g0YAUzzIc',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589980981',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 21:23:02 response :
+------------
+
+2020-05-20 21:25:37 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wakML7QnRyem50g0YAUzzIc]]></FromUserName>
+<CreateTime>1589981136</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 21:25:37 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wakML7QnRyem50g0YAUzzIc',
+    'createtime' => '1589981136',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wakML7QnRyem50g0YAUzzIc',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589981136',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 21:25:37 response :
+------------
+
+2020-05-20 21:25:41 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wVc8TrGqM-6r7UV0ZopOl1E]]></FromUserName>
+<CreateTime>1589981140</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 21:25:41 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wVc8TrGqM-6r7UV0ZopOl1E',
+    'createtime' => '1589981140',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wVc8TrGqM-6r7UV0ZopOl1E',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589981140',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 21:25:41 response :
+------------
+
+2020-05-20 21:26:04 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wWglStJQSwql_5vigbeWZxI]]></FromUserName>
+<CreateTime>1589981163</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 21:26:04 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wWglStJQSwql_5vigbeWZxI',
+    'createtime' => '1589981163',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wWglStJQSwql_5vigbeWZxI',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589981163',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 21:26:04 response :
+------------
+
+2020-05-20 21:26:22 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wVc8TrGqM-6r7UV0ZopOl1E]]></FromUserName>
+<CreateTime>1589981181</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 21:26:22 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wVc8TrGqM-6r7UV0ZopOl1E',
+    'createtime' => '1589981181',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wVc8TrGqM-6r7UV0ZopOl1E',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589981181',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 21:26:22 response :
+------------
+
+2020-05-20 21:26:30 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wVc8TrGqM-6r7UV0ZopOl1E]]></FromUserName>
+<CreateTime>1589981190</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 21:26:30 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wVc8TrGqM-6r7UV0ZopOl1E',
+    'createtime' => '1589981190',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wVc8TrGqM-6r7UV0ZopOl1E',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589981190',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 21:26:30 response :
+------------
+
+2020-05-20 21:27:32 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wVc8TrGqM-6r7UV0ZopOl1E]]></FromUserName>
+<CreateTime>1589981251</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 21:27:32 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wVc8TrGqM-6r7UV0ZopOl1E',
+    'createtime' => '1589981251',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wVc8TrGqM-6r7UV0ZopOl1E',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589981251',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 21:27:32 response :
+------------
+
+2020-05-20 21:27:44 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wWglStJQSwql_5vigbeWZxI]]></FromUserName>
+<CreateTime>1589981263</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 21:27:44 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wWglStJQSwql_5vigbeWZxI',
+    'createtime' => '1589981263',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wWglStJQSwql_5vigbeWZxI',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589981263',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 21:27:44 response :
+------------
+
+2020-05-20 21:28:01 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wWglStJQSwql_5vigbeWZxI]]></FromUserName>
+<CreateTime>1589981280</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 21:28:01 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wWglStJQSwql_5vigbeWZxI',
+    'createtime' => '1589981280',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wWglStJQSwql_5vigbeWZxI',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589981280',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 21:28:01 response :
+------------
+
+2020-05-20 21:29:13 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wSlrh4ZjTjE967l5NcgcaXM]]></FromUserName>
+<CreateTime>1589981353</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 21:29:13 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wSlrh4ZjTjE967l5NcgcaXM',
+    'createtime' => '1589981353',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wSlrh4ZjTjE967l5NcgcaXM',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589981353',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 21:29:13 response :
+------------
+
+2020-05-20 21:46:58 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wVHFFoQTePIoNfdA7dx3BLQ]]></FromUserName>
+<CreateTime>1589982418</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 21:46:58 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wVHFFoQTePIoNfdA7dx3BLQ',
+    'createtime' => '1589982418',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wVHFFoQTePIoNfdA7dx3BLQ',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589982418',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 21:46:58 response :
+------------
+
+2020-05-20 21:47:15 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wWmI8S2Wn00yV0Dtou1-ghI]]></FromUserName>
+<CreateTime>1589982434</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 21:47:15 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wWmI8S2Wn00yV0Dtou1-ghI',
+    'createtime' => '1589982434',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wWmI8S2Wn00yV0Dtou1-ghI',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589982434',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 21:47:15 response :
+------------
+
+2020-05-20 21:47:17 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wWmI8S2Wn00yV0Dtou1-ghI]]></FromUserName>
+<CreateTime>1589982436</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 21:47:17 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wWmI8S2Wn00yV0Dtou1-ghI',
+    'createtime' => '1589982436',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wWmI8S2Wn00yV0Dtou1-ghI',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589982436',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 21:47:17 response :
+------------
+
+2020-05-20 21:47:21 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wVHFFoQTePIoNfdA7dx3BLQ]]></FromUserName>
+<CreateTime>1589982441</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 21:47:21 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wVHFFoQTePIoNfdA7dx3BLQ',
+    'createtime' => '1589982441',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wVHFFoQTePIoNfdA7dx3BLQ',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589982441',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 21:47:21 response :
+------------
+
+2020-05-20 21:56:16 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wces7DskGW_hZKq_e5LLhdM]]></FromUserName>
+<CreateTime>1589982976</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 21:56:16 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wces7DskGW_hZKq_e5LLhdM',
+    'createtime' => '1589982976',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wces7DskGW_hZKq_e5LLhdM',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589982976',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 21:56:16 response :
+------------
+
+2020-05-20 21:58:37 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wces7DskGW_hZKq_e5LLhdM]]></FromUserName>
+<CreateTime>1589983117</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 21:58:37 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wces7DskGW_hZKq_e5LLhdM',
+    'createtime' => '1589983117',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wces7DskGW_hZKq_e5LLhdM',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589983117',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 21:58:37 response :
+------------
+
+2020-05-20 22:02:26 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wTvcbkbjASvmatYSQ1RxRiU]]></FromUserName>
+<CreateTime>1589983345</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000571202005207071851357]]></EventKey>
+</xml>
+
+2020-05-20 22:02:26 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wTvcbkbjASvmatYSQ1RxRiU',
+    'createtime' => '1589983345',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000571202005207071851357',
+    'from' => 'oKdt4wTvcbkbjASvmatYSQ1RxRiU',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589983345',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000571202005207071851357',
+    'redirection' => true,
+    'source' => 'subscribe',
+    'content' => 'EWEI_SHOPV2_POSTER',
+  ),
+  'module' => 'reply',
+  'rule' => '1033',
+  'priority' => '0',
+  'keyword' => 
+  array (
+    'id' => '2860',
+    'rid' => '1033',
+    'uniacid' => '267',
+    'module' => 'reply',
+    'content' => 'EWEI_SHOPV2_POSTER',
+    'type' => '1',
+    'displayorder' => '0',
+    'status' => '1',
+    'reply_type' => 
+    array (
+      0 => 'basic',
+    ),
+  ),
+  'reply_type' => 
+  array (
+    0 => 'basic',
+  ),
+)
+
+2020-05-20 22:02:26 response :
+------------
+Array:
+FromUserName : gh_93e9b49c2dea ;
+ToUserName : oKdt4wTvcbkbjASvmatYSQ1RxRiU ;
+MsgType : text ;
+Content : 你好，感谢您的关注，“叶氏医药”为您提供的都是厂家直销的药品，价格实惠，正品保障！而且在本商城购买商品，我们都以自购省钱，分享赚钱的原则回馈给关注我们的每一个人。 ;
+
+2020-05-20 22:11:56 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wSHm9B0EcHAVOc5wd796sV4]]></FromUserName>
+<CreateTime>1589983915</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 22:11:56 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wSHm9B0EcHAVOc5wd796sV4',
+    'createtime' => '1589983915',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wSHm9B0EcHAVOc5wd796sV4',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589983915',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 22:11:56 response :
+------------
+
+2020-05-20 22:15:59 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wSHm9B0EcHAVOc5wd796sV4]]></FromUserName>
+<CreateTime>1589984159</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 22:15:59 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wSHm9B0EcHAVOc5wd796sV4',
+    'createtime' => '1589984159',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wSHm9B0EcHAVOc5wd796sV4',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589984159',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 22:15:59 response :
+------------
+
+2020-05-20 22:20:10 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wSHm9B0EcHAVOc5wd796sV4]]></FromUserName>
+<CreateTime>1589984410</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 22:20:10 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wSHm9B0EcHAVOc5wd796sV4',
+    'createtime' => '1589984410',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wSHm9B0EcHAVOc5wd796sV4',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589984410',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 22:20:10 response :
+------------
+
+2020-05-20 22:22:25 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wSHm9B0EcHAVOc5wd796sV4]]></FromUserName>
+<CreateTime>1589984540</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 22:22:25 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wSHm9B0EcHAVOc5wd796sV4',
+    'createtime' => '1589984540',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wSHm9B0EcHAVOc5wd796sV4',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589984540',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 22:22:25 response :
+------------
+
+2020-05-20 22:22:30 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wSHm9B0EcHAVOc5wd796sV4]]></FromUserName>
+<CreateTime>1589984540</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 22:22:30 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wSHm9B0EcHAVOc5wd796sV4',
+    'createtime' => '1589984540',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wSHm9B0EcHAVOc5wd796sV4',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589984540',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 22:22:30 response :
+------------
+
+2020-05-20 22:22:30 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wSHm9B0EcHAVOc5wd796sV4]]></FromUserName>
+<CreateTime>1589984540</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 22:22:30 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wSHm9B0EcHAVOc5wd796sV4',
+    'createtime' => '1589984540',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wSHm9B0EcHAVOc5wd796sV4',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589984540',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 22:22:30 response :
+------------
+
+2020-05-20 22:23:57 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wRVixafcBciGbOqwp596lNg]]></FromUserName>
+<CreateTime>1589984637</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2020-05-20 22:23:58 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wRVixafcBciGbOqwp596lNg',
+    'createtime' => '1589984637',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => '',
+    'from' => 'oKdt4wRVixafcBciGbOqwp596lNg',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589984637',
+    'type' => 'text',
+    'redirection' => true,
+    'source' => 'subscribe',
+    'content' => 'EWEI_SHOPV2_POSTER',
+  ),
+  'module' => 'reply',
+  'rule' => '1033',
+  'priority' => '0',
+  'keyword' => 
+  array (
+    'id' => '2860',
+    'rid' => '1033',
+    'uniacid' => '267',
+    'module' => 'reply',
+    'content' => 'EWEI_SHOPV2_POSTER',
+    'type' => '1',
+    'displayorder' => '0',
+    'status' => '1',
+    'reply_type' => 
+    array (
+      0 => 'basic',
+    ),
+  ),
+  'reply_type' => 
+  array (
+    0 => 'basic',
+  ),
+)
+
+2020-05-20 22:23:58 response :
+------------
+Array:
+FromUserName : gh_93e9b49c2dea ;
+ToUserName : oKdt4wRVixafcBciGbOqwp596lNg ;
+MsgType : text ;
+Content : 你好，感谢您的关注，“叶氏医药”为您提供的都是厂家直销的药品，价格实惠，正品保障！而且在本商城购买商品，我们都以自购省钱，分享赚钱的原则回馈给关注我们的每一个人。 ;
+
+2020-05-20 22:24:04 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wRVixafcBciGbOqwp596lNg]]></FromUserName>
+<CreateTime>1589984644</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 22:24:04 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wRVixafcBciGbOqwp596lNg',
+    'createtime' => '1589984644',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wRVixafcBciGbOqwp596lNg',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589984644',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 22:24:04 response :
+------------
+
+2020-05-20 22:24:26 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wSHm9B0EcHAVOc5wd796sV4]]></FromUserName>
+<CreateTime>1589984661</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 22:24:26 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wSHm9B0EcHAVOc5wd796sV4',
+    'createtime' => '1589984661',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wSHm9B0EcHAVOc5wd796sV4',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589984661',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 22:24:26 response :
+------------
+
+2020-05-20 22:24:26 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wSHm9B0EcHAVOc5wd796sV4]]></FromUserName>
+<CreateTime>1589984661</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 22:24:26 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wSHm9B0EcHAVOc5wd796sV4',
+    'createtime' => '1589984661',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wSHm9B0EcHAVOc5wd796sV4',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589984661',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 22:24:26 response :
+------------
+
+2020-05-20 22:24:37 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wSHm9B0EcHAVOc5wd796sV4]]></FromUserName>
+<CreateTime>1589984676</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 22:24:37 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wSHm9B0EcHAVOc5wd796sV4',
+    'createtime' => '1589984676',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wSHm9B0EcHAVOc5wd796sV4',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589984676',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 22:24:37 response :
+------------
+
+2020-05-20 22:25:39 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wRVixafcBciGbOqwp596lNg]]></FromUserName>
+<CreateTime>1589984739</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 22:25:39 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wRVixafcBciGbOqwp596lNg',
+    'createtime' => '1589984739',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wRVixafcBciGbOqwp596lNg',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589984739',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 22:25:39 response :
+------------
+
+2020-05-20 22:27:32 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wSHm9B0EcHAVOc5wd796sV4]]></FromUserName>
+<CreateTime>1589984852</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 22:27:32 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wSHm9B0EcHAVOc5wd796sV4',
+    'createtime' => '1589984852',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wSHm9B0EcHAVOc5wd796sV4',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589984852',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 22:27:32 response :
+------------
+
+2020-05-20 22:28:17 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wSHm9B0EcHAVOc5wd796sV4]]></FromUserName>
+<CreateTime>1589984897</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 22:28:17 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wSHm9B0EcHAVOc5wd796sV4',
+    'createtime' => '1589984897',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wSHm9B0EcHAVOc5wd796sV4',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589984897',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 22:28:17 response :
+------------
+
+2020-05-20 22:31:06 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wRVixafcBciGbOqwp596lNg]]></FromUserName>
+<CreateTime>1589985066</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 22:31:06 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wRVixafcBciGbOqwp596lNg',
+    'createtime' => '1589985066',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wRVixafcBciGbOqwp596lNg',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589985066',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 22:31:06 response :
+------------
+
+2020-05-20 22:39:40 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wQHkCSYU7LaqA2bxs5rvv1E]]></FromUserName>
+<CreateTime>1589985580</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 22:39:40 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wQHkCSYU7LaqA2bxs5rvv1E',
+    'createtime' => '1589985580',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wQHkCSYU7LaqA2bxs5rvv1E',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589985580',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 22:39:40 response :
+------------
+
+2020-05-20 22:42:11 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wWRd8b7gAZ268A9h5S8QP-0]]></FromUserName>
+<CreateTime>1589985731</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 22:42:11 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wWRd8b7gAZ268A9h5S8QP-0',
+    'createtime' => '1589985731',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wWRd8b7gAZ268A9h5S8QP-0',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589985731',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 22:42:11 response :
+------------
+
+2020-05-20 22:43:03 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wWRd8b7gAZ268A9h5S8QP-0]]></FromUserName>
+<CreateTime>1589985783</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 22:43:03 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wWRd8b7gAZ268A9h5S8QP-0',
+    'createtime' => '1589985783',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wWRd8b7gAZ268A9h5S8QP-0',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589985783',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 22:43:03 response :
+------------
+
+2020-05-20 22:43:43 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4weTq78NdK5ZC8vWuKSaQGi8]]></FromUserName>
+<CreateTime>1589985823</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000556202005203714447457]]></EventKey>
+</xml>
+
+2020-05-20 22:43:43 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4weTq78NdK5ZC8vWuKSaQGi8',
+    'createtime' => '1589985823',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000556202005203714447457',
+    'from' => 'oKdt4weTq78NdK5ZC8vWuKSaQGi8',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589985823',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000556202005203714447457',
+    'redirection' => true,
+    'source' => 'subscribe',
+    'content' => 'EWEI_SHOPV2_POSTER',
+  ),
+  'module' => 'reply',
+  'rule' => '1033',
+  'priority' => '0',
+  'keyword' => 
+  array (
+    'id' => '2860',
+    'rid' => '1033',
+    'uniacid' => '267',
+    'module' => 'reply',
+    'content' => 'EWEI_SHOPV2_POSTER',
+    'type' => '1',
+    'displayorder' => '0',
+    'status' => '1',
+    'reply_type' => 
+    array (
+      0 => 'basic',
+    ),
+  ),
+  'reply_type' => 
+  array (
+    0 => 'basic',
+  ),
+)
+
+2020-05-20 22:43:43 response :
+------------
+Array:
+FromUserName : gh_93e9b49c2dea ;
+ToUserName : oKdt4weTq78NdK5ZC8vWuKSaQGi8 ;
+MsgType : text ;
+Content : 你好，感谢您的关注，“叶氏医药”为您提供的都是厂家直销的药品，价格实惠，正品保障！而且在本商城购买商品，我们都以自购省钱，分享赚钱的原则回馈给关注我们的每一个人。 ;
+
+2020-05-20 22:53:44 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wZHq9JmtTwOpsOUJ_ORgp0Y]]></FromUserName>
+<CreateTime>1589986423</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=diypage&id=632]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 22:53:44 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wZHq9JmtTwOpsOUJ_ORgp0Y',
+    'createtime' => '1589986423',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=diypage&id=632',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wZHq9JmtTwOpsOUJ_ORgp0Y',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589986423',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=diypage&id=632',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 22:53:44 response :
+------------
+
+2020-05-20 22:55:19 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wVD2i8A9SRoMwjL7AKLkImE]]></FromUserName>
+<CreateTime>1589986518</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 22:55:19 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wVD2i8A9SRoMwjL7AKLkImE',
+    'createtime' => '1589986518',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wVD2i8A9SRoMwjL7AKLkImE',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589986518',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 22:55:19 response :
+------------
+
+2020-05-20 23:13:33 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wSlrh4ZjTjE967l5NcgcaXM]]></FromUserName>
+<CreateTime>1589987612</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 23:13:33 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wSlrh4ZjTjE967l5NcgcaXM',
+    'createtime' => '1589987612',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wSlrh4ZjTjE967l5NcgcaXM',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589987612',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&r=member',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 23:13:33 response :
+------------
+
+2020-05-20 23:20:23 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wSxW3JdZGB3VB7G6iifBur8]]></FromUserName>
+<CreateTime>1589988023</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000563202005201608610486]]></EventKey>
+</xml>
+
+2020-05-20 23:20:24 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wSxW3JdZGB3VB7G6iifBur8',
+    'createtime' => '1589988023',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000563202005201608610486',
+    'from' => 'oKdt4wSxW3JdZGB3VB7G6iifBur8',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589988023',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000563202005201608610486',
+    'redirection' => true,
+    'source' => 'subscribe',
+    'content' => 'EWEI_SHOPV2_POSTER',
+  ),
+  'module' => 'reply',
+  'rule' => '1033',
+  'priority' => '0',
+  'keyword' => 
+  array (
+    'id' => '2860',
+    'rid' => '1033',
+    'uniacid' => '267',
+    'module' => 'reply',
+    'content' => 'EWEI_SHOPV2_POSTER',
+    'type' => '1',
+    'displayorder' => '0',
+    'status' => '1',
+    'reply_type' => 
+    array (
+      0 => 'basic',
+    ),
+  ),
+  'reply_type' => 
+  array (
+    0 => 'basic',
+  ),
+)
+
+2020-05-20 23:20:24 response :
+------------
+Array:
+FromUserName : gh_93e9b49c2dea ;
+ToUserName : oKdt4wSxW3JdZGB3VB7G6iifBur8 ;
+MsgType : text ;
+Content : 你好，感谢您的关注，“叶氏医药”为您提供的都是厂家直销的药品，价格实惠，正品保障！而且在本商城购买商品，我们都以自购省钱，分享赚钱的原则回馈给关注我们的每一个人。 ;
+
+2020-05-20 23:21:20 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wSxW3JdZGB3VB7G6iifBur8]]></FromUserName>
+<CreateTime>1589988080</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>426766433</MenuId>
+</xml>
+
+2020-05-20 23:21:20 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wSxW3JdZGB3VB7G6iifBur8',
+    'createtime' => '1589988080',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'menuid' => '426766433',
+    'from' => 'oKdt4wSxW3JdZGB3VB7G6iifBur8',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1589988080',
+    'type' => 'text',
+    'content' => 'http://www.yesyaodg.com/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile&wxref=mp.weixin.qq.com#wechat_redirect',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-05-20 23:21:20 response :
+------------
+

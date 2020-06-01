@@ -1,0 +1,182 @@
+{template '_header'}
+<div class="page-header">
+
+    当前位置：<span class="text-primary"> 处理主播申请 </span>
+    <small>({$item['hostname']})</small>
+</div>
+
+<div class="page-content">
+    <form id="setform" {ifp 'live.host.post'}action="" method="post"{/if} class="form-horizontal form-validate">
+    <input type="hidden" name="id" value="{$item['id']}"/>
+
+    <div class="form-group">
+        <label class="col-lg control-label">申请时间</label>
+        <div class="col-sm-8">
+            <div class="form-control-static">{php echo date("Y-m-d",$item['applytime'])}</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-lg control-label">昵称</label>
+        <div class="col-sm-8">
+            <div class="form-control-static"><a target="_blank" href="{php echo webUrl('member/list/detail',array('id'=>$member['id']))}"> {$member['nickname']}</a></div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-lg control-label">openid</label>
+        <div class="col-sm-8">
+            <div class="form-control-static js-clip text-primary" data-href="{$item['openid']}">{$item['openid']}</div>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label class="col-lg control-label must">主播名称</label>
+        <div class="col-sm-8">
+            {ife 'live.host.post' $item}
+            <input type="text" class="form-control" name="hostname" value="{$item['hostname']}" data-rule-required="true"/>
+            {else}
+            <div class="form-control-static">{$item['hostname']}</div>
+            {/if}
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-lg control-label must">身份证</label>
+        <div class="col-sm-8">
+            <img src="{$idcard1}" alt="">
+            <img src="{$idcard2}" alt="">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-lg control-label must">分类</label>
+        <div class="col-sm-8 ">
+            {ife 'live.room' $item}
+            <select class='form-control' name='category' data-rule-required='true' data-msg-required='请选择分类'>
+                <option value=''>请选择分类</option>
+                {loop $category $cate}
+                <option value='{$cate['id']}' {if $item['salecate']==$cate['id']}selected{/if}>{$cate['name']}</option>
+                {/loop}
+            </select>
+            {else}
+            {/if}
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-lg control-label must">直播平台</label>
+        <div class="col-sm-8 ">
+            {ife 'live.room' $item}
+            <select class='form-control' name='identity' data-rule-required='true' data-msg-required='请选择直播平台'>
+                <option value=''>请选择直播平台</option>
+                {loop $liveidentity $row}
+                <option value="{$row['identity']}" class="identity_livetype identity_livetype{$row['type']}" {if $item['identity']==$row['identity']}selected{/if}>{$row['name']}</option>
+                {/loop}
+            </select>
+            {else}
+            <div class='form-control-static'>
+                {loop $liveidentity $row}
+                {if $item['liveidentity']==$row['identity']}{$row['name']}{/if}
+                {/loop}
+            </div>
+            {/if}
+        </div>
+    </div>
+    <div class="form-group live-url" >
+    <label class="col-lg control-label must">直播地址</label>
+    <div class="col-sm-8 ">
+        {ife 'live.room' $item}
+            <input type='text' class='form-control' name='liveurl'  value="{$item['liveurl']}" />
+        
+        {else}
+        <div class='form-control-static'>{$item['url']}</div>
+        {/if}
+    </div>
+</div>
+    <div class="form-group">
+        <label class="col-lg control-label must">联系人</label>
+        <div class="col-sm-8">
+            {ife 'live.room' $item}
+            <input type="text" class="form-control" name="realname" value="{$item['realname']}" data-rule-required="true"/>
+            {else}
+            <div class="form-control-static">{$item['realname']}</div>
+            {/if}
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-lg control-label must">联系电话</label>
+        <div class="col-sm-8">
+            {ife 'live.room' $item}
+            <input type="tel" class="form-control" name="phone" value="{$item['phone']}" data-rule-required="true"/>
+            {else}
+            <div class="form-control-static">{$item['phone']}</div>
+            {/if}
+        </div>
+    </div>
+
+    <div class="form-group-title">申请操作</div>
+    <div class="form-group">
+        <label class="col-lg control-label">申请状态</label>
+        <div class="col-sm-8">
+            {ifp 'merch.reg.detail'}
+            <label class="radio-inline">
+                <input type="radio" name="status" value="0" {if $item['status']==0}checked{/if} onclick='showReason(false)'/>
+                申请中
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="status" value="-1" {if $item['status']==-1}checked{/if}
+                onclick='showReason(true)'/> 驳回申请
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="status" value="1" {if $item['status']==1}checked{/if} onclick='showReason(false)'/>
+                审核通过
+            </label>
+            {else}
+            <div class="form-control-static">
+                {if $item['status']==0}
+                申请中
+                {elseif $item['stauts']==-1}
+                驳回申请
+                {elseif $item['stauts']==1}
+                审核通过
+                {/if}
+            </div>
+            {/if}
+        </div>
+    </div>
+
+    <div class="form-group" id="reason" {if $item['status']!=-1}style='display:none'{/if}>
+    <label class="col-lg control-label">驳回理由</label>
+    <div class="col-sm-8">
+        {ifp 'merch.reg.detail'}
+        <textarea name="reason" class="form-control textarea">{$item['reason']}</textarea>
+        {else}
+        <div class="form-control-static">{$item['reason']}</div>
+        {/if}
+    </div>
+</div>
+
+
+{ifp 'merch.reg.detail'}
+<div class="form-group">
+    <label class="col-lg control-label"></label>
+    <div class="col-sm-9 col-xs-12">
+        <input type="submit" value="提交" class="btn btn-primary"/>
+        <a class="btn btn-default" href="{php echo webUrl('merch/reg')}">返回列表</a>
+    </div>
+</div>
+{/if}
+
+</form>
+</div>
+<script>
+    function showReason(show) {
+        if (show) {
+            $('#reason').show();
+        } else {
+            $('#reason').hide();
+        }
+    }
+</script>
+
+{template '_footer'}
+<!--63779278-->

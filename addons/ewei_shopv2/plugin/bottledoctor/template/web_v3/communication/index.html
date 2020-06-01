@@ -1,0 +1,120 @@
+{template '_header'}
+
+<div class="page-header">
+    当前位置：<span class="text-primary">消息管理</span>
+</div>
+<div class="page-content"> 
+   <div>
+         <form action="" method="get">   
+                   <input type="hidden" name="c" value="site" />
+                   <input type="hidden" name="a" value="entry" />
+                   <input type="hidden" name="m" value="ewei_shopv2" />
+                   <input type="hidden" name="do" value="web" />
+                   <input type="hidden" name="r" value="bottledoctor.communication" />   
+        <div class="page-toolbar">
+            <div class="input-group">
+                <div class="input-group-select">
+                    <select name="enabled" class='form-control input-sm select-md'>
+                        <option value=""  {if $_GPC['enabled']==''}selected{/if}>请选择状态</option>
+                        <option value="0" {if $_GPC['enabled']=='0'}selected{/if}>待审核</option>
+                        <option value="1" {if $_GPC['enabled']=='1'}selected{/if}>已通过</option>
+                        <option value="-1" {if $_GPC['enabled']=='-1'}selected{/if}>拒绝</option>
+                    </select>
+                    <select name="communicationtype" class='form-control input-sm select-md'>
+                        <option value=""  {if $_GPC['communicationtype']==''}selected{/if}>请选择模块</option>
+                        <option value="0" {if $_GPC['communicationtype']=='0'}selected{/if}>交流</option>
+                        <option value="1" {if $_GPC['communicationtype']=='1'}selected{/if}>互动</option>
+                    </select>  
+                    <select name="category" class='form-control select2' style="width:150px;">
+                        <option value="" {if $_GPC['category'] == ''} selected{/if}>请选择分类</option>
+                        {loop $categorys $category}
+                        <option value="{$category['id']}" {if $_GPC['category']==$category['id']}selected="selected"{/if}>{$category['name']}</option>
+                        {/loop}
+                    </select>
+                     <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit"> 搜索</button> 
+                     </span>
+                </div>  
+                </div>
+            </div>
+        </div> 
+    </form>
+   </div>
+
+{if count($list)>0}
+<form action="" method="post">
+    <table class="table table-hover table-responsive">
+        <thead class="navbar-inner">
+            <tr>
+                <th style="width:50px;">ID</th>
+                <th>会员</th>					
+                <th>消息</th>
+                <th>创建时间</th>
+                <th>审核状态</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody id="sort">
+            {loop $list $row}
+            <tr>
+                <td>{$row['id']}</td>
+                <td>
+                    {ifp 'bottledoctor.communication.edit'}
+                    	<a href='javascript:;' data-toggle='ajaxEdit' data-href="{php echo webUrl('bottledoctor/communication/displayorder',array('id'=>$row['id']))}" ><img src="{$row['headimgurl']}" style='width:30px;height:30px;padding:1px;border:1px solid #ccc;border-radius: 50%'>{$row['name']}</a>
+                    {else}
+                    	{$row['name']} 
+                    {/if}
+                </td>
+                <td>
+                
+                {loop $row[images] $v}
+                <img src='{php echo tomedia($v)}' style='width:30px;height:30px;padding:1px;border:1px solid #ccc' onerror="this.src='../addons/ewei_shopv2/static/images/nopic.png'"/> 
+                {/loop}
+
+                {$row['descripTion']}</td>
+                <td>{php echo date('y-m-d H:i:s',$row['createTime'])}</td>
+                <td>{if $row['enabled']==0}待审核{else if $row['enabled']==1}已通过{else}拒绝{/if}</td>
+                <td style="text-align:left;">
+                    {ifp 'bottledoctor.communication.view|bottledoctor.communication.edit'}
+                        <a href="{php echo webUrl('bottledoctor/communication/edit', array('id' => $row['id']))}" class="btn btn-default btn-sm btn-op btn-operation" title="{ifp 'bottledoctor.communication.edit'}修改{else}查看{/if}">
+                             <span data-toggle="tooltip" data-placement="top" title="" data-original-title="{ifp 'bottledoctor.communication.edit'}修改{else}查看{/if}">
+                                    {ifp 'bottledoctor.communication.edit'}
+                                    <i class="icow icow-bianji2"></i>
+                                    {else}
+                                    <i class="icow icow-chakan-copy"></i>
+                                    {/if}
+                                 </span>
+                        </a>
+                    {/if}
+                    {ifp 'bottledoctor.communication.delete'} 
+                    	<a data-toggle='ajaxRemove' href="{php echo webUrl('bottledoctor/communication/delete', array('id' => $row['id']))}"class="btn btn-default btn-sm btn-op btn-operation" data-confirm="确认删除此分类?" title="删除">
+                             <span data-toggle="tooltip" data-placement="top" title="" data-original-title="删除">
+                                <i class="icow icow-shanchu1"></i>
+                             </span>
+                        </a>
+                    {/if}
+                </td>
+                </tr>
+                {/loop} 
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="6" style="text-align: right">{$pager}</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        {else}
+        <div class='panel panel-default'>
+            <div class='panel-body' style='text-align: center;padding:30px;'>
+                暂时没有任何消息
+            </div>
+        </div>
+            {/if}
+    </form>
+</div>
+
+    {template '_footer'}
+
+
+<!--yifuyuanma-->

@@ -1,0 +1,47 @@
+﻿{template 'common/header'}
+<link type="text/css" rel="stylesheet" href="./themes/m001_1/images/css/style.css">
+<link type="text/css" rel="stylesheet" href="./themes/m001_1/images/css/wedding.css">
+<link type="text/css" rel="stylesheet" href="./themes/m001_1/images/css/idangerous.swiper.css">
+<style type="text/css">
+body{font:{$_W['styles']['fontsize']} {$_W['styles']['fontfamily']}; color:{$_W['styles']['fontcolor']};padding:0;margin:0;background-image:url('{if empty($_W['styles']['indexbgimg'])}./themes/m001_1/images/bg.jpg{else}{$_W['styles']['indexbgimg']}{/if}');background-size:cover;{if !empty($_W['styles']['indexbgcolor'])} background-color:{$_W['styles']['indexbgcolor']};{/if}{$_W['styles']['indexbgextra']}}
+a,a:hover{color:{if empty($_W['styles']['linkcolor'])}#FFF{else}{$_W['styles']['linkcolor']}{/if}; text-decoration:none;}
+{$_W['styles']['css']}
+</style>
+
+  <div class="swiper-container swiper-parent">
+    <div class="swiper-wrapper">
+
+      <!--Menu page-->
+      <div class="swiper-slide sliderbg_menu">
+          <div class="swiper-container swiper-nested">
+                   <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                                  <div class="slide-inner">
+                                        <div class="logo">
+                                           {data func="site_navs" section="1" item="nav"}  
+                                            <a href="{$nav['url']}"><img src="{$_W['attachurl']}{$nav['icon']}" border="0" /><span>{$_W['styles']['logoname']}</span></a>	
+                                            {/data}
+                                        </div>
+                                        <div class="menu">
+                                        <ul>
+                                         {data func="site_navs" section="2" item="nav"}  
+                                           <li><a href="{$nav['url']}"><img src="{$_W['attachurl']}{$nav['icon']}"/><span>{$nav['name']}</span></a></li>
+                                         {/data}
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                        </div>
+                                 </div>
+                         </div>
+                   </div>
+                  <div class="swiper-scrollbar"></div>
+          </div> 
+      </div>
+     <!--End of pages--> 
+
+    </div>
+    <div class="pagination"></div>
+  </div>
+<script type="text/javascript" src="./themes/m001_1/images/js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="./themes/m001_1/images/js/idangerous.swiper-2.1.min.js"></script>
+<script type="text/javascript" src="./themes/m001_1/images/js/code.js"></script>
+{template 'common/footer'}

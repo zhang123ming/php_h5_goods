@@ -1,0 +1,149 @@
+{template '_header'}
+<div class='fui-page  fui-page-current'>
+    <div class="fui-header">
+	<div class="fui-header-left">
+	    &nbsp;
+	</div>
+	<div class="title">一物一码</div> 
+	<div class="fui-header-right">&nbsp;</div>
+    </div>
+    <div class='fui-content navbar'>
+	<div class='fui-list-group' >
+  
+	  
+	    <div class='fui-list'>
+		<div class='fui-list-media'><i class='icon icon-shop'></i></div>
+		<div class='fui-list-inner'>
+		    <div class='title'>出货扫码</div>
+		</div>
+	    </div>
+	  
+	</div>
+<div class='fui-list-group' >
+	<div class='fui-list'>
+	<div class='fui-list-media'><img src='{$member['avatar']}' /></div>
+	<div class='fui-list-inner'>
+		<div class='title'>{$member['id']}</div>
+		<div class='text'>{$member['nickname']}</div>
+	</div>
+	</div>
+  
+</div>
+<div class='fui-cell-group'>
+{if $nopurview}
+	<div class='fui-cell-title'>此账号无出货权限，请复制以下信息发送给管理员。</div>
+	    <div class='fui-cell'>
+            <div class='fui-cell-info'>
+                   <textarea id='code' style="border:1px solid #efefef;background:#FFF;height:30px;">{$openid}</textarea>                  
+            </div>
+            
+	    </div>
+{else}
+	    <div class='fui-cell-title'>请用PDA或微信扫码,或者手工输入，一行一个。</div>
+	    <div class='fui-cell'>
+            <div class='fui-cell-info'>
+                   <textarea id='code' style="border:1px solid #efefef;background:#FFF;height:100px;"></textarea>
+                   <br>
+                   <!-- <a class='btn btn-green btn-search' id="">微信扫码</a> -->
+                   <input type="button" style="outline: none;height: 40px;line-height: 40px;-webkit-appearance:none;" class='btn btn-danger ' id="btn-qrcode"  value="微信扫码">
+                  
+            </div>
+            
+	    </div>
+	    <div class='fui-cell'>
+			<input type='text' class='fui-input' id='money' value="{$_GPC['money']}" style="border: 1px solid #000;height: 35px;">
+            <a id="searchAgent" class="btn btn-success block disabled">查询</a>
+	    </div>
+        <div class='fui-cell'>
+            <div class='fui-cell-info'>
+                   经销商:
+                  <select id="agent">
+                  <option value="0">请选择</option>
+                   {loop $agentList $row}
+                   <option value="{$row['itemid']}">{$row['name']}</option>
+                   {/loop}
+                  </select>
+            </div>
+            
+	    </div>
+        <div class='fui-cell'>
+            <div class='fui-cell-info'>
+                   <input type="button" style="outline: none;height: 40px;line-height: 40px;-webkit-appearance:none;" class='btn btn-danger btn-search' id="send" onclick="check();" value="我要出货">
+                	<a class='btn btn-green btn-sm btn-search' style="display:none" href=" {php echo mobileUrl('marketcode.verifyorder.log')}">出货记录</a>
+            </div> 
+	    </div>
+{/if}
+	</div>
+</div>
+<script language='javascript'>
+		function check(){
+			
+			var code = $('#code').val();
+			var agent = $('#agent').val();
+			if (!code) {
+				FoxUI.toast.show('请输入扫码数据',true);
+				return false;
+			}
+			if (agent<1) {
+				FoxUI.toast.show('请选择经销商',true);
+				return false;
+			}
+			$('#send').attr("disabled",true);
+			//$("#send").val("出货中...");
+			$.post('{php echo mobileUrl("marketcode.page.deliverRecord")}',{code:code,agent:agent},function (data) {
+                	if (data.code==102) {
+                		FoxUI.toast.show(data.msg,true);
+						$("#code").val("");
+                		//window.location.href='{php echo mobileUrl("marketcode.page");}'
+                	}else{
+                		FoxUI.toast.show(data.msg,true);
+                	}
+            },'json');
+			$('#send').attr("disabled",false);
+			//$("#send").val("我要出货");
+		}
+		$("#btn-qrcode").unbind('click').click(function () {
+			 wx.scanQRCode({
+                needResult: 1, scanType: ["barCode","qrCode"], success: function (res) {
+                    if (res.errMsg != "scanQRCode:ok") {
+                        FoxUI.toast.show(res.errMsg);
+                        return
+                    }
+
+                    var text = res.resultStr;
+
+                    var v = $('#code').val() ; 
+		            if(!v){             
+		              nv = text;
+		            }else{ 
+		              nv = $.trim(v)+"\r"+text; 
+		            }
+ 
+                    $("#code").val(nv);
+                    
+                    //FoxUI.toast.show("扫描成功")
+                }
+            })
+        });
+		//
+		$('#searchAgent').on('click',function(){
+			$("#agent").html("");
+	        var obj = $(this);
+	        var name = $(this).prev().val();
+	        $.post('{php echo mobileUrl("marketcode.page.searchAgent")}',{name:name},function (data) {
+                	var str = "";
+                	for(var k in data){
+                		if (k == 0) {
+                			str+='<option value="'+data[k]['itemid']+'" selected>'+data[k]['name']+'</option>';
+                		}
+                		else{
+                			str+='<option value="'+data[k]['itemid']+'">'+data[k]['name']+'</option>';
+                		}
+                	}
+                	$("#agent").html(str)
+            },'json');
+   		});
+  
+</script>
+
+{template '_footer'}

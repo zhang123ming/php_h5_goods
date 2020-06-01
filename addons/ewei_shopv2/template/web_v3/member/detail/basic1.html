@@ -1,0 +1,78 @@
+<input type="hidden" class="form-control" name="data[mobileverify]" value="1"/>
+<div class="form-group">
+    <label class="col-lg control-label">手机号码</label>
+    <div class="col-sm-9 col-xs-12">
+        <input type="text" class="form-control" name="data[mobile]"/>
+    </div>
+</div>
+<div class="form-group">
+    <label class="col-lg control-label">用户密码</label>
+    <div class="col-sm-9 col-xs-12">
+        <input type="text" class="form-control" name="data[pwd]"/>
+    </div>
+</div>
+<div class="form-group">
+    <label class="col-lg control-label">会员等级</label>
+    <div class="col-sm-9 col-xs-12">
+        {ifp 'member.list.edit'}
+        <select name='data[level]' class='form-control'>
+            <option value=''>{php echo empty($shop['levelname'])?'普通会员':$shop['levelname']}</option>
+            {loop $levels $level}
+            <option value='{$level['id']}' {if $merchUser&&$merchUser['level']<=$level['level']} hidden {/if} {if $member['level']==$level['id']}selected{/if}>{$level['levelname']}</option>
+            {/loop}
+        </select>
+        {else}
+        <div class='form-control-static'>
+            {if empty($member['level'])}
+            {php echo empty($shop['levelname'])?'普通会员':$shop['levelname']}
+            {else}
+            {php echo pdo_fetchcolumn('select levelname from '.tablename('ewei_shop_member_level').' where id=:id limit 1',array(':id'=>$member['level']))}
+            {/if}
+        </div>
+        {/if}
+    </div>
+</div>
+<div class="form-group">
+    <label class="col-lg control-label">会员分组</label>
+    <div class="col-sm-9 col-xs-12">
+        {ifp 'member.list.edit'}
+        <select name='data[groupid]' class='form-control'>
+            <option value=''>无分组</option>
+            {loop $groups $group}
+            <option value='{$group['id']}' {if $member['groupid']==$group['id']}selected{/if}>{$group['groupname']}</option>
+            {/loop}
+        </select>
+        {else}
+        <div class='form-control-static'>
+            {if empty($member['groupid'])}
+            无分组
+            {else}
+            {php echo pdo_fetchcolumn('select groupname from '.tablename('ewei_shop_member_group').' where id=:id limit 1',array(':id'=>$member['groupid']))}
+            {/if}
+        </div>
+        {/if}
+    </div>
+</div>
+<div class="form-group">
+    <label class="col-lg control-label">真实姓名</label>
+    <div class="col-sm-9 col-xs-12">
+        <input type="text" class="form-control" name="data[realname]"/>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $(function () {
+        $(".btn-maxcredit").unbind('click').click(function () {
+            var val = $(this).val();
+            if(val==1){
+                $(".maxcreditinput").css({'display':'inline-block'});
+            }else{
+                $(".maxcreditinput").css({'display':'none'});
+            }
+        });
+    })
+
+     cascdeInit("{php echo $new_area}","{php echo $address_street}","{php echo isset($member['agentprovince'])?$member['agentprovince']:''}","{php echo isset($member['agentcity'])?$member['agentcity']:''}","{php echo isset($member['agentarea'])?$member['agentarea']:''}","''");
+</script>
+<!--efwww_com-->

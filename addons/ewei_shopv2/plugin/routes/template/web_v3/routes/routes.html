@@ -1,0 +1,98 @@
+{template '_header'}
+<div class="page-header">
+	当前位置：<span class="text-primary">路线管理 </span>
+</div>
+<div class="page-content">
+<form action="./index.php" method="get" class="form-horizontal" role="form">
+	<input type="hidden" name="c" value="site" />
+	<input type="hidden" name="a" value="entry" />
+	<input type="hidden" name="m" value="ewei_shopv2" />
+	<input type="hidden" name="do" value="web" />
+	<input type="hidden" name="r"  value="routes" />
+
+	<div class="page-toolbar  m-b-sm m-t-sm">
+		<div class="col-sm-6">
+			<span class="">
+				{ifp 'routes.add'}
+				<a class='btn btn-primary btn-sm' href="{php echo webUrl('routes/routes/add')}"><i class="fa fa-plus"></i> 添加路线</a>
+				{/if}
+			</span>
+		</div>	
+
+
+		<div class="col-sm-6 pull-right">
+			<div class="input-group">				 
+				<input type="text" class=" form-control" name='keyword' value="{$_GPC['keyword']}" placeholder="请输入关键词"> <span class="input-group-btn">
+					<button class="btn btn-primary" type="submit"> 搜索</button> </span>
+			</div>
+
+		</div>
+	</div>
+</form>
+
+{if !(count($list)>0)}
+
+<form action="" method="post" >
+	<div class="page-table-header">
+		<input type="checkbox">
+		<div class="btn-group">
+			{ifp 'routes.delete'}
+			<button class="btn btn-default btn-sm btn-operation" type="button" data-toggle='batch-remove' data-confirm="确认要删除?" data-href="{php echo webUrl('routes/routes/delete')}">
+				<i class='icow icow-shanchu1'></i> 删除</button>
+			{/if}
+		</div>
+	</div>
+	<table class="table table-hover table-responsive">
+		<thead>
+			<tr>
+
+				<th style="width:25px;"></th>
+				<th >路线名称</th>
+				<th  style="width: 95px">操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			{loop $routes $row}
+			<tr>
+				<td>
+					<input type='checkbox' value=""/>
+				</td>
+				<td>{php echo $row['route_name']}</td>
+				<td>
+					<a class='btn btn-default btn-sm  btn-op btn-operation' href="{php echo webUrl('routes/routes/edit', array( 'id' => $row['id']))}">
+						<span data-toggle="tooltip" data-placement="top" title="" data-original-title="编辑">
+							<i class="icow icow-bianji2"></i>
+                     </span>
+					</a>
+					<a class='btn btn-default btn-sm btn-op btn-operation' data-toggle="ajaxRemove"  href="{php echo webUrl('routes/routes/delete', array('id' => $row['id']))}"  title='删除' data-confirm="真的要删除此路线mua？">
+						<span data-toggle="tooltip" data-placement="top" title="" data-original-title="删除">
+							 <i class="icow icow-shanchu1"></i>
+						 </span>
+					</a>
+				</td>
+			</tr>
+			{/loop}
+		</tbody>
+		<tfoot>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>
+					<div class="btn-group">
+						<button class="btn btn-default btn-sm btn-operation" type="button" data-toggle='batch-remove' data-confirm="确认要删除?" data-href="{php echo webUrl('routes/routes/delete')}">
+							<i class='icow icow-shanchu1'></i> 删除</button>
+					</div>
+				</td>
+				<td colspan="3" class="text-right">{$pager}    </td>
+			</tr>
+		</tfoot>
+	</table>
+	{else}
+	<div class='panel panel-default'>
+		<div class='panel-body' style='text-align: center;padding:30px;'>
+			暂时没有任何路线!
+		</div>
+	</div>
+	{/if}
+</form>
+</div>
+{template '_footer'}

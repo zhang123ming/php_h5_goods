@@ -1,0 +1,10 @@
+<div data-am-widget="slider" class="am-slider am-slider-c2" data-am-slider='{"directionNav":false}' >
+    <ul class="am-slides">
+        {data func="site_slide_search" item="row" limit="4"} 
+        <li>
+            <img src="{$row['thumb']}">
+            <div class="am-slider-desc">{$row['title']}</div>
+        </li>
+        {/data}
+    </ul>
+</div>

@@ -1,0 +1,120 @@
+{template 'common/header'}
+{template 'common/slide'}
+<style>
+	body{
+	font:{$_W['styles']['fontsize']} {$_W['styles']['fontfamily']};
+	color:{$_W['styles']['fontcolor']};
+	padding:0;
+	margin:0;
+	background-image:url('{if !empty($_W['styles']['indexbgimg'])}{$_W['styles']['indexbgimg']}{/if}');
+	background-size:cover;
+	background-color:{if empty($_W['styles']['indexbgcolor'])}#FFFFFF{else}{$_W['styles']['indexbgcolor']}{/if};
+	{$_W['styles']['indexbgextra']}
+	}
+	a{color:{$_W['styles']['linkcolor']}; text-decoration:none;}
+	{$_W['styles']['css']}
+	.box{width:96%; overflow:hidden; margin:1.1% 2%; border-radius:0.2em; background-color:#fff;}
+	.box .box2{float:left; margin-top: 0.5em; display:block; text-align:center; width:33.33%; border-right:#d1d1d1 solid 1px;border-bottom:#d1d1d1 solid 1px;}
+	.box .box-item{display:block; text-align:center; text-decoration:none; height:5.5em; line-height:5.5em; width:5.5em; margin:2% auto; color:#ffffff;}
+	.box .box-item i{display:inline-block; width:100%; line-height:77px; font-size:35px; color:#C46336; overflow:hidden;}
+	.box .box-item .icon{display:inline-block; width:100%; height:100%; border-radius:100%; }
+	.box .box2 span{color:{$_W['styles']['fontnavcolor']};display:inline-block; font-size:14px; width:90%; height:20px; line-height:20px; text-align:center; margin:0 5%; overflow:hidden;}
+	.wenzhang{width: 100%;height: 30px;background-repeat: no-repeat;background-size: cover;background-size: 100% 100%;}
+	.rollingNews {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+}
+.carousel-inner{height:150px;}
+.carousel-inner .item {width:100%; height:100%;}
+.carousel-inner .item a img{height:100%;width:100%}
+.carousel-indicators{margin-bottom: -9px;}
+.notice{width: 100%;height: 30px;margin-left: auto;margin-right: auto;}
+.notice_pic{width: 15px;height: 15px;vertical-align: middle;border: rgba(0, 0, 255, 0) 1px solid;float: left;margin-top: 2px;margin-left: 2%;}
+.notice_txt{width: 78%;height: 35px;line-height: 35px;border: rgba(0, 0, 255, 0) 1px solid;margin-left: 26px;margin-top: -3px;text-align: left;overflow: hidden;}
+.notice_h1{margin-top: 2px;color: #797979;font-size: 13px;}
+.notice_pic1{width: 15px;height: 15px;vertical-align: middle;}
+.notice_pic img{-webkit-animation:ro2 1.5s .2s linear infinite;-moz-animation:ro2 1.5s .2s linear infinite;animation:ro2 1.5s .2s linear infinite;}
+.box2:nth-child(1) .box-item{background-color:#ABE97C;}
+.box2:nth-child(2) .box-item{background-color:#FFC566;}
+.box2:nth-child(3) .box-item{background-color:#63D3D6;}
+.box2:nth-child(3) {border-right:none;}
+.box2:nth-child(4) .box-item{background-color:#FF7464;}
+.box2:nth-child(5) .box-item{background-color:#66E2AE;}
+.box2:nth-child(6) .box-item{background-color:#D7DC75;}
+.box2:nth-child(6) {border-right:none;}
+.box2:nth-child(7) .box-item{background-color:#70C5FE;}
+.box2:nth-child(8) .box-item{background-color:#789887;}
+.box2:nth-child(9) .box-item{background-color:#FFAA73;}
+.box2:nth-child(9) {border-right:none;}
+.box2:nth-child(10) .box-item{background-color:#ABE97C;}
+.box2:nth-child(11) .box-item{background-color:#FFC566;}
+.box2:nth-child(12) .box-item{background-color:#63D3D6;}
+.box2:nth-child(12) {border-right:none;}
+</style>
+<script>
+$(function(){
+				var $this = $(".rollingNews");
+				var t=null;
+				$this.hover(function(){
+					clearInterval(t);
+				},function(){
+					t = setInterval(function(){
+					rollingNews( $this );
+				}, 4000 );
+			}).trigger("mouseleave");
+		});
+		function rollingNews(gg){
+			var $self = gg.find(".wenzhang");
+			var lineHeight = $self.find(".notice").eq(0).height();
+				$self.animate({"marginTop": -lineHeight +"px"}, 600 , function(){
+				$self.css({marginTop:0}).find(".notice").eq(0).appendTo($self);
+			})
+		};
+</script>
+
+<div class="rollingNews">
+	<div class="wenzhang">
+		{data module="site" func="site_article" cid="$_W['styles']['notice_cid']" assign="result" return="true" iscommend="true"}
+		{if empty($result['list'])}
+		<div class="notice">
+			<a href="#">
+				<div class="notice_pic">
+					<img class="notice_pic1" src="{$_W['siteroot']}app/themes/xinchuanren_app_themes_01/style/img/img.png">
+				</div>
+				<div class="notice_txt">
+					<p class="notice_h1">暂无公告或文章..</p>
+				</div>
+			</a>
+		</div>
+		{/if}
+		{loop $result['list'] $row}
+		<div class="notice">
+			<a href="{$row['linkurl']}">
+				<div class="notice_pic">
+					<img class="notice_pic1" src="{$_W['siteroot']}app/themes/xinchuanren_app_themes_01/style/img/img.png">
+				</div>
+				<div class="notice_txt">
+					<p class="notice_h1">{$row['title']}</p>
+				</div>
+			</a>
+		</div>
+		{/loop}
+	</div>
+</div>
+<div class="box clearfix">
+	{loop $navs $nav}
+	<div class="box2   nth-child({$nav['displayorder']})">
+		<a href="{$nav['url']}" class="box-item">
+			{if !empty($nav['icon'])}
+			<i style="background:url({$_W['attachurl']}{$nav['icon']}) no-repeat; background-size:cover;" class="icon"></i>
+			{else}
+			<i class="fa {$nav['css']['icon']['icon']} icon" style="{$nav['css']['icon']['style']} color:#fff;"></i>
+			{/if}
+		</a>
+		<span style="{$nav['css']['name']}" title="{$nav['name']}">{$nav['name']}</span>
+	</div>
+	{/loop}
+</div>
+{template 'common/footer'}

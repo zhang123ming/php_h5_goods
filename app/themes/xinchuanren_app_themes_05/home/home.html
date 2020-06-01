@@ -1,0 +1,79 @@
+{template 'header'}
+<style>
+body{
+	background-image:url('{if empty($_W['styles']['indexbgimg'])}./themes/xinchuanren_app_themes_05/style/img/bg.jpg{else}{$_W['styles']['indexbgimg']}{/if}');background-size:100% 100%;}
+	background-color:{if empty($_W['styles']['indexbgcolor'])}#fbf5df{else}{$_W['styles']['indexbgcolor']}{/if};
+	}
+.clear li{height:40px}	
+.diy_00	{border: 1px solid {if empty($_W['styles']['indexbgcolor'])}#2D2A61{else}{$_W['styles']['indexbgcolor']}{/if}; box-shadow:0px 3px 10px {if empty($_W['styles']['indexbgcolor'])}#2D2A61{else}{$_W['styles']['indexbgcolor']}{/if};}
+.diy_01 {background-color:{if empty($_W['styles']['fontnavcolor'])}#E17F3B{else}{$_W['styles']['fontnavcolor']}{/if};opacity: 0.7;}
+.diy_02 {color:{if empty($_W['styles']['linkcolor'])}#FFF{else}{$_W['styles']['linkcolor']}{/if}}
+.diy_03 {color:{if empty($_W['styles']['fontcolor'])}#000{else}{$_W['styles']['fontcolor']}{/if}}
+
+</style>
+<link rel="stylesheet" type="text/css" href="./themes/xinchuanren_app_themes_05/style/css/index.css">
+<script src="./themes/xinchuanren_app_themes_05/style/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<div class="top-page">
+	{data func="site_navs" section="1" item="nav"}
+		<img src="{if empty($nav['icon'])}./themes/xinchuanren_app_themes_05/style/img/logo.png{else}{$_W['attachurl']}{$nav['icon']}{/if}" class="logo-bg">
+		<span class="logo_title diy_02">
+		{$nav['name']}
+		</span>
+	{/data}
+			<div class="wrapper">
+				<div class="row cf">
+					<div class="span">
+						<div class="circle">
+						</div>
+					</div>
+				</div>
+			</div>
+		<div class="header-box diy_00">
+		    <ul class="clear">
+					{data func="site_navs" section="2" item="nav"}
+					<li>
+					<div class="fl li-div diy_01">
+					<a class="text-overflow diy_02" href="{$nav['url']}">
+					{$nav['name']}
+					</a>
+					</div>
+					<div class="fls">
+					<span class="text-overflow diy_03">
+					{$nav['description']}
+					</span>
+					</div>
+					</li>
+				{/data}    		
+		    	</ul>
+		    </div>
+		</div>
+
+		<script type="text/javascript">
+		$('.header-box li').bind('click',function(){
+		var img = $(this);
+		var flyElm = img.clone().css('opacity', 0.75);
+		$('body').append(flyElm);
+		flyElm.css({
+			'z-index': 999,
+			'display': 'block',
+			'position': 'absolute',
+			'top': img.offset().top +'px',
+			'left': img.offset().left +'px',
+			'width': img.width() +'px',
+			'height': img.height() +'px'
+		});
+		flyElm.animate({
+			top: $('.logo-bg').offset().top,
+			left: $('.logo-bg').offset().left+50,
+			width: 20,
+			height: 32
+		}, 'slow', function() {
+			flyElm.remove();
+		
+		});
+	}); 
+		</script>
+				<!--底部-->
+<div class="fooer">
+{template 'footer'}
+</div>

@@ -1,0 +1,99 @@
+{template '_header'}
+<style type="text/css">
+    .fui-body{
+        margin-top: 5rem;
+        text-align: center;
+    }
+    .bg-box{
+        margin:0 auto;
+        width: 80px;
+        height: 80px;
+    }
+    .bg-icon{
+        width: 80px;
+        height: 80px;
+    }
+    .button{
+        width:95%;
+        height:40px;
+        border-radius: 5px;
+        background:#FF6600;
+        margin:20px auto;
+        text-align: center;
+        cursor:pointer;
+        margin-bottom: 1rem;
+    }
+    .put-number{
+        width:94%;
+        height:2rem;
+        background: #fff;
+        border: none;
+        font-size:1rem; 
+        text-align: center;
+        margin:0 auto;
+    }
+    .fui-images.fui-images-sm .image.image-sm {
+        width: 4rem;
+        height: 4rem;
+    }
+    .upload_box{
+        width:100%;
+        height: 1.3rem;
+        margin:.6rem auto;
+        margin-left: 2.5%;
+        position:relative;
+    }
+    #images{
+        position:absolute;
+        left:32%;
+        top:32%;
+        margin-top: -50px;
+        margin-left: -50px;
+    }
+    #upload_input{
+        position:absolute;
+        left:55%;
+        bottom:0;
+        margin-top: -50px;
+        margin-left: -50px;
+    }
+</style>
+<div class='fui-page  fui-page-current'>
+    <div class="fui-header">
+        <div class="fui-header-left">
+            <a class="back"></a>
+        </div>
+        <div class="title">提交凭证</div>
+        <div class="fui-header-right">&nbsp;</div>
+    </div>
+    <div class='fui-body' >
+        <div class="bg-box">
+            <img class="bg-icon" src="../addons/ewei_shopv2/static/images/ye.png" >
+        </div>
+        <div style="color:#666;">余额充值</div>
+        <div >￥{$member['credit2']}</div>
+        <div class="upload_box">
+            <div class="upload_img">
+                <ul class="fui-images fui-images-sm" id="images"></ul>
+                <div class="fui-uploader fui-uploader-sm " id="upload_input" data-max="3" data-count="0">
+                    <input class="upload_input" type="file" name='imgFile0'  id='imgFile0' multiple="" accept="image/*" >
+                </div>
+            </div>
+        </div>
+        <div class='put-number'><input class='put-number' id="put-number"  type="text" name="setnumber" placeholder="请输入充值金额"></div>
+        <div class="button btn_query" data-memberid='{$member['id']}'><span style="line-height: 40px;color:#fff;font-weight: 700;">马上充值</span></div>
+        <div class="button btn_log" style="background:#F49C06;"><span style="line-height: 40px;color:#fff;font-weight: 700;">充值记录</span></div>
+    </div>
+    <script language='javascript'>
+        $('.btn_log').click(function(){
+            window.location.href="{php echo mobileUrl('member/log')}";
+        });
+        require(['biz/member/upload'], function (modal) {
+            modal.init({});
+        }); 
+        $('.upload_input').change(function(){
+            $('.upload_box').css('height','5.4rem');
+        });
+    </script>
+</div>
+{template '_footer'}

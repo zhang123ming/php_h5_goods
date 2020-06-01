@@ -1,0 +1,176 @@
+{template 'common/header'}
+<link href="../app/themes/yihudong_3D/a/screen.css" rel="stylesheet">
+<style>
+.gmu-media-detect{-webkit-transition: width 0.001ms; width: 0; position: relative; bottom: -999999px;}
+@media screen and (width: 394px) { #gmu-media-detect0 { width: 100px; } }
+{$_W['styles']['css']}
+</style>
+
+<script src="../app/themes/yihudong_3D/a/modernizr.js"></script>
+
+{template 'site/nav_top'}
+
+<script type="text/javascript">
+/*$(document).ready(function(){
+  mMasklay_h = Math.max(document.body.scrollHeight,document.documentElement.scrollHeight);  
+ $("#mMasklay").height(mMasklay_h);
+  
+});
+*/
+</script>
+<div id="page">
+<section>
+
+<footer>
+  
+    <nav class="fenye slider-controls">
+
+                <ul id="controls">
+
+          <li><a class="goto-slide dian1 current" href="#" data-slideindex="0"></a></li>
+          <li><a class="goto-slide dian2" href="#" data-slideindex="1"></a></li>
+
+                </ul>
+
+    </nav>
+
+</footer>
+<div id="time-indicator"></div>
+  <div style="position: relative;">
+    <div class="qie_left" id="prev"></div>
+    <div class="qie_right" id="next"></div>    
+  </div>
+
+
+<div id="viewport">    
+<div id="box">
+<figure class="slide fan1">
+
+<div class="qiehuan">
+    <div class="h_left" /></div>
+
+    <div class="h_datu" ><a href="{$_W['styles']['dan3d_1pic_url']}"><img src="{$_W['styles']['dan3d_1pic']}" /></a></div>
+
+      <div class="h_right" /></div>
+
+            <div class="nofloat"></div>
+    </div>
+
+    <div class="w70">
+      <ul>
+
+      {data func="site_navs" section="1" item="nav"}
+<li><a href="{$nav['url']}"><strong>{$nav['name']}</strong><i></i></a></li>
+{/data}
+
+      </ul>
+
+        <div class="box-btn bgcolor">
+                        <a href="tel:{$_W['styles']['dan3d_tel']}"><i class="icon2 icon-1phone"></i>{$_W['styles']['dan3d_tel']}</a>
+         </div>
+
+        <div class="box-btn bgcolor">
+                        <a href="{$_W['styles']['dan3d_address_url']}"><i class="icon2 icon-1phone3"></i>{$_W['styles']['dan3d_address']}</a>
+        </div>
+{if empty($footer_off)}<div id="footer1">{if $_W['account']['siteinfo']['footer']}{php echo htmlspecialchars_decode($_W['account']['siteinfo']['footer'])}{else}&copy;{if empty($_W['account']['name'])}微易互联数字营销{else}{$_W['account']['name']}{/if}&nbsp;&nbsp;{/if}{$_W['setting']['copyright']['statcode']}</div>{/if}
+    </div>
+</figure>
+
+<figure class="slide fan2">
+
+<div class="qiehuan qiehuan_2">
+    <div class="h_left" /></div>
+
+     <div class="h_datu" ><a  href="{$_W['styles']['dan3d_2pic_url']}"><img src="{$_W['styles']['dan3d_2pic']}" /></a></div>
+
+      <div class="h_right" /></div>
+
+            <div class="nofloat"></div>
+    </div>
+
+
+    <div class="w70 w70_2">
+      <ul>
+      {data func="site_navs" section="2" item="nav"}
+<li><a href="{$nav['url']}"><strong>{$nav['name']}</strong><i></i></a></li>
+{/data}
+      </ul>
+
+        <div class="box-btn bgcolor_2">
+                         <a href="tel:{$_W['styles']['dan3d_tel']}"><i class="icon2 icon-1phone"></i>{$_W['styles']['dan3d_tel']}</a>
+         </div>
+
+        <div class="box-btn bgcolor_2">
+                         <a href="{$_W['styles']['dan3d_address_url']}"><i class="icon2 icon-1phone3"></i>{$_W['styles']['dan3d_address']}</a>
+        </div>
+{if empty($footer_off)}<div id="footer1">{if $_W['account']['siteinfo']['footer']}{php echo htmlspecialchars_decode($_W['account']['siteinfo']['footer'])}{else}&copy;{if empty($_W['account']['name'])}微易互联数字营销{else}{$_W['account']['name']}{/if}&nbsp;&nbsp;{/if}{$_W['setting']['copyright']['statcode']}</div>{/if}
+    </div>
+</figure>
+
+
+</div>
+</div>
+
+</section>
+</div>
+
+<script src="../app/themes/yihudong_3D/a/1.0.js"></script>
+<script src="../app/themes/yihudong_3D/a/mod.base.js"></script>
+
+<script type="text/javascript" src="../app/themes/yihudong_3D/a/jquery_1_7_2.js"></script>
+<script type="text/javascript" src="../app/themes/yihudong_3D/a/box-slider-all.js"></script> 
+<script type="text/javascript">
+$(function (){
+var $box = $('#box')
+, $indicators = $('.goto-slide')
+, $effects = $('.effect')
+, $timeIndicator = $('#time-indicator')
+, slideInterval = 10000;
+
+var switchIndicator = function ($c, $n, currIndex, nextIndex) {
+$timeIndicator.stop().css('width', 0);
+$indicators.removeClass('current').eq(nextIndex).addClass('current');
+};
+
+var startTimeIndicator = function () {
+$timeIndicator.animate({width: '360px'}, slideInterval);
+};
+
+// initialize the plugin with the desired settings
+$box.boxSlider({
+speed: 1000
+, autoScroll: true
+, timeout: slideInterval
+, next: '#next'
+, prev: '#prev'
+, pause: '#pause'
+, effect: 'scrollHorz3d'
+, blindCount: 15
+, onbefore: switchIndicator
+, onafter: startTimeIndicator
+});
+
+startTimeIndicator();
+
+// pagination isn't built in simply because it's easy to
+// roll your own with the plugin API methods
+$('#controls').current('click', '.current', function (ev) {
+$box.boxSlider('showSlide', $(this).data('slideindex'));
+ev.preventDefault();
+});
+
+$('#effect-list').current('click', '.effect', function (ev) {
+var $effect = $(this);
+
+$box.boxSlider('option', 'effect', $effect.data('fx'));
+$effects.removeClass('current');
+$effect.addClass('current');
+
+switchIndicator(null, null, 0, 0);
+ev.preventDefault();
+});
+
+});
+</script>
+
+{template 'common/footer'}

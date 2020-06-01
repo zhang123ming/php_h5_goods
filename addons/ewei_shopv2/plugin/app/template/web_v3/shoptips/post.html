@@ -1,0 +1,112 @@
+{template '_header'}
+
+<link href="../addons/ewei_shopv2/plugin/app/static/css/web.css?v=201609291000" rel="stylesheet" type="text/css"/>
+<link href="../addons/ewei_shopv2/plugin/app/static/css/startadv.css?v=201711181700" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+
+<div class="page-header">当前位置：<span class="text-primary">{if !empty($id)}编辑{else}新建{/if}购物公告</span></div>
+
+<div class="page-content">
+<form {ife 'goods' $item}action="" method="post"{/if} class="form-horizontal form-validate" enctype="multipart/form-data">
+    <input type="hidden" id="docopy" name="docopy" value="{$_GPC['copy']}" />
+
+    <div class="tabs-container tab-goods">
+        <div class="tabs-left">
+            <div class="region-goods-details row">
+                <div class="region-goods-right col-sm-10">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">排序</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" name="displayorder" id="displayorder" class="form-control" value="{$shoptips['displayorder']}" />
+                            <span class='help-block'>数字越大，排名越靠前,如果为空，默认排序方式为创建时间</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label must">标题</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" name="title" id="title" class="form-control" value="{$shoptips['title']}" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label must">副标题</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" name="rtitle" class="form-control" value="{$shoptips['rtitle']}" />
+                            <span class='help-block'>当显示在商品详情页时，必须填写</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">图标</label>
+                        <div class="col-sm-9 col-xs-12">
+                            {php echo tpl_form_field_image2('thumb', $shoptips['thumb'])}
+                            <span class="help-block">建议尺寸: 100*100，或正方型图片 </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">内容</label>
+                        <div class="col-sm-9 subtitle">
+                            <textarea id="" name="content" id="content" rows="5"  class="form-control" maxlength="200" data-rule-maxlength="200">{$shoptips['content']}</textarea>
+                            <div class="help-block">内容的长度请控制在200字以内</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">显示位置</label>
+                        <div class="col-sm-9 col-xs-12" style="margin-left:25px;">
+
+                            <label class="radio-inline"><input style="border-radius:50%;" class="showtype" type="radio" name="showtype" value="1" {if !empty($showtype)}{if in_array('1',$showtype)}checked="checked"{/if}{/if}  /> 商城首页</label>
+
+                            <label class="radio-inline"><input style="border-radius:50%;" class="showtype" type="radio" name="showtype" value="2" {if !empty($showtype)}{if in_array('2',$showtype)}checked="checked"{/if}{/if}  /> 商品详情页</label>
+
+                            <label class="radio-inline"><input style="border-radius:50%;" class="showtype" type="radio" name="showtype" value="3" {if !empty($showtype)}{if in_array('3',$showtype)}checked="checked"{/if}{/if}  /> 下单页面</label>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">是否显示</label>
+                        <div class="col-sm-9 col-xs-12" style="margin-left:25px;">
+                            <label class="radio-inline"><input type="radio" name="status" value="1" {if $shoptips['status']==1}checked="checked"{/if} /> 是</label>
+                            <label class="radio-inline"><input type="radio" name="status" value="0" {if $shoptips['status']==0}checked="checked"{/if} /> 否</label>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">是否推荐</label>
+                        <div class="col-sm-9 col-xs-12" style="margin-left:25px;">
+                            <label class="radio-inline"><input type="radio" name="istop" value="1" {if $shoptips['istop']==1}checked="checked"{/if} /> 是</label>
+                            <label class="radio-inline"><input type="radio" name="istop" value="0" {if $shoptips['istop']==0}checked="checked"{/if} /> 否</label>
+
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+    {ife 'goods' $item}
+    <div class="form-group">
+        <label class="col-sm-2 control-label"></label>
+        <div class="col-sm-9 subtitle">
+            <input type="submit" value="提交" class="btn btn-primary"/>
+            <a class="btn btn-default" href="{php echo webUrl('app/shoptips')}">返回列表</a>
+        </div>
+    </div>
+    {/if}
+</form>
+    
+</div>
+<!-- <script type="text/javascript">
+    $('.showtype').click(function(){
+        var types = '';
+        $.each($('input:checkbox'),function(){
+            if(this.checked){
+                if(types){
+                    types = types+','+$(this).val();
+                    
+                } else {
+                    types = $(this).val();
+                }
+            }
+        })
+        $('#showtype').val(types);
+    });
+</script> -->
+{template '_footer'}
+<!--913702023503242914-->

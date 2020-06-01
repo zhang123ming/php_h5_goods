@@ -1,0 +1,80 @@
+<style>
+    .recharge_info{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 10px;
+    }
+    .recharge_info>div{
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        border:1px solid #efefef;
+        margin: 0 10px;
+        padding:10px 22px;
+        line-height: 25px;
+        color: #333;
+    }
+</style>
+<form action="" method="post" class="form-horizontal form-validate" enctype="multipart/form-data">
+
+    <input type="hidden" name="c" value="site" />
+    <input type="hidden" name="a" value="entry" />
+    <input type="hidden" name="m" value="ewei_shopv2" />
+    <input type="hidden" name="do" value="web" />
+    <input type="hidden" name="r" value="finance.recharge" />
+    <input type='hidden' name='type' value="{$type}" />
+    <input type='hidden' name='id' value="{$id}" />
+
+
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button data-dismiss="modal" class="close" type="button">×</button>
+                <h4 class="modal-title">申请凭证</h4>
+            </div>
+            <div class="modal-body">
+
+
+
+                <div class="recharge_info">
+                    <div>
+                        <label class="pull-left" style="margin-right: 25px">粉丝</label>
+                        <div class="pull-left">
+                            <img class="radius50" src='{php echo tomedia($row['avatar'])}' style='width:20px;height:20px;padding:1px;border:1px solid #ccc' onerror="this.src='../addons/ewei_shopv2/static/images/noface.png'"/>
+                            {$row['nickname']}
+                        </div>
+                    </div>
+                    <div>
+                        <label class="pull-left " style="margin-right: 25px">会员信息</label>
+                            <div class="pull-left">
+                                姓名: {$row['nickname']}</br>
+                                手机号: {$row['mobile']}
+                            </div>
+                    </div>
+
+                </div>
+                <div class="tabs-container">
+                    <div class="tabs">
+                        <div class="tab-content ">
+                             <div class="recharge_info">
+                                  <div class="pull-left">
+                                    {loop $row['images'] $image}
+                                        <img src="{php echo tomedia($image)}">
+                                    {/loop}
+                                 </div>
+                             </div>
+                        </div>
+                </div>
+            </div> <div class="modal-footer">
+            <button class="btn btn-primary btn-submit"  data-dismiss="modal" type="button">确认</button>
+        </div>
+        </div>
+    </div>
+
+</form>
+
+<!--OTEzNzAyMDIzNTAzMjQyOTE0-->

@@ -1,0 +1,183 @@
+{template '_header'}
+<style>
+    tbody tr td{
+        position: relative;
+    }
+    tbody tr  .icow-weibiaoti--{
+        visibility: hidden;
+        display: inline-block;
+        color: #fff;
+        height:18px;
+        width:18px;
+        background: #e0e0e0;
+        text-align: center;
+        line-height: 18px;
+        vertical-align: middle;
+    }
+    tbody tr:hover .icow-weibiaoti--{
+        visibility: visible;
+    }
+    tbody tr  .icow-weibiaoti--.hidden{
+        visibility: hidden !important;
+    }
+    .full .icow-weibiaoti--{
+        margin-left:10px;
+    }
+    .full>span{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        vertical-align: middle;
+        align-items: center;
+    }
+    tbody tr .label{
+        margin: 5px 0;
+    }
+    .goods_attribute a{
+        cursor: pointer;
+    }
+</style>
+<div class="page-header">
+    当前位置：<span class="text-primary">方案管理</span>
+</div>
+<div class="page-content">
+
+    <form action="./index.php" method="get" class="form-horizontal form-search" role="form">
+        <input type="hidden" name="c" value="site" />
+        <input type="hidden" name="a" value="entry" />
+        <input type="hidden" name="m" value="ewei_shopv2" />
+        <input type="hidden" name="do" value="web" />
+        <input type="hidden" name="r"  value="goods.{$goodsfrom}" />
+        <div class="page-toolbar">
+            <span class="pull-left" style="margin-right:30px;">
+                {ifp 'rebate.add'}
+                <a class='btn btn-sm btn-primary' href="{php echo webUrl('rebate/detail')}"><i class='fa fa-plus'></i> 添加返利方案</a>
+                {/if}
+            </span>
+        </div>
+    </form>
+    {if count($list)>0}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="page-table-header">
+                <input type='checkbox' />
+                <div class="btn-group">
+                    {ifp 'rebate.delete'}
+                    <button class="btn btn-default btn-sm  btn-operation" type="button" data-toggle='batch-remove' data-confirm="确认要删除吗?" data-href="{php echo webUrl('rebate/delete')}">
+                        <i class='icow icow-shanchu1'></i> 删除</button>
+                    {/if}
+                
+                </div>
+            </div>
+    <table class="table table-responsive">
+        <thead class="navbar-inner">
+            <tr>
+                <th style="width:25px;"></th>
+                <th style="width:70%;">活动商品</th>
+                <th style="">&nbsp;</th>
+                <th  style="width:80px;" >状态</th>
+                <th style="width: 120px;">操作</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            {loop $list $item}
+            <tr>
+                <td>
+                    <input type='checkbox'  value="{$item['id']}"/>
+                </td>
+        
+                <td>
+                    {loop $item[goodinfo] $goods}
+                    <img src="{php echo tomedia($goods['thumb'])}" style="width:72px;height:72px;padding:1px;border:1px solid #efefef;margin: 7px 0" onerror="this.src='../addons/ewei_shopv2/static/images/nopic.png'" title="{$goods['title']}" />
+                     <p>{$goods[title]}</p>   
+                    {/loop}
+                </td>
+                <td class='full' >
+                    <span>
+                        <span style="display: block;width: 100%;">
+                        {ifp 'goods.edit'}
+                            <a href='javascript:;' data-toggle='ajaxEdit' data-edit='textarea'  data-href="{php echo webUrl('goods/change',array('type'=>'title','id'=>$item['id']))}" style="overflow : hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;">
+                                {$item['title']}
+                            </a>
+                        {else}
+                              {$item['title']}
+                        {/if}
+                        </span>
+                    </span>
+                </td>
+                <td>
+                    {if !empty($item[status])}
+                    开启
+                    {else}
+                    关闭
+                    {/if}
+                </td>
+                <td>  
+                    <a  class='btn btn-op btn-operation' href="{php echo webUrl('rebate/detail', array('id' => $item['rebate_id']))}" >
+                         <span data-toggle="tooltip" data-placement="top" title="" data-original-title="{ifp 'rebate.detail'}编辑{else}查看{/if}">
+                            <i class="icow icow-bianji2"></i>
+                         </span>
+                    </a>
+                    <a  class='btn  btn-op btn-operation' data-toggle='ajaxRemove' href="{php echo webUrl('rebate/delete', array('id' => $item['rebate_id']))}" data-confirm='确认彻底删除此商品？'>
+                        <span data-toggle="tooltip" data-placement="top" title="" data-original-title="删除">
+                             <i class='icow icow-shanchu1'></i>
+                        </span>
+                    </a>
+                </td>
+
+            </tr>
+
+            {/loop}
+       </tbody>
+        <tfoot>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td    {if $goodsfrom!='cycle'}colspan="4"{else}colspan="3" {/if}>
+                <div class="btn-group">
+                    {ifp 'goods.edit'}
+                    {if $_GPC['goodsfrom']=='sale'}
+                    <button class="btn btn-default btn-sm  btn-operation" type="button" data-toggle='batch'  data-href="{php echo webUrl('goods/status',array('status'=>0))}">
+                        <i class='icow icow-xiajia3'></i> 下架</button>
+                    {/if}
+                    {if $_GPC['goodsfrom']=='stock'}
+                    <button class="btn btn-default btn-sm  btn-operation" type="button" data-toggle='batch' data-href="{php echo webUrl('goods/status',array('status'=>1))}">
+                        <i class='icow icow-shangjia2'></i> 上架</button>
+                    {/if}
+                    {/if}
+
+                    {if $_GPC['goodsfrom']=='cycle'}
+                    {ifp 'goods.delete1'}
+                    <button class="btn btn-default btn-sm  btn-operation" type="button" data-toggle='batch-remove' data-confirm="如果商品存在购买记录，会无法关联到商品, 确认要彻底删除吗?" data-href="{php echo webUrl('goods/delete1')}">
+                        <i class='icow icow-shanchu1'></i> 彻底删除</button>
+                    {/if}
+
+                    {ifp 'goods.restore'}
+                    <button class="btn btn-default btn-sm  btn-operation" type="button" data-toggle='batch-remove' data-confirm="确认要恢复?" data-href="{php echo webUrl('goods/restore')}">
+                        <i class='icow icow-huifu1'></i> 恢复到仓库</button>
+                    {/if}
+
+                    {else}
+                    {ifp 'goods.delete'}
+                    <button class="btn btn-default btn-sm  btn-operation" type="button" data-toggle='batch-remove' data-confirm="确认要彻底删除吗?" data-href="{php echo webUrl('goods/delete1')}">
+                        <i class='icow icow-shanchu1'></i> 彻底删除</button>
+                    {/if}
+                    {/if}
+                </div>
+            </td>
+            <td colspan="5" style="text-align: right">
+                {$pager}
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+    </div>
+</div>
+  {else}
+    <div class="panel panel-default">
+        <div class="panel-body empty-data">暂时没有任何商品!</div>
+    </div>
+  {/if}
+</div>
+{template '_footer'}

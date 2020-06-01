@@ -1,0 +1,129 @@
+{template 'common/header'}
+{php $row = $detail;}
+<link href="../app/themes/yihudong_3D/a/detail.css" rel="stylesheet" type="text/css">
+    <script>
+window.onload = function ()
+{
+var oWin = document.getElementById("win");
+var oLay = document.getElementById("overlay");	
+var oBtn = document.getElementById("popmenu");
+var oClose = document.getElementById("close");
+oBtn.onclick = function ()
+{
+oLay.style.display = "block";
+oWin.style.display = "block"	
+};
+oLay.onclick = function ()
+{
+oLay.style.display = "none";
+oWin.style.display = "none"	
+}
+};
+
+</script>
+
+
+<div id="news" >
+
+<div id="mcover" onclick="document.getElementById(&#39;mcover&#39;).style.display=&#39;&#39;;"><img src="../app/themes/yihudong_3D/a/guide.png"></div>	
+{template 'site/nav_top'}
+
+<style>
+body {background: #F5F5F5;}
+.page-bizinfo .header #activity-name {
+font-size: 18px;border-left: 4px solid #b1130a;line-height: 18px;padding-left: 10px;
+}
+.tabPanel ul{height:40px;}
+.tabPanel ul li{
+	float:left;font-size:11px;height:40px;line-height:40px;width:25%;text-align:center;cursor:pointer;
+	background:#a3a3a3;
+	background:-moz-linear-gradient(top, #a3a3a3, #a3a3a3);
+	background:-webkit-gradient(linear, left top, left bottom, from(#a3a3a3), to(#a3a3a3));
+	color: #fff;position: relative;
+}
+.tabPanel .hit{
+	cursor:pointer;color:#fff;
+	background:#b1130a;
+	background:-webkit-gradient(linear, left top, left bottom, from(#b1130a), to(#b1130a));
+	background:-moz-linear-gradient(top, #b1130a, #b1130a);
+}
+.tabPanel .hit:before {
+content: "";
+position: absolute;
+right: 40%;
+top: 40px;
+width: 0;
+height: 0;
+border: 10px solid;
+border-color: #b1130a transparent transparent transparent;
+}
+.pane{bborder-top:0;min-height:100px;display:none;}
+.pane p{padding:0px 15px 0 10px;}
+.pane h4{padding:0px 15px 0 10px;font-size:14px;font-weight:bold;}
+#mess_share {margin: 15px 10px;}
+div#content p {line-height: 1.4em; }
+.text a{color: #000;text-decoration:none; border-bottom:1px dashed #AFAFAF;}
+{$_W['styles']['css']}
+</style>
+
+
+
+
+
+
+
+
+<div id="overlay" style="display: none;"></div>
+
+<div class="Listpage">
+
+
+<div class="page-bizinfo">
+<div class="header"><h1 id="activity-name">{$detail['title']}</h1><span id="post-date">{php echo date("Y-m-d", $detail['createtime']);}</span></div>
+
+
+
+<div class="showpic">
+        <img onerror="this.parentNode.removeChild(this)" src="{$row['thumb']}">
+    </div>
+
+<div class="text" id="content">
+{$detail['content']}
+
+
+</div>
+
+
+
+<div class="page-content">
+
+</div>
+
+</div>
+
+
+
+<div id="mess_share">
+<div id="share_1">
+<button class="button2" onclick="document.getElementById(&#39;mcover&#39;).style.display=&#39;block&#39;;"><img src="../app/themes/yihudong_3D/a/icon_msg.png">&nbsp;发送给朋友</button>
+</div>
+<div id="share_2">
+<button class="button2" onclick="document.getElementById(&#39;mcover&#39;).style.display=&#39;block&#39;;"><img src="../app/themes/yihudong_3D/a/icon_timeline.png">&nbsp;分享到朋友圈</button>
+</div>
+<div class="clr"></div>
+</div>					
+		
+    
+<a class="footertop" href="#" target="_self"><span class="top1">返回顶部</span></a>
+
+
+    
+ 
+<div style="display:none"> </div>
+</div>
+ 
+
+</div>
+ 
+
+{template 'common/footer'}

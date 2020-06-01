@@ -1,0 +1,60 @@
+{template 'common/header'}
+<link href="{$_W['siteroot']}app/themes/xx_j/css/xui.css" rel="stylesheet">
+<link href="{$_W['siteroot']}app/themes/xx_j/css/swiper.min.css" rel="stylesheet" >
+<link href="{$_W['siteroot']}app/themes/xx_j/css/home.css" rel="stylesheet">
+<script src="{$_W['siteroot']}app/themes/xx_j/css/swiper.jquery.min.js"></script>
+<style>
+html,body,.container-fill{height:100%;}
+body{
+	background-image:url('{$_W['styles']['indexbgimg']}');
+	background-size:100% 100%;
+	background-color:{if empty($_W['styles']['indexbgcolor'])}#302E2F{else}{$_W['styles']['indexbgcolor']}{/if};
+	{$_W['styles']['indexbgextra']}
+	}
+{$_W['styles']['css']}
+</style>
+<div class="x-top"></div>
+<div class="swiper-container">
+	<div class="swiper-wrapper">
+		{if !empty($navs)}
+		{loop $navs $index $nav}
+		<div class="swiper-slide x-item">
+			<a class="x-cell" href="{$nav['url']}" >
+				<div class="x-cell-pic">
+					{if !empty($nav['icon'])}
+					<img src="{$_W['attachurl']}{$nav['icon']}" class="x-pic">
+					{else}
+					<i class="x-icon {$nav['css']['icon']['icon']}" style="background-color:{$nav['css']['icon']['color']};"></i>
+					{/if}
+				</div>
+				<div class="x-cell-txt">
+					<div class="x-tit">
+						{$nav['name']}
+					</div>
+					<div class="x-des">
+						{$nav['description']}
+					</div>
+				</div>
+			</a>
+		</div>
+		{/loop}
+		{/if}
+	</div>
+</div>
+<script>
+	var swiper = new Swiper('.swiper-container', {
+		pagination: '.swiper-pagination',
+		effect: 'coverflow',
+		grabCursor: true,
+		centeredSlides: true,
+		slidesPerView: 'auto',
+		coverflow: {
+			rotate: 50,
+			stretch: 0,
+			depth: 100,
+			modifier: 1,
+			slideShadows : true
+		}
+	});
+</script>
+{template 'common/footer'}

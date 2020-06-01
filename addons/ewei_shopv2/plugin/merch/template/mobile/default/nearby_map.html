@@ -1,0 +1,710 @@
+{template '_header'}
+<!-- <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>  -->
+<style>
+.fui-list-group{
+    margin-top: 0;
+    display: none;
+}
+.fui-tab.fui-tab-danger a.active {
+
+color: #ff5555;
+border-color: #ff5555;
+border-bottom: 2px solid#ff5555;
+z-index: 100;
+}
+.external{
+    font-size: 18px;
+}
+html,
+body{
+width:100%;
+height:100%;
+}
+ul,
+li{
+padding:0;
+margin:0;
+list-style:none;
+}
+#outer-box{
+height:100%;
+padding-right:300px;
+}
+#container{
+height:100%;
+width:100%;
+}
+#panel{
+position:absolute;
+top:0;
+bottom:0;
+right:0;
+height:100%;
+overflow:auto;
+width:300px;
+z-index:999;
+border-left:1px solid #eaeaea;
+background:#fff;
+}
+#btnList{
+position:absolute;
+right:300px;
+top:0;
+padding:0;
+margin:0;
+z-index:999;
+}
+#btnList li{
+padding:5px;
+}
+#btnList input{
+padding:3px 10px;
+min-width:120px;
+}
+li.poibox{
+border-bottom:1px solid #eaeaea;
+border-left:2px solid rgba(0,0,0,0);
+padding:10px 3px;
+cursor:pointer;
+}
+li.poibox.selected{
+border-left-color:#f00;
+background:#f6f6f6;
+}
+li.poibox:hover{
+background:#f6f6f6;
+}
+li.poibox:last-child{
+border-bottom:none;
+}
+h3.poi-title{
+margin:3px 0;
+font-size:13px;
+}
+.poibox .poi-info-left{
+padding-left:8px
+}
+.poi-addr{
+margin:7px 0 0;
+}
+.poibox .poi-imgbox{
+width:100px;
+height:74px;
+vertical-align:top;
+float:right;
+margin:0 8px;
+overflow:hidden
+}
+.poibox .poi-img{
+display:inline-block;
+width:100%;
+height:100%;
+background-size:cover;
+background-position:50% 50%;
+}
+.amap-simple-marker.my-marker .amap-simple-marker-label{
+font-size:12px;
+color:#eee;
+font-family:sans-serif;
+}
+.selected .amap-simple-marker.my-marker .amap-simple-marker-label{
+font-size:14px;
+color:orange;
+font-weight:700;
+}
+@-webkit-keyframes flash{
+from,
+50%,
+to{
+opacity:1;
+}
+25%,
+75%{
+opacity:0;
+}
+}
+@keyframes flash{
+from,
+50%,
+to{
+opacity:1;
+}
+25%,
+75%{
+opacity:0;
+}
+}
+.flash{
+-webkit-animation-name:flash;
+animation-name:flash;
+}
+.animated{
+-webkit-animation-duration:1s;
+animation-duration:1s;
+-webkit-animation-fill-mode:both;
+animation-fill-mode:both;
+}
+.scrollbar1::-webkit-scrollbar-track{
+-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);
+background-color:#fff;
+}
+.scrollbar1::-webkit-scrollbar{
+width:6px;
+background-color:#fff;
+}
+.scrollbar1::-webkit-scrollbar-thumb{
+background-color:#aaa;
+}
+.clear{
+clear:both;
+}
+.amap-ui-smp-ifwn-info-content{
+    display: none!important;
+
+}
+.amap-ui-smp-ifwn-def-tr-close{
+    display: none!important;
+
+}
+.amap-ui-smp-ifwn-info-title{
+    border-bottom: 0px solid #ccc!important;
+}
+.amap-simple-marker-label{
+    color:#fff!important;
+}
+.fui-tab {
+    -webkit-align-self: center;
+    align-self: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-lines: single;
+    -moz-box-lines: single;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    margin-top: 0.2rem;
+}
+.fui-tab a {
+    color: #666;
+    font-size:1rem;
+    width: 100%;
+    line-height: 2rem;
+    -ms-flex: 1;
+    text-align: center;
+    -moz-transition-duration: 300ms;
+    -webkit-transition-duration: 300ms;
+    transition-duration:300ms;
+    -webkit-transition-property: color;
+}
+.fui-tab.fui-tab-danger a.active {
+
+    color: #ff5555;
+    border-color: #ff5555;
+    border-bottom: 2px solid#ff5555;
+    z-index: 100;
+}
+.outer{
+    display: none;
+}
+.store-item .store-inner {
+    border-right: 1px solid #d9d9d9;
+}
+.store-item .fui-list-angle {
+    width: 3rem;
+    margin-right: 0;
+}
+.store-item .fui-list-angle i {
+    margin: 0 .5rem;
+    font-size: 1.3rem;
+}
+.icon-phone:before {
+    content: "\e60a";
+}
+.icon-location:before {
+    content: "\e609";
+}
+.icon {
+    font-family: "icon" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.fui-tab a {
+z-index: 100;
+}
+#outer{
+    display: none;
+}
+.xiabiao{
+    /*margin: 3px auto 0;*/
+    background: url(/addons/ewei_shopv2/static/images/xiabiao.png) no-repeat -5px -16px;
+    width: 18px;
+    height: 9px;
+    position: fixed;
+    top: -6px;
+    left: -1px;
+}
+.amap-marker-label {
+    background-color: #1afa29;
+    position: fixed;
+    color: #ffffff;
+    border-radius: 3px;
+    border: 0px solid #00f;
+}
+.amap-icon img{
+    display: none;
+}
+.amap-icon{
+    width: 33px;
+    background: url(/addons/ewei_shopv2/static/images/mapmy.png) no-repeat -6px 0px;
+}
+.amap-simple-marker-label p{
+    position: fixed;
+    top: -26px;
+    left: -11.5px;
+    background-color: #3daf36;
+    border-radius: 3px;
+    padding: 3px;
+    white-space: nowrap;
+    cursor: default;
+    font-size: 12px;
+    line-height: 14px;
+    color: #ffffff;
+    }
+.amap-simple-marker-icon{
+    background: url(/addons/ewei_shopv2/static/images/position.png) no-repeat -3px 0px !important;
+}
+.amap-info{
+    display: none;
+}
+  .amap-ui-control-theme-my-red .amap-ui-control-layer {
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+        background: red;
+    }
+    
+    .amap-ui-control-theme-my-red .amap-ui-control-layer-expanded {
+        color: #fff;
+        background: red;
+    }
+    
+    .amap-ui-control-theme-my-red .amap-ui-control-layer-toggle {
+        color: #fff;
+    }
+    .amap-ui-control-zoom{
+        position: fixed;
+        margin-top: -65%;
+        margin-left: -6%;
+    }
+    .amap-ui-control-layer{
+         background: #ccc !important;
+    }
+</style>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>商户地图</title>
+</head>
+<body>
+    <div id="tab" class="fui-tab fui-tab-danger">
+        <a data-tab="tab1"  class="external active" id="map">地图</a>
+        <a data-tab="tab2" class='external' id="list">列表</a>
+    </div>
+
+    <div id="outer-box" style="padding-right:0px;">
+        <div id="container" tabindex="0"></div>
+    </div>
+ 
+    <div id='outer' class="fui-page page-merch-list">
+        <div class="fui-header">
+            <div class="title"></div>
+            <div class="fui-header-right"></div>
+        </div>
+        <div class="fui-content" style="bottom: 2.4rem">
+
+            <div class='fui-content-inner'>
+                <div class='content-empty' style='display:none;'>
+                    <i class='icon icon-lights'></i><br/>暂时没有商家<br/><a href="{php echo mobileUrl()}" class='btn btn-default-o external'>到处逛逛</a>
+                </div>
+                <div class='fui-list-group container'></div>
+                <div class='infinite-loading'><span class='fui-preloader'></span><span class='text'> 正在加载...</span></div>
+            </div>
+        </div>
+        <script id='tpl_merch_list_user' type='text/html'>
+            <%each list as value%>
+                <div  class="fui-list store-item"
+                      data-lng="<%value.lng%>"
+                      data-lat="<%value.lat%>">
+
+
+                    <div class="fui-list-media">
+                        <div class="fui-list-media">
+                            <a href="<%value.merch_url%>">
+                            <img src="<%value.logo%>" class="round">
+                            </a>
+                         </div>
+                    </div>
+                    <div class="fui-list-inner store-inner">
+                        <a href="<%value.merch_url%>">
+                        <div class="title"> <span class='storename'><%value.merchname%></span></div>
+                        <%if value.address!=''%>
+                        <div class="text">
+                            地址: <span class='realname'><%value.address%></span>
+                        </div>
+                        <%/if%>
+
+                         <%if value.tel!=''%>
+                        <div class="text">
+                            电话: <span class='address'><%value.tel%></span>
+                        </div>
+                        <%/if%>
+
+                        <div class="text location" style="color:green;">
+                            <%if value.distance<100000%>
+                            距离您:<%value.distance%>km
+                            <%else%>
+                            <%/if%>
+                        </div>
+                        </a>
+                    </div>
+
+
+                    <div class="fui-list-angle ">
+                        <%if value.tel!=''%>
+                        <a href="tel:<%value.tel%>" class='external '><i class=' icon icon-phone' style='color:green'></i></a>
+                        <%else%>
+                        <a href="tel:<%value.mobile%>" class='external '><i class=' icon icon-phone' style='color:green'></i></a>
+                        <%/if%>
+                        <a href="<%value.url%>" class='external' ><i class='icon icon-location' style='color:#f90'></i></a>
+                    </div>
+                </div>
+            <%/each%>
+
+            <div id="nearStore" style="display:none">
+                <div class='fui-list store-item' id='nearStoreHtml'></div>
+            </div>
+        </script>
+
+        <input type="hidden" id="refreshed" value="no"> 
+        <script type="text/javascript">
+            $(function(){
+                var e=$("#refreshed");
+                if(e.val()=="no") {
+                    e.val('yes');
+                }else{
+                    e.val('no');
+            　　　　 location.reload();
+                }
+            });
+        </script>
+        <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=ZQiFErjQB7inrGpx27M1GR5w3TxZ64k7&s=1"></script>
+        <script language="javascript">
+            require(['../addons/ewei_shopv2/plugin/merch/static/js/list.js'], function (modal) {
+                modal.init({cateid:'{$_GPC['cateid']}',keyword:'{$_GPC['keyword']}'});
+            })
+        </script>
+
+    </div>
+    {php $this->footerMenus()}
+    <script type="text/javascript" src='https://webapi.amap.com/maps?v=1.4.1&key=1fb308f0707e5ff11db5997d42660396&plugin=AMap.Driving'></script>
+    <!-- UI组件库 1.0 -->
+    <script src="//webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+    <script type="text/javascript" src="https://3gimg.qq.com/lightmap/components/geolocation/geolocation.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var u = navigator.userAgent, app = navigator.appVersion;
+        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //g
+        var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+        if (isAndroid) {
+            //由为安卓不支持H5定位使用百度定位
+            var geolocation = new BMap.Geolocation();
+            geolocation.getCurrentPosition(function (r) {
+                var _this = this;
+                if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+                    onSuccess(r.point)
+                }
+            })
+        }
+        if (isIOS) {
+            //ios系统使用h5加腾讯地图高精确定位
+            window.onload=getLocation();
+            function getLocation()
+            {
+              var options={
+                      enableHighAccuracy:true, //boolean 是否要求高精度的地理信息，默认为false
+                      maximumAge:1000 //应用程序的缓存时间
+                  }
+         
+              if(navigator.geolocation){
+                  //浏览器支持geolocation
+                  //navigator.geolocation.getCurrentPosition(onSuccess,onError,options);
+                var geolocation = new qq.maps.Geolocation("MHGBZ-N5LWK-A6GJO-AVCZP-OXDEO-EBFEW", "myapp");
+                geolocation.getLocation(onSuccess,onError,options);
+                  
+              }else{
+                  //浏览器不支持geolocation
+                  console.log("浏览器不支持!");
+              }
+            }
+        }
+    });    
+    function onSuccess(position){
+               //返回用户位置
+               //经度
+               console.log(JSON.stringify(position, null, 4),position);
+              var longitude =position.lng;
+               //纬度
+               var latitude = position.lat;
+               //创建地图
+               var position = new AMap.LngLat(longitude, latitude);
+                var map = new AMap.Map('container', {
+                    resizeEnable: true,
+                    center:position,
+                    zoom: 9
+                });
+                console.log(position)
+                 var marker = new AMap.Marker({
+                    position:position//位置
+                })
+                map.add(marker);//添加到地图
+
+        AMapUI.loadUI(['misc/MarkerList', 'overlay/SimpleMarker'],
+        function(MarkerList, SimpleMarker) {
+            //即jQuery/Zepto
+            var $ = MarkerList.utils.$;
+           
+            var defaultIconStyle = 'red', //默认的图标样式
+                hoverIconStyle = 'green' //鼠标hover时的样式
+                // selectedIconStyle = 'purple' //选中时的图标样式
+            ;
+
+            var markerList = new MarkerList({
+                map: map,
+                //从数据中读取位置, 返回lngLat
+                getPosition: function(item) {
+                    return [item.lng, item.lat];
+
+                },
+                //数据ID，如果不提供，默认使用数组索引，即index
+                // getDataId: function(item, index) {
+                //     return item.id;
+                // },
+                    getMarker: function(data, context, recycledMarker) {
+                    // var label = String.fromCharCode('A'.charCodeAt(0) + context.index);
+
+                    // if (recycledMarker) {
+                    //     recycledMarker.setIconLabel(label);
+                    //     return;
+                    // }
+                    return new SimpleMarker({
+                        iconLabel:  '<a ontouchstart="window.location.href=\'./index.php?i='+data.uniacid+'&c=entry&m=ewei_shopv2&do=mobile&r=merch.map&merchid='+data.id+'\'">'+'<p>'+data.merchname+'</p>'+'<div class="xiabiao">'+'</div>'+'</a>',
+                        containerClassNames: 'my-marker',
+                        iconStyle: defaultIconStyle,                                                                       
+                    });
+                },
+               
+                //列表节点上监听的事件
+                //listElementEvents: ['click', 'mouseenter', 'mouseleave'],
+                //marker上监听的事件
+               //markerEvents: ['click', 'mouseover', 'mouseout'],
+                //makeSelectedEvents:false,
+                //selectedClassNames: 'selected',
+                //autoSetFitView: true
+            });
+
+
+            // window.markerList = markerList;
+
+            // markerList.on('selectedChanged', function(event, info) {
+
+            //     checkBtnStats();
+
+            //     if (info.selected) {
+
+            //         //console.log(info);
+
+            //         if (info.selected.marker) {
+            //             //更新为选中样式(点击图标换颜色)
+            //             //info.selected.marker.setIconStyle(selectedIconStyle);
+            //         }
+
+            //         //选中并非由列表节点上的事件触发，将关联的列表节点移动到视野内
+            //         if (!info.sourceEventInfo.isListElementEvent) {
+
+            //             // if (info.selected.listElement) {
+            //             //     scrollListElementIntoView($(info.selected.listElement));
+            //             // }
+            //         }
+            //     }
+
+            //     if (info.unSelected && info.unSelected.marker) {
+            //         //更新为默认样式
+            //         info.unSelected.marker.setIconStyle(defaultIconStyle);
+            //     }
+            // });
+
+            // markerList.on('listElementMouseenter markerMouseover', function(event, record) {
+
+            //     if (record && record.marker) {
+
+            //         forcusMarker(record.marker);
+
+            //         //this.openInfoWindowOnRecord(record);
+
+            //         //非选中的id
+            //         if (!this.isSelectedDataId(record.id)) {
+            //             //设置为hover样式
+            //             record.marker.setIconStyle(hoverIconStyle);
+            //             //this.closeInfoWindow();
+            //         }
+            //     }
+            // });
+
+            // markerList.on('listElementMouseleave markerMouseout', function(event, record) {
+
+            //     if (record && record.marker) {
+
+            //         if (!this.isSelectedDataId(record.id)) {
+            //             //恢复默认样式
+            //             record.marker.setIconStyle(defaultIconStyle);
+            //         }
+            //     }
+            // });
+
+            //数据输出完成
+            // markerList.on('renderComplete', function(event, records) {
+
+            //     checkBtnStats();
+            // });
+
+          
+
+            //加载数据
+            function loadData(jsonData) {
+                    markerList.render(jsonData);  
+            }
+
+            // var $btns = $('#btnList input[data-path]');
+
+            /**
+             * 检测各个button的状态
+             */
+            // function checkBtnStats() {
+            //     $('#btnList input[data-enable]').each(function() {
+
+            //         var $input = $(this),
+            //             codeEval = $input.attr('data-enable');
+
+            //         $input.prop({
+            //             disabled: !eval(codeEval)
+            //         });
+            //     });
+            // }
+
+           
+            var jsonData={php echo json_encode($store)};
+            loadData(jsonData);
+
+            // function forcusMarker(marker) {
+            //     marker.setTop(true);
+
+            //     //不在地图视野内
+            //     if (!(map.getBounds().contains(marker.getPosition()))) {
+
+            //         //移动到中心
+            //         map.setCenter(marker.getPosition());
+            //     }
+            // }
+
+            // function isElementInViewport(el) {
+            //     var rect = el.getBoundingClientRect();
+
+            //     return (
+            //         rect.top >= 0 &&
+            //         rect.left >= 0 &&
+            //         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
+            //         rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
+            //     );
+            // }
+
+            // function scrollListElementIntoView($listEle) {
+
+            //     if (!isElementInViewport($listEle.get(0))) {
+            //         $('#panel').scrollTop($listEle.offset().top - $listEle.parent().offset().top);
+            //     }
+
+            //     //闪动一下
+            //     $listEle
+            //         .one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
+            //             function(e) {
+            //                 $(this).removeClass('flash animated');
+            //             }).addClass('flash animated');
+            // }
+        });
+
+            AMapUI.loadUI(['control/BasicControl'], function(BasicControl) {
+
+                var layerCtrl = new BasicControl.LayerSwitcher({
+                    //my-red 见上方style
+                    theme: 'my-red',
+                    position: 'tr'
+                });
+
+                map.addControl(layerCtrl);
+
+                //动态加载css
+                AMapUI.loadCss('./zoom-green.css', function() {
+
+                    var zoomCtrl = new BasicControl.Zoom({
+                        //见zoom-green.css
+                        theme: 'my-green',
+                        position: 'br',
+                        showZoomNum: true
+                    });
+
+                    map.addControl(zoomCtrl);
+                });
+            });
+
+        }
+ 
+       //失败时
+       function onError(error){
+          switch(error.code){
+              case error.PERMISSION_DENIED:
+              alert("用户拒绝对获取地理位置的请求");
+              break;
+
+              case error.POSITION_UNAVAILABLE:
+              alert("位置信息是不可用的");
+              break;
+
+              case error.TIMEOUT:
+              alert("请求用户地理位置超时");
+              break;
+
+              case error.UNKNOWN_ERROR:
+               alert("未知错误");
+              break;
+         }
+
+       }
+
+    var btn = document.getElementById("map");
+    var list = document.getElementById("list");
+    var outer = document.getElementById("outer");
+    var box = document.getElementById("outer-box");
+        btn.onclick=function(){
+            box.style.display = "block";
+            btn.classList.add("active");
+            outer.style.display = "none";
+            list.classList.remove("active");
+        }
+        list.onclick=function(){
+            box.style.display = "none";
+            btn.classList.remove("active");
+            outer.style.display = "block";
+            list.classList.add("active");
+        }
+</script>
+{template '_footer'}

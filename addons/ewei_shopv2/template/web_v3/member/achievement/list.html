@@ -1,0 +1,190 @@
+{template '_header'}
+<style type='text/css'>
+    .trhead td {  background:#efefef;text-align: center}
+    .trbody td {  text-align: center; vertical-align:top;border-left:1px solid #f2f2f2;overflow: hidden; font-size:12px;}
+    .trorder { background:#f8f8f8;border:1px solid #f2f2f2;text-align:left;}
+    .ops { border-right:1px solid #f2f2f2; text-align: center;}
+    .ops a,.ops span{
+        margin: 3px 0;
+    }
+    .table-top .op:hover{
+        color: #000;
+    }
+    .tables{
+        border:1px solid #e5e5e5;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .tables:hover{
+        border:1px solid #b1d8f5;
+    }
+    .table-row,.table-header,.table-footer,.table-top{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        -webkit-justify-content: center;
+        -webkit-align-content: space-around;
+        align-content: space-around;
+    }
+    .tables  .table-row>div{
+        padding: 14px 0 !important;
+    }
+    .tables  .table-row.table-top>div{
+        padding: 11px 0;
+    }
+    .tables    .table-row .ops.list-inner{
+        border-right:none;
+    }
+    .tables .list-inner{
+       border-right: 1px solid #efefef;
+        vertical-align: middle;
+    }
+    .table-row .goods-des .title{
+        width:180px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .table-row .goods-des{
+        width:300px;
+        border-right: 1px solid #efefef;
+        vertical-align: middle;
+    }
+    .table-row .list-inner{
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        text-align: center;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+    .saler>div{
+        width:130px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .table-row .list-inner.ops,  .table-row .list-inner.paystyle{
+        -webkit-flex-direction: column;
+        flex-direction: column;
+       -webkit-justify-content: center;
+       justify-content: center;
+    }
+    .table-header .others{
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        text-align: center;
+    }
+    .table-footer{
+        border-top: 1px solid #efefef;
+    }
+    .table-footer>div, .table-top>div{
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        height:100%;
+    }
+</style>
+
+<div class="page-header">
+    当前位置：<span class="text-primary">订单管理</span>
+    <span>订单数:  <span class='text-danger'>{$total}</span> 订单金额:  <span class='text-danger'>{$totalmoney}</span> {if !empty($magent['nickname'])}订单推广人:  <span class='text-danger'>{$magent['nickname']}</span>{/if}</span>
+</div>
+<div class="page-content">
+	<ul class="nav nav-tabs">
+		<!-- <li><form action="" method="post" class="form-horizontal table-search" role="form"><input type="hidden" name="r" value="member.achievement.list.salesman" /><button class="btn btn-primary" type="submit">业务业绩</button></form></li>
+        <li><form action="" method="post" class="form-horizontal table-search" role="form"><input type="hidden" name="r" value="member.achievement.list.doctor" /><button class="btn btn-primary" type="submit"> 医生业绩</button></form></li> -->
+        <li onclick="javascript:window.location.href='{php echo webUrl('member/achievement/list', array('type' => salesman))}'"><button class="btn btn-primary">业务业绩</button></li>
+		<li onclick="javascript:window.location.href='{php echo webUrl('member/achievement/list', array('type' => doctor))}'"><input type="hidden" name="r" value="member.achievement.list.doctor" /><button class="btn btn-primary"> 医生业绩</button></li>
+	</ul>
+    <div class="tab-content ">				
+		<div class="page-content">
+		    <form action="" method="post" class="form-horizontal" >
+		        <input type="hidden" name="c" value="site" />
+		        <input type="hidden" name="a" value="entry" />
+		        <input type="hidden" name="m" value="ewei_shopv2" />
+		        <input type="hidden" name="do" value="web" />
+		        <input type="hidden" name="r"  value="member.achievement.list{$st}" />
+		        <div class="page-toolbar">
+		            <div class="col-sm-6 pull-right" style="width:100%">
+		                <div class="input-group">
+                            <span class="input-group-btn" style="margin-left:0px;">
+                                {php echo tpl_form_field_daterange('time', array('starttime'=>date('Y-m-d H:i', $starttime),'endtime'=>date('Y-m-d H:i', $endtime)),true);}
+                            </span>
+		                    <div class="input-group-select">
+		                        <select name='searchfield'  class='form-control'   style="width:120px;">
+		                            <option value='member' {if $_GPC['searchfield']=='member'}selected{/if}>会员</option>
+		                        </select>
+		                    </div>
+		                    <input type="text" class="form-control"  name="keyword" value="{$_GPC['keyword']}" placeholder="请输入会员相关信息"/>
+		                    <span class="input-group-btn">
+		                        <button class="btn btn-primary " type="submit"> 搜索</button>
+		                        {ifp 'member.achievement.list{$st}'}
+		                        <button type="submit" name="export" value="1" class="btn btn-success ">导出</button>
+		                        {/if}
+		                    </span>
+		                </div>
+
+		            </div>
+		        </div>
+		    </form>
+
+		    {if empty($member)}
+		    <div class="panel panel-default">
+		        <div class="panel-body empty-data">未查询到相关数据</div>
+		    </div>
+		    {else}
+		    <table class="table">
+		        <tr  style='background:#f8f8f8'>
+		            <td style='width:200px;text-align: center;'>会员</td>
+                    <td style='width:200px;text-align: center;'>业绩</td>
+                    <td style='width:200px;text-align: center;'>推广人数</td>
+		            <td style='width:200px;text-align: center;'>等级</td>
+		            <td style='width:400px;text-align: center;'>openid</td>
+		            <td style='width:200px;text-align: center;'>手机号</td>		            
+		        </tr>
+		        <tbody>
+
+		        {loop $member $row}
+		        <tr class="trbody" style="border: 1px solid #efefef;">
+		            <td style="text-align:center">
+						<img class="img-40" src="{php echo tomedia($row['avatar'])}" style='border-radius:50%;border:1px solid #efefef;' onerror="this.src='../addons/ewei_shopv2/static/images/noface.png'" /><span>{$row['nickname']}</span>
+		            </td>
+                    <td style='width:200px;text-align: center;'>{$row['direct_award']}</td>
+                    <td style='width:200px;text-align: center;'>{$row['member_total']}</td> 
+		            <td style='width:200px;text-align: center;'>{$row['levelname']}</td>
+		            <td style='width:400px;text-align: center;'>{$row['openid']}</td>
+		            <td style='width:200px;text-align: center;'>{$row['mobile']}</td>		                     
+		        </tr>
+		        {/loop}
+		        </tbody>
+		        <tfoot>
+		            <tr>
+		                <td colspan="7" style="text-align: right">
+		                    {$pager}
+		                </td>
+		            </tr>
+		        </tfoot>
+		    </table>
+		    {/if}
+		</div>			
+		
+	</div>
+</div>
+{template '_footer'}
+
+<!--efwww_com-->

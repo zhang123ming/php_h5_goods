@@ -1,0 +1,86 @@
+<div class="form-group">
+    <label class="col-sm-2 control-label must">证书名称</label>
+    <div class="col-sm-9 col-xs-12">
+        {ife 'poster' $item}
+        <input type="text" name="title" class="form-control" value="{$item['title']}" data-rule-required="true" />
+        {else}
+        <div class='form-control-static'>{$item['title']}</div>
+        {/if}
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="col-sm-2 control-label must">回复关键词</label>
+    <div class="col-sm-9 col-xs-12">
+        {ife 'poster' $item}
+        <input type="text" name="keyword2" class="form-control" value="{$item['keyword2']}" data-rule-required="true" />
+        <span class='help-block'>如果是商品海报 ，回复关键词是 关键词+商品ID</span>
+        {else}
+        <div class='form-control-static'>{$item['keyword']}</div>
+        {/if}
+    </div>
+</div>
+
+<div class="form-group" id="membergroup" {if $item['ismembergroup']==0}style="display:none;"{/if}>
+<label class="col-sm-2 control-label">指定会员分组</label>
+<div class="col-sm-9 col-xs-12">
+    {ife 'poster' $item}
+    <select name='membergroupid' class='form-control'>
+        <option value=''>无分组</option>
+        {loop $groups $group}
+        <option value='{$group['id']}' {if $item['membergroupid']==$group['id']}selected{/if}>{$group['groupname']}</option>
+        {/loop}
+    </select>
+    {else}
+    <div class='form-control-static'>
+        {if empty($member['groupid'])}
+        无分组
+        {else}
+        {php echo pdo_fetchcolumn('select groupname from '.tablename('ewei_shop_member_group').' where id=:id limit 1',array(':id'=>$member['groupid']))}
+        {/if}
+    </div>
+    {/if}
+</div>
+</div>
+
+<div class="form-group">
+    <label class="col-sm-2 control-label">是否默认</label>
+    <div class="col-sm-9 col-xs-12">
+        {ife 'poster' $item}
+        <label class="radio-inline">
+            <input type="radio" name="isdefault" value="0" {if empty($item['isdefault'])}checked{/if} /> 否
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="isdefault" value="1" {if $item['isdefault']==1}checked{/if} /> 是
+        </label>
+        <span class='help-block'>是否是证书类型的默认设置，一种证书只能一个默认设置</span>
+        {else}
+        <div class='form-control-static'>{if $item['isdefault']==1}是{else}否{/if}</div>
+        {/if}
+    </div> 
+</div>
+<div class="form-group">
+    <label class="col-sm-2 control-label">生成等待文字</label>
+    <div class="col-sm-9 col-xs-12">
+        {ife 'poster' $item}
+
+        <textarea name="waittext" class="form-control"  >{$item['waittext']}</textarea>
+        <span class="help-block">例如：您的专属证书正在拼命生成中，请等待片刻...</span>
+        {else}
+        <div class='form-control-static'>{if empty($item['waittext'])}未填写{else}{$item['waittext']}{/if}</div>
+        {/if}
+
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("input[name='ismembergroup']").off('click').on('click',function () {
+            if($(this).val()==1){
+                $("#membergroup").show();
+            }else{
+                $("#membergroup").hide();
+            }
+        })
+    })
+</script>
+

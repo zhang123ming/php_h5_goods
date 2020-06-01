@@ -1,0 +1,73 @@
+{template '_header'}
+<link rel="stylesheet" type="text/css" href="../addons/ewei_shopv2/plugin/task/static/css/task.css?v={php echo time();}"/>
+<link rel="stylesheet" type="text/css" href="../addons/ewei_shopv2/plugin/task/static/css/iconfont.css?v={php echo time();}"/>
+
+<title>任务中心</title>
+<div class="fui-page">
+    <div class="fui-header">
+        <div class="fui-header-left">
+            <a class="back"></a>
+        </div>
+        <div class="title">任务中心</div>
+        <div class="fui-header-right">
+            <a href="{php echo mobileUrl('')}">商城首页</a>
+        </div>
+    </div>
+    <div class="fui-content">
+<div class="fui-goods-group fui-goods-group block one" style="background: #f3f3f3;">
+<!--             {loop $diyitem['data'] $goodsitem} -->
+                <a class="fui-goods-item" data-goodsid="{$goodsitem['gid']}" href="{php echo mobileUrl(empty($diyitem['params']['goodstype'])?'goods/detail':'creditshop/detail', array('id'=>$goodsitem['gid']))}" data-nocache="true" style="position: relative;">
+                    <div class="image {php echo $diyitem['style']['liststyle']=='block one'?'auto':''}  {if $diyitem['params']['showicon']==1}{$diyitem['style']['iconstyle']}{/if}" data-text="
+                            {if $diyitem['style']['goodsicon']=='recommand'}推荐{/if}
+                            {if $diyitem['style']['goodsicon']=='hotsale'}热销{/if}
+                            {if $diyitem['style']['goodsicon']=='isnew'}新上{/if}
+                            {if $diyitem['style']['goodsicon']=='sendfree'}包邮{/if}
+                            {if $diyitem['style']['goodsicon']=='istime'}限时卖{/if}
+                            {if $diyitem['style']['goodsicon']=='bigsale'}促销{/if}
+                        " {if $diyitem['style']['liststyle']!='block one'}data-lazy-background="{php echo tomedia($goodsitem['thumb'])}"{else}style="background:none; height: 6rem;"{/if}>
+                        {if $diyitem['style']['liststyle']=='block one'}
+                            <img class="exclude" src="{php echo tomedia($_W['shopset']['shop']['loading'])}" data-lazy="{php echo tomedia($goodsitem['thumb'])}" />
+                        {/if}
+                        {if $diyitem['params']['showicon']==2}
+                            <div class="goodsicon {$diyitem['params']['iconposition']}  "
+                                 {if $diyitem['params']['iconposition']=='left top'}
+                                    style="top: {$diyitem['style']['iconpaddingtop']}px; left: {$diyitem['style']['iconpaddingleft']}px; text-align: left;"
+                                 {elseif $diyitem['params']['iconposition']=='right top'}
+                                    style="top: {$diyitem['style']['iconpaddingtop']}px; right: {$diyitem['style']['iconpaddingleft']}px; text-align: right;"
+                                 {elseif $diyitem['params']['iconposition']=='left bottom'}
+                                    style="bottom: {$diyitem['style']['iconpaddingtop']}px; left: {$diyitem['style']['iconpaddingleft']}px; text-align: left;"
+                                 {elseif $diyitem['params']['iconposition']=='left bottom'}
+                                    style="bottom: {$diyitem['style']['iconpaddingtop']}px; right: {$diyitem['style']['iconpaddingleft']}px; text-align: right;"
+                                 {/if}
+                            >
+                                {if $diyitem['params']['showicon']==1}
+
+
+                                {elseif $diyitem['params']['showicon']==2 && !empty($diyitem['params']['goodsiconsrc'])}
+                                    <img class="exclude" src="{php echo tomedia($diyitem['params']['goodsiconsrc'])}" onerror="this.src=''" style="width: {$diyitem['style']['iconzoom']}%;" />
+                                {/if}
+                            </div>
+                        {/if}
+                    </div>
+        
+                        <div class="detail" style="padding: 0.2rem;border-bottom: solid 1px #ccc">
+                            <div style="width:20%;max-height: 87px;display: inline-block;vertical-align:top; background-image:url('https://www.baidu.com/img/baidu_jgylogo3.gif');"></div>
+                          
+                                <div class="" style="display: inline-block;vertical-align: top;max-width: 77%;font-size: 0.1rem; color: {$diyitem['style']['titlecolor']};">
+                                    
+                        
+                                    <style> p{max-width:100%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}</style>
+                                   <p style=""> <span>项目名称：</span> {$goodsitem['title']}</p>
+                                   <p style=""> <span>项目特色：</span> {$goodsitem['title']}</p>
+                                   <p style=""><span>项目投资：100万</span>
+
+                                </div>
+                        </div>
+                </a>
+           <!--  {/loop} -->
+        </div>
+
+    </div>
+</div>
+
+{template '_footer'}

@@ -1,0 +1,63 @@
+{template '_header'}
+{template 'commission/common'}
+<style>
+	.fui-navbar{
+		height: 2.25rem;
+	}
+	.fui-navbar .nav-item.btn.btn-warning{
+		height: 2.25rem;
+		border-radius: 0;
+		display: table-cell;
+	}
+	.fui-navbar ~ .fui-content, .fui-content.navbar{
+		bottom: 2.25rem;
+	}
+</style>
+<div class="fui-page fui-page-current page-commission-index ">
+	<div class="fui-header">
+		<div class="fui-header-left">
+			<a class="back" onclick='location.back()'></a>
+		</div>
+		<div class="title">奖励记录</div>
+	</div>
+    <div class="fui-content navbar">
+    	{if !empty($record)}
+    	<section class="bonus-wrap">
+			<ul class="bonus-list">
+				{loop $record $item}
+				<li class="bonus-item">
+					<div class="top">
+						<!-- <h4>奖励到账提醒</h4> -->
+						<span style="font-size: 16px;font-weight: 700">奖励到账提醒</span>
+						<span>{php echo date("Y-m-d H-i-s",$item['createtime'])}</span>
+					</div>
+					<div class="bottom">
+						<div class="left">
+							<div class="l-dotted"></div>
+							{$item['amount']}
+							<div class="r-dotted"></div>
+						</div>
+						<div class="right">
+							<p>{$item['yMember']['nickname']}</p>
+							{if $item['goodsprice']>0}
+							<p>商品价格：{$item['goodsprice']}元</p>
+							{/if}
+							<p>{$item['remark']}</p>
+						</div>
+					</div>
+				</li>
+				{/loop}
+			</ul>
+		</section>
+		{else}
+		<div class='fui-content navbar order-list' >
+            <div class='fui-content-inner'>
+                <div class='content-empty'>
+                    <img src="{EWEI_SHOPV2_STATIC}images/nolist.png" style="width: 6rem;margin-bottom: .5rem;"><br/><p style="color: #999;font-size: .75rem">暂时没有找到奖金记录！</p>
+                </div>
+            </div>
+        </div>
+		{/if}
+	</div>
+
+{template '_footer'}

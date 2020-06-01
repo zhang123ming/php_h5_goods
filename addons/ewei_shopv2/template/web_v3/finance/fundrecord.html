@@ -1,0 +1,70 @@
+{template '_header'}
+<div class="page-header">当前位置：<span class="text-primary">公司分成</span></div>
+<div class="page-content">
+    <form action="./index.php" method="get" class="form-horizontal" role="form" id="form1">
+        <input type="hidden" name="c" value="site" />
+        <input type="hidden" name="a" value="entry" />
+        <input type="hidden" name="m" value="ewei_shopv2" />
+        <input type="hidden" name="do" value="web" />
+        <input type="hidden" name="r" value="finance.credit.fundrecord" />
+        <div class="page-toolbar">
+            <div class="input-group">
+                <span class="pull-left">
+                    {php echo tpl_daterange('time', array('sm'=>true,'placeholder'=>'选择时间'),true);}
+                </span>
+                <span class="input-group-select">
+                </span>
+                <input type="text" class="form-control "  name="keyword" value="{$_GPC['keyword']}" placeholder="请输入会员信息/备注信息" />
+                <span class="input-group-btn">
+                    <button class="btn  btn-primary" type="submit"> 搜索</button>
+                    {ifp 'finance.credit.otherrecord.export'}
+                            <button type="submit" name="export" value="1" class="btn btn-success ">导出</button>
+                    {/if}
+                </span>
+            </div>
+        </div>
+    </form>
+    {if empty($list)}
+    <div class="panel panel-default">
+        <div class="panel-body empty-data">未查询到相关数据</div>
+    </div>
+    {else}
+
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead class="navbar-inner">
+                <tr>
+                    <th >机器码</th>
+                    <th >名称</th>
+                    <th >数量</th>
+                    <th >时间</th>
+                </tr>
+                </thead>
+                <tbody>
+                {loop $list $row}
+                <tr >
+                    <td>{$row['machineid']}</td>
+                    <td>{$row['name']}</td>
+                    <td >{$row['amount']}</td>
+                    <td>{php echo date('Y-m-d H:i:s',$row['createtime'])}</td>
+                </tr>
+                {/loop}
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td>
+                        <div class="btn-group"></div>
+                    </td>
+                    <td colspan="5" style="text-align: right">
+                        {$pager}
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    {/if}
+</div>
+{template '_footer'}
+<!--efwww_com-->

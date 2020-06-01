@@ -1,0 +1,63 @@
+<style>
+    .recharge_info{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 10px;
+    }
+    .recharge_info>div{
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        border:1px solid #efefef;
+        margin: 0 10px;
+        padding:10px 22px;
+        line-height: 25px;
+        color: #333;
+    }
+</style>
+<form class="form-horizontal form-validate" action="{php echo webUrl('commission/apply/changecommission')}" method="post" enctype="multipart/form-data">
+    <input type='hidden' name='id' value="{$order['id']}" />
+
+    <div class="modal-dialog" style='width:1500px;'>
+        <div class="modal-content">
+            <div class="modal-header">
+                <button data-dismiss="modal" class="close" type="button">×</button>
+                <h4 class="modal-title">其它佣金详情</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group"  style="margin: 0 10px;">
+                {if $id}
+                    <table class='table' style='table-layout: fixed;'>
+                        <tr>
+                            <th style='width:150px;;'>来源</th>
+                            <th style='width:50px;;'>返利金额</th>
+                            <th style='width:80px;'>时间</th>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                {else}
+                <div>没有订单详情</div>
+                {/if}
+                </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+</form>
+<script language='javascript'>
+    function commission_changeall() {
+        $('.clevel[data-canchange=1]').each(function(){
+            $(this).val( $('#clevel' + $(this).data('level') + '_sys_' + $(this).data('ogid')).html());
+        });
+        tip.msgbox.suc('设置成功!');
+
+    }
+</script>
+<!-- yi fu yuan ma wang -->

@@ -1,0 +1,10 @@
+2018-11-15 23:04:18:'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx4c2cbb6e3cc5a737&secret=7bf9d2f377b3a97b193fc3a9b0cc8a1b'
+2018-11-15 23:04:18:''
+2018-11-15 23:04:19:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_DgTjkDhmprdZDLaG4Aw4zWkZPYCMhtMgbdMDSbvbHBcUu2s5jhQ-Yx6WbQsiYYHqKysIxu_-zhIR8izDdDE0QVX-LmDvTEhjLO4Aau2yjiXZVgAQGVHuBHgZz3NLpbXdmPolKWnVs1BL4_hqBHPdACATZH'
+2018-11-15 23:04:19:'{"touser":"sns_wa_olCnc4jtAIFaoibplYZMpJ0CtQW4","msgtype":"text","text":{"content":"您参加的拼团组团失败！
+
+订单编号:PT20181115144857848919
+通知时间:2018-11-15 23:04:18
+很抱歉，您所在的拼团未能成功组团，系统会在24小时之内自动退款。如有疑问请联系卖家，谢谢您的参与！
+
+"}}'

@@ -1,0 +1,100 @@
+<div class="content">
+<form class="form-horizontal form-validate" action="{php echo webUrl('order/op/remarkserver')}" method="post" enctype="multipart/form-data">
+	<input type='hidden' name='id' value='{$id}' />
+	<div class="modal-dialog">
+           <div class="modal-content">
+            <div class="modal-header">
+                <button data-dismiss="modal" class="close" type="button">×</button>
+                <h4 class="modal-title">服务人员确认</h4>
+            </div>
+            <div class="modal-body" style="padding: 10px;">
+            	服务人员：<input type="text" name="pserver" id="pserver" class="form-control" readonly style="width: 20%;display: inline-block;" value="{if !empty($item['serviceid'])}{$agent['mobile']}{/if}" >&nbsp;&nbsp;<input type="text" class="form-control" style="width: 50%;display: inline-block;" value="" id="keyword" placeholder="手机/城市">&nbsp;<button type="button" class="btn-default" onclick="searchAgent('#keyword');">搜索</button>
+            </div>
+            <div>
+                <table class="table"">
+                    <tbody>   
+                        {loop $agents $key $row}
+                        <tr id="agent_{$key}">
+                            <td>昵称：{$row['nickname']}&nbsp;&nbsp;地区：{$row['province']}{$row['city']}{$row['area']}&nbsp;&nbsp;手机：{$row['mobile']}</td>
+                            <td style="width:80px;"><a href="javascript:;" onclick='choose("{$row['mobile']}","agent_{$key}");'>选择</a></td>
+                        </tr>
+                        {/loop}
+                        {if count($agents)<=0}
+                        <tr>
+                            <td colspan='2' align='center'>未找到符合要求的会员</td>
+                        </tr>
+                        {/if} 
+                    </tbody>
+                </table>
+                <div style="text-align:right;">
+                    {$pager}
+                </div>
+                <script>
+                    function searchAgent(obj){
+                        keyword =  $.trim($(obj).val());
+                        $.ajax({
+                            url:"{php echo webUrl('order/op/remarkserver')}",
+                            type:'get',
+                            data:{akeyword:keyword,id:"{php echo $id}"},
+                            async : false, //默认为true 异步
+                            success:function(data){
+                                $(".content").html(data);
+                            }
+                        }); 
+                    }
+                    function choose(obj,id){
+                        $('#pserver').val(obj)
+                        $('tr').hide()
+                        $('#'+id).show()
+                    }
+                    //分页函数
+                    var type = '';
+                    function select_page(url,pindex,obj) {
+
+                        if(pindex==''||pindex==0){
+                            return;
+                        }
+                        // console.log("{php echo webUrl('order/op/remarkserver')}");return false;
+                        $.ajax({
+                            url:"{php echo webUrl('order/op/remarkserver')}",
+                            type:'get',
+                            data:{page:pindex,psize:10,id:"{php echo $id}"},
+                            async : false, //默认为true 异步
+                            success:function(data){
+                                console.log(data)
+                                $(".content").html(data);
+                            }
+                        });
+                    }
+                </script>
+            </div>
+            <div class="modal-body" style="padding: 10px;">
+                <div style="width: 50%;float: left;"><textarea id="send_desc" name="send_desc" style="height: 100px;resize: none;" class="form-control" placeholder='输入自定义消息内容' ></textarea>
+                </div>
+                
+                <div style="height: 100px;width: 50%;float: left;">
+                    <a href='JavaScript:' class="btn btn-default btn-sm">订单号</a>
+                    <a href='JavaScript:' class="btn btn-default btn-sm">买家手机</a>
+                    <a href='JavaScript:' class="btn btn-default btn-sm">买家地址</a>
+                    <a href='JavaScript:' class="btn btn-default btn-sm">商品名称</a>
+                    <a href='JavaScript:' class="btn btn-default btn-sm">下单时间</a>
+                    <a href='JavaScript:' class="btn btn-default btn-sm">订单金额</a>
+                    <a href='JavaScript:' class="btn btn-default btn-sm">用户昵称</a>
+                </div>
+            </div>
+            <script>
+                $('.btn-sm').click(function(){
+                    var text = $(this).text();
+                    var content = $('#send_desc').val();
+                    var content =content+'['+text+']';
+                    $('#send_desc').val(content);
+                })
+            </script>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="submit">提交</button>
+                <button data-dismiss="modal" class="btn btn-default" type="button">取消</button>
+            </div>
+        </div>
+</form>
+</div>
+<!--efwww_com-->

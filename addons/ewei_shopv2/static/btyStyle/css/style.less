@@ -1,0 +1,466 @@
+/* base style */
+/* reset 样式重设 */
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video,
+details,
+summary {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Microsoft Yahei", "Arial";
+  color: #333;
+  background-color: #fff;
+  font-size: 14px;
+  background-image: url(about:blank);
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+a {
+  color: #06f;
+  text-decoration: none;
+}
+a:hover {
+  color: #f60;
+  text-decoration: none;
+}
+img {
+  border: none;
+  vertical-align: middle;
+  max-width: 100%;
+}
+i,
+em {
+  font-style: normal;
+}
+li {
+  list-style-type: none;
+}
+textarea {
+  resize: vertical;
+}
+input,
+select,
+textarea {
+  font-family: "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Arial";
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+/* 常用布局样式 */
+/* 常用布局公共容器 */
+.container {
+  max-width: 1200px;
+  min-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* 浮动布局 */
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+/* 注意浮动布局需要在父级添加清除浮动样式 */
+.clearfix {
+  zoom: 1;
+}
+.clearfix::after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+/* flex布局 常用 */
+/* 默认 */
+.flex {
+  display: flex;
+  display: -webkit-flex;
+}
+/* 垂直居中 vertical center */
+.flex-ver {
+  -webkit-align-items: center;
+  align-items: center;
+}
+/*水平居中 center horizontally */
+.flex-hor {
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+/*两端对齐 justify align*/
+.flex-jus {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+/* 常用外边距 */ 
+.mt_30{
+  margin-top: 0.4rem;
+}
+.mb_30{
+  margin-bottom: 0.4rem;
+}
+
+
+
+/* 我的云仓库 */ 
+.my_head{
+  display: flex;
+  padding: 0 0.533333rem;
+  height: 2.933333rem;
+  background: url(../img/header-bg.png) no-repeat;
+  background-size: cover;
+  div{
+    img{
+      margin-right: 0.293333rem;
+      width: 1.066667rem;
+      height: 1.066667rem;
+      border-radius: 50%;
+    }
+    span{
+      font-size: 15px;
+      color: #fff;
+    }
+  }
+  >span{
+    padding: 0 0.4rem;
+    border: 1px solid #fff;
+    font-size: 12px;
+    color: #fff;
+    border-radius:0.32rem;
+  }
+
+}
+
+.my_list{
+    &:after{
+      background-color: #ddd;
+    }
+    &:before{
+      background-color: transparent;
+    }
+  .mui-media-object{
+    position: relative;
+    width: 0.8rem;
+    height: 0.8rem;
+    line-height: 1.2rem;
+    img{
+      width: 100%;
+    }
+    .badge{
+      position: absolute;
+      top: -.2em;
+      right: -.2em;
+      display: inline-block;
+      padding: .15em .4em;
+      min-width: 8px;
+      border-radius: 18px;
+      background-color: #F43530;
+      color: #FFFFFF;
+      line-height: 1.2;
+      text-align: center;
+      font-size: 12px;
+      vertical-align: middle;
+    }
+  }
+  .mui-media-body{
+    height: 1.2rem;
+    line-height: 1.2rem;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #666;
+  }
+  .mui-table-view-cell:after{
+    background-color: #ddd;
+  }
+}
+
+
+/* 我的云仓库详情页 */
+.orange{
+  color: #FFA530;
+}
+.product_list{
+  padding: 0 0.4rem;
+  li{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0.266667rem;
+    min-height: 2.4rem;
+    .left{
+      width: 1.893333rem;
+      height: 1.76rem;
+    }
+    .center{
+      display: flex;
+      flex: 1 1 auto;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 1.8rem;
+      padding:0.133333rem 0 0 0.266667rem;
+      h3{
+        font-size: 15px;
+        font-weight: 500;
+      }
+      p{
+        font-size: 12px;
+        font-weight: 700;
+      }
+    }
+    .right{
+      display: flex;
+      flex: 1 1 auto;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+      height: 1.8rem;
+      padding:0.133333rem 0 0 0.266667rem;
+      width: 2.053333rem;
+      p{
+        font-size: 12px;
+      }
+      .mui-btn-unfold{
+        padding: 0;
+        width: 2.16rem;
+        height: 0.666667rem;
+        line-height: 0.666667rem;
+        background-color: #63DBA2;
+        text-align: center;
+        color: #fff;
+        font-size: 12px;
+        border: none;
+        border-radius: 0.3333rem;
+      }
+    }
+    .mui-numbox{
+      padding: 0 0.533333rem;
+      width: 2.0rem;
+      height: 0.56rem;
+      .mui-btn{
+        width: 0.533333rem;
+      }
+    }
+    .size_list{
+      padding: 0.666667rem 0;
+      width: 100%;
+      li{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.4rem;
+        min-height: auto;
+        p{
+          padding-right: 0.266667rem;
+          &:nth-of-type(2){
+            flex:1 1 auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 我的门店订单 */
+.store_order{
+  .mui-segmented-control.mui-scroll-wrapper{
+    height: 1.066667rem;
+  }
+  .mui-segmented-control.mui-scroll-wrapper .mui-scroll{
+    height: 1.066667rem;
+  }
+  .mui-segmented-control.mui-scroll-wrapper .mui-control-item{
+    padding: 0 0.4rem;
+    color: #AFAFAF;
+  }
+  .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+    color: #000;
+    border-color: #FFA530;
+  }
+}
+
+.search{
+  display: flex;
+  padding: 0 0.4rem;
+  .left{
+    display: flex;
+    flex:1 1 auto;
+    padding:0 0.533333rem;
+    background-color: #f0f1f3;
+    border-radius: 0.533333rem;
+    input{
+      padding: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      border: none;
+      background-color: transparent;
+    }
+    button{
+      padding: 0;
+      background-color: transparent;
+    }
+  }
+  button{
+    border: 0;
+  }
+  .right{
+    margin-left: 0.4rem;
+    width: 2.666667rem;
+    background-color: #f0f1f3;
+    border-radius: 0.533333rem;
+    .mui-icon{
+      font-size: 12px;
+    }
+  }
+}
+
+.mui-btn-fahuo{
+  padding: 0;
+  width: 2.16rem;
+  height: 0.666667rem;
+  line-height: 0.666667rem;
+  background-color: #63DBA2;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  border: none;
+  border-radius: 0.3333rem;
+}
+
+/* 我的云仓库收入详情页 */ 
+.my_details{
+  display: flex;
+  padding: 0 0.533333rem;
+  height: 2.933333rem;
+  background-size: cover;
+  div{
+    img{
+      margin-right: 0.293333rem;
+      width: 1.066667rem;
+      height: 1.066667rem;
+      border-radius: 50%;
+    }
+    span{
+      font-size: 15px;
+      color: #666;
+    }
+  }
+  >span{
+    padding: 0 0.4rem;
+    border: 1px solid #FFA836;
+    font-size: 13px;
+    color: #FFA836;
+    border-radius:0.32rem;
+  }
+}
+.income{
+  padding: 0 0.533333rem;
+  ul{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem;
+    height: 4.506667rem;
+    background: url(../img/header-bg2.png) no-repeat center center;
+    background-size: contain;
+    li{
+      display: flex;
+      flex:0 1 34%;
+      flex-direction: column;
+      justify-content: space-between;
+      p{font-size: 15px;color: #FFDFC0;}
+      h3{font-size: 24px;color: #fff;font-weight: 700;}
+    }
+    a{
+      position: absolute;
+      right: 0;
+      bottom: 0.88rem;
+      padding-left: 0.24rem;
+      width: 2.933333rem;
+      height: 1.04rem;
+      line-height: 1.04rem;
+      border: none;
+      background-color: #fff;
+      border-top-left-radius: 0.52rem;
+      border-bottom-left-radius: 0.52rem;
+      text-align: left;
+      color: #FFA836;
+      font-size: 18px;
+      font-weight: 700;
+      span{
+        display: inline-block;
+        margin-right: 0.133333rem;
+        width: 0.693333rem;
+        height: 0.693333rem;
+        line-height: 0.693333rem;
+        background-color: #FFA837;
+        border-radius: 50%;
+        text-align: center;
+        color: #fff;
+      }
+    }
+  }
+}

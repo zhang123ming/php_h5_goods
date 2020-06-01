@@ -1,0 +1,71 @@
+{template '_header'}
+<script>document.title = "{php echo $this->set['texts']['center']}"; </script>
+<script>
+    document.documentElement.style.fontSize =document.documentElement.clientWidth/750*40 +"px";
+</script>
+<script src="//at.alicdn.com/t/font_82607_6xtuyfrxik6v42t9.js"></script>
+<style type="text/css">
+    .icon1 {
+        width: .8rem; height: .8rem;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+    }
+</style>
+<div class="fui-page fui-page-current page-commission-index ">
+    <div class="fui-header">
+        <div class="fui-header-left">
+            <a class="back" onclick='location.back()'></a>
+        </div>
+        <div class="title">直播间管理</div>
+        <div class="fui-header-right"></div>
+    </div>
+    <div class='fui-content navbar'>
+
+
+        <div class="fui-cell-group">
+            <a class="fui-cell" href="{php echo mobileUrl('live/myroom/qrcode')}">
+
+                <div class="fui-cell-icon ">
+                    <i class="icon icon-erweima1 text-yellow"></i>
+                </div>
+                <div class="fui-cell-text">直播间二维码</div>
+                <div class="fui-cell-remark" style="font-size: 0.5rem;"></div>
+
+            </a>
+        </div>
+
+
+
+        <style>
+            .fui-block-group.noafter:after{
+                content: none;
+            }
+        </style>
+        <div class="fui-cell-group">
+
+            <a class="fui-cell" href="{php echo mobileUrl('live/myroom/set')}">
+                <div class="fui-cell-icon ">
+                    <i class="icon icon-shezhi text-yellow"></i>
+                </div>
+                <div class="fui-cell-text">直播间设置</div>
+                <div class="fui-cell-remark" style="font-size: 0.5rem;"></div>
+            </a>
+
+        </div>
+        <div class="fui-cell-group">
+            <a class="fui-cell" href="{php echo mobileUrl('live/myroom/goods')}">
+                <div class="fui-cell-icon ">
+                    <i class="icon icon-shangcheng1 text-yellow"></i>
+                </div>
+                <div class="fui-cell-text">自选商品</div>
+                <div class="fui-cell-remark" style="font-size: 0.5rem;"></div>
+            </a>
+
+
+        </div>
+        {template '_copyright'}
+    </div>
+
+</div>
+{template '_footer'}

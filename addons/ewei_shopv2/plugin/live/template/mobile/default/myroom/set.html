@@ -1,0 +1,125 @@
+{template '_header'}
+{template 'commission/common'}
+<style>
+    .fui-cell-label{
+        align-self: flex-start;
+        line-height: normal;
+    }
+    /*.fui-uploader{*/
+    /*background: #f5f5f5;*/
+    /*border:0;*/
+    /*}*/
+    /*.fui-uploader.fui-uploader-sm:before {*/
+    /*height: .7rem;*/
+    /*width: 1px;*/
+    /*}*/
+    /*.fui-uploader.fui-uploader-sm:after {*/
+    /*width: .7rem;*/
+    /*height: 1px;*/
+    /*}*/
+    .fui-uploader.img-container-uploader.long:after{
+        display: none;
+    }
+    .fui-uploader.img-container-uploader.long:before{
+        display: none;
+    }
+</style>
+<div class="fui-page fui-page-current">
+    <div class="fui-header">
+        <div class="fui-header-left">
+            <a class="back"></a>
+        </div>
+        <div class="title">直播间设置</div>
+    </div>
+    <div class='fui-content'>
+        <div class='fui-cell-group'>
+            <div class='fui-cell'>
+                <div class='fui-cell-label'>直播状态</div>
+                <div class='fui-cell-info'>
+                    <span class="pull-right">
+                    <a class="btn btn-loading disabled">加载中...</a>
+                    <a class="btn btn-play"><i class="fa fa-play"></i> 开启直播</a>
+                    <a class="btn btn-stop"><i class="fa fa-stop"></i> 关闭直播</a>
+                </span>
+                </div>
+            </div>
+        </div>
+        <div class='fui-cell-group'>
+            <div class='fui-cell'>
+                <div class='fui-cell-label'>直播间名称</div>
+                <div class='fui-cell-info'><input type="text" class='fui-input' id="title" value="{$room['title']}" placeholder='直播间名称'/></div>
+            </div>
+            <div class='fui-cell'>
+                <div class='fui-cell-label'>封面类型</div>
+                <div class='fui-cell-info'>
+                    <input type="radio" class='fui-radio' id="covertype" name="covertype" value="0" {if $room['covertype']!=1 }checked{/if} />自动获取
+                    <input type="radio" class='fui-radio' id="covertype" name="covertype" value="1" {if $room['covertype']==1 }checked{/if} />自定义
+                </div>
+            </div>
+            <div class="fui-cell-tip">自动获取:直播开始前将显示您上传的直播间封面，直播开始后，系统将自动抓取直播平台的图片并替换直播间已上传的封面</div>
+            <div class="fui-cell-tip">自定义:您上传的图片将作为直播封面显示，您可手动上传修改直播间封面</div>
+            <div class='fui-cell'>
+                <div class='fui-cell-label'>封面</div>
+                <div class='fui-cell-info'>
+                    <ul class="fui-images fui-images-sm" id="imageLogo">
+                        {if !empty($room['thumb'])}
+                        <li style="background-image:url({php echo tomedia($room['thumb'])})" class="image image-sm" data-filename="{$room['thumb']}">
+                            <span class="image-remove"><i class="icon icon-close"></i></span></li>
+                        {/if}
+
+
+                    </ul>
+
+                    <div class="fui-uploader fui-uploader-sm "  {if !empty($room['thumb'])}style='display:none'{/if}
+                    data-max="1"
+                    data-count="{if !empty($room['thumb'])}1{else}0{/if}">
+                    <input type="file" name='imgFile0' id='imgFile0'  {if !is_h5app() || (is_h5app() && is_ios())}multiple="" accept="image/*" {/if}>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="fui-cell-group">
+            <div class="fui-cell must ">
+                <div class="fui-cell-label">直播平台</div>
+                <div class="fui-cell-info">
+                    <select name="liveidentity" class="" id="liveidentity">
+                        <option value=''>请选择平台</option>
+                        {loop $liveidentity $row}
+                        <option value="{$row['identity']}"  {if $room['liveidentity']==$row['identity']}selected{/if}>{$row['name']}</option>
+                        {/loop}
+                    </select>
+                </div>
+            </div>
+            <div class="fui-cell must ">
+                <div class="fui-cell-label">直播地址</div>
+                <div class="fui-cell-info">
+                    <div class="fui-cell-info"><input type="text" class="fui-input" name="url" id="url" placeholder="以http://或https://开头" value="{$room['url']}"/></div>
+                </div>
+
+            </div>
+            <div class="fui-cell-tip">注意：请复制PC端直播间详情页的链接 例如：http://www.panda.tv/123 (以http://或https://开头)</div>
+
+        </div>
+    <div class='fui-cell'>
+        <div class='fui-cell-label'>简介</div>
+        <div class='fui-cell-info'><textarea id="introduce" rows="3" placeholder="直播间简介">{$room['introduce']}</textarea></div>
+    </div>
+</div>
+<div class='btn btn-warning block btn-submit mtop'>保存设置</div>
+</div>
+
+
+<script language='javascript'>
+    require(['../addons/ewei_shopv2/plugin/live/static/js/myroom.js'], function (modal) {
+        modal.initSet();
+    });
+</script>
+<script>
+    require(['../addons/ewei_shopv2/plugin/live/static/js/console2.js'], function (modal) {
+        modal.init({wsConfig: {$wsConfig}});
+    })
+</script>
+</div>
+{template '_footer'}

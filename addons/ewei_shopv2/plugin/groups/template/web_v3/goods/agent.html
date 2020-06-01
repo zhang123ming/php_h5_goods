@@ -1,0 +1,58 @@
+<div class="form-group">
+    <label class="col-lg control-label">
+         拼团奖励 
+    </label>
+    <div class="col-sm-10 col-xs-12">
+        <label class="checkbox-inline">
+            <input type="checkbox" id="agent" value="1" name="agent" {if intval($item['agent'])==1}checked{/if}>使用单独佣金
+        </label>
+    </div>
+</div>
+<div class="form-group" id="isagent" {if intval($item['agent'])==0}style="display:none"{/if}>
+    <label class="col-lg control-label">
+    </label>
+
+    <div class="col-sm-10 col-xs-12">
+        {ifp 'groups.set.edit'}
+        <div class='input-group fixsingle-input-group'>
+            <span class="input-group-addon">团长奖励</span>
+            <input type="text" name="reward[head_rate1]" value="{$reward['head_rate1']}" style="width: 80px" class="form-control"/>
+            <span class="input-group-addon">%</span>
+            <input type="text" name="reward[head_pay1]" value="{$reward['head_pay1']}" style="width: 80px" class="form-control"/>
+            <span class="input-group-addon">元</span>
+            <!-- <span class="input-group-addon">第一次团长奖励</span>
+            <input type="text" name="reward[head_rate2]" value="{$reward['head_rate2']}" style="width: 80px" class="form-control"/>
+            <span class="input-group-addon">%</span>
+            <input type="text" name="reward[head_pay2]" value="{$reward['head_pay2']}" style="width: 80px" class="form-control"/>
+            <span class="input-group-addon">元</span> -->
+        </div>
+        <span class="help-block">团长开团成功后奖励</span>
+        <div class='input-group fixsingle-input-group'>
+            <!-- <span class="input-group-addon">团员奖励</span>
+            <input type="text" name="reward[member_rate1]" value="{$reward['member_rate1']}" style="width: 80px" class="form-control"/>
+            <span class="input-group-addon">%</span>
+            <input type="text" name="reward[member_pay1]" value="{$reward['member_pay1']}" style="width: 80px" class="form-control"/>
+            <span class="input-group-addon">元</span> -->
+            <span class="input-group-addon">第一次团员奖励</span>
+            <input type="text" name="reward[member_rate2]" value="{$reward['member_rate2']}" style="width: 80px" class="form-control"/>
+            <span class="input-group-addon">%</span>
+            <input type="text" name="reward[member_pay2]" value="{$reward['member_pay2']}" style="width: 80px" class="form-control"/>
+            <span class="input-group-addon">元</span>
+        </div>
+        <span class="help-block">团员拼团成功后奖励</span>
+        {else}
+        <div class='form-control-static'>团长奖励 {php echo intval($reward['head_pay1'])}元 {php echo intval($reward['head_rate1'])}%，团长第一次开团奖励 {php echo intval($reward['head_pay2'])}元 {php echo intval($reward['head_rate2'])}%</div>
+        <div class='form-control-static'>团员奖励 {php echo intval($reward['member_pay1'])}元 {php echo intval(['member_rate1'])}%，团员第一次参团奖励 {php echo intval($reward['member_pay2'])}元 {php echo intval($reward['member_rate2'])}%</div>
+        {/if}
+    </div>
+</div>
+
+<script type="text/javascript">
+    $('#agent').click(function(){
+        if ($(this).prop('checked')) {
+            $("#isagent").show();
+        }else {
+            $("#isagent").hide();
+        }
+    });    
+</script>

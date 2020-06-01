@@ -1,0 +1,96 @@
+{template '_header'}
+<link rel="stylesheet" href="../addons/ewei_shopv2/template/mobile/default/static/css/rank.css">
+<div class="fui-page fui-page-current page-rank orange" style="overflow:auto;">
+    <div class="fui-header">
+        <div class="fui-header-left">
+            <a class="back"></a>
+        </div>
+        <div class="title">{$commission_title}排名</div>
+        <div class="fui-header-right">&nbsp;</div>
+    </div>
+    <div class='fui-content navbar'>
+        <div class="fui-tab fui-tab-warning" id="tab">
+            <a {if !$userrank} class="active"{/if} href="{php echo mobileUrl('commission.rank');}">{if $userrank}{$user_commission_title}{else}{$commission_title}{/if}</a>
+            <a href="{php echo mobileUrl('commission.rank.userrank');}" {if $userrank}class="active"{/if}>任务排名</a>
+        </div>
+        <div class="rankhead">
+        <div class="head">
+            <div class="child">
+                <!--<span>{$user['seven']}</span>-->
+                <!--<p class="text">本周{$_W['shopset']['trade']['credittext']}</p>-->
+            </div>
+            <div class="child gold">
+                {if $userrank}
+                 <span>{php echo (empty($user['paiming']) ) ? '暂未上榜' : $user['paiming']}</span>
+                {else}
+                <span>{php echo ($user['paiming']>=$commission_rank['num'] || empty($user['paiming']) ) ? '暂未上榜' : $user['paiming']}</span>
+                {/if}
+                <p class="text">我的名次</p>
+            </div>
+            <div class="child">
+                <span>{if $userrank}{$user['usertotal']}{else}{$user['commission_total']}{/if}</span>
+                <p class="text">{$commission_title}</p>
+            </div>
+        </div>
+        <div class="title">{$commission_title}排名为{if $commission_rank['type'] == '0'}定时刷新{else}实时更新{/if}(最多显示{$commission_rank['num']}名)</div>
+    </div>
+<div class="rankline">
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="center"></div>
+</div>
+<div class="ranklist">
+    <div class="main">
+        <div class="line title">
+            <div class="col">排名</div>
+            <div class="col">昵称</div>
+            <div class="col">{$commission_title}</div>
+        </div>
+        {if $userrank==1}
+         <div id="container" >
+            {loop $list $key $item}
+             <div class="line">
+                 <div class="col {if $key+1<4} icon-{php echo  $key+1}{/if}">{if $key+1>=4}{php echo  $key+1}{/if}</div>
+                 <div class="col">
+                     <div class="face"><img src="{$item[avatar]}" /></div>
+                     <div class="name">{$item[nickname]}</div>
+                 </div>
+                 <div class="col index-1">{$item[level1]}</div>
+             </div>
+             {/loop}
+        </div>
+        {else}
+        <div id="container" ></div>
+        <a id="btn-more" class="btn btn-danger block">点击加载更多</a>
+        {/if}
+    
+
+    </div>
+    {template '_copyright'}
+</div>
+<script id="tpl_list" type="text/html">
+     <%each list as row,index%>
+
+     <div class="line">
+         <div class="col<% if ((page+index)<4) %> icon-<%page+index%><%/if%>"><% if ((page+index)>3) %><%page+index%><%/if%></div>
+         <div class="col">
+             <div class="face"><img src="<%row.avatar%>" /></div>
+             <div class="name"><%row.nickname%></div>
+         </div>
+         <div class="col index-1"><%row.commission_total%></div>
+     </div>
+    <%/each%>
+</script>
+{if $userrank}
+
+{else}
+    <script language='javascript'>
+        require(['../addons/ewei_shopv2/plugin/commission/static/js/rank.js'], function (modal) {
+            modal.init();
+        });
+    </script>
+{/if}
+    </div>
+</div>
+{php $this->footerMenus()}
+{template '_footer'}

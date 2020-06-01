@@ -1,0 +1,47 @@
+{template 'common/header'}
+<div id="activity-detail">
+<style type="text/css">
+@charset "utf-8";
+html{background:#FFF;color:#000;}
+body, div, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset, img{border:0;}
+address, caption, cite, code, dfn,  th, var{font-style:normal;font-weight:normal;}
+ol, ul{list-style:none;}
+body{background:#F7F7F7}
+#activity-name{font-size:18px;margin-bottom:5px;}
+.post-date{display:block;width:95%;margin-left:2.5%;background:#fff;}
+.header{width:95%;margin-left:2.5%;margin-top:20px;border:1px solid #ccc;background:#fff;padding-top:10px;padding-bottom:10px;padding-left:20px;}
+#post-date{ color:#666;}
+.page-content{width:95%;margin-left:2.5%;background:#fff;margin-top:15px;}
+.pic img{width:95%;margin-left:2.5%;margin-top:10px;margin-bottom:10px;}
+.text{width:95%;margin-left:2.5%;margin-top:15px;padding-bottom:15px;letter-spacing: 1px;color:#333;word-wrap:break-word; word-break:normal;}
+.text p{line-height: 20px;}
+.ms{color:#04be02!important} 
+</style>
+<div class="page-bizinfo">
+	<div class="header">
+		<h1 id="activity-name">{$detail['title']}</h1>
+		<span id="post-date">
+			<span>作者：{$detail['author']}</span>
+			
+			<a href="{$detail['source']}" class="ms"><span style="color:#04be02!important;">文章来源</span></a>
+			<span>{php echo date("Y-m-d", $detail['createtime']);}</span>
+		
+		
+			{if !empty($subscribeurl)}<a href="{$subscribeurl}">{$_W['account']['name']}</a>{/if}
+			<!--<span>阅读:{$detail['click']}次</span>-->
+		</span>
+	</div>
+</div>
+
+<div class="page-content">
+<div class="pic">
+
+</div>
+	<div class="text">
+		{$detail['content']}
+	</div>
+</div>
+</div>
+{template 'common/footer'}

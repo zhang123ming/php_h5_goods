@@ -1,0 +1,222 @@
+{template '_header'}
+{template 'commission/common'}
+{if $this->set['pageway']==1}
+<style type="text/css">
+
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 0;
+    border-radius: 4px;
+}
+.pagination>li {
+    display: inline;
+}
+.pagination > li > span.nobg {
+    background: none;
+    border: 0;
+}
+.pagination>li:last-child>a, .pagination>li:last-child>span {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.pagination>li>a, .pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #337ab7;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+.pagination >.active>a{
+	background: #ff9326;
+}
+.pager-nav{
+	/*display: none;*/
+}
+.pagination > li > a, .pagination > li > span {
+    margin-right: 5px;
+    color: #000;
+    line-height: 12px;
+    font-size: 12px;
+    padding: 7px 7px;
+}
+.pagination>li:first-child>a, .pagination>li:first-child>span {
+    margin-left: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+</style>
+{/if}
+<div class="fui-page fui-page-current page-commission-down">
+    <div class="fui-header">
+        <div class="fui-header-left">
+            <a class="back"></a>
+        </div>
+        <div class="title">{php echo $this->set['texts']['mydown']}({$total})</div>
+    </div>
+    <div class="fui-content navbar">
+        {if $this->set['level']>=2}
+        <div class="fui-tab fui-tab-warning" id="tab">
+            <a {if $this->set['pageway']==0||($this->set['pageway']==1&&$_GPC['level']<=1)}class="active"{/if} href="{if $this->set['pageway']==1}{php echo mobileUrl("commission/down",array('level'=>1))}{else}javascript:void(0){/if}" data-tab='level1'>{php echo $this->set['texts']['c1']}({$level1}){if !empty($lev1) && $datas['checkpower'] ==1}<div class="badge" style="background-color: #ff0011;">{$lev1}</div>{/if}</a>
+            {if $this->set['level']>=2}<a {if $this->set['pageway']==1&&$_GPC['level']==2}class="active"{/if} href="{if $this->set['pageway']==1}{php echo mobileUrl("commission/down",array('level'=>2))}{else}javascript:void(0){/if}" data-tab='level2'>{php echo $this->set['texts']['c2']}({$level2}){if !empty($lev2) && $datas['checkpower'] ==1}<div class="badge" style="background-color: #ff0011;">{$lev2}</div>{/if}</a>{/if}
+            {if $this->set['level']>=3}<a {if $this->set['pageway']==1&&$_GPC['level']==3}class="active"{/if} href="{if $this->set['pageway']==1}{php echo mobileUrl("commission/down",array('level'=>3))}{else}javascript:void(0){/if}" data-tab='level3'>{php echo $this->set['texts']['c3']}({$level3}){if !empty($lev3) && $datas['checkpower'] ==1}<div class="badge" style="background-color: #ff0011;">{$lev3}</div>{/if}</a>{/if}
+        </div>
+        {/if}
+
+        <div class="fui-title"><i class="icon icon-star text-danger"></i> 代表已成为{php echo $this->set['texts']['agent']}的{php echo $this->set['texts']['down']}
+            
+        </div>
+        <div class="fui-list-group" id="container">
+        	{if $this->set['pageway']==1}
+        	{loop $lists $user}
+        	<a {if $datas['checkpower'] == 1&& $member['agentpower']!='0' && $user.status==0 && $user.isagent==1} href='{php echo mobileUrl("commission/power")}&id={$user['id']}'{else} href='{php echo mobileUrl("commission/downorders")}&id={$user['id']}'{/if}>
+			<div class="fui-list" style="height: 3.5rem;margin-bottom: 0.5rem">
+				<div class="fui-list-media">
+					{if $user['avatar']}
+					<img data-lazy="{$user['avatar']}" class="round" style="width:2rem;height:2rem">
+					{else}
+					<i class="icon icon-my2" id="{$user['id']}"></i>
+					{/if}
+				</div>
+				<div class="fui-list-inner">
+					<div class="row">
+					      <div class="row-text" >
+						 {if $user['isagent']==1&&$user['status']==1}
+						  <i class="icon icon-star text-danger"></i>
+						  {/if}
+						  {if $user['nickname']}{$user['nickname']}{else}未获取{/if}
+					      
+					      </div>
+					</div>
+					<div class="subtitle">
+					     {if $user['isagent']==1&&$user['status']==1}
+					    成为{php echo $this->set['texts']['agent']}时间: {$user['agenttime']}
+					    {else}
+					    注册时间: {$user['createtime']}
+					   {/if}   
+					</div>
+				</div>
+
+				<div class="row-remark">
+					{if $datas['checkpower'] == 1}
+					{if $user['isagent']==1&&$user['status']==0}
+					<div style="font-color:red">待审核</div>
+					{/if}
+					{/if}
+
+					{if $user['isagent']==1&&$user['status']==1}
+
+						<p>{php echo $_S['commission']['texts']['commission_total']} : {$user['commission_total']}</p>
+						<p>{$user['agentcount']}个{php echo $_S['commission']['texts']['agent']}</p>
+						{if $user['ordercount'] !=0}
+							<p>{$user['ordercount']}个订单</p>
+						{/if}
+
+					{else}
+
+						<p>消费 : {$user['moneycount']}{php echo $this->set['texts']['yuan']}</p>
+						<p>{$user['ordercount']}个订单</p>
+
+					{/if}
+					 
+				</div>
+			</div>
+			</a>
+			{/loop}
+			{/if}
+        </div>
+        {if $this->set['pageway']==1}
+        <div>
+        	{$pager}
+        </div>
+        {else}
+        <div class='infinite-loading'><span class='fui-preloader'></span><span class='text'> 正在加载...</span></div>
+        {/if}
+		<div class='content-empty'  style='display:{if !empty($lists)}none{/if};'>
+			<!--<i class='icon icon-group'></i><br/>暂时没有任何数据-->
+			<img src="{EWEI_SHOPV2_STATIC}images/nomeb.png" style="width: 6rem;"><br/><p style="color: #999;font-size: .75rem">暂时没有任何数据</p>
+		</div>
+
+    </div>
+
+
+	<script id='tpl_commission_down_list' type='text/html'>
+		<%each list as user%>
+		{if $datas['checkpower'] == '1' && $member['agentpower']!='0'}
+			<%if user.status==0 && user.isagent==1%>
+			<a href='{php echo mobileUrl("commission/power")}&id=<%user.id%>'>
+			<%else%>
+			<a href='{php echo mobileUrl("commission/downorders")}&id=<%user.id%>'>
+			<%/if%>
+		{else}
+			<a href='{php echo mobileUrl("commission/downorders")}&id=<%user.id%>'>
+		{/if}
+		<div class="fui-list" style="height: 3.5rem;margin-bottom: 0.5rem">
+			<div class="fui-list-media">
+				<%if user.avatar%>
+				<img data-lazy="<%user.avatar%>" class="round" style="width:2rem;height:2rem">
+				<%else%>
+				<i class="icon icon-my2" id="<%user.id%>"></i>
+				<%/if%>
+			</div>
+			<div class="fui-list-inner">
+				<div class="row">
+				      <div class="row-text" >
+					  <%if user.isagent==1 && user.status==1%>
+					  <i class="icon icon-star text-danger"></i>
+					  <%/if%>
+					  <%if user.nickname%><%user.nickname%><%else%>未获取<%/if%>
+				      
+				      </div>
+				</div>
+				<div class="subtitle">
+				      <%if user.isagent==1 && user.status==1%>
+				    成为{php echo $this->set['texts']['agent']}时间: <%user.agenttime%>
+				    <%else%>
+				    注册时间:  <%user.createtime%>
+				    <%/if%>    
+				</div>
+			</div>
+
+			<div class="row-remark">
+				{if $datas['checkpower'] == 1}
+				<%if user.status==0 && user.isagent==1%>
+				<div style="font-color:red">待审核</div>
+				<%/if%>
+				{/if}
+
+				<%if user.isagent==1 && user.status==1%>
+
+					<p>{php echo $_S['commission']['texts']['commission_total']} : <%user.commission_total%></p>
+					<p><%user.agentcount%>个{php echo $_S['commission']['texts']['agent']}</p>
+
+					<%if user.ordercount !=0%>
+						<p><%user.ordercount%>个订单</p>
+					<%/if%>
+
+				<%else%>
+
+					<p>消费 : <%user.moneycount%>{php echo $this->set['texts']['yuan']}</p>
+					<p><%user.ordercount%>个订单</p>
+
+				<%/if%>
+				 
+			</div>
+		</div>
+		</a>
+		<%/each%>
+	</script>
+{if $this->set['pageway']==0}
+	<script language='javascript'>
+		require(['../addons/ewei_shopv2/plugin/commission/static/js/down.js'], function (modal) {
+			modal.init({fromDetail: false});
+		});
+	</script>
+{/if}
+</div>
+{php $this->footerMenus()}
+{template '_footer'}

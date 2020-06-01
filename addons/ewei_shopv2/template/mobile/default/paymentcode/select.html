@@ -1,0 +1,311 @@
+{template '_header'}
+<link rel="stylesheet" type="text/css" href="../addons/ewei_shopv2/template/mobile/default/static/css/coupon.css?v=2.0.0">
+<link rel="stylesheet" type="text/css" href="../addons/ewei_shopv2/template/mobile/default/static/css/coupon-new.css?v=2017030302">
+<style>
+    .yen{border:none;height:0.75rem;width:0.75rem;display: inline-block;background: #ff4753;color:#fff;font-size:0.4rem;line-height: 0.8rem;text-align: center;
+        font-style: normal;border-radius: 0.75rem;-webkit-border-radius: 0.75rem;}
+    .order-create-page .fui-list.goods-item .fui-list-inner{
+        height: 3.5rem;
+        align-self: center;
+    }
+    .order-create-page .fui-list.goods-item .fui-list-angle{
+        height: 3.5rem;
+        align-self: center;
+    }
+    .order-create-page .fui-list-inner .subtitle{
+        display: block;
+    }
+</style>
+<div class='fui-page order-create-page'>
+    <div class="fui-header">
+        <div class="fui-header-left">
+            <a class="back"></a>
+        </div>
+        <div class="title">确认支付</div>
+        <div class="fui-header-right" data-nomenu="true">&nbsp;</div>
+    </div>
+    <div class='fui-content  navbar'>
+        {if  !$isverify && !$isvirtual&&!$isonlyverifygoods}
+        <!--地址选择-->
+        <div class="fui-list-group" id='addressInfo' data-addressid="{php echo intval($address['id'])}" style="    margin: 0 0 .5rem;display:none;">
+            <a  class="fui-list {if empty($address)}external{/if}"
+                    {if empty($address)}
+                        href="{php echo mobileUrl('member/address/post')}"
+                    {else}
+                        href="{php echo mobileUrl('member/address/selector')}"
+                    {/if}
+                data-nocache="true">
+                <div class="fui-list-media">
+                    <i class="icon icon-dingwei" {if empty($address)}style='display:none'{/if}></i>
+                </div>
+                <div class="fui-list-inner" >
+                    <div class="title has-address" {if empty($address)}style='display:none'{/if}>
+                        收货人：
+                        <span class='realname'>{$address['realname']}</span>
+                        <span class='mobile'>{$address['mobile']}</span>
+                    </div>
+                    <div class="text has-address" {if empty($address)}style='display:none'{/if}>
+                        <span class='address'>{$address['province']}{$address['city']}{$address['area']}{if !empty($new_area) && !empty($address_street)} {$address['street']}{/if} {$address['address']}</span>
+                    </div>
+                    <div class="text no-address" {if !empty($address)}style='display:none'{/if}><i class="icon icon-icon02"></i> 添加收货地址</div>
+                </div>
+                <div class="fui-list-angle">
+                    <div class="angle"></div>
+                </div>
+            </a>
+        </div>
+    {/if}
+    <!--联系填写-->
+    {if $sysset['set_realname']==0 || $sysset['set_mobile']==0}
+        <div class="fui-cell-group sm" style="display:none;" id="memberInfo" {if !$isverify && !$isvirtual}style="display:none"{/if}>
+            {if $sysset['set_realname']==0}
+                <div class="fui-cell">
+                    <div class="fui-cell-label sm">联系人</div>
+                    <div class="fui-cell-info c000"><input type="text" placeholder="请输入联系人" data-set="{$sysset['set_realname']}" name='carrier_realname' class="fui-input" value="{$member['realname']}"/></div>
+                </div>
+            {/if}
+            {if $sysset['set_mobile']==0}
+                <div class="fui-cell">
+                    <div class="fui-cell-label sm">联系电话</div>
+                    <div class="fui-cell-info c000"><input type="tel" placeholder="请输入联系电话" data-set="{$sysset['set_mobile']}" name='carrier_mobile' class="fui-input" value="{$member['carrier_mobile']}"/></div>
+                </div>
+            {/if}
+        </div>
+    {/if}
+
+    <div class="fui-list-group" >
+        <div class="fui-list-group-title"><i class="icon icon-dianpu1"></i > {$goods[0]['merchname']}</div>
+        <input type="hidden" name="merchid" value="{$goods[0]['merchid']}"/>
+        <input type='hidden' name='optionid' value="{$ggoods[0]['optionid']}" />
+        <div class="fui-list goods-item align-start">
+            <div class="fui-list-media">
+                    <img id="" class="round" src="{php echo tomedia($goods[0]['merchlogo'])}">
+            </div>
+            <div class="fui-list-inner">
+            </div>
+            <div class="fui-list-angle"style="width: auto">
+                <span style="font-size: .65rem;color: #000">￥<span class="marketprice">{if $goods[0]['packageprice'] > $goods[0]['unitprice']}{$goods[0]['packageprice']}{else if $goods[0]['marketprice'] > $goods[0]['unitprice']}{$goods[0]['marketprice']}{else}{$goods[0]['unitprice']}{/if}</span></span>
+                <div class="num">
+                    {if $taskgoodsprice}
+                    {php $total = 1;}
+                    x1<input class="num shownum" type="hidden" name="" value="1"/>
+                    {elseif $changenum && !$isgift}
+                    
+                    {else}
+                    x{$goods[0]['total']}<input class="num shownum" type="hidden" name="" value="{$total}"/>
+                    {/if}
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            $(function(){
+                $(".package-goods-img").height($(".package-goods-img").width());
+            })
+        </script>
+        <div class='fui-cell-group' style="margin-top: 0">
+
+        <div class="fui-cell  lineblock ">
+            <div class="fui-cell-info c000" style="text-align: right;"> 实付：<span class="text-danger bigprice">&yen; <span class='{if !$packageid && empty($exchangeOrder)}goodsprice{/if}'>{php echo number_format($goodsprice,2)}</soan></span></div>
+        </div>
+    </div>
+</div>
+
+    {if empty($exchangeOrder) && empty($taskgoodsprice) && empty($packageid) && empty($if_bargain['bargain'])}
+    <div class="fui-cell-group">
+        <div id='coupondiv' class="fui-cell fui-cell-click" {if $couponcount<=0}style='display:none'{/if}>
+        <div class='fui-cell-label' style='width:auto;'>优惠券</div>
+        <div class='fui-cell-info'></div>
+        <div class='fui-cell-remark'>
+            <img id="couponloading" src="../addons/ewei_shopv2/static/images/loading.gif" style="vertical-align: middle;display: none;" width="20" alt=""/>
+            <div class='badge badge-danger' {if $couponcount<=0}style='display:none'{/if}>{$couponcount}</div>
+            <span class='text' {if $couponcount>0}style='display:none'{/if}>无可用</span>
+        </div>
+    </div>
+
+    {if $deductcredit>0}
+    <div class="fui-cell">
+        <div class="fui-cell-label" style="width: auto;"> <span id="deductcredit_info" class='text-danger'>{$deductcredit}</span> {$_W['shopset']['trade']['credittext']}可抵扣 ￥<span id="deductcredit_money" class='text-danger'>{php echo number_format($deductmoney,2)}</span> 元</div>
+        <div class="fui-cell-info"></div>
+        <div class="fui-cell-remark noremark"><input id="deductcredit" data-credit="{$deductcredit}" data-money='{$deductmoney}' type="checkbox" class="fui-switch fui-switch-small fui-switch-danger pull-right"></div>
+    </div>
+    {/if}
+    {if $deductcredit2>0}
+    <div class="fui-cell">
+        <div class="fui-cell-label" style="width: auto;">{$_W['shopset']['trade']['moneytext']}可抵扣 <span id='deductcredit2_money' class="text-danger">{php echo number_format($deductcredit2,2)}</span>元</div>
+        <div class="fui-cell-info"></div>
+        <div class="fui-cell-remark noremark info"><input id="deductcredit2" data-credit2="{$deductcredit2}" type="checkbox"  class="fui-switch fui-switch-small fui-switch-danger pull-right"></div>
+    </div>
+    {/if}
+</div>
+{/if}
+
+
+<div class="fui-cell-group">
+    <input type="hidden" id="weight" name='weight' value="{$weight}" />
+    {if !empty($exchangeOrder)}
+    <div class="fui-cell">
+        <div class="fui-cell-label" >兑换券</div>
+        <div class="fui-cell-info"></div>
+        <div class="fui-cell-remark noremark"><span style="color: red;">- &yen; {php echo number_format($exchangecha,2);}</span></div>
+    </div>
+    {/if}
+    <div class="fui-cell">
+        <div class="fui-cell-label" >小计</div>
+        <div class="fui-cell-info"></div>
+        <div class="fui-cell-remark noremark">&yen; <span class='{if !$packageid && empty($exchangeOrder)}goodsprice{/if}'>
+            {if !empty($exchangeOrder)}{$exchangeprice}{elseif $taskgoodsprice}{$taskgoodsprice}{else}{php echo number_format($goodsprice,2)}{/if}
+        </span></div>
+    </div>
+    <input type="hidden" name="invoicePrice" value="{$hasinvoiceMoney}">
+    {if empty($exchangeOrder) && empty($taskgoodsprice)}
+    {if !$packageid}
+    {if empty($if_bargain['bargain'])}
+    <div class="fui-cell"  style="display: none">
+        <div class="fui-cell-label" style='width:auto' >重复购买优惠</div>
+        <div class="fui-cell-info"></div>
+        <div class="fui-cell-remark noremark">-￥<span id='showbuyagainprice' class='showbuyagainprice'></span></div>
+        <input type="hidden" id='buyagain' class='buyagainprice'  value="{php echo number_format($buyagainprice,2)}" />
+    </div>
+    {/if}
+    <div class="fui-cell istaskdiscount"  style="display: none">
+        <div class="fui-cell-label" style='width:auto' >任务活动优惠</div>
+        <div class="fui-cell-info"></div>
+        <div class="fui-cell-remark noremark">-&yen; <span id='showtaskdiscountprice' class='showtaskdiscountprice'></span></div>
+        <input type="hidden" id='taskdiscountprice' class='taskdiscountprice'  value="{php echo number_format($taskdiscountprice,2)}" />
+    </div>
+
+    <div class="fui-cell discount"  style="display: none">
+        <div class="fui-cell-label" style='width:auto' >会员优惠</div>
+        <div class="fui-cell-info"></div>
+        <div class="fui-cell-remark noremark">-&yen; <span id='showdiscountprice' class='showdiscountprice'></span></div>
+        <input type="hidden" id='discountprice' class='discountprice'  value="{php echo number_format($discountprice,2)}" />
+    </div>
+
+    <div class="fui-cell isdiscount"  style="display: none">
+        <div class="fui-cell-label" style='width:auto' >促销优惠</div>
+        <div class="fui-cell-info"></div>
+        <div class="fui-cell-remark noremark">-&yen; <span id='showisdiscountprice' class='showisdiscountprice'></span></div>
+        <input type="hidden" id='isdiscountprice' class='isdiscountprice'  value="{php echo number_format($isdiscountprice,2)}" />
+    </div>
+    
+    {if $saleset['showenough']}
+    <div class="fui-cell" id="deductenough" >
+        <div class="fui-cell-label" style='width:auto' >商城优惠 <span style="font-size: .6rem">：单笔满 ￥<span id="deductenough_enough">{php echo number_format($saleset['enoughmoney'],2)}</span> 元立减￥{if $saleset['showenough']}{php echo number_format($saleset['enoughdeduct'],2)}{/if}</span></div>
+        <div class="fui-cell-info"></div>
+        <div class="fui-cell-remark noremark">-&yen; <span id='deductenough_money'>{if $saleset['showenough']}{php echo number_format($saleset['enoughdeduct'],2)}{/if}</span></div>
+    </div>
+    {/if}
+    {if $merch_saleset['merch_showenough']}
+    <div class="fui-cell" id="merch_deductenough" {if !$merch_saleset['merch_showenough']}style='display:none'{/if}>
+        <div class="fui-cell-label" style='width:auto' >商户单笔满 <span id="merch_deductenough_enough" class='text-danger'>{php echo number_format($merch_saleset['merch_enoughmoney'],2)}</span> 元立减</div>
+        <div class="fui-cell-info"></div>
+        <div class="fui-cell-remark noremark">-&yen; <span id='merch_deductenough_money'>{if $merch_saleset['merch_showenough']}{php echo number_format($merch_saleset['merch_enoughdeduct'],2)}{/if}</span></div>
+    </div>
+    {/if}
+
+    <div class="fui-cell" id="seckillprice"  {if $seckill_price<=0}style="display: none"{/if}>
+        <div class="fui-cell-label" style='width:auto' >秒杀优惠</div>
+        <div class="fui-cell-info"></div>
+        <div class="fui-cell-remark noremark">-&yen; <span id="seckillprice_money">{php echo number_format($seckill_price,2)}</span></div>
+    </div>
+
+    <div class="fui-cell" id='coupondeduct_div' style='display:none'>
+        <div class="fui-cell-label" style='width:auto' id='coupondeduct_text' ></div>
+        <div class="fui-cell-info"></div>
+        <div class="fui-cell-remark noremark">-&yen; <span id="coupondeduct_money">0</span></div>
+    </div>
+    </div>
+    {/if}
+
+    {/if}
+
+    
+    
+    <div class="fui-cell-group oppaytype">
+        <input type="hidden" name="paytype" value="">
+        <div class='fui-list pay-btn buy-btn' type="credit">
+            <div class='fui-list-media'>
+                <img src="{EWEI_SHOPV2_STATIC}images/ye.png" alt="">
+            </div>
+            <div class='fui-list-inner'>
+                <div class="title">
+                    余额支付
+                </div>
+                <div class="subtitle c999 f24">当前余额: <span class='text-danger'>￥{php echo $member['credit2']}</span>
+                </div>
+            </div>
+            <div class='fui-list-angle'><span class="angle"></span></div>
+        </div>
+        <!-- {if number_format($goodsprice,2) > 0} -->
+        <div class='fui-list pay-btn buy-btn' type="wechat">
+            <div class='fui-list-media'>
+                <!--<i class='icon icon-wechat wechat'></i>-->
+                <img src="{EWEI_SHOPV2_STATIC}images/wx.png" alt="">
+            </div>
+            <div class='fui-list-inner'>
+                <div class="title">
+                    微信支付
+                </div>
+                <div class="subtitle c999 f24">
+                    <img src="{EWEI_SHOPV2_STATIC}images/safe.png" alt="" style="height: .8rem;vertical-align: text-bottom">微信安全支付
+                </div>
+            </div>
+            <div class='fui-list-angle'><span class="angle"></span></div>
+        </div>
+        <!-- {/if} -->
+    </div>
+    <div class="fui-list-group">
+        <div class="fui-cell-group oppaybtn" style="display:none;">
+            <div class='fui-list pay-btn buy-btn' type="credit">
+                <div class="btn btn-success" style="width:95%;">确认支付</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="fui-navbar order-create-checkout">
+    <div href="javascript:;" class="nav-item total">
+        <p style="color: #000">{if $packageid}<span class="text-danger" style="font-size: 0.6rem;text-align:center;">(套餐优惠&yen;{php echo number_format($marketprice-$goodsprice,2)})</span>{/if}
+            需付：<span class="text-danger  bigprice">&yen; <text class="totalprice">
+                {if !empty($exchangeOrder)}{$exchangerealprice}{elseif $taskgoodsprice}{$taskgoodsprice}{else}{php echo number_format($realprice,2)}{/if}</text></span>
+        </p>
+    </div>
+    
+</div>
+{template 'sale/coupon/util/picker'}
+<script language='javascript'>require(['biz/order/paymentcode'], function (modal) {modal.init({php echo json_encode($createInfo)}); });</script>
+</div>
+<script type="text/javascript">
+    $("#invoiceCheckbox").click(function(){
+        if ($(this).prop("checked")) {            
+            $(".invoice-operate").show();
+            $("#showinvoice").show();
+        }else{
+            $(".invoice-operate").hide();
+            $("#showinvoice").hide();
+             // $("#showinvoice").html('')
+        }
+    })
+
+</script>
+<script type="text/javascript">
+    $(".buy-btn").click(function(){
+        var type = $(this).attr('type');
+        $('input[name="paytype"]').val(type);
+    })
+</script>
+
+<script type="text/javascript">
+    
+    $("#invoiceCheckbox_personal").click(function(){
+            $(".invoice-tax-no").hide();
+    }),
+    $("#invoiceCheckbox_company").click(function(){
+            $(".invoice-tax-no").show();
+
+    })
+</script>
+{template '_footer'}
+
+<!--efwww_com54mI5p2D5omA5pyJ-->

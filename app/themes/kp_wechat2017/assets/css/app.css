@@ -1,0 +1,97 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017-2-26, 20:07:11
+    Author     : ivan
+*/
+
+body {
+    font-size: 1.4rem; /* =16px */
+}
+
+.kp-nav-menu{
+    margin-top:0;
+    background-color: #f2f2f2;
+}
+.kp-nav-menu>li.am-active>a{
+    color:#49bd2f;
+    background-color: inherit;
+}
+.kp-nav-menu>li.am-active>a, .am-nav>li.am-active>a:focus, .am-nav>li.am-active>a:hover{
+    color:#49bd2f;
+    background-color: inherit;    
+}
+
+.kp-nav-menu>li>a:focus, .kp-nav-menu>li>a:hover{
+    background-color: inherit;    
+}
+
+.kp-nav-menu>li>a{
+    color:black;
+}
+
+.kp-nav-menu2{
+    margin:5px; 
+    /*border:1px #ff8000 dashed;*/
+    /*background-color: #f2f2f2;*/
+}
+.kp-nav-menu2>li{
+    border:1px #ddd solid;
+    margin-bottom: 5px;
+    color:#428bca;
+    border-radius: 5px;
+}
+.kp-nav-menu2>li.am-active{
+
+    /*border:1px #428bca solid;*/
+    background-color: #428bca;
+    margin-bottom: 5px;
+    border-color: #428bca;
+　　border-style: solid dashed;
+　　border-width: 1px 2px 3px;
+　　border-top-color: red;
+　　border-radius: 5%;
+}
+
+.kp-nav-menu2>li.am-active>a:focus, .kp-nav-menu2>li.am-active>a:hover{
+    color:white;
+
+    background-color: inherit;    
+}
+
+.kp-list-news{
+    margin-top:0px;
+}
+
+
+.kp-list-thumb{
+    height: 70px;
+}
+
+.am-list-main>h3{
+    height:20px;
+    color:#6699ff;overflow:hidden;text-overflow:ellipsis; 
+    /*border-bottom:1px #ff8000 dashed;*/
+}
+
+.am-list-main>h3>a{
+    font-size:1.5rem;
+    color:black;
+    overflow: hidden;
+    text-overflow:ellipsis; 
+}
+.kp-breadcrumb{
+    background-color:#f5f5f5;
+}
+.kp-breadcrumb>li+li:before{
+    content: "/";
+    padding: 0 5px;
+    color: #ccc;  
+}
+
+.kp-article{
+    margin:10px;
+}

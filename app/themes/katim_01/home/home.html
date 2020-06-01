@@ -1,0 +1,95 @@
+{template 'common/header'}
+<header data-am-widget="header" class="am-header am-header-default">
+	<div class="am-header-left am-header-nav">
+	<a href="#" data-am-offcanvas="{target: '#list-left', effect: 'push'}">
+		<i class="am-header-icon am-icon-list"></i>
+	</a>
+	</div>
+	<h1 class="am-header-title" style="height: 48px;line-height: 48px;">{php if(isset($title)) $_W['page']['title'] = $title}{if !empty($_W['page']['title'])} {/if}{if !empty($_W['account']['name'])}{$_W['account']['name']}{/if}{if !empty($_W['page']['sitename'])} - {$_W['page']['sitename']}{/if}</h1>
+</header>
+{php $slides = app_slide(array('multiid'=>$multiid));}
+{if $slides}
+<div class="am-slider am-slider-default" data-am-flexslider id="dslider">
+  <ul class="am-slides">
+    {loop $slides $row}
+    <li><a href="{$row['url']}"><img src="{$row['thumb']}" /></a></li>
+    {/loop}
+  </ul>
+</div>
+{/if}
+<div class="">
+	<ul data-am-widget="gallery" class="am-gallery am-avg-sm-2 am-avg-md-3 am-avg-lg-4 am-gallery-overlay" >
+		
+      {data module="site" func="site_article" ishot="1" assign="result" return="true"}
+		{loop $result['list'] $row}
+		{if $row['ishot'] == '1'}
+		<li>
+        <div class="am-gallery-item">
+            <a href="{$row['linkurl']}" class="">
+              	<img src="{$row['thumb']}"  alt="{$row['title']}"/>
+                <h3 class="am-gallery-title">{$row['title']}</h3>
+                <div class="am-gallery-desc">{php echo date('Y-m-d H:i:s', $row['createtime'])}</div>
+            </a>
+        </div>
+      </li>
+		{/if}
+	   {/loop}
+	</ul>
+</div>
+<div data-am-widget="list_news" class="am-list-news am-list-news-default" >
+	<div class="am-list-news-bd">
+		<ul class="am-list">
+			{data module="site" func="site_article" iscommend="1" assign="result" return="true"}
+			{loop $result['list'] $row}
+			{if $row['iscommend'] == '1'}
+			<li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-right">
+				<div class=" am-u-sm-8 am-list-main">
+					<h3 class="am-list-item-hd"><a href="{$row['linkurl']}" class="">{$row['title']}</a></h3>
+					<div class="am-list-item-text">{php echo cutstr($row['description'],80,1);}</div>
+				</div>
+				{if $row['thumb']}
+				<div class="am-u-sm-4 am-list-thumb">
+	            <a href="{$row['linkurl']}" class="">
+	              <img src="{$row['thumb']}" alt="{$row['title']}"/>
+	            </a>
+	          	</div>
+	          	{/if}
+			</li>
+			{/if}
+		    {/loop}
+		</ul>
+	</div>
+</div>
+<!-- 侧边栏内容 -->
+<style type="text/css" media="screen">
+#list-left{}	
+#list-left .am-offcanvas-bar{background-color: #0e90d2;}
+#list-left .am-list>li{background: none; border-width:0 0 1px 0; border-bottom:1px dotted #fff;}
+#list-left .am-list>li a{color: #fff;}
+#list-left .am-list>li i{margin-right: 5px; width: 25px; height: 25px; font-size: 25px;vertical-align:bottom; text-align: center;}
+#list-left .am-list>li img{ max-width: 25px; max-height: 25px;}
+</style>
+<div id="list-left" class="am-offcanvas">
+  <div class="am-offcanvas-bar">
+    <div class="am-offcanvas-content">
+    	<div data-am-widget="list_news" class="am-list-news am-list-news-default" >
+			<div class="am-list-news-bd">
+				<ul class="am-list">
+					{loop $navs $key $nav}
+					<li class="am-g am-list-item-dated">
+						<a href="{$nav['url']}" class="am-list-item-hd ">
+						{if !empty($nav['icon'])}
+		              	<img src="{$_W['attachurl']}{$nav['icon']}"/>
+		              	{else}
+		              	<i class="fa {$nav['css']['icon']['icon']}"></i> 
+		              	{/if}
+						{$nav['name']}</a>
+					</li>
+			      	{/loop}
+				</ul>
+			</div>
+    	</div>
+    </div>
+  </div>
+</div>
+{template 'footer'}

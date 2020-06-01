@@ -1,0 +1,100 @@
+{template 'common/header'}
+{template 'common/slide'}
+<link href="{$_W['siteroot']}app/themes/fzz_a/css/xui.css" rel="stylesheet">
+<link href="{$_W['siteroot']}app/themes/fzz_a/css/home.css" rel="stylesheet">
+<style>
+	.container{ padding: 0;}
+	{$_W['styles']['css']}
+</style>
+{php $aa = $_W['styles']['aa'];}
+{php $ab = $_W['styles']['ab'];}
+{php $ac = $_W['styles']['ac'];}
+<div class="top-news x-list">
+	<div class="hd">
+		{php $res_a = pdo_fetch("SELECT name,icon,css FROM " .tablename('site_category'). " WHERE id = $aa ");}
+		{if !empty($res_a['icon'])}
+		<span class="icon">
+			<img src="{$_W['attachurl']}{$res_a['icon']}">
+		</span>
+		{else}
+		<span class="icon">
+			<i class="x-icon {$res_a['css']['icon']['icon']}" style="color: {$nav['css']['icon']['color']}" ></i>
+		</span>
+		{/if}
+		<span class="tit">{php echo $res_a['name'];}</span>
+	</div>
+	<div class="bd">
+		{data func="site_article" cid=$aa assign="result" ishot="true" limit="1" return="true"}
+		{loop $result['list'] $row}
+		<a class="cell x_cf" href="{$row['linkurl']}">
+			<div class="pic">
+				<img src="{$row['thumb']}" alt="">
+			</div>
+			<div class="txt">
+				<div class="title">{$row['title']}</div>
+				<div class="des">
+					{$row['description']}
+				</div>
+			</div>
+		</a>
+		{/loop}
+	</div>
+</div>
+<!--nav-->
+<div class="x-nav x_cf">
+	{data func="site_navs" item="nav" limit="5"}
+		{if $i<6}
+		<a class="x-item item-{php echo $i}" href="{$nav['url']}">
+			{if !empty($nav['icon'])}
+			<div class="icon">
+				<img src="{$_W['attachurl']}{$nav['icon']}">
+			</div>
+			{else}
+			<div class="icon">
+				<i class="x-icon {$nav['css']['icon']['icon']}" style="color: {$nav['css']['icon']['color']}" ></i>
+			</div>
+			{/if}
+			<div class="tit x_toe">
+				{$nav['name']}
+			</div>
+			<div class="des x_toe">
+				{$nav['description']}
+			</div>
+		</a>
+		{/if}
+	{/data}
+</div>
+<!--news-->
+<div class="x-news x-list">
+	<div class="hd">
+		{php $res_b = pdo_fetch("SELECT name,icon,css FROM " .tablename('site_category'). " WHERE id = $ab ");}
+		{if !empty($res_b['icon'])}
+		<span class="icon">
+			<img src="{$_W['attachurl']}{$res_b['icon']}">
+		</span>
+		{else}
+		<span class="icon">
+			<i class="x-icon {$res_b['css']['icon']['icon']}" style="color: {$nav['css']['icon']['color']}" ></i>
+		</span>
+		{/if}
+		<span>{php echo $res_b['name'];}</span>
+	</div>
+	<div class="bd">
+		{php $ac ? $limitNum = $ac : $limitNum = 4 }
+		{data func="site_article" cid=$ab assign="result" iscommend="true" limit=$limitNum return="true"}
+		{loop $result['list'] $row}
+		<a class="cell x_cf" href="{$row['linkurl']}">
+			<div class="pic">
+				<img src="{$row['thumb']}" alt="">
+			</div>
+			<div class="txt">
+				<div class="title">{$row['title']}</div>
+				<div class="des">
+					{$row['description']}
+				</div>
+			</div>
+		</a>
+		{/loop}
+	</div>
+</div>
+{template 'common/footer'}

@@ -1,0 +1,101 @@
+{template '_header'}
+<div class='fui-page  fui-page-current'>
+    <div class="fui-header">
+	<div class="fui-header-left">
+	    <a class="back"></a>
+	</div>
+	<div class="title">订单服务</div> 
+	<div class="fui-header-right">&nbsp;</div>
+    </div>
+    <div class='fui-content navbar'>
+
+	<div class='fui-list-group'>
+	    <div class='fui-list order-status'>
+
+		<div class='fui-list-inner'>
+		    <div class='title'>{$order['ordersn']}</div>
+		    <div class='text'>订单金额: ￥{$order['price']}</div>
+		</div>
+	    </div>
+	</div>
+	<div class="fui-list-group goods-list-group">  
+
+	    <div class="fui-list-group-title"><i class="icon icon-shop"></i> {$_W['shopset']['shop']['name']}</div>
+
+	    {loop $allgoods $g}
+	    <a href="{php echo mobileUrl('goods/detail',array('id'=>$g['goodsid']))}">
+
+		<div class="fui-list goods-list">
+		    <div class="fui-list-media">
+			<img src="{php echo tomedia($g['thumb'])}" class="round">
+		    </div>
+		    <div class="fui-list-inner">
+			<div class="text goodstitle">{$g['title']}</div> 
+			{if !empty($g['optionid'])}<div class='subtitle'>{$g['optiontitle']}</div>{/if}
+
+		    </div>
+		    <div class='fui-list-angle'>
+			￥<span class='marketprice'>{$g['price']}<br/>   x{$g['total']}
+		    </div>
+
+		</div>
+	    </a>
+	    {/loop}
+	</div>
+	<div class='fui-list-group'>
+	    <div class='fui-list order-status'>
+
+		<div class='fui-list-inner'>
+		    <div class='text'>本次订单服务费: ￥{$server_money}</div>
+		</div>
+	    </div>
+	</div>
+    </div>
+    {if $nolevel}
+	    {if $is_server && $order['status']==0}
+	    <div class='fui-footer' style="height: 4.9rem;">
+			<div class="btn btn-success order-query block" data-orderid="{$order['id']}" data-status="1" data-servermoney="{$server_money}">
+			    <!-- <i class="icon icon-check"></i>  -->
+			    <span>确认服务</span>
+			</div>
+			<div class="btn btn-danger order-query block" data-orderid="{$order['id']}" data-status="-1" data-servermoney="{$server_money}">
+			    <!-- <i class="icon icon-nocheck"></i>  -->
+			    <span>拒绝服务</span>
+			</div>
+	    </div>
+	    {elseif $order['status']== -1}
+	    <div class='fui-footer' style="height: 2.45rem;">
+			<div class="btn btn-success order-query block" data-orderid="{$order['id']}" data-status="1" data-servermoney="{$server_money}">
+			    <!-- <i class="icon icon-check"></i>  -->
+			    <span>确认服务</span>
+			</div>
+	    </div>
+	    {else if !$is_server && $order['status']!=1}
+	    <div class='fui-footer' style="height: 2.45rem;background:#6D6E6A;color:#fff;">
+			<div class="btn   block" style="border:none;" onclick="return false;"  >
+			    <!-- <i class="icon icon-check"></i>  -->
+			    <span>您不是客户的直属上级,暂时无法服务</span>
+			</div>
+	    </div>
+	    {else}
+	    <div class='fui-footer' style="height: 2.45rem;background:#6D6E6A;color:#fff;">
+			<div class="btn   block" style="border:none;" onclick="return false;" >
+			    <!-- <i class="icon icon-check"></i>  -->
+			    <span>此订单已完成服务,无法重复服务</span>
+			</div>
+	    </div>
+	    {/if}
+	 {else}
+	 	<div class='fui-footer' style="height: 2.45rem;background:#6D6E6A;color:#fff;">
+			<div class="btn   block" style="border:none;" onclick="return false;" data-orderid="{$order['id']}" data-servermoney="{$server_money}" data-status="1" >
+			    <!-- <i class="icon icon-check"></i>  -->
+			    <span>您目前的等级无法提供服务,请提升等级</span>
+			</div>
+	    </div>
+	 {/if}
+    <script language='javascript'>require(['biz/verify/server_detail'], function (modal) {
+                modal.init();
+            });</script>
+</div>
+{template '_footer'}
+<!--www-efwww-com-->

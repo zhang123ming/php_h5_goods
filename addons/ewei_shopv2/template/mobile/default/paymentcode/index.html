@@ -1,0 +1,55 @@
+{template '_header'}
+<link rel="stylesheet" type="text/css" href="../addons/ewei_shopv2/template/mobile/default/static/css/coupon-new.css?v=2017030302">
+<div class='fui-page fui-page-current'>
+    <div class="fui-header">
+		<div class="fui-header-left">
+			<a class="back"></a>
+		</div>
+		<div class="title">向商家付款</div> 
+		<div class="fui-header-right">&nbsp;</div>
+    </div>
+    <form method="get" action='./index.php'>
+    <div class='fui-content' style="margin-top:35px;">
+    	<input type="hidden" name="i" value="{$uniacid}"/>
+		<input type="hidden" name="c" value="entry" />
+		<input type="hidden" value="ewei_shopv2" name="m"/>
+        <input type="hidden" value="mobile" name="do"/>
+        <input type="hidden"  value="paymentcode.select" name="r"/>
+		<input type="hidden" name="merchid" value="{$merchuser['id']}" />
+		<div class='fui-cell-group' style="text-align:center">
+			<div class='fui-cell'>
+				<div class='fui-cell-info'><img style="width:80px;height:80px;margin-top:10px;border-radius: 50%" src="{php echo tomedia($merchuser['logo'])}"></div>
+			</div>
+			<div class="fui-cell">
+				<div class='fui-cell-info' style="text-align:center;">{php echo $merchuser['merchname']}</div>
+			</div>
+		</div>
+		<div class='fui-cell-group'>
+			<div class='fui-cell'>
+				<div class='fui-cell-label'>支付金额</div>
+				<div class='fui-cell-info'><input type='text' placeholder="请输入金额" class='fui-input' name='money' value=""></div>
+			</div>
+		</div>
+
+		<button style="width:95%;" class='btn btn-success' onclick="return check(this.form)">下一步</button>
+
+    </div>
+    </form>
+    <script type="text/javascript">
+        function check(form) {
+            if(form.money.value=='') {
+                alert("请输入金额!");
+                form.money.focus();
+                return false;
+            }
+
+            if(!(/^\d+(\.\d+)?$/.test(form.money.value))) {
+                alert("请输入数字");
+                form.money.focus();
+                return false;
+            } 
+                return true;
+        }
+	</script>
+	{template 'order/pay/wechat_jie'}
+</div> 

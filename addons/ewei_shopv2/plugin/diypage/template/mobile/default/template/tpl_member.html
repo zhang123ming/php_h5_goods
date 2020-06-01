@@ -1,0 +1,92 @@
+{php $member=m('member')->getMember($_W[openid]); $agentName=pdo_fetchcolumn('select nickname from '.tablename('ewei_shop_member').' where uniacid=:uniacid and id=:id',array(':uniacid'=>$_W['uniacid'],':id'=>$member['agentid']))}
+{if empty($diyitem['params']['style']) || $diyitem['params']['style']=='default1'}
+   <div style="overflow: hidden;height: 7.5rem;position: relative;background: #fff">
+       <div class="headinfo" style="{if !empty($diyitem['style']['background'])}border: none;{/if};z-index: 100">
+           {if !empty($diyitem['params']['seticon'])}
+                <a class="setbtn" style="color: {$diyitem['style']['textcolor']};" href="{$diyitem['params']['setlink']}" data-nocache="true"><i class="icon {$diyitem['params']['seticon']}"></i></a>
+            {/if}
+           <div class="child">
+               {if !$_W['shopset']['trade']['closecredit2']}
+               <div class="title" style="color: {$diyitem['style']['textcolor']};font-size: {$diyitem['style']['fontsize']}px;">{$diyitem['info']['textmoney']}</div>
+               <div class="num" style="color: {$diyitem['style']['textlight']};font-size: {$diyitem['style']['fontsize']}px;">{$diyitem['info']['money']}</div>
+               {if !empty($diyitem['params']['leftnav'])}
+               <a class="btn" style="color: {$diyitem['style']['textcolor']}; border-color: {$diyitem['style']['textcolor']};font-size: {$diyitem['style']['fontsize']}px;" href="{$diyitem['params']['leftnavlink']}" data-nocache="true">{$diyitem['params']['leftnav']}</a>
+               {/if}
+               {/if}
+           </div>
+           <div class="child userinfo" style="color: {$diyitem['style']['textcolor']};">
+               <a href="{php echo mobileUrl('member/info/face')}" data-nocache="true" style="color: {$diyitem['style']['textcolor']};">
+                   <div class="face {$diyitem['style']['headstyle']}"><img src="{$diyitem['info']['avatar']}" onerror="this.src='../addons/ewei_shopv2/static/images/noface.png'"></div>
+                   <div class="name" style="font-size: {$diyitem['style']['fontsize']}px;">{$diyitem['info']['nickname']}</div>
+               </a>
+               {if !empty($diyitem['params']['levellink'])}
+               <a class="level" href="{$diyitem['params']['levellink']}" style="font-size: {$diyitem['style']['fontsize']}px;">等级：[{$diyitem['info']['levelname']}] <i class="icon icon-question1" style="font-size: 0.6rem;"></i></a>
+               {else}
+               <div class="level" style="font-size: {$diyitem['style']['fontsize']}px;">等级：[{$diyitem['info']['levelname']}]</div>
+               {/if}
+               <div style="font-size: {$diyitem['style']['fontsize']}px;">ID：({$member[id]})</div>
+           </div>
+           <div class="child">
+              {if !$_W['shopset']['trade']['closecredit']}
+               <div class="title" style="color: {$diyitem['style']['textcolor']};">{$diyitem['info']['textcredit']}</div>
+               <div class="num" style="color: {$diyitem['style']['textlight']};">{$diyitem['info']['credit']}</div>
+               {if !empty($diyitem['params']['rightnav'])}
+               <a class="btn" style="color: {$diyitem['style']['textcolor']}; border-color: {$diyitem['style']['textcolor']}; font-size: {$diyitem['style']['fontsize']}px;" href="{$diyitem['params']['rightnavlink']}" data-nocache="true">{$diyitem['params']['rightnav']}</a>
+               {/if}
+              {/if}
+           </div>
+       </div>
+       <div class="member_header"style="background: {$diyitem['style']['background']};border-color: {$diyitem['style']['background']};font-size: {$diyitem['style']['fontsize']}px;"></div>
+   </div>
+{elseif $diyitem['params']['style']=='default2'}
+    <div class="headinfo style-2" style="background: {$diyitem['style']['background']}; {if !empty($diyitem['style']['background'])}border: none;{/if}">
+        {if !empty($diyitem['params']['seticon'])}
+          <a class="setbtn" style="color: {$diyitem['style']['textcolor']};" href="{$diyitem['params']['setlink']}" data-nocache="true"><i class="icon {$diyitem['params']['seticon']}"></i></a>
+        {/if}
+          <div class="face {$diyitem['style']['headstyle']}"><img src="{$diyitem['info']['avatar']}" onerror="this.src='../addons/ewei_shopv2/static/images/noface.png'"></div>
+          <div class="inner" style="color: {$diyitem['style']['textcolor']};">
+              <div class="name" style="font-size: {$diyitem['style']['fontsize']}px;">{$diyitem['info']['nickname']}</div>
+                {if !empty($diyitem['params']['levellink'])}
+                <a class="level" href="{$diyitem['params']['levellink']}" style="color: {$diyitem['style']['textcolor']};font-size: {$diyitem['style']['fontsize']}px;">等级：[{$diyitem['info']['levelname']}] <i class="icon icon-question1" style="ffont-size: {$diyitem['style']['fontsize']}px;"></i></a>
+                {else}
+                <div class="level" style="font-size: {$diyitem['style']['fontsize']}px;">等级：[{$diyitem['info']['levelname']}]</div>
+                {/if}
+                <div style="font-size: {$diyitem['style']['fontsize']}px;">ID：({$member[id]})</div>
+              {if !$_W['shopset']['trade']['closecredit2']}
+              <div class="credit" style="font-size: {$diyitem['style']['fontsize']}px;">{$diyitem['info']['textmoney']}: <span style="color: {$diyitem['style']['textlight']};">{$diyitem['info']['money']}</span></div>
+              {/if}
+              {if !$_W['shopset']['trade']['closecredit']}
+              <div class="credit" style="font-size: {$diyitem['style']['fontsize']}px;">{$diyitem['info']['textcredit']}: <span style="color: {$diyitem['style']['textlight']};">{$diyitem['info']['credit']}</span></div>
+              {/if}
+          </div>
+    </div>
+{elseif $diyitem['params']['style']=='default3'}
+    <div class="headinfo style-2" style="background: {$diyitem['style']['background']}; {if !empty($diyitem['style']['background'])}border: none;{/if}">
+        {if !empty($diyitem['params']['seticon'])}
+          <a class="setbtn" style="color: {$diyitem['style']['textcolor']};" href="{$diyitem['params']['setlink']}" data-nocache="true"><i class="icon {$diyitem['params']['seticon']}"></i></a>
+        {/if}
+        <div class="face {$diyitem['style']['headstyle']}"><img src="{$diyitem['info']['avatar']}" onerror="this.src='../addons/ewei_shopv2/static/images/noface.png'"></div>
+        <div class="child" style="width: 50%;padding-bottom: 0px;">
+          <div class="inner" style="color: {$diyitem['style']['textcolor']};text-align:left;">
+              <div class="name" style="font-size: {$diyitem['style']['fontsize']}px;">{$diyitem['info']['nickname']}</div>
+              {if !$_W['shopset']['trade']['closecredit2']}
+              <div class="credit" style="font-size: {$diyitem['style']['fontsize']}px;">{$diyitem['info']['textmoney']}: <span style="color: {$diyitem['style']['textlight']};">{$diyitem['info']['money']}</span></div>
+              {/if}
+              {if !$_W['shopset']['trade']['closecredit']}
+              <div class="credit" style="font-size: {$diyitem['style']['fontsize']}px;">{$diyitem['info']['textcredit']}: <span style="color: {$diyitem['style']['textlight']};">{$diyitem['info']['credit']}</span></div>
+              {/if}
+          </div>
+        </div>
+        <div class="child" style="width: 40%;padding-bottom: 0px;">
+              {if !empty($diyitem['params']['levellink'])}
+              <a class="level" href="{$diyitem['params']['levellink']}" style="color: {$diyitem['style']['textcolor']};font-size: {$diyitem['style']['fontsize']}px;">等级：[{$diyitem['info']['levelname']}] <i class="icon icon-question1" style="font-size: 0.6rem;"></i></a>
+              {else}
+              <div class="level" style="color: yellow;" style="font-size: {$diyitem['style']['fontsize']}px;"><strong>等级：[{$diyitem['info']['levelname']}]</strong></div>
+              {/if}
+            {if !empty($diyitem['params']['defaultnav'])}
+             <a class="btn" style="color: {$diyitem['style']['textcolor']}; border-color: {$diyitem['style']['textcolor']};font-size: {$diyitem['style']['fontsize']}px;" href="{$diyitem['params']['defaultnavlink']}" data-nocache="true">{$diyitem['params']['defaultnav']}</a>
+             {/if}
+        </div>
+    </div>
+{/if}
+<!--yifuyuanma-->

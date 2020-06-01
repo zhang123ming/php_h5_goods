@@ -1,0 +1,120 @@
+{template '_header'}
+ 
+<div class="page-header">
+    <span>当前位置：<span class="text-primary"> {if !empty($item['id'])}编辑{else}添加{/if}出勤 <small>{if !empty($item['id'])}修改【{$item['name']}】{/if}</small></span></span>
+
+</div>
+ <div class="page-content">
+    
+    <form action="" method="post" class="form-horizontal form-validate" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="{$item['id']}" />
+         <input type="hidden" name="batch" value="{$_GPC['batch']}" />
+                {if $_GPC['batch']==2}
+                <div class="form-group">
+                     <label class="col-lg control-label must">月报表</label>
+                    <div class="col-sm-9 col-xs-12">
+                        {ife 'perm.attendance' $item}
+                            {if $_GPC['batch']}
+                                <input type="number" name="month" class="form-control" value="" data-rule-required="true" />
+                            {else}
+                            {php echo tpl_form_field_date('post[date]',$item['date'])}
+                            {/if}
+                        {else}
+                        <div class="form-control-static">{php echo date('Y-m-d',$item['date'])}</div>
+                        {/if}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg control-label must">出勤人</label>
+                    <div class="col-sm-9 col-xs-12">
+                        <select name="name" class='form-control'>
+                          <option value="" {if $_GPC['name'] == ''} selected{/if}>全部</option>
+                          {loop $nameList $t}
+                            {if $t['name']}<option value="{$t['name']}" {if $_GPC['name'] == $t['name']} selected{/if}>{$t['name']}</option>{/if}
+                          {/loop}    
+                        </select>
+                    </div>
+                </div>
+                {else}
+				<div class="form-group">
+                     <label class="col-lg control-label must">出勤{if $_GPC['batch']}月份{else}日期{/if}</label>
+                    <div class="col-sm-9 col-xs-12">
+                        {ife 'perm.attendance' $item}
+                        	{if $_GPC['batch']}
+                            	<input type="number" name="month" class="form-control" value="" data-rule-required="true" />
+                            {else}
+                        	{php echo tpl_form_field_date('post[date]',$item['date'])}
+                            {/if}
+                        {else}
+                        <div class="form-control-static">{php echo date('Y-m-d',$item['date'])}</div>
+                        {/if}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg control-label must">出勤人</label>
+                    <div class="col-sm-9 col-xs-12">
+                        {ife 'perm.attendance' $item}
+                        <input type="text" name="post[name]" class="form-control" value="{$item['name']}" data-rule-required="true" />
+                        {else}
+                        <div class='form-control-static'>{$item['name']}</div>
+                        {/if}
+                    </div>
+                </div>
+                {/if}
+                {if empty($_GPC['batch'])}
+                <div class="form-group">
+                    <label class="col-lg control-label must">第一次打卡</label>
+                    <div class="col-sm-9 col-xs-12">
+                        {ife 'perm.attendance' $item}
+                        <input type="text" name="post[first]" class="form-control" value="{$item['first']}" data-rule-required="true" />
+                        {else}
+                        <div class='form-control-static'>{$item['first']}</div>
+                        {/if}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg control-label must">第二次打卡</label>
+                    <div class="col-sm-9 col-xs-12">
+                        {ife 'perm.attendance' $item}
+                        <input type="text" name="post[second]" class="form-control" value="{$item['second']}" data-rule-required="true" />
+                        {else}
+                        <div class='form-control-static'>{$item['second']}</div>
+                        {/if}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg control-label">状态</label>
+                    <div class="col-sm-9 col-xs-12">
+                         {ife 'perm.attendance' $item}
+                        <label class='radio-inline'>
+                            <input type='radio' name='post[status]' value=1' {if $item['status']==1}checked{/if} /> 已审
+                        </label>
+                        <label class='radio-inline'> 
+                            <input type='radio' name='post[status]' value=0' {if $item['status']==0}checked{/if} /> 待审
+                        </label>
+                        <span class="help-block">如果待审，则当前出勤的操作员全部会禁止使用</span>
+                        {else}
+                        <div class='form-control-static'>{if $item['status']==1}已审{else}待审{/if}</div>
+                        {/if}
+                    </div>
+                </div>
+                {/if}
+                    <div class="form-group"></div>
+            <div class="form-group">
+                    <label class="col-lg control-label"></label>
+                    <div class="col-sm-9 col-xs-12">
+                           {ife 'perm.attendance' $item}
+                            <input type="submit" value="提交" class="btn btn-primary"  />
+                            
+                        {/if}
+                       <input type="button" name="back" onclick='history.back()' {ifp 'perm.attendance.add|perm.attendance.edit'}style='margin-left:10px;'{/if} value="返回列表" class="btn btn-default" />
+                    </div>
+            </div>
+ 
+ 
+    
+    </form>
+ </div>
+{template '_footer'}
+
+<!--efwww_com54mI5p2D5omA5pyJ-->

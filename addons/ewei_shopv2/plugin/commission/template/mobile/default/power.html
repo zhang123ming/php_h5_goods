@@ -1,0 +1,159 @@
+{template '_header'}
+{template 'commission/common'}
+<form method="post" action='{php echo mobileUrl("commission/power")}&id={$member["id"]}'>
+
+<div class='fui-page  fui-page-current'>
+    <div class="fui-header">
+		<div class="fui-header-left">
+			<a class="back"></a>
+		</div>
+		<div class="title">会员资料</div>
+		<div class="fui-header-right">&nbsp;</div>
+	</div>
+	
+	<div class='fui-content' style='margin-top:5px;'>
+
+		<div class="fui-list-group">
+			<div class="fui-list">
+				<div class="fui-list-media">
+					<img class="round avatar" src="{php echo tomedia($member['avatar'])}" />
+				</div>
+				<div class="fui-list-inner">
+					<div class="title nickname">{$member['nickname']}</div>
+				</div>
+			</div>
+		</div>
+		{if $template_flag == 1}
+			{template 'diyform/formfields'}
+			{if $member['status'] == 0}
+				{if in_array($levelid[0]['id'],$userpower)}
+				<input type="submit" class='btn btn-success' style="width:95%" value="确认修改">
+				<a href="javascript:;" class='btn btn-danger' onclick="changeback({$member['id']})" style="width:95%" >驳回申请</a>
+				{else if !in_array($levelid[0]['id'],$userpower) }
+				<div class="fui-cell">
+					<center><div style="margin-top: 7%;">您没有审核权限</div></center>
+				</div>
+				{/if}
+			{/if}
+		{else}
+			<div class="fui-cell-group">
+				<div class="fui-cell">
+					<div class="fui-cell-label">姓名</div>
+					<div class="fui-cell-info">{$member['realname']}</div>
+				</div>
+				{if !empty($member['mobile'])}
+				<div class="fui-cell">
+					<div class="fui-cell-label">电话</div>
+					<div class="fui-cell-info">				
+						<div class="fui-cell-info">{$member['mobile']}</div>
+					</div>
+				</div>
+				{/if}
+				{if !empty($member['weixin'])}
+				<div class="fui-cell">
+					<div class="fui-cell-label">微信号</div>
+					<div class="fui-cell-info">					
+						<div class="fui-cell-info">{$member['weixin']}</div>
+					</div>
+				</div>
+				{/if}
+				
+				{if $user['levelname'] && $member['status'] == 0 && $member['isagent']==1}
+					{if !empty($aaglevels)}
+	                <div class='fui-cell must'>
+	                    <div class='fui-cell-label'>分销等级</div>
+	                    <div class='fui-cell-info'>
+	                        <select  id="agentlevel" name="agentlevels" value="" class='fui-cell-info'>
+	                            <option value="0" class='fui-cell-info'>{php echo empty($levels) ? ( empty($this->set['levelname'])?'普通等级':$this->set['levelname'] ) : $levels['levelname']}(默认,可选)</option>
+	                            {loop $aaglevels $aglevel}
+	                            {if !empty($aagent) && ($aglevel['level'] <= $aagent['level'])}
+	                            <option value="{$aglevel['id']}" {if $aglevel['level'] == $member['agentlevel']}selected="selected"{/if} class='fui-cell-info'>{$aglevel['levelname']}</option>
+	                            {/if}
+	                            {/loop}
+	                        </select>
+	                    </div>
+	                </div>
+	                {else}
+	                    {if !empty($auserlevels)}
+	                    <div class='fui-cell'>
+	                        <div class='fui-cell-label'>会员等级</div>
+	                        <div class='fui-cell-info'>
+	                            <select  id="userlevel" name="levels" value="" class='fui-cell-info'>
+	                                {loop $auserlevels $ulevel}
+	                                {if !empty($alevel) && ($ulevel['level'] <= $alevel['level'])}
+	                                <option value="{$ulevel['id']}" {if $ulevel['id'] == $member['level']}selected="selected"{/if} class='fui-cell-info'>{$ulevel['levelname']}</option>
+	                                {/if}
+	                                {/loop}
+	                            </select>
+	                        </div>
+	                    </div>
+	                    {/if}
+	                {/if}
+	            {else}
+	            	{if !empty($agent)}
+	                <div class='fui-cell must'>
+	                    <div class='fui-cell-label'>分销等级</div>
+	                    <div class='fui-cell-info'>  
+	                        <div class='fui-cell-info'>{$agent['levelname']}</div>
+	                    </div>
+	                </div>
+	                {else}
+	                    {if !empty($user)}
+	                    <div class='fui-cell'>
+	                        <div class='fui-cell-label'>会员等级</div>
+	                        <div class='fui-cell-info'>
+	                            <div class='fui-cell-info'>{$user['levelname']}</div>
+	                        </div>
+	                    </div>
+	                    {/if}
+	                {/if}
+				{/if}
+			</div>
+			{if $member['status'] == 0}
+				{if !empty($member['realname']) && !empty($member['mobile']) && !empty($user['levelname']) && in_array($levelid['id'],$userpower) && $member['isagent']==1}
+				<input type="submit" class='btn btn-success' style="width:95%" value="确认修改">
+				<a href="javascript:;" class='btn btn-danger' onclick="changeback({$member['id']})" style="width:95%" >驳回申请</a>
+				{/if}
+				{if empty($member['realname']) || empty($member['mobile']) || empty($user['levelname'])}
+				<div class="fui-cell">
+					<center><div style="margin-top: 7%;">资料尚未完善，无法审核</div></center>
+				</div>
+				{else if !in_array($levelid['id'],$userpower)}
+				<div class="fui-cell">
+					<center><div style="margin-top: 7%;">您没有审核权限</div></center>
+				</div>
+				{/if}
+				{if $member['isagent']==0 && $member['status']==0 && !empty($member['realname']) && !empty($member['mobile']) && !empty($user['levelname'])}
+				<div class="fui-cell">
+					<center><div style="margin-top: 7%;">申请已驳回</div></center>
+				</div>
+				{/if}
+			{/if}
+			
+		{/if}
+
+	</div>
+</div>
+
+</form>
+<script type="text/javascript">
+	function changeback(id)
+	{
+		var id = id;
+		// alert(id);
+		$.get('{php echo mobileUrl("commission/power/changeback")}',{'id':id},function(res){
+			var res=eval('('+res+')');
+			if(res.status == 1){
+				alert("驳回成功");
+			} else {
+				alert("驳回失败");
+			}
+			window.location.href='{php echo mobileUrl("commission/down")}';
+		})
+	}
+</script>
+{php $this->footerMenus()}
+{template '_footer'}
+
+
+<!--efwww_com

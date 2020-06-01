@@ -1,0 +1,51 @@
+<!doctype html>
+<html class="no-js">
+    {template 'common/header'}
+    <body>
+        {template 'common/slide'}
+
+        <ul class="am-nav am-nav-pills kp-nav-menu am-nav-justify">
+            {data func="site_navs" item="row"}
+            <li>
+                <a href="{$row[url]}">
+                    {php echo $row['name']}
+                </a>
+            </li>
+            {/data}
+        </ul>
+        {if empty($_W['styles']['home_pagesize'])}
+        {php $_W['styles']['home_pagesize'] = 10}
+        {/if}
+        {data func="site_article" cid=$cid return="true" ishot='true' limit="$_W['styles']['home_pagesize']" assign="result"}
+        {if empty($result['list'])}
+        <span style="text-align: center; display: block; padding-top: 20px; padding-bottom: 20px;">本分类下暂时没有文章，请稍后查看</span>
+        {else}
+        <div data-am-widget="list_news" class="kp-list-news am-list-news am-list-news-default" >
+            <!--列表标题-->
+            <div class="am-list-news-bd">
+                <ul class="am-list kp-list">
+                    <!--缩略图在标题左边-->
+                    {loop $result['list'] $row}
+                    <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left">
+                        {if $row['thumb']}
+                        <div class="am-u-sm-4 am-list-thumb kp-list-thumb">
+                            <a href="{$row['linkurl']}" class="">
+                                <img src="{$row['thumb']}" alt="$row['title']"/>
+                            </a>
+                        </div>
+                        {/if}
+                        <div class=" am-u-sm-8 am-list-main">
+                            <h3 class="am-list-item-hd"><a href="{$row['linkurl']}" class="">{$row['title']}</a></h3>
+                            <div class="am-list-item-text">{$row['description']}</div>
+                        </div>
+                    </li>
+                    {/loop}
+
+                </ul>
+            </div>
+
+        </div>
+        {/if}
+        {template 'common/footer'}
+    </body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>我的库存</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<!-- 适配文档 -->
+	<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+	<link rel="stylesheet" href="../addons/ewei_shopv2/static/btyStyle/lib/mui/css/mui.min.css">
+	<link rel="stylesheet" href="../addons/ewei_shopv2/static/btyStyle/css/style.css">
+	<!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+	<!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+	<!--[if lt IE 9]>
+	  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+	  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<article class="mt_30" style="margin-top: 30px">
+		<ul class="product_list">
+			{loop $list $item}
+			{if $item['hasoption']!=1}
+			<!-- 单规格产品 -->
+			<li>
+				<div class="left"><img src="{php echo tomedia($item['thumb'])}" alt="" width="100%"></div>
+				<div class="center">
+					<h3>{$item['title']}</h3>
+					<p class="orange">￥<span>{$item['price']}</span></p>
+				</div>
+				<div class="right mui-text-right">
+					<p>库存{$item['mstock']}件</p>
+					<!-- 可限定最大值和最小值 不需要可以去掉 -->
+					<!-- <div class="mui-numbox" data-numbox-min="0" data-numbox-max="9999"> -->
+						<!-- <button class="jian mui-btn mui-btn-numbox-minus " type="button">-</button>
+						<input type="text" id="test" class="mui-input-numbox num" data-price="{$item['price']}" data-type="goodsid" data-id="{$item['id']}" data-num="0" name="" value="0">
+						<button class="jia mui-btn mui-btn-numbox-plus " type="button" disabled="">+</button> -->
+					<!-- </div> -->
+				</div>
+			</li>
+			<!-- /单规格产品 -->
+			{else}
+			<!-- 多规格产品 -->
+			<li>
+				<div class="left"><img src="{php echo tomedia($item['thumb'])}" alt="" width="100%"></div>
+				<div class="center">
+					<h3>{$item['title']}</h3>
+					<p class="orange">￥<span>{$item['price']}</span></p>
+				</div>
+				<div class="right mui-text-right">
+					<p>库存{$item['mstock']}件</p>
+					<button type="button" class="mui-btn mui-btn-unfold">展开规格</button>
+				</div>
+				<ul class="size_list" style="display: none;">
+					{loop $item['options'] $option}
+					<li>
+						<span>规格：{$option['title']}</span>
+						<span class="orange">￥{$option['mprice']}</span>
+						<span>库存{$option['mstock']}件</span>
+						<!-- 可限定最大值和最小值 不需要可以去掉 -->
+						<!-- <div class="mui-numbox" data-numbox-min="0" data-numbox-max="99999">
+							<button class="mui-btn mui-btn-numbox-minus jian" type="button">-</button>
+							<input type="text" id="test" class="mui-input-numbox num" data-pid="{$item['id']}" data-type="optionid" data-price="{$option['mprice']}" data-id="{$option['id']}" data-num="0" name="" value="0">
+							<button class="mui-btn mui-btn-numbox-plus jia" type="button" disabled="">+</button>
+						</div> -->
+					</li>
+					{/loop}
+				</ul>
+			</li>
+			{/if}
+			{/loop}
+			<!-- /多规格产品 -->
+		</ul>
+	</article>
+<!-- 	<section class="footer-nav">
+		<ul class="flex-jus">
+			<li class="left flex flex-ver">
+				<img src="../addons/ewei_shopv2/static/btyStyle/img/shopping-cart.png" alt="" width="100%">
+				<span class="badge">0</span>
+			</li>
+			<li class="middle">
+				<p class="orange">合计：￥<span id="total_price">0.00</span></p>
+			</li>
+			<li class="right">
+				<button id="btn-submit" >去进货</button>
+			</li>
+		</ul>
+	</section> -->
+	<input type="hidden" name="real_total"  value="0">
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="../addons/ewei_shopv2/static/btyStyle/lib/mui/js/mui.min.js"></script>
+<script>
+	$(function(){
+		$(".mui-btn-unfold").on("tap",function(){
+			$(this).html($(this).html() == "展开规格"?"收起规格":"展开规格");
+			$(this).parent().siblings('.size_list').toggle();
+		})
+	})
+</script>
+    <script type="text/javascript">
+    	$('#btn-submit').attr('disabled','true');
+        $('.jian').on("tap",function(){
+            var num = parseInt($(this).next().val());
+            var price = parseInt($(this).next().data('price'));
+            var total = parseInt($('#total_price').html());
+            var can_total = parseInt($('.badge').html());
+            if(num==0){
+                return false;
+            }
+                // num -=1;
+                total = (total -= price);
+                total_one = total*100;
+                str = total_one+'';
+                str_one = str.substr(-2);
+                append = total+'.'+str_one;
+                $(this).next().val(num);
+                num -=1;
+                can_total -=1;
+                $('.badge').html(can_total);
+                $(this).next().attr('data-num',num);
+                if(total==0){
+                    total = '0.00';
+                    $('#total_price').html(total);
+                    $('#btn-submit').attr('disabled','true');
+                    return false;
+                }else{
+                    $('#btn-submit').removeAttr('disabled');
+                }
+                $('#total_price').html(append);
+                $('.badge').html(can_total);
+                return false;
+        });
+        $('.jia').on("tap",function(){
+            var num = parseInt($(this).prev().val());
+            var price = parseInt($(this).prev().data('price'));
+            var total = parseInt($('#total_price').html());
+            var can_total = parseInt($('.badge').html());
+            	// console.log(num);
+                //num +=1;
+                total = (total += price);
+                total_one = total*100;
+                str = total_one+'';
+                str_one = str.substr(-2);
+                append = total+'.'+str_one;
+                $(this).prev().val(num);
+                num +=1
+                can_total +=1; 
+                $(this).prev().attr('data-num',num);
+                $('#total_price').html(append);
+                $('.badge').html(can_total);
+                $('#btn-submit').removeAttr('disabled');
+                return false;
+        });
+        $('.num').blur(function(){
+            var num = parseInt($(this).val());
+            var real_num = parseInt($(this).attr('data-num'));
+            var price = parseInt($(this).data('price'));
+            var total = parseInt($('#total_price').html());
+            var can_total = parseInt($('.badge').html());
+            var re = /^[0-9]+$/;
+        　　if (!re.test(num)) { 
+        　　　　 $(this).val(real_num);
+                return false;
+        　　}
+            if(num==real_num){
+                $(this).val(num);
+                return false;
+            }
+            if(num>real_num){
+                can_num = num-real_num;
+                price = price*can_num;
+                total = (total += price);
+                can_total +=can_num;
+            }else{
+                can_num = real_num-num;
+                price = price*can_num;
+                total = (total -= price);
+                can_total -=can_num;
+                 
+            }
+            total_one = total*100;
+            str = total_one+'';
+            str_one = str.substr(-2);
+            append = total+'.'+str_one; 
+            $(this).attr('data-num',num);
+            if(total==0){
+                total = '0.00';
+                $('#total_price').html(total);
+                $('#btn-submit').attr('disabled');
+                return false;
+            }else{
+                $('#btn-submit').removeAttr('disabled');
+            }
+            $('#total_price').html(append);
+            $('.badge').html(can_total);
+        });
+        var fiag = true;
+        $('.select_guige').click(function(){
+            var ts = $(this);
+            var open = $(this).parent().parent().parent().next();
+            if(fiag){
+                open.css('display','block');
+                ts.html('收起规格');
+                fiag = !fiag;
+            }else{
+                open.css('display','none');
+                fiag = !fiag;
+                ts.html('选规格');
+            }
+            // $('.open_guige').
+        });
+        $('#btn-submit').click(function(){
+            var opthions = [];
+            $('.num').each(function(i){
+                if($('.num').eq(i).val()>0){
+                     var item = {
+                        id:$('.num').eq(i).attr('data-id'),
+                        price:$('.num').eq(i).attr('data-price'),
+                        num:$('.num').eq(i).val(),
+                        type:$('.num').eq(i).attr('data-type'),
+                        };
+                    if(item.type=='optionid'){
+                        item['pid'] = $('.num').eq(i).attr('data-pid');
+                    }
+                    opthions.push(item);
+                }
+            });
+            if(opthions.length>0){
+                var string = JSON.stringify(opthions);
+                $.post("{php echo mobileUrl('member/myyuncang/submit')}",{opthions:string},function(res){
+                    if(res.status==1){
+                        window.location.href="{php echo mobileUrl('member/myyuncang/confirm')}&id="+res.result.id;
+                    }else{
+                     
+                        alert(res.result.message);
+                        return ;
+                    }
+                },'json');
+                // 
+            }
+        });
+
+    </script>
+</body>
+</html>

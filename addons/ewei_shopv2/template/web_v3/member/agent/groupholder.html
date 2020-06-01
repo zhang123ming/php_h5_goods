@@ -1,0 +1,43 @@
+<form action="" method="post" class="form-horizontal form-validate" enctype="multipart/form-data">
+<input type="hidden" name="id" value="{$id}" />
+<input type="hidden" name="r" value="member.agent.groupholder" />
+<div class="modal-dialog" style="width: 1000px;">
+	<div class="modal-content">
+		<div class="modal-header">
+			<button data-dismiss="modal" class="close" type="button">×</button>
+			<h4 class="modal-title">项目股东成员：<span style="color: red;">请选择会员等级大于等于91的成员</span></h4>
+		</div>
+		<div class="modal-body">
+			<?php for($i=1;$i<=9;$i++){
+				$mstr = 'member'.$i;
+				$member = $$mstr;
+				?>
+				<div class="form-group">
+				    <label class="col-lg control-label">
+				    绑定{$i}号股东</label>
+				    <div class="col-sm-4 col-xs-5">
+				        {php echo tpl_selector('share_holder'.$i,array('key'=>'id','text'=>'nickname', 'thumb'=>'avatar','multi'=>0,'placeholder'=>'昵称/姓名/手机号','buttontext'=>'选择用户', 'items'=>$member,'url'=>webUrl('member/query',array('level'=>'91')) ))}
+				    </div>
+				    <?php
+				    ++$i;
+				    $mstr = 'member'.$i;
+					$member = $$mstr;
+				    ?>
+				    {if $i<=9}
+				    <span class="col-lg control-label"> 绑定{$i}号股东</span>
+				    <div class="col-sm-4 col-xs-5">
+				        {php echo tpl_selector('share_holder'.$i,array('key'=>'id','text'=>'nickname', 'thumb'=>'avatar','multi'=>0,'placeholder'=>'昵称/姓名/手机号','buttontext'=>'选择用户', 'items'=>$member,'url'=>webUrl('member/query',array('level'=>'91')) ))}
+				    </div>
+				    {/if}
+				</div>
+				<?php }?>
+
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-primary" type="submit">提交</button>
+			<button data-dismiss="modal" class="btn btn-default" type="button">取消</button>
+		</div>
+	</div>
+	</form>
+
+<!--yifuyuanma-->

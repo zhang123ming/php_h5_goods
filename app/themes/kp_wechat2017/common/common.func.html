@@ -1,0 +1,64 @@
+<?php
+	function format_date($time){
+		$t=time()-$time;
+		$f=array(
+			'31536000'=>'年',
+			'2592000'=>'个月',
+			'604800'=>'星期',
+			'86400'=>'天',
+			'3600'=>'小时',
+			'60'=>'分钟',
+			'1'=>'秒'
+		);
+		foreach ($f as $k=>$v) {
+			if (0 !=$c=floor($t/(int)$k)) {
+				return $c.$v.'前';
+			}
+		}
+	}
+
+    function kp_site_article($params = array()) {
+        global $_GPC, $_W;
+        extract($params);
+        $pindex = max(1, intval($_GPC['page']));
+        if (!isset($limit)) {
+            $psize = 10;
+        } else {
+            $psize = intval($limit);
+            $psize = max(1, $limit);
+        }
+        $result = array();
+
+        $condition = " WHERE uniacid = :uniacid ";
+        $pars = array(':uniacid' => $_W['uniacid']);
+        if (!empty($cid)) {
+            $category = pdo_fetch("SELECT parentid FROM ".tablename('site_category')." WHERE id = :id", array(':id' => $cid));
+        if (!empty($category['parentid'])) {
+            $condition .= " AND ccate = :ccate ";
+            $pars[':ccate'] = $cid;
+        } else {
+            $condition .= " AND pcate = :pcate";
+            $pars[':pcate'] = $cid;
+        }
+        }
+        if ($iscommend == 'true') {
+            $condition .= " AND iscommend = '1'";
+        }
+        if ($ishot == 'true') {
+            $condition .= " AND ishot = '1'";
+        }
+        $sql = "SELECT * FROM ".tablename('site_article'). $condition. ' ORDER BY displayorder DESC, id DESC LIMIT ' . ($pindex - 1) * $psize .',' .$psize;
+        $result['list'] = pdo_fetchall($sql, $pars);
+        $total = pdo_fetchcolumn('SELECT COUNT(*) FROM ' . tablename('site_article') . $condition, $pars);
+        $result['pager'] = pagination($total, $pindex, $psize);
+        if (!empty($result['list'])) {
+            foreach ($result['list'] as &$row) {
+                if(empty($row['linkurl'])) {
+                    $row['linkurl'] = murl('site/site/detail', array('id' => $row['id'], 'uniacid' => $_W['uniacid']));
+                }
+                $row['thumb'] = tomedia($row['thumb']);
+            }
+        }
+        return $result;
+    }
+?>

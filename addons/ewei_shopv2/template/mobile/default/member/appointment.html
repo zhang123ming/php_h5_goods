@@ -1,0 +1,41 @@
+{template '_header'}
+<div class='fui-page  fui-page-current'>
+    <div class="fui-header">
+		<div class="fui-header-left">
+			<a class="back" onclick='location.back()'></a>
+		</div>
+		<div class="title">信息提交</div>
+		<div class="fui-header-right">&nbsp;</div>
+	</div>
+
+	<div class='fui-content' style='margin-top:5px;'>
+
+		<div class="fui-list-group">
+			<div class="fui-list">
+				<div class="fui-list-media">
+					<img class="round avatar" src="{php echo tomedia($member['avatar'])}" />
+				</div>
+				<div class="fui-list-inner">
+					<div class="title nickname">{$member['nickname']}</div>
+				</div>
+			</div>
+		</div>
+		   {template 'diyform/formfields'}
+		<a href='#' id='btn-submit' class='btn btn-success block'>确认提交</a>
+	</div>
+	<script language='javascript'>
+		require(['biz/member/appointment'], function (modal) {
+		  	modal.init({
+			    new_area:{php echo $new_area},
+			    returnurl:"{php echo $returnurl}",
+			    template_flag: {php echo intval($template_flag)},
+				wapopen: {php echo intval($wapset['open'])}
+			});
+	});
+</script>
+
+</div>
+{template '_footer'}
+
+
+<!--efwww_com-->

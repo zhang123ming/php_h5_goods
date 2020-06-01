@@ -1,0 +1,65 @@
+<tbody style="overflow: hidden;" class="station_body">
+	<tr>
+		<td class="station_list">
+			<div class="form-group">
+	            <label class="col-sm-2 control-label">站点名称</label>
+	            <div class="col-sm-9 col-xs-12">
+	                <input type="text" name="station_name[]" id="station_name" class="form-control" value="" />
+	            </div>
+	            
+	        </div>	
+		</td>
+		
+		<td style="width:10%;" rowspan="4">
+			<!-- <input name="param_id[]" type="hidden" class="form-control" value="{$tag1}"/> -->
+			<a href="javascript:;" class='btn btn-default btn-sm' onclick="deleteParam(this)"  title="删除"><i class='fa fa-times'></i></a>
+		</td>
+	</tr>
+	<tr>
+		<td class="station_list">
+			<div class="form-group">
+	            <label class="col-sm-2 control-label">站点距离</label>
+	            <div class="col-sm-9 col-xs-12">
+	                <input type="text" name="station_length[]" id="station_length" class="form-control" value="" />
+	            </div>
+	            <div class="col-sm-9 col-xs-12" style="float:right;">
+					<span class="help-block" >单位 : 公里 (从上一站到本站的距离 , 起始站点距离填0)</span>
+	            </div>
+	        </div>	
+		</td>
+	</tr>
+	<tr>
+		<td class="station_list">
+			<div class="form-group">
+	            <label class="col-sm-2 control-label">路程时长</label>
+	            <div class="col-sm-9 col-xs-12">
+	                <input type="text" name="reach_time[]" id="reach_time" class="form-control" value="" />
+	            </div>
+	            <div class="col-sm-9 col-xs-12" style="float:right;">
+					<span class="help-block" >单位 : 分钟 (从上一站到本站所花时间 , 起始站点填0)</span>
+	            </div>
+	        </div>	
+		</td>
+	</tr>
+	<tr>
+		<td class="station_list">
+		    <div class="form-group">
+		        <label class="col-sm-2 control-label">地理位置</label>
+		        <div class="col-sm-9 col-xs-12">
+		            {php echo tpl_form_field_coordinates('map',array('lng'=>'','lat'=>''))}
+		        </div>
+		    </div>	
+		</td>
+	</tr>
+	<tr style="border-bottom: solid 5px white;">
+		<td class="station_list">
+			<div class="form-group">
+	            <label class="col-sm-2 control-label">位置名称</label>
+	            <div class="col-sm-9 col-xs-12">
+	                <input type="text" name="addresss[]" id="addresss" class="form-control" value="" />
+	            </div>
+	        </div>	
+		</td>
+	</tr>
+</tbody>
+

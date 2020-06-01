@@ -1,0 +1,69 @@
+<!-- <div class="form-group">
+    <label class="col-lg control-label">是否开启团队奖励</label>
+    <div class="col-sm-8">
+    	{ifp 'commission.set.edit'}
+		<label class="radio-inline"><input type="radio"  name="data[open]" value="1" {if $data['open'] ==1} checked="checked"{/if} /> 开启</label>
+			<label class="radio-inline"><input type="radio"  name="data[open]" value="0" {if $data['open'] ==0} checked="checked"{/if} /> 不开启</label>
+		{else}
+			{if $data['open'] ==0}不开启{else}开启{/if}
+		{/if}
+    </div>
+</div> -->
+<div class="form-group">
+    <label class="col-lg control-label">团队奖励模式</label>
+    <div class="col-sm-9 col-xs-12">
+		{ifp 'commission.set.edit'}
+		<div class="input-group-select">
+	        <select name='data[awardMode]' id="awardMode" class='form-control  input-sm select-md'>
+	        	<option value='0' >请选择模式</option>
+	            <option value='1' {if $data['awardMode']==1} selected {/if}>代理级差模式</option>
+	            <option value='2' {if $data['awardMode']==2} selected {/if}>会员上下级差熔断模式</option>
+	           	<option value='3' {if $data['awardMode']==3} selected {/if}>代理同级返利模式</option>
+	           	<option value='4' {if $data['awardMode']==4} selected {/if}>DY团队返利模式</option>
+	           	<option value='5' {if $data['awardMode']==5} selected {/if}>NMN团队返利模式</option>
+	           	<option value='6' {if $data['awardMode']==6} selected {/if}>YSKF团队返利模式</option>
+	        </select>
+	    </div>
+		
+		{else}
+		{if $data['selfbuy'] ==0}关闭{else}开启{/if}
+		{/if}
+		<span style="color: red;">请勿擅自更改</span>
+	</div>
+</div>
+<div class="form-group awardMode awardMode1 awardMode3 awardMode4 awardMode5">
+	<label class="col-lg control-label">团队奖励资格</label>
+	<div class="col-sm-9 col-xs-12">
+		{ifp 'commission.set.edit'}
+		<div class="input-group-select">
+			<span >会员等级大于等于</span>
+	        <select name='data[level]' class='form-control  input-sm select-md' style="display: inline-block;"  >
+	            <option value='91' {if $data['level']==91}selected{/if}>91</option>
+	            <option value='92' {if $data['level']==92}selected{/if}>92</option>
+	            <option value='93' {if $data['level']==93}selected{/if}>93</option>
+	            <option value='94' {if $data['level']==94}selected{/if}>94</option>
+	            <option value='95' {if $data['level']==95}selected{/if}>95</option>
+	            <option value='96' {if $data['level']==96}selected{/if}>96</option>
+	            <option value='97' {if $data['level']==97}selected{/if}>97</option>
+	            <option value='98' {if $data['level']==98}selected{/if}>98</option>
+	            <option value='99' {if $data['level']==99}selected{/if}>99</option>
+	            <option value='100' {if $data['level']==100}selected{/if}>100</option>
+	        </select>
+	        <span>享受团队奖励</span>
+	    </div>
+	    <br>
+		    
+	    <div class="input-group-select DY4 DY5" >
+	    	<span >个人团队销售业绩达</span>
+	        <input type="text" name="data[teamresults]" style="display: inline-block;width:80px;"  value="{$data['teamresults']}" class='form-control'>
+	        <span>万 享受团队奖励</span>
+	    </div>
+		
+		{else}
+		{if $data['selfbuy'] ==0}关闭{else}开启{/if}
+		{/if}
+	</div>
+</div>
+
+
+<!--yifuyuanma-->

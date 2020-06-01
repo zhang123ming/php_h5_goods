@@ -1,0 +1,9 @@
+<?php
+global $_GPC, $_W;
+//echo '<pre>';
+//print_r($_W['uniacid']);
+//exit;
+$url=$_W['siteroot']."app/index.php?i=".$_W['uniacid']."&c=entry&do=index&m=tiger_taoke";
+//echo $url;
+header("location: $url");
+?>

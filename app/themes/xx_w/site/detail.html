@@ -1,0 +1,38 @@
+{template 'common/header'}
+<link href="{$_W['siteroot']}app/themes/xx_w/css/xui.css" rel="stylesheet">
+<style type="text/css">
+	.x-box{
+		padding: 20px 15px 15px;
+		background-color: #fff;
+	}
+	.x-title{
+		margin-bottom: 10px;
+		font-size: 24px;
+		line-height: 32px;
+		font-weight:400;
+		padding-bottom:15px;
+		border-bottom: 1px solid #E6E6E6;
+	}
+	.x-content{
+		min-height: 100px;
+		margin-bottom: 50px;
+		color: #3e3e3e;
+		font-size: 16px;
+	}
+	.x-content img{
+		max-width:100%;
+	}
+	.x-content p{
+		color: #3e3e3e;
+		font-size: 16px;
+	}
+</style>
+<div class="x-box">
+	<div class="x-title">
+		{$detail['title']}
+	</div>
+	<div class="x-content">
+		{$detail['content']}
+	</div>
+</div>
+{template 'common/footer'}

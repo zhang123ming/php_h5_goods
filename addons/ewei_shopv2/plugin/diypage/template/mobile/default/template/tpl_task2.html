@@ -1,0 +1,124 @@
+<?php
+if ($diyitem[id]=='task2') {
+		$condition = ' and `type` like \'%shop%\' ';
+		
+		$field = '*';
+		$sql = 'select ' . $field . ' from ' . tablename('ewei_shop_task2_list') . ' where uniacid = :uniacid ' . $condition . 'order by id desc';
+
+		$params = array(':uniacid' => $_W['uniacid']);
+		$diyitem[data] = pdo_fetchall($sql, $params);
+	}
+
+    $member=m('member')->getMember($_W['openid']);
+
+?>
+<div class="fui-goods-group fui-goods-group block one" style="background: #f3f3f3;">
+    {loop $diyitem[data] $item}
+        <a class="fui-goods-item" data-goodsid="{$item['id']}" href="{php echo mobileUrl('task2/detail', array('id'=>$item['id']))}" data-nocache="true" style="position: relative;">
+            <div class="image auto" data-text="推荐" style="background:none; height: 8rem;" >
+                <img class="exclude" src="{php echo tomedia($item['image'])}" data-lazy="{php echo tomedia($item['image'])}" />
+            </div>
+         </a>
+          <div class="detail" style="padding: 0.2rem;border-bottom: solid 1px #ccc">
+                <style>
+                    img{height: 3rem;}
+                    .icon{font-size: 1.2rem;}
+                </style>
+                <div style="display: inline;float: left;padding-top:-0.8rem;padding-right:0.3rem; ">
+                    <img class="exclude" src="{php echo 'http://'.$_SERVER['HTTP_HOST']; }\addons\ewei_shopv2\plugin\diypage\static\images\tuijian.png" >
+                </div>
+        
+                <div class="" style="display: inline;vertical-align: top;width:100%;font-size: 0.7rem; color:black;">
+                    
+                    <style> p{max-width:100%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}</style> 
+                   <p style=""><span><strong>项目名称：</strong></span> {$item['title']}</p>
+                   <p style=""><span><strong>项目特色：</strong></span> {$item['subtitle']}</p>
+                   <p style="">
+                    <span><strong>项目回报：</strong>{$item[returnrate]}%</span>
+                    <span style="float: right;display: inline-block;">
+                         <a class="btn-share js-clip" href="javascript:;" style="padding-right: 0.3rem;" onclick="" data-url="{php echo mobileUrl('task2/detail', array('id'=>$item['id'],'mid'=>$member[isagent]&&$member[status]?$member[id]:0),true)}" >
+                            <i class="icon icon-share" style="font: 20px;"></i>
+                        </a>
+                     <?php
+                        $sql = 'select count(*) from ' . tablename('ewei_shop_task2_favorite') . ' where taskid=:taskid and deleted=0 and openid=:openid and uniacid=:uniacid limit 1';
+                        $params = array(':taskid' => $item[id], ':openid' => $_W['openid'], ':uniacid' => $_W['uniacid']);
+                        $count = pdo_fetchcolumn($sql,$params);
+                        $isFavorite = 0<$count?true:false;
+                     ?>  
+                     <a  class="nav-item favorite-item {if $isFavorite}active{/if}" data-isfavorite="{php echo intval($isFavorite)}" data-id="{$item[id]}">
+                        <span class="icon {if $isFavorite}icon-likefill{else}icon-like{/if}" ></span>
+                    </a>
+                    </span>
+                   
+                   </p>
+                </div>
+            </div>
+    {/loop}
+</div>
+
+<script>
+    function toggle(taskid, isfavorite, callback) {
+
+        $.post("{php echo mobileUrl('task2.toggle')}",{id: taskid,isfavorite: isfavorite}, function(ret) {
+            if (ret.status == 0) {
+                if (ret.result.message == '请先登录!') {
+                   
+                    FoxUI.confirm("请先登录", "提示", function() {
+                        location.href = "{php echo mobileUrl('account/login')}"
+                    });
+                    if (callback) {
+                        callback(false)
+                    }
+                    return false
+                }
+                FoxUI.toast.show(ret.result.message);
+                return false
+            }
+            if (callback) {
+                var data=eval('('+ret+')');
+                console.log(data);
+                callback(data.result.isfavorite)
+            }
+        }, false, true)
+    };
+
+    $('.favorite-item').click(function() {
+        var self = $(this);
+
+        if (self.attr('submit') == '1') {
+            return
+        }
+        self.attr('submit', 1);
+        var isfavorite = self.attr('data-isfavorite') == '1';
+        var id = self.attr('data-id'); 
+        var icon = self.find('.icon');
+        icon.addClass('icon-like').removeClass('icon-likefill');
+        self.removeClass('active');
+        isfavorite = self.attr('data-isfavorite') == '1' ? 0 : 1;
+        toggle(id ,isfavorite, function(is) {
+            self.removeAttr('submit').attr("data-isfavorite", is ? "1" : 0);
+            if (is) {
+                icon.addClass('icon-likefill').removeClass('icon-like');
+                self.addClass('active')
+            }
+        })
+    });
+
+</script>
+<script language="javascript">
+    $(".js-clip").click(function(){
+        var i = $(this).attr('data-url');  
+        var clipboard = new ClipboardJS('.js-clip',{
+                text: function() {
+                    return i
+                }
+            });
+    clipboard.on("success", function(e) {
+             FoxUI.toast.show("复制成功");
+        }), clipboard.on("error", function(e) {
+             FoxUI.toast.show("复制失败，请重试");
+        })
+
+    })
+    
+</script>

@@ -1,0 +1,75 @@
+{template 'header'}
+{template 'slide'}
+<link rel="stylesheet" href="{$_W['siteroot']}app/themes/mihua04/style/style.css">
+<style>
+body{
+background-image:url('{if !empty($_W['styles']['indexbgimg'])}{$_W['styles']['indexbgimg']}{else} {$_W['siteroot']}app/themes/mihua04/images/index_bg.jpg {/if}');
+
+}
+.box .box-item2 span{color:{if empty($_W['styles']['fontnavcolor'])}#fff{else}{$_W['styles']['fontnavcolor']}{/if};
+}
+.box .box-item1 span{color:{if empty($_W['styles']['fontnavcolor'])}#fff{else}{$_W['styles']['fontnavcolor']}{/if};
+}
+a{color:{$_W['styles']['linkcolor']}; }
+.bar a{color:{if empty($_W['styles']['fontnavcolor'])}#FFFFFF{else}{$_W['styles']['fontnavcolor']}{/if}}
+</style>
+<div class="box">
+	{php $num = 1;}
+	{loop $navs $nav}
+	{php if($num == 1) $bg = '#AB6269';}
+	{php if($num == 2) $bg = '#AB916E';}
+	{php if($num == 3) $bg = '#647F90';}
+	{php if($num == 4) $bg = '#b7436c';}
+	
+	{if ($num <= 4)}
+	<a href="{$nav['url']}" class="box-item1 icon-rounded">
+		{if !empty($nav['icon'])}
+		<i style="background:url({$_W['attachurl']}{$nav['icon']}) no-repeat;background-size:cover;" class="img-circle"></i>
+		{else}
+		<i class="{$nav['css']['icon']['icon']} img-circle" style="background:{$bg}; "></i>
+		{/if}
+		<span style="{$nav['css']['name']}">{$nav['name']}</span>
+	</a>
+	{else}
+	<a href="{$nav['url']}" class="box-item2 img-rounded">
+		{if !empty($nav['icon'])}
+		<i style="background:url({$_W['attachurl']}{$nav['icon']}) no-repeat;background-size:cover;" class=""></i>
+		{else}
+		<i class="{$nav['css']['icon']['icon']}" style="{$nav['css']['icon']['style']}"></i>
+		{/if}
+		<span style="{$nav['css']['name']}">{$nav['name']}</span>
+	</a>
+	{/if}
+	{php $num++;}
+	{/loop}
+</div>
+</div>
+
+<div class="bar"><img src="{$_W['siteroot']}app/themes/mihua04/images/star.png"  style="padding:0 5px 3px 0; width:25px; height:20px; vertical-align:middle;"/>最新发布
+	{data func="site_navs" section="2" item="row"}
+	<a href="{$row['url']}" class="box-item">
+		<span style="{$row['css']['name']}" title="{$row['name']}">{$row['name']} </span>
+	</a>
+	{php if($row['iteration'] > 0) break;}
+	{/data}
+</div>
+<div class="list clearfix">
+	{data module="site" func="site_article" cid="$cid" assign="result" return="true"}
+	{php $num = 1;}
+	{loop $result['list'] $row}
+	
+	<li>
+		<a href="{$row['linkurl']}">
+			{if $row['thumb']}<img src="{$row['thumb']}" class="pull-left thumb" onerror="this.parentNode.removeChild(this)" />{/if}
+			<div class="title">{$row['title']}</div>
+			<div class="createtime">{php echo date('Y-m-d H:i:s', $row['createtime'])}</div>
+		</a>
+	</li>
+	{php $num ++;}
+	{php if( $num> 5) break;}
+	{/loop}
+</div>
+<div class="footer_height"  style="height:40px"></div>
+
+{template 'com/footer'}
+

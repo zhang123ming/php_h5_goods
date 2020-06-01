@@ -1,0 +1,101 @@
+
+<html>
+<head>
+    <title>{$_W['page']['title']}</title>
+
+<!-- meta tags start -->
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<meta name="Keywords" content="perso, premium, mobile, template, HTML, CSS" />
+<meta name="Description" content="Premium mobile HTML/CSS template." />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<!-- meta tags end -->
+
+<!-- favorite icon starts -->
+<link rel="themes/bilin_version4/shortcut icon" href="images/common/favicon.ico" type="image/x-icon" />
+<!-- favorite icon ends -->
+
+
+
+	<link href="{$_W['siteroot']}app/resource/css/bootstrap.min.css" rel="stylesheet">
+	<link href="{$_W['siteroot']}app/resource/css/font-awesome.min.css" rel="stylesheet">
+
+
+
+
+
+<!-- CSS files start -->
+<link href="themes/bilin_version4/css/framework.css" rel="stylesheet" type="text/css" media="all" />
+<link href="themes/bilin_version4/css/colorbox.css" rel="stylesheet" type="text/css" media="all" />
+<link href="themes/bilin_version4/css/elements.css" rel="stylesheet" type="text/css" media="all" />
+<link href="themes/bilin_version4/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="themes/bilin_version4/css/responsive.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="themes/bilin_version4/css/hidpi.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="themes/bilin_version4/css/skin.css" rel="stylesheet" type="text/css" media="all" />
+<link href="themes/bilin_version4/css/custom.css" rel="stylesheet" type="text/css" media="all" />
+<!-- CSS files end -->
+
+<!-- JavaScript files start -->
+<script type="text/javascript" src="themes/bilin_version4/js/jquery.min.js"></script>
+<script type="text/javascript" src="themes/bilin_version4/js/effects.jquery-ui.min.js"></script>
+<script type="text/javascript" src="themes/bilin_version4/js/jquery.colorbox.min.js"></script>
+<script type="text/javascript" src="themes/bilin_version4/js/custom.js"></script>
+<!-- JavaScript files end -->
+</head>
+<body>
+<!-- website wrapper starts -->
+<div class="websiteWrapper"> 
+  
+  <!-- main menu wrapper starts -->
+	<ul class="mainMenuWrapper">
+		 {loop $navs $nav}
+        		<li><a href="{$nav['url']}">{$nav['name']}</a></li>
+        	{/loop}
+  
+  </ul>
+  <!-- main menu wrapper ends --> 
+  
+  <!-- header wrapper starts -->
+  <div class="headerOuterWrapper">
+    <div class="headerWrapper"> <span class="mainMenuButtonLine"></span><a href="#" class="mainMenuButton"></a></div>
+  </div>
+  <!-- header wrapper ends --> 
+  
+  <!-- page wrapper starts -->
+  <div class="pageWrapper homePageWrapper"> 
+
+    <a href="javascript:;" class="landingImageWrapper"> <img src="{$_W['styles']['indexbgimg']}" alt=""/> </a> 
+
+    <div class="welcomeMessageWrapper">
+      <h3 class="welcomeTitle">{$_W['styles']['title']}</h3>
+      <p class="welcomeMessage">{$_W['styles']['title_p']}</p>
+    </div>
+    <div class="homePageIconsWrapper">
+
+
+
+    		{data func="site_navs" item="row"}
+
+		<a class="homePageIcon" href="{$row['url']}">
+				{if !empty($row['icon'])}
+				<i class="picbox"><img src="{$_W['attachurl']}{$row['icon']}"></i>
+				{else}
+				<i class="icon fa {$row['css']['icon']['icon']}" ></i>
+				{/if}
+
+		</a>
+
+	{/data}
+
+
+    </div>
+  </div>
+  <!-- page wrapper ends --> 
+  
+  <!-- footer wrapper starts -->
+	<div class="footerWrapper"> <span class="copyright">{$_W['styles']['copy']}</span> </div>
+  <!-- footer wrapper ends --> 
+  
+</div>
+<!-- website wrapper ends -->
+</body>
+</html>

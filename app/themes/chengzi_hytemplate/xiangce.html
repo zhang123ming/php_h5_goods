@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>仿海贝微官网手机wap微信网站模板相册页</title>
+<base  />
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta charset="utf-8">
+
+<link href="css/listhome/listhome5_3.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/plugmenu.css">
+
+
+</head>
+
+<script type="text/javascript">
+window.onload = function (){
+	var oWin = document.getElementById("win");
+	var oLay = document.getElementById("overlay");	
+	var oBtn = document.getElementById("popmenu");
+	var oClose = document.getElementById("close");
+	oBtn.onclick = function (){
+		oLay.style.display = "block";
+		oWin.style.display = "block"	
+	};
+	oLay.onclick = function (){
+		oLay.style.display = "none";
+		oWin.style.display = "none"	
+	}
+};
+</script>
+
+<body id="listhome5">
+
+	<div id="ui-header">
+		<div class="fixed">
+			<a class="ui-title" id="popmenu">选择分类</a>
+			<a class="ui-btn-left_pre" href="#"></a>
+			<a class="ui-btn-right" href="#"></a>
+		</div>
+	</div>
+	
+	<div id="overlay"></div>
+	
+	<div id="win">
+		<ul class="dropdown"> 
+			<li><a href="#"><span>首页</span></a></li>
+			<li><a href="#"><span>海贝相册</span></a></li>
+			<li><a href="#"><span>关于海贝</span></a></li>
+			<li><a href="#"><span>加盟条件</span></a></li>
+			<li><a href="w#"><span>心族系列</span></a></li>
+			<li><a href="#"><span>领取优惠券</span></a></li>
+			<li><a href="#"><span>在线预订</span></a></li>
+			<li><a href="#"><span>联系我们</span></a></li>
+			<div class="clr"></div>
+		</ul>
+	</div>
+	
+	<div class="Listpage">
+		<div class="top46"></div>
+
+		<div id="todayList">
+			<ul class="chatPanel">
+				<li class="mediaFullText">
+					<a href="#">
+						<div class="time">
+							<p><span class="timed">01</span>/<span class="timem">11</span></p>
+							<p class="timey">2013</p>
+							<span class="timex"></span>
+						</div>
+						<div class="mediaPanel media">
+							<div class="mediaHead"><span class="title">辣妈正传</span></div>
+							<div class="mediaImg"><img src="images/12341235.jpg"></div>
+							<div class="mediaContent mediaContentP">
+								<p>辣妈正传</p>
+							</div>
+							<div class="mediaFooter">
+								<span class="mesgIcon right"></span>
+								<span style="line-height:50px;" class="left">查看全文</span>
+								<div class="clr"></div>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="mediaFullText">
+					<a href="#">
+						<div class="time">
+							<p><span class="timed">01</span>/<span class="timem">11</span></p>
+							<p class="timey">2013</p>
+							<span class="timex"></span>
+						</div>
+						<div class="mediaPanel media">
+							<div class="mediaHead"><span class="title">女王范儿搭配</span></div>
+							<div class="mediaImg"><img src="images/1234534.jpg"></div>
+							<div class="mediaContent mediaContentP">
+								<p>女王范儿搭配</p>
+							</div>
+							<div class="mediaFooter">
+								<span class="mesgIcon right"></span>
+								<span style="line-height:50px;" class="left">查看全文</span>
+								<div class="clr"></div>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="mediaFullText">
+					<a href="#">
+						<div class="time">
+							<p><span class="timed">01</span>/<span class="timem">11</span></p>
+							<p class="timey">2013</p>
+							<span class="timex"></span>
+						</div>
+						<div class="mediaPanel media">
+							<div class="mediaHead"><span class="title">爆款形象展示</span></div>
+							<div class="mediaImg"><img src="images/1231.jpg"></div>
+							<div class="mediaContent mediaContentP">
+								<p>爆款形象展示</p>
+							</div>
+							<div class="mediaFooter">
+								<span class="mesgIcon right"></span>
+								<span style="line-height:50px;" class="left">查看全文</span>
+								<div class="clr"></div>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="pagination">
+			<div class="disabled "><a href="#">上一页</a></div>
+			<div class="allpage">
+				<div class="currentpage">1/1</div>
+				<select id="dropdown-select" name="select" onchange="dourl('wxapi.php@ac=listhome5&tid=7542&page='+this.value)">
+					<option selected="selected"  value=1 >第1页</option>
+				</select>
+			</div>
+			<div class="disabled" ><a>下一页</a></div>
+		</div>
+		
+	</div>
+
+<div align="center">温馨提示：本信息仅供提供演示方便链接，与原网站无关！ <a href="index.html">首页</a>  <a href="jiameng.html">加盟页</a>  <a href="lianxi.html">联系我们页</a>  <a href="pinpai.html">品牌页</a>  <a href="xiangce.html">相册列表页</a></div>	
+
+<script type="text/javascript">
+function dourl(url){
+	location.href= url;
+}
+</script>
+
+</body>
+</html>

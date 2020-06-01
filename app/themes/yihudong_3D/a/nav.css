@@ -1,0 +1,175 @@
+.quick{
+
+	text-align:center;
+
+}
+
+.footer_bar .quick{height:0;}
+
+.quick ul{
+
+	height:60px;
+
+	position:fixed;
+
+	z-index:2000000;
+
+	bottom:0;
+
+	left:0;
+
+	width:100%;
+
+	background:-webkit-gradient(linear, 0 0, 0 100%, from(#921e1f), to(#921e1f));
+
+}
+
+.quick li>a{
+
+	color:#fff;
+
+	-webkit-box-sizing:border-box;
+
+	box-sizing:border-box;
+
+	border-bottom:0;
+
+	display:block;
+
+	height:100%;
+
+	padding:7px 0;
+
+	text-align:center;
+
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+
+}
+
+.quick ul li a:hover{background-color: #921e1f;}
+
+.quick ul li {border-right: 1px solid #76161b;border-left: 1px solid #d80c18;}
+
+.quick ul li:last-child{border-right: 0px solid #3b4148;}
+
+.quick li>a.on, .quick li>a.active{
+
+	color:#fff;
+
+	background:-webkit-gradient(radial, 50% 110%, 10, 50% 110%, 30, from(rgba(255,255,255,0.2)), to(transparent));
+
+}
+
+.quick li>a>*{
+
+	pointer-events:none;
+
+}
+
+.quick li>a>p{
+
+	width:67px;
+
+	height:43px;
+
+	margin:auto;
+
+	-webkit-background-size:100px auto;
+
+}
+
+.quick li>a>p[class*="icon"]{
+
+	display: block;
+
+	
+
+	font-size: 25px;
+
+	line-height: 25px;
+
+}
+
+.quick li>a.on>p, .quick li>a.active>p{
+
+	background-position-x:-63px;
+
+}
+
+.quick-box {
+
+	width: 100%;
+
+	display: -webkit-box;
+
+	display: -moz-box;
+
+	-webkit-box-orient: horizontal;
+
+	-moz-box-orient: horizontal;
+
+	-webkit-box-sizing: border-box;
+
+	-moz-box-sizing: border-box;
+
+}
+
+.quick-box > * {
+
+	-webkit-box-flex: 1;
+
+	-moz-box-flex: 1;
+
+}
+
+.quick .icon-group{background: url(nav1.png)no-repeat;background-size: 25px auto;}
+
+.quick .icon-heart{background: url(nav2.png)no-repeat;background-size: 25px auto;}
+
+.quick .icon-edit{background: url(nav4.png)no-repeat;background-size: 25px auto;}
+
+.quick .icon-arrow-left{background: url(nav3.png)no-repeat;background-size: 25px auto;}
+
+.quick-box li:first-child{background: url(./themes/mobile/dan23/a/footer_bg1.png) no-repeat !important;
+background-size: 17px;
+background-position: 0 0px;
+border-left: 0 solid #d80c18;}
+
+.quick-box li:last-child{background: url(./themes/mobile/dan23/a/footer_bg2.png) no-repeat !important;
+
+background-size: 17px;
+
+background-position:100% 0px;}
+
+
+body {
+
+margin-bottom: 60px !important;
+
+}
+
+a:hover, a:focus {
+
+text-decoration: none;
+
+}
+
+
+
+#footer{display: none;}
+
+.top1{background: url("../../dan1/images/newstop.png") no-repeat scroll left center transparent;
+
+background-size: 11px auto;
+
+display: block;
+
+margin: 0 auto;
+
+text-indent: 15px;
+
+width: 85px;}
+
+#news {
+
+background-color: #F5F5F5;}

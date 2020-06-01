@@ -1,0 +1,97 @@
+
+@charset "utf-8";
+html{font-size:12px}
+@media screen and (min-width:321px) and (max-width:375px){html{font-size:13px}}
+@media screen and (min-width:376px) and (max-width:414px){html{font-size:14px}}
+@media screen and (min-width:415px) and (max-width:639px){html{font-size:15px}}
+@media screen and (min-width:640px) and (max-width:719px){html{font-size:20px}}
+@media screen and (min-width:720px) and (max-width:749px){html{font-size:22.5px}}
+@media screen and (min-width:750px) and (max-width:799px){html{font-size:23.5px}}
+@media screen and (min-width:800px){html{font-size:25px}}
+/* CSS Document */
+html{-ms-text-size-adjust:none;-webkit-text-size-adjust:none;text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);height: 100%;}
+body, h1, h2, h3, h4, h5, h6, hr, p,blockquote,dl, dt, dd, ul, ol, li,pre,form, fieldset, legend, button, /*input,*/ textarea, th, td, img{border:medium none;margin: 0;padding: 0;list-style-type: none;}
+body,button, /*input,*/ select, textarea {font: 12px/1.5 'Î¢ï¿½ï¿½ï¿½Åºï¿½',tahoma, Srial, helvetica, sans-serif;}
+body{overflow:visible;}
+h1, h2, h3, h4, h5, h6{font-size: 100%;}
+em{font-style:normal;}
+ul, ol,{ list-style:none;}
+a,a:hover{text-decoration: none;}
+img{ border:0px;}
+body,.ui-overlay-h{margin:0 auto;/* position:relative; */}
+/*input,*/ img{vertical-align: middle;}
+body,html{margin:0 auto;height: 100%;background: #4bb6e2;}
+img{border:none;vertical-align:top; width:100%;}
+*{margin:0;padding:0;text-shadow:none;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+.clearfix:after,.clear:before{display:table;content:'';}
+.clearfix:after{clear:both;	overflow:hidden;}
+.clearfix{zoom:1;clear:both;}
+.nav1 li.nobodertop{border-top:none;}
+
+.dhnav{width:100%;padding: 0 5%;}
+.dhnavli{float:left;width:33.3%;}
+.dhnavli a{display:block;/* height: 60px; */text-align: center;color: #747474;font-size: 17px;position: relative;width: 7.5rem;margin: 0 auto 10px;}
+.dhnavli a span{position:absolute;display: block;text-align: center;bottom: 0;width: 7.5rem;height: 2.5rem;line-height: 2.5rem;color: #fff;background: rgba(0,0,0,0.25);}
+.dhnavli a img{width: 7.5rem;height: 8.5rem;border-radius: 1rem;}
+.dhnavli a i{width: 7.5rem;height: 8.5rem;border-radius: 1rem;font-size:35px;background-color: #fff;line-height: 9rem;}
+
+
+
+.main{width:100%;margin-bottom:50px;height: 100%;}
+/****banner****/
+.focus{ width:100%; position:relative;/* overflow:hidden; */}
+.focus .hd{ width:100%; /*! height:11px; */  position:absolute; z-index:1; bottom:11px; text-align:center;}
+.focus .hd ul{ display:inline-block; height:5px; padding:3px 5px; font-size:0; vertical-align:top;
+}
+.focus .hd ul li{ display:inline-block; width:15px; height:15px; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:8px; background:#ababab; margin:0 5px;  vertical-align:top; overflow:hidden;   }
+.focus .hd ul .on{ background:#fff;  }
+
+.focus .bd{ position:relative; z-index:0; }
+.focus .bd li img{ width:100%;}
+
+.focus .hd2{ width:100%; height:30px;  /*! position:absolute; */ z-index:1; bottom:5px; text-align:right;display: none;}
+.focus .hd2 ul{ display:inline-block; height:8px; padding:13px 5px; font-size:0; vertical-align:top;}
+.focus .hd2 ul li{ display:inline-block; width:8px; height:8px; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; background:#ababab; margin:0 5px;  vertical-align:top; overflow:hidden;   }
+.focus .hd2 ul .on{ background:#c61b4f;  }
+.item-img i{width: 2.25rem;height: 2.25rem;/*! border-radius: 1rem; */font-size: 45px; line-height: 2.45rem;color: #cbebf6;}
+.list-div {
+  margin: 0.5rem auto 1rem auto;
+}
+.list-div .list-item {
+  padding: 0.5rem 0.7rem;
+  line-height: 2.25rem;
+  background-color: #1a72a2;
+  margin-bottom: 10px;
+  width: 48%;
+  margin-left: 1%;
+  float: left;
+}
+.list-div .list-item .item-img {
+  float: left;
+}
+.list-div .list-item .item-img img {
+  height: 2.25rem;
+  width: 2.25rem;
+}
+.list-div .list-item .item-content {
+  height: 2.25rem;
+  padding: 0 0 0 2.0rem;
+  /* width: 50%; */
+}
+.list-div .list-item .item-content .item-title {
+  line-height: 1.5rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #cbebf6;
+  text-align: center;
+}
+.list-div .list-item .item-content .item-desc {
+  line-height: 0.75rem;
+  font-size: 0.6rem;
+  color: #cbebf6;
+  text-align: center;
+}
+.list-div hr {
+  margin: 0 1.5rem;
+  border-top: 1px solid #e4e5e6;
+}

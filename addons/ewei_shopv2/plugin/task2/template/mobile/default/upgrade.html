@@ -1,0 +1,56 @@
+{template '_header'}
+<link rel="stylesheet" type="text/css" href="../addons/ewei_shopv2/plugin/seckill/template/mobile/default/static/css/common.css">
+<div class='fui-page seckill-page'>
+    <div class="fui-header">
+		<div class="fui-header-left">
+			<a class="back" onclick='location.back()'></a>
+		</div>
+		<div class="title">会员升级</div>
+		<div class="fui-header-right"></div>
+	</div>
+
+	<div class='fui-content navbar'>
+
+		<div class="swiper-container goods-container">
+            <div class="swiper-wrapper">
+            	<div class="swiper-slide goods-slide swiper-slide-active">
+            		{loop $goodsList $item}
+                	<div class="fui-list-group " style="margin-top:0px">
+				      	<div class="fui-list align-start">
+				            <div class="fui-list-media">
+				                <a href="{php echo mobileUrl('order/create',array('id'=>$item[id],'option'=>0,'total'=>1,'liveid'=>0))}"><img src="{$item['thumb']}"></a>
+				            </div>
+				            <div class="fui-list-inner">
+				                <a href="{php echo mobileUrl('order/create',array('id'=>$item[id],'option'=>0,'total'=>1,'liveid'=>0))}" class="text" style="color:">{$item['title']}</a>
+				                <div class="info">
+				                     <span class="button">
+				  
+				                         <a href="{php echo mobileUrl('order/create',array('id'=>$item[id],'option'=>0,'total'=>1,'liveid'=>0))}" class="btn btn-danger btn-sm" style="color:;background:;border:1px solid ">¥{$item[minprice]}</a>
+				                     </span>
+				                    <div style="color: #949598;
+    font-size: .6rem;">{$item[subtitle]}</div>
+				                </div>
+				                <!-- <div class="info info1">
+				                    
+				                    <span class="process" style="border:1px solid ">
+				                                <div class="inner" style="width:0%;background:"></div>
+				                        </span>
+				                    <span class="process-text" style="color:">已售 0%</span>
+				                    
+				                    <div class="price1" style="color:">¥29</div>
+				                </div> -->
+				            </div>
+        				</div> 
+					</div>
+					{/loop}
+				</div> 
+            </div>
+        </div>
+
+		{if !empty($set['upgrade_intro'])}
+        {php echo htmlspecialchars_decode($set['upgrade_intro'])}
+        {/if}
+	</div>
+
+
+</div>

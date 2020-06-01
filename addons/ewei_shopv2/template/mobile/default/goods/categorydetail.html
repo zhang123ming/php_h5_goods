@@ -1,0 +1,162 @@
+{template '_header'}
+<style type="text/css">
+	.btn-danger-p{background:#f6827a;color:#fff;}
+	.btn-default-op{border-color: #7c7c7c;color: #7c7c7c;font-size: 0.7rem;padding: 0;display: inline-block;background:#f5f5f5;}
+</style>
+<div class='fui-page  fui-page-current page-goods-list'>
+    <div class="fui-header">
+	<div class="fui-header-left">
+	    <a class="back"></a>
+	</div>
+	<div class="title">	
+		<form method="post">
+				<div class="searchbar">
+				<div class="search-input">
+					<i class="icon icon-search"></i>
+					<input type="search" id="search" placeholder="输入关键字..." value="{$_GPC['keywords']}">
+				</div>
+				</div>
+		</form>
+	</div>
+	<div class="fui-header-right" data-nomenu="true">
+	    <a href="javascript:;"><i class="icon icon-sort" id="listblock" data-state="list"></i></a>
+	</div>
+
+    </div>
+    <div class="sort">
+	<div class="item on"><span class='text'>综合</span></div>
+	<div class="item" data-order="sales"><span class='text'>销量</span></div>
+	<div class="item item-price"  data-order="minprice"><span class='text'>价格</span>
+	    <span class="sorting">
+		<i class="icon icon-sanjiao2"></i>
+		<i class="icon icon-sanjiao1"></i>
+		
+	    </span>
+	</div>
+	<div class="item"  data-order="filter"><span class='text'>筛选 <i class="icon icon-filter "></i></span> </div>
+    </div>
+
+
+
+    <div class="fui-content navbar">
+	<div class='fui-content-inner'>
+	    <div class='content-empty' style='display:none;'>
+		<i class='icon icon-searchlist'></i><br/>暂时没有任何商品
+	    </div>
+	    <div class="fui-goods-group container block" id="goods-list-container"></div>
+	    <div class='infinite-loading'><span class='fui-preloader'></span><span class='text'> 正在加载...</span></div>
+	</div>
+    </div>
+
+     <div class='fui-mask-m'></div>
+     <div class="screen">
+		<!-- <div class="attribute">
+		    <div class="item">
+			<div class="btn btn-default-o block" data-type="isrecommand"><i class="icon icon-check"></i> 推荐商品</div>
+		    </div>
+		    <div class="item">
+			<div class="btn btn-default-o block" data-type="isnew"><i class="icon icon-check"></i> 新品上市</div>
+		    </div>
+		    <div class="item">
+			<div class="btn btn-default-o block" data-type="ishot"><i class="icon icon-check"></i> 热卖商品</div>
+		    </div>
+		    <div class="item">
+			<div class="btn btn-default-o block" data-type="isdiscount"><i class="icon icon-check"></i> 促销商品</div>
+		    </div>
+		    <div class="item">
+			<div class="btn btn-default-o block" data-type="issendfree"><i class="icon icon-check"></i> 卖家包邮</div>
+		    </div>
+		    <div class="item">
+			<div class="btn btn-default-o block" data-type="istime"><i class="icon icon-check"></i> 限时抢购</div>
+		    </div>
+		</div> -->
+		<div class="attribute" style="overflow:auto;height:400px;">					
+			{loop $child1  $p}	
+			<div class="item" style="width:100%;height:20px; padding:10px;border-top: 1px solid #e4e4e4;">{$p['name']}</div>			
+				{loop $p['child2'] $cv}
+					<div class="item btn btn-default-op" style="margin-left:15px;margin-bottom:10px;margin-top:15px;border:0; width:20%;" data-cateid="{$cv['id']}" data-prentid="{$p['id']}">
+						<div class="block" style="{if $cv['thumb']}height:80px;{/if}">
+							{if $cv['thumb']}
+								<img src="{php echo tomedia($cv['thumb'])}" style='padding-top:4px' />
+							{/if}
+							<div style="{if $cv['thumb']}margin-top:-8px;{else}line-height:38px;{/if}">{$cv['name']}</div>
+						</div>
+					</div>	
+
+				{/loop}
+			{/loop}	
+			
+		</div>	
+		<div class="btns">
+		    <div class="cancel">取消筛选</div>
+		    <div class="confirm">确认</div>
+		</div>
+
+    </div>
+<script type='text/html' id='tpl_goods_list'>
+     <%each list as g%>     
+	 <div class="fui-goods-item" data-goodsid="<%g.id%>" data-type="<%g.type%>" style="width:100%;height:110px;">
+		<div <%if g.bargain>0%>href="{php echo mobileUrl('bargain/detail')}&id=<%g.bargain%>"<%else%>href="{php echo mobileUrl('goods/detail')}&id=<%g.id%>&categoryid=<%g.categoryid%>"<%/if%>>
+			<div class="image" data-lazy-background="<%g.thumb%>" style="padding-bottom:70px;width:70px;float:left; height:100px;">
+				  <%if g.total<=0%>
+				  <div class="salez" style="background-image: url('{php echo tomedia($_W['shopset']['shop']['saleout'])}'); ">
+				  </div>
+				  <%/if%>
+			</div>
+			<div style="padding-left:85px;width:80%;"><%g.title%></div>
+			<div style="padding-left:85px;margin-top:6px; font-size: 0.75rem;color:#ff5555;width:80%;">
+				<span class="text">￥<%g.minprice%></span>
+			</div>
+		</div>
+		<div style="position:absolute;right:38px;top:28px;">
+			<div  class="fui-label fui-label-success">
+				<span class="catebuy" data-type="<%g.type%>" data-marketprice="<%g.marketprice%>" style="color:#ffffff;">选择</span>
+			</div>
+		</div>
+		<div class="detail" style="height:3px; width:100%;background-color:#fff;">
+		</div>
+			
+	</div>
+   <%/each%>
+</script>
+
+<script id="tpl_cate_list" type="text/html">
+	<div class="item">
+	   <%each category as c%>
+		<nav class="on"><%c.catname%></nav>
+            <%/each%>
+    </div>
+</script>
+    {template 'goods/catepicker'}
+	{template 'goods/wholesalePicker'}
+    <script language="javascript">
+	  window.category = false;
+	  {if $catlevel!=-1}
+	      window.category = {php echo json_encode($allcategory)};
+	  {/if}
+	   require(['biz/goods/categorylist'], function (modal) {
+                modal.init({
+					page: "1",
+					keywords: "{$_GPC['keywords']}",
+					isrecommand: "{$_GPC['isrecommand']}",
+					ishot: "{$_GPC['ishot']}",
+					isnew: "{$_GPC['isnew']}",
+					isdiscount: "{$_GPC['isdiscount']}",
+					issendfree: "{$_GPC['issendfree']}",
+					istime: "{$_GPC['istime']}",
+					cate: "{$_GPC['cate']}",
+					order: "{$_GPC['order']}",
+					by: "{$_GPC['by']}",
+					merchid: "{$_GPC['merchid']}",
+					pid:"{$_GPC['pid']}",
+					openid:"{$_W['openid']}",
+					categoryid:"{$_GPC['categoryid']}",
+					frommyshop: "{php echo intval($_GPC['frommyshop'])}"
+				});
+            });
+	   </script>
+    {php $this->footerMenus()}
+</div>
+
+{template '_footer'}
+<!--efwww_com-->

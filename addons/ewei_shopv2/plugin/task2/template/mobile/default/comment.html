@@ -1,0 +1,129 @@
+{template '_header'}
+<div class='fui-page  fui-page-current order-comment-page'>
+    <div class="fui-header">
+	<div class="fui-header-left">
+	    <a class="back" onclick='history.back()'></a>
+	</div>
+	<div class="title">评价</div> 
+	<div class="fui-header-right">&nbsp;</div>
+    </div>
+  <div class='fui-content margin navbar'>
+    
+	  <div class="fui-list-group goods-list-group">  
+		  <div class="fui-list-group-title"><i class="icon icon-shop"></i> {$_W['shopset']['shop']['name']}</div>
+		 
+		{if $task}	
+	    <div class="fui-list goods-list" data-taskid="{$task['id']}">
+		<a class="fui-list-media" href="{php echo mobileUrl('task2/detail',array('id'=>$task['id']))}">
+			<img src="{php echo tomedia($task['image'])}" class="round">
+		</a>
+		<a class="fui-list-inner" href="{php echo mobileUrl('task2/detail',array('id'=>$task['id']))}">
+			<div class="text goodstitle">{$task['title']}</div>
+			<div class='subtitle'>{$task['subtitle']}</div>
+		</a>
+			<div class='fui-list-angle'>
+				<p><span class='marketprice'>{if $task['returnrate']}{$task['returnrate']}{else}0{/if}%</span></p>
+			</div>
+
+	    </div>
+		{/if}
+		</div>
+ <div class="fui-cell-group">  
+	 
+	 <div class='fui-cell'>
+		 <div class='fui-cell-label'>晒图</div>
+		 <div class='fui-cell-info'>
+			 
+			 <ul class="fui-images fui-images-sm" id="images"></ul>
+			 <div class="fui-uploader fui-uploader-sm"
+						 data-max="5" 
+						 data-count="0"> 
+						 <input type="file" name='imgFile0' id='imgFile0' multiple="" accept="image/*" >
+			 </div>
+		 </div>
+	 </div>
+	 <div class='fui-cell must'>
+		 <div class='fui-cell-label '>评论</div>
+		 <div class='fui-cell-info'><textarea rows="3" placeholder="说点什么吧" id='comment'></textarea></div>
+	 </div>
+ </div>
+
+	  
+  </div>      <div class='fui-footer'>
+	  <a class='btn btn-danger task-btn-submit block'>提交评价</a>
+	  </div>
+    <script language='javascript'>
+    	require(['biz/order/comment'], function (modal) {
+		modal.init({
+			orderid: {php echo intval($order['id'])} ,
+			iscomment: {php echo intval($order['iscomment'])} 
+		}); 
+	});
+
+    	$('.task-btn-submit').click(function() {
+    		var taskid={$_GPC['taskid']};
+			if ($(this).attr('stop')) {
+				return
+			}
+			
+			if ($('#comment').isEmpty()) {
+				FoxUI.toast.show('说点什么吧!');
+				return
+			}
+			var default_images = [];
+			$('#images').find('li').each(function() {
+				default_images.push($(this).data('filename'))
+			});
+			var default_comment = {
+				'level': 0,
+				'content': $('#comment').val(),
+				'images': default_images
+			};
+			var comments = [];
+			$('.goods-list').each(function() {
+				var images = [];
+				$(this).next().find('.fui-images').find('li').each(function() {
+					images.push($(this).data('filename'))
+				});
+				if (images.length <= 0) {
+					images = default_comment.images
+				}
+				var content = $(this).next().find('textarea').val();
+				if ($.trim(content) == '') {
+					content = default_comment.content
+				}
+				var level = $(this).next().find('.fui-stars').data('value');
+				if (level == '0') {
+					level = default_comment.level
+				}
+				comments.push({
+					'content': content,
+					'images': images
+				})
+			});
+			$(this).html('正在处理...').attr('stop', 1);
+			console.log(comments);
+
+			$.ajax({
+				url:"{php echo mobileUrl('task2.comment')}",
+				data:{comments:comments,taskid:taskid},
+				type:'post',
+				success:function(ret){
+					var ret = eval('('+ret+')');
+					if (ret.status == 1) {
+						location.href = "{php echo mobileUrl('task2.detail',array(id=>$_GPC[taskid]))}";
+						return
+					}
+					$('.btn-submit').removeAttr('stop').html('提交评价');
+					FoxUI.toast.show(ret.result.message)
+
+				}
+
+			})
+	
+		})
+
+	</script>
+</div> 
+{template '_footer'}
+<!--efwww_com54mI5p2D5omA5pyJ-->

@@ -1,0 +1,68 @@
+{template 'header'}
+<style type="text/css">
+body{
+	font:{$_W['styles']['fontsize']} {$_W['styles']['fontfamily']};
+	color:{if empty($_W['styles']['fontcolor'])}#555{else}{$_W['styles']['fontcolor']}{/if};
+	padding:0;
+	margin:0;
+	background-size:cover;
+	background-color:{if empty($_W['styles']['indexbgcolor'])}#fff{else}{$_W['styles']['indexbgcolor']}{/if};
+	{$_W['styles']['indexbgextra']}
+}
+a{color:{$_W['styles']['linkcolor']}; text-decoration:none;}
+{$_W['styles']['css']}
+
+.home-container{width:100%;overflow:hidden;margin:.6em 0;}
+.home-container .box-item{float:left;display:block;text-decoration:none;outline:none;width:25%;height:4em;margin:0 auto;background:#d90b0b;text-align:center;color:#fff;border:1px solid #c80e0f;line-height:4em;}
+.home-container i{display:block;height:45px; margin: 5px auto; font-size:16px; padding-top:10px; width:20%;}
+.home-container span{color:{$_W['styles']['fontnavcolor']};valign="middle";display:block; width:90%; margin:0 5%; font-size:16px; overflow:hidden; height:3em; line-height:3em;}
+.footer{color:#dddddd;}
+.home-container ul li{background-color:rgba(0, 0, 0, 0.3);padding:0 10px;margin:1%;display: inline-block;height:45px;width:100%;}
+.home-container ul li a{text-decoration: none;}
+.home-container .title{color:#ccc;}
+.home-container .createtime{color:#999;font-size:12px}
+.title_list{margin-top:10em;margin-bottom:2em;background-image:url('./themes/tod_one/image/title.png');background-repeat:no-repeat;background-position:center center;width:100%px;height:40px;position:relative;text-align:center;}
+</style>
+{template 'slide'}
+<div class="home-container clearfix">
+	{php $num = 0;}
+	{data func="site_navs" item="row"}
+	{php $num++;}
+            {if $num ==1||$num ==2||$num ==3||$num ==4||$num ==5||$num ==6||$num ==7||$num ==8}
+		<a href="{$row[url]}" class="box-item"><span title="{$row[name]}">{$row[name]}</span></a>
+		{/if}
+	{/data}
+
+	<div class="title_list"></div>
+    <ul class="list list-unstyled" style="text-align:center;">
+        {data module="site" func="site_article" cid="$cid" assign="result" iscommend="true" return="true" limit="6"}
+        {loop $result['list'] $row}
+		<div style="width:50%;float:left;">
+        <li  class="clearfix" style="height:160px;background-color:#fff;">
+            <a href="{$row['linkurl']}">
+                {if $row['thumb']}<img src="{$row['thumb']}" class="thumb" style="width:120px;height:120px;" onerror="this.parentNode.removeChild(this)" />{/if}
+                <div style="display:block;height:40px;line-height:40px;color:#d90b0b;">{php echo cutstr($row['title'],7,1);}</div>
+            </a>
+        </li>
+		</div>
+        {/loop}
+    </ul>
+
+	<!-- 该分类下文章-start -->
+	{if $_GPC['c'] == 'site' && $_GPC['a'] == 'site'}
+	<ul class="list list-unstyled">
+		{data func="site_article" cid=$cid return="true" assign="result"}
+			{loop $result['list'] $row}
+			<li>
+				<a href="{$row['linkurl']}">
+					<div class="title">{php echo cutstr($row['title'],10,1);}</div>
+					<div class="createtime">{php echo date('Y-m-d H:i:s', $row['createtime'])}</div>
+				</a>
+			</li>
+			{/loop}
+	</ul>
+	{/if}
+	<!-- 该分类下文章-start -->
+</div>
+
+{template 'footer'}

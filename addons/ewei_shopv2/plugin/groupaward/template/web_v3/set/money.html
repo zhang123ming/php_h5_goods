@@ -1,0 +1,225 @@
+<div class="form-group ">
+    <label class="col-lg control-label">结算周期</label>
+    <div class="col-sm-9 col-xs-12">
+        {ifp 'groupaward.set.edit'}
+        <label class="radio radio-inline" >
+            <input type="radio" name="data[paytype]" value="1" {if $data['paytype']==1}checked{/if}/> 按月发放
+        </label>
+        <label class="radio radio-inline" >
+            <input type="radio" name="data[paytype]" value="3" {if $data['paytype']==3}checked{/if}/> 按年发放
+        </label>
+        <!-- <label class="radio radio-inline">
+            <input type="radio" name="data[paytype]" value="2" {if $data['paytype']==2}checked{/if}/> 按周发放
+        </label> -->
+
+        <span class="help-block">分红结算周期</span>
+        {else}
+        {if $data['paytype']==1 || empty($data['paytype'])}按月结算{/if}
+        {if $data['paytype']==2}按周结算{/if}
+         {if $data['paytype']==3}按年结算{/if}
+        {/if}
+    </div>
+</div>
+<div class="form-group">
+    <label class="col-lg control-label">结算订单类型</label>
+    <div class="col-sm-9 col-xs-12">
+        <label class="radio radio-inline" >
+            <input type="radio" name="data[orderpaytype]" value="1" {if $data['orderpaytype']==1}checked{/if}/> 报单订单
+        </label>
+        <label class="radio radio-inline" >
+            <input type="radio" name="data[orderpaytype]" value="0" {if $data['orderpaytype']==0}checked{/if}/> 不限
+        </label>
+        <span class="help-block">报单订单，只结算后台报单的订单</span>
+    </div>
+</div>
+<div class="form-group awardMode awardMode2">
+    <div >
+         <label class="col-lg control-label">业绩熔断</label>
+        &nbsp;&nbsp;熔断点&nbsp;&nbsp;<input type="text"  name="data[amount]"  style="width: 100px;display: inline-block;" class="form-control" value="{$data['amount']}"  />元
+        &nbsp;&nbsp;同级收益&nbsp;<input type="number"  name="data[sameRate]"  style="width: 80px;padding:0;display: inline-block;text-align: center;" class="form-control" value="{$data[sameRate]}"  />%
+    </div>
+    
+</div>
+<div class="form-group awardMode awardMode4 awardMode5">
+    <div class="groupaward_item">
+         <label class="col-lg control-label">月度结算比例</label>
+        &nbsp;&nbsp;全球总业绩分红&nbsp;&nbsp;
+        {if $data['awardMode']==5}
+            {loop $levels $level}
+                {if $level['level']>90 && $level['level']>=$data['level']}
+                <div style="margin:10px 175px;">
+                &nbsp;&nbsp;{$level['levelname']}奖励比例&nbsp;<input type="number"  name="data[awardRate][{$level['level']}]"  style="width: 80px;padding:0;display: inline-block;text-align: center;" class="form-control" value="{$data[awardRate][$level['level']]}"  />%
+                </div>
+                {/if}
+            {/loop}
+        {else}
+            &nbsp;&nbsp;{$level['levelname']}奖励比例&nbsp;<input type="number"  name="data[awardRate]"  style="width: 80px;padding:0;display: inline-block;text-align: center;" class="form-control" value="{$data[awardRate]}"  />%
+        {/if}  
+       <!-- <button type='button' class="btn btn-default" onclick='addGroupAward()' style="margin-bottom:5px"><i class='fa fa-plus'></i>添加奖励比例</button> -->
+    </div>  
+</div>
+<div class="form-group groupaward">
+    <div class="groupaward_item">
+         <label class="col-lg control-label">月度结算比例</label>
+        &nbsp;&nbsp;团队销售额达到&nbsp;&nbsp;<input type="text"  name="data[teamSale][]"  style="width: 100px;display: inline-block;" class="form-control" value="{$data['teamSale'][0]}"  />元
+        &nbsp;&nbsp;奖励比例&nbsp;<input type="number"  name="data[awardRate][]"  style="width: 80px;padding:0;display: inline-block;text-align: center;" class="form-control" value="{$data[awardRate][0]}"  />%
+       <button type='button' class="btn btn-default" onclick='addGroupAward()' style="margin-bottom:5px"><i class='fa fa-plus'></i>添加奖励比例</button>
+    </div>
+    <?php
+        if($data['awardMode']!=4&&$data['awardMode']!=5){
+           unset($data['teamSale'][0]);
+           unset($data['awardRate'][0]);
+        }
+    ?>
+    {loop $data['teamSale'] $k  $v}
+    <div class="groupaward_item">
+        <label class="col-lg control-label"></label>
+        &nbsp;&nbsp;团队销售额达到&nbsp;&nbsp;<input type="text"  name="data[teamSale][]"  style="width: 100px;display: inline-block;" class="form-control" value="{$data['teamSale'][$k]}"  />元
+        &nbsp;&nbsp;奖励比例&nbsp;<input type="number"  name="data[awardRate][]"  style="width: 80px;padding:0;display: inline-block;text-align: center;" class="form-control" value="{$data[awardRate][$k]}"  />%
+        <button type='button' class="btn btn-default" onclick='deleteGroupAward(this)' style="margin-bottom:5px">删除奖励比例</button>
+    </div>
+    {/loop}
+    
+</div>
+    <div class="awardModesamegrade" >
+    <div class="groupaward_item " style="margin:30px 0px;">
+         <label class="col-lg control-label">同级奖结算比例</label>
+        &nbsp;&nbsp;奖励比例&nbsp;<input type="number" id="teamSamegrade"  name="data[awardRateSamegrade]"  style="width: 80px;padding:0;display: inline-block;text-align: center;" class="form-control" value="{$data['awardRateSamegrade']}"  />%
+    </div>
+    <div class="groupaward_item" id="teamSamegradeLevel" style="margin:30px 0px;display: none;" >
+         <label class="col-lg control-label">同级奖返利级层</label>
+        &nbsp;&nbsp;
+        <label class="radio radio-inline samegrade" >
+            <input type="radio"  name="data[samegradeLevel]" {if $data['samegradeLevel']==''}checked{/if} value="0" /> 不开启
+        </label>
+        <label class="radio radio-inline samegrade" >
+            <input type="radio"  name="data[samegradeLevel]" {if $data['samegradeLevel']==1}checked{/if} value="1" /> 一级
+        </label>
+        <label class="radio radio-inline samegrade" >
+            <input type="radio"  name="data[samegradeLevel]" {if $data['samegradeLevel']==2}checked{/if} value="2" /> 二级
+        </label>
+        <label class="radio radio-inline samegrade" >
+            <input type="radio" name="data[samegradeLevel]" value="3" {{if $data['samegradeLevel']==3}checked{/if}/> 三级
+        </label>
+    </div>
+    </div>
+
+<div class="form-group ygroupaward awardMode awardMode2">
+    <div class="groupaward_item">
+         <label class="col-lg control-label">年度结算比例</label>
+        &nbsp;&nbsp;团队销售额达到&nbsp;&nbsp;<input type="text"  name="data[yteamSale][]"  style="width: 100px;display: inline-block;" class="form-control" value="{$data['yteamSale'][0]}"  />元
+        &nbsp;&nbsp;奖励比例&nbsp;<input type="number"  name="data[yawardRate][]"  style="width: 80px;padding:0;display: inline-block;text-align: center;" class="form-control" value="{$data[yawardRate][0]}"  />%
+       <button type='button' class="btn btn-default" onclick='yaddGroupAward()' style="margin-bottom:5px"><i class='fa fa-plus'></i>添加奖励比例</button>
+    </div>
+    <?php
+       unset($data['yteamSale'][0]);
+       unset($data['yawardRate'][0]);
+    ?>
+    {loop $data['yteamSale'] $k  $v}
+    <div class="groupaward_item">
+        <label class="col-lg control-label"></label>
+        &nbsp;&nbsp;团队销售额达到&nbsp;&nbsp;<input type="text"  name="data[teamSale][]"  style="width: 100px;display: inline-block;" class="form-control" value="{$data['yteamSale'][$k]}"  />元
+        &nbsp;&nbsp;奖励比例&nbsp;<input type="number"  name="data[yawardRate][]"  style="width: 80px;padding:0;display: inline-block;text-align: center;" class="form-control" value="{$data[yawardRate][$k]}"  />%
+        <button type='button' class="btn btn-default" onclick='deleteGroupAward(this)' style="margin-bottom:5px">删除奖励比例</button>
+    </div>
+    {/loop}
+    
+</div>
+  
+{if 1==2}
+    <div class="form-group">
+        <label class="col-lg control-label">结算形式</label>
+        <div class="col-sm-9 col-xs-12">
+            {ifp 'groupaward.set.edit'}
+            <label class="radio radio-inline" >
+                <input type="radio" name="data[moneytype]" value="0" {if empty($data['moneytype'])}checked{/if}/> 余额
+            </label>
+            <label class="radio radio-inline">
+                <input type="radio" name="data[moneytype]" value="1" {if $data['moneytype']==1}checked{/if}/> 微信钱包
+            </label>
+
+            <span class="help-block">结算打款形式, 如果选择了微信钱包形式，某个区域代理结算金额不足1元，会自动结算到该区域代理的商城余额</span>
+            {else}
+            {if  empty($data['moneytype'])}余额{/if}
+            {if $data['moneytype']==1}微信钱包{/if}
+            {/if}
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-lg control-label">订单结算天数</label>
+        <div class="col-sm-9 col-xs-12 fixsingle-input-group">
+            {ifp 'groupaward.set.edit'}
+            <input type="text" name="data[settledays]" class="form-control" value="{$data['settledays']}"  />
+            <span class="help-block">当订单完成后的n天后才纳入到分红结算, 设置空或0则收货就进行结算</span>
+            {else}
+            {$data['settledays']}
+            {/if}
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-lg control-label">分红提现手续费</label>
+        <div class="col-sm-9 col-xs-12">
+            {ifp 'groupaward.set.edit'}
+            <div class="input-group fixsingle-input-group">
+                <input type="text" name="data[paycharge]" class="form-control" value="{$data['paycharge']}" />
+                <div class="input-group-addon">%</div>
+            </div>
+            <span class="help-block">发放分红时,扣除的提现手续费.空为不扣除提现手续费</span>
+            {else}
+            {php echo empty($data['paycharge'])?"0":$data['paycharge']}%
+            {/if}
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-lg control-label">免提现手续费金额区间</label>
+        <div class="col-sm-9 col-xs-12">
+            {ifp 'sysset.trade.edit'}
+            <div class='input-group fixmore-input-group'>
+                <span class='input-group-addon'>开始金额￥</span>
+                <input type="text" name="data[paybegin]" class="form-control" value="{$data['paybegin']}" />
+                <span class='input-group-addon'>结束金额￥</span>
+                <input type="text" name="data[payend]" class="form-control" value="{$data['payend']}" />
+            </div>
+            <span class='help-block'>当提现手续费金额在此区间内时,不扣除提现手续费. 结束金额 必须大于 开始金额才能生效</span>
+            <span class='help-block'>例如 设置开始金额0元 结束金额5元,只有提现手续费金额高于5元时,才扣除</span>
+            {else}
+            <input type="hidden" name="data[paybegin]" value="{$data['paybegin']}"/>
+            <input type="hidden" name="data[payend]" value="{$data['payend']}"/>
+            <div class='form-control-static'>
+                {$data['paybegin']} 元 - {$data['payend']}元
+            </div>
+            {/if}
+        </div>
+    </div>
+{/if}
+<script type="text/javascript">
+    function addGroupAward(){
+        var content = ' <div class="groupaward_item"><label class="col-lg control-label"></label>&nbsp;&nbsp;团队销售额达到&nbsp;&nbsp;<input type="text"  name="data[teamSale][]"  style="width: 100px;display: inline-block;" class="form-control" value=""  />元&nbsp;&nbsp;奖励比例&nbsp;<input type="number"  name="data[awardRate][]"  style="width: 80px;padding:0;display: inline-block;text-align: center;" class="form-control" value=""  />%<button type="button" class="btn btn-default" onclick="deleteGroupAward(this)" style="margin-bottom:5px">删除奖励比例</button></div>'
+         $('.groupaward').append(content);
+    }
+    function yaddGroupAward(){
+        var content = ' <div class="groupaward_item"><label class="col-lg control-label"></label>&nbsp;&nbsp;团队销售额达到&nbsp;&nbsp;<input type="text"  name="data[yteamSale][]"  style="width: 100px;display: inline-block;" class="form-control" value=""  />元&nbsp;&nbsp;奖励比例&nbsp;<input type="number"  name="data[yawardRate][]"  style="width: 80px;padding:0;display: inline-block;text-align: center;" class="form-control" value=""  />%<button type="button" class="btn btn-default" onclick="deleteGroupAward(this)" style="margin-bottom:5px">删除奖励比例</button></div>'
+         $('.ygroupaward').append(content);
+    }
+    function deleteGroupAward(obj) {
+          $(obj).parent().remove();
+      }
+</script>
+<script type="text/javascript">
+    if($('#teamSamegrade').val()){
+        $('#teamSamegradeLevel').css('display','block');
+    }else{
+        $('#teamSamegradeLevel').css('display','none');
+    }
+    $("#teamSamegrade").blur(function(){
+        if($('#teamSamegrade').val()&& $('#teamSamegrade').val()!=0){
+            $('#teamSamegradeLevel').css('display','block');
+        }else{
+            $('#teamSamegradeLevel').css('display','none');
+        }
+    });
+</script>
+<!--yifuyuanma-->

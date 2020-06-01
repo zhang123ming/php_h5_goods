@@ -1,0 +1,54 @@
+{template '_header'}
+<script>document.title = "奖品说明"; </script>
+
+<link rel="stylesheet" href="../addons/ewei_shopv2/plugin/lottery/static/style/lotteryreward.css?{php echo time();}" />
+
+<div class='fui-page  fui-page-current'>
+
+    <div class="fui-content">
+ <?php
+            $uniacid=$_GPC['i'];
+            $sql="SELECT data from ". tablename('ewei_shop_lottery_default') ." WHERE uniacid=$uniacid";
+            $thumb=pdo_fetch($sql);
+            $data=unserialize($thumb[data]);
+            ?>
+        <div class="lottery-head">
+            <img src="{if $data[thumb]}{$data[thumb]}{else}../addons/ewei_shopv2/plugin/lottery/static/images/lottery_banner.png{/if}" style="height: 10rem;width: 100%;">
+        </div>
+        <div class="lottery-title"><span class="title-left">奖品说明</span></div>
+        <div class="lottery-content">
+            {if !empty($reward)}
+                {loop $reward $rank $value}
+                {if !empty($value['reward'])}
+                {if isset($value['reward']['credit'])}
+                <p class="reward-item"><span class="item-left">{$value['title']}</span><span class="item-center">积分</span><span class="item-right">{$value['reward']['credit']}</span></p>
+                {elseif isset($value['reward']['bribery'])}
+                <p class="reward-item"><span class="item-left">{$value['title']}</span><span class="item-center">红包</span><span class="item-right">{$value['reward']['bribery']['num']}元</span></p>
+                {elseif isset($value['reward']['money'])}
+                <p class="reward-item"><span class="item-left">{$value['title']}</span><span class="item-center">{if $value['reward']['money']['type']==0}余额{else}微信{/if}奖金</span><span class="item-right">{$value['reward']['money']['num']}元</span></p>
+                {elseif isset($value['reward']['goods'])}
+
+                {loop $value['reward']['goods'] $key $val}
+                <p class="reward-item"><span class="item-left">{$value['title']}</span><span class="item-center">特惠商品</span><span class="item-right">{$value['reward']['goods'][$key]['title']}</span></p>
+                {/loop}
+
+                {elseif isset($value['reward']['coupon'])}
+				 <p class="reward-item"><span class="item-left">{$value['title']}</span>
+				                {loop $value['reward']['coupon'] $key $val}
+               <span class="item-center">{$val['couponname']}</span><span class="item-right">{$val['couponnum']}
+                {/loop}
+				</span>
+				</p>
+                {/if}
+                {else}
+                <p class="reward-item"><span class="item-left">{$value['title']}</span><span class="item-center">无奖励</span><span class="item-right"></span></p>
+                {/if}
+                {/loop}
+            {/if}
+        </div>
+
+    </div>
+
+</div>
+
+{template '_footer'}

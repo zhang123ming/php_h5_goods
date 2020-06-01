@@ -1,0 +1,192 @@
+<div class="form-group">
+
+    <div class="col-sm-12">
+        <table style='width:100%;'>
+            <tr>
+                <td style='width:320px;padding:10px;' valign='top'>
+                    <div id='poster'>
+                        {if !empty($item['bg'])}
+                        <img src='{php echo tomedia($item['bg'])}' class='bg'/>
+                             {/if}
+                             {if !empty($data)}
+                             {php $i=0;}
+                             {loop $data $key $d}
+
+                             <div class="drag" type="{$d['type']}" index="{php echo $key+1}" style="zindex:{php echo $key+1};left:{$d['left']};top:{$d['top']};
+                             width:{$d['width']};height:{$d['height']}" 
+                             src="{$d['src']}" size="{$d['size']}" color="{$d['color']}"
+                             > 
+
+                            {if $d['type']=='content'}
+                            <div class=text id="showcontent" style="font-size:{$d['size']};color:{$d['color']}">{$d['content']}</div>
+                            {elseif $d['type']=='other'}
+                            <div class=text id="showother"  data-type="{php echo ++$i}" style="font-size:{$d['size']};color:{$d['color']}">{$d['content']}</div>
+                            {elseif $d['type']=='date'}
+                            <div class=text style="font-size:{$d['size']};color:{$d['color']}">{$d['content']}</div>
+                            {/if}
+                            <div class="rRightDown"> </div><div class="rLeftDown"> </div><div class="rRightUp"> </div><div class="rLeftUp"> </div><div class="rRight"> </div><div class="rLeft"> </div><div class="rUp"> </div><div class="rDown"></div>
+                        </div>
+                        {/loop} 
+                        {/if}
+                    </div>
+
+                </td>
+                <td valign='top' style='padding:10px;'>
+                    {ife 'poster' $item}
+                    <div class='panel panel-default'>
+                        <div class='panel-body' id="editpanel">
+                            <div class="form-group" id="bgset">
+                                <label class="col-lg control-label">背景图片</label>
+                                <div class="col-sm-9 col-xs-12">
+                                    {php echo tpl_form_field_image2('bg',$item['bg'])}
+                                    <span class='help-block'>背景图片尺寸: 640 * 1008</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg control-label">证书元素</label>
+                                <div class="col-sm-9 col-xs-12">
+                                    <button class='btn btn-default btn-com' type='button' data-type='date' >时间</button>
+                                    <button class='btn btn-default btn-com' type='button' data-type='content' >内容</button>
+                                    <button class='btn btn-default btn-com' type='button' data-type='other' >其他</button>
+                                </div>
+                            </div>
+                            <div id='contentset' style='display:none'>
+                                <div class="form-group">
+                                    <label class="col-lg control-label">内容</label>
+                                    <div class="col-sm-9 col-xs-12">
+                                        <div>
+                                            <textarea class="form-control" id="content" rows="5" placeholder="请输入授权内容"></textarea>
+                                            <div class='help-block'>模板变量: [昵称] [代理等级] </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg control-label">文字颜色</label>
+                                    <div class="col-sm-9 col-xs-12">
+                                        {php echo tpl_form_field_color('fontcolor')}
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg control-label">文字大小</label>
+                                    <div class="col-sm-4">
+                                        <div class='input-group'>
+                                            <input type="text" id="fontsize" class="form-control namesize" placeholder="例如: 14,16" value=""/>
+                                            <div class='input-group-addon'>px</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id='dateset' style='display:none'>
+                                <div class="form-group">
+                                    <label class="col-lg control-label">文字颜色</label>
+                                    <div class="col-sm-9 col-xs-12">
+                                        {php echo tpl_form_field_color('fontcolor')}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg control-label">文字大小</label>
+                                    <div class="col-sm-4">
+                                        <div class='input-group'>
+                                            <input type="text" id="fontsize" class="form-control namesize" placeholder="例如: 14,16" value=""/>
+                                            <div class='input-group-addon'>px</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {if !empty($data)}
+                            {php $i=0;}
+                            {loop $data $key $d}
+                            {if $d['type']=='other'}
+                            <?php
+                                $index=strpos($d['content'],':');
+                                $title=substr($d['content'],0,$index);
+                                $content=substr($d['content'],$index+1);
+                                if(empty($index)){
+                                    $content=$d['content'];
+                                }
+                            ?>
+                            <div id="otherset{php echo ++$i}" style='display:none' name="otherset">
+                                <div class="form-group">
+                                    <label class="col-lg control-label">标题</label>
+                                    <div class="col-sm-6 col-xs-6">
+                                        <div>
+                                            <input type="text" id="othertitle" class="form-control" placeholder="请输入标题 {$i}" value="{$title}"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg control-label">内容</label>
+                                    <div class="col-sm-6 col-xs-6">
+                                        <div>
+                                            <input type="text" id="othercontent" class="form-control" placeholder="请输入内容 {$i}" value="{$content}"/>
+                                            <div class='help-block'>模板变量: [手机号码] [授权码]</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg control-label">文字颜色</label>
+                                    <div class="col-sm-9 col-xs-12">
+                                        <input type="color" name="fontcolor">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg control-label">文字大小</label>
+                                    <div class="col-sm-4">
+                                        <div class='input-group'>
+                                            <input type="text" id="fontsize" class="form-control namesize" placeholder="例如: 14,16" />
+                                            <div class='input-group-addon'>px</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {/if}
+                            {/loop}
+                            {/if}
+                        </div>
+                    </div>
+                    {/if}
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- 自定义内容 -->
+<script type="text/html" id="tpl_diycontent">
+    <div id="otherset{id}" style='display:none' name="otherset">
+        <div class="form-group">
+            <label class="col-lg control-label">标题</label>
+            <div class="col-sm-6 col-xs-6">
+                <div>
+                    <input type="text" id="othertitle" class="form-control" placeholder="请输入标题 {id}" />
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg control-label">内容</label>
+            <div class="col-sm-6 col-xs-6">
+                <div>
+                    <input type="text" id="othercontent" class="form-control" placeholder="请输入内容 {id}" />
+                    <div class='help-block'>模板变量: [手机号码] [授权码]</div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg control-label">文字颜色</label>
+            <div class="col-sm-9 col-xs-12">
+                <input type="color" name="fontcolor">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg control-label">文字大小</label>
+            <div class="col-sm-4">
+                <div class='input-group'>
+                    <input type="text" id="fontsize" class="form-control namesize" placeholder="例如: 14,16" />
+                    <div class='input-group-addon'>px</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+<!--e-f-w-w-w-->

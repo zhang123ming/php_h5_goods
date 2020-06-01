@@ -1,0 +1,50 @@
+{template 'common/header'}
+{template 'common/slide'}
+<style type="text/css" media="screen">
+.carousel{overflow: hidden;width: 100%;}
+.carousel-caption{text-align: left; padding: 10px; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5);}
+.carousel-indicators{left: 90%; bottom: 0;}
+.am-slider-default .am-control-nav{bottom: 15px;}
+.col{display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;margin: 0.66666667%;}
+.col>a{display: block;-webkit-box-flex: 1;-webkit-flex: 1;-ms-flex: 1;flex: 1;width: 100%;margin-right: 0.4084507%;position: relative;}
+.col>a:last-child{margin-right: 0;}
+.col a{-webkit-box-sizing: border-box;box-sizing: border-box;text-align: center; position: relative;}
+.col a img{width: 100%;}
+.col a i{text-align: center;}
+.col a p{position: absolute; background: rgba(0,0,0,0.7); bottom: 0; left: 0; width: 100%;margin: 0;padding: 5px 0;color: #fff; font-size: 1rem;}
+</style>
+<div class="col">
+	{data func="site_navs" section="1" item="nav" limit="3"}
+	<a href="{$nav['url']}">
+	{if !empty($nav['icon'])}
+	<img src="{$_W['attachurl']}{$nav['icon']}"/>	
+	{else}	
+	<i class="fa {$nav['css']['icon']['icon']}" style="{$nav['css']['icon']['style']}"></i>
+	{/if}
+	<p>{$nav['name']}</p></a>
+	{/data}
+</div>	
+<div class="col">
+	{data func="site_navs" section="2" item="nav" limit="2"}
+	<a href="{$nav['url']}">
+	{if !empty($nav['icon'])}
+	<img src="{$_W['attachurl']}{$nav['icon']}"/>	
+	{else}	
+	<i class="fa {$nav['css']['icon']['icon']}" style="{$nav['css']['icon']['style']}"></i>
+	{/if}
+	<p>{$nav['name']}</p></a>
+	{/data}
+</div>
+<div class="col">
+	{data func="site_navs" section="3" item="nav" limit="3"}
+	<a href="{$nav['url']}">
+	{if !empty($nav['icon'])}
+	<img src="{$_W['attachurl']}{$nav['icon']}"/>	
+	{else}	
+	<i class="fa {$nav['css']['icon']['icon']}" style="{$nav['css']['icon']['style']}"></i>
+	{/if}
+	<p>{$nav['name']}</p></a>
+	{/data}
+</div>
+
+{template 'common/footer'}

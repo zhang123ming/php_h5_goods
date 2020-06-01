@@ -1,0 +1,107 @@
+{template '_header'}
+<div class='fui-page  fui-page-current page-goods-list'>
+    <div class="fui-header">
+    <div class="fui-header-left">
+        <a class="back"></a>
+    </div>
+    <div class="title">
+        <form method="get" action="{php echo mobileUrl(task2)}" id="dform">
+                <input type="hidden" name="i" value="{$_W[uniacid]}">
+                <input type="hidden" name="c" value="entry">
+                <input type="hidden" name="m" value="ewei_shopv2">
+                <input type="hidden" name="do" value="mobile">
+                <input type="hidden" name="r" value="task2">
+                <div class="searchbar">
+                <div class="search-input">
+                    <i class="icon icon-search"></i>
+                    <input type="search" id="search" name="keywords" placeholder="输入关键字..." value="{$_GPC['keywords']}">
+                </div>
+                </div>
+        </form>
+    </div>
+    <div class="fui-header-right" hidden data-nomenu="true">
+        <a href="javascript:;"><i class="icon icon-sort" id="listblock" data-state="list"></i></a>
+    </div>
+    </div>
+    <script type="text/javascript">
+        $(function(){
+            $("body").keydown(function() {
+                 if (event.keyCode == "13") {//keyCode=13是回车键
+                     $('#btn-search').click();
+                 }
+             });
+        })
+        function Dsearch() {
+
+            if($('#search').value.length < 1) {
+                $('#search').val('');
+            }
+            $('#dform').submit();
+        }
+        function searchOrder(type){
+            window.location.href="{php echo mobileUrl('task2')}&type="+type;
+
+        }
+    </script>
+ 
+    <div class="sort">
+    <div class="item" ><a href="javascript:searchOrder('multiple');"><span class='text'>综合</span></a></div>
+    <div class="item"><a href="javascript:searchOrder('time');"><span class='text'>最新发布</span></a></div>
+    </div>
+
+<div class="fui-content " id="container"  >
+<div class="fui-goods-group fui-goods-group block one" style="background: #f3f3f3;">
+    {loop $list $item}
+        <a class="fui-goods-item" data-goodsid="{$item['id']}" href="{php echo mobileUrl('task2/detail', array('id'=>$item['id']))}" data-nocache="true" style="position: relative;">
+            <div class="image auto" data-text="推荐" style="background:none; height: 8rem;" >
+                <img class="exclude" src="{php echo tomedia($item['image'])}" data-lazy="{php echo tomedia($item['image'])}" />
+            </div>
+          <div class="detail" style="padding: 0.2rem;border-bottom: solid 1px #ccc">
+                <style>
+                    img{height: 70px;}
+                </style>
+                <div style="display: inline;float: left;padding-right:0.3rem; ">
+                    <img class="exclude" src="{php echo 'http://'.$_SERVER['HTTP_HOST']; }\addons\ewei_shopv2\plugin\diypage\static\images\tuijian.png" >
+                </div>
+        
+                <div class="" style="display: inline;vertical-align: top;width:100%;font-size: 0.8rem;color: black;">
+                    
+                    <style> p{max-width:100%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}</style> 
+                   <p style=""><span>项目名称：</span> {$item['title']}</p>
+                   <p style=""><span>项目特色：</span> {$item['subtitle']}</p>
+                   <p style=""><span>项目投资：{$item[returnrate]}%</span>
+                </div>
+            </div>
+        </a>
+    {/loop}
+</div>
+</div>
+</div>
+
+<div class="fui-navbar">
+
+    <a href="{if empty($_GPC['merchid'])}{php echo mobileUrl()}{else}{php echo mobileUrl('merch')}{/if}" class="external nav-item {if $_W['routes']=='' ||  $_W['routes']=='shop' ||  $_W['routes']=='commission.myshop'}active{/if}">
+        <span class="icon icon-home"></span>
+        <span class="label">首页</span>
+    </a>
+    
+
+    <a href="{php echo mobileUrl('task2')}" class="external nav-item {if $_W['routes']=='task2'}active{/if}" >
+        <span class="icon icon-search top"></span>
+        <span class="label">发现</span>
+    </a>
+   
+    
+    <a href="{php echo mobileUrl('member/cart')}" class="external nav-item {if $_W['routes']=='member.cart'}active{/if}" id="menucart">
+        <span class="icon icon-recharge top"></span>
+        <span class="label">购物车</span>
+        {if $cartcount>0}<span class="badge">{$cartcount}</span>{/if}
+    </a>
+    <a href="{php echo mobileUrl('member')}" class="external nav-item  {if $_W['routes']=='member'}active{/if}">
+        <span class="icon icon-person2"></span>
+        <span class="label">我的</span>
+    </a>
+</div>
+
+<!--efwww_com-->
+{template '_footer'}

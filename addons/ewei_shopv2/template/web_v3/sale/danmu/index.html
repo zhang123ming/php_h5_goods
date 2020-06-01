@@ -1,0 +1,94 @@
+{template '_header'}
+<style type="text/css">
+    .table_kf {display: none;}
+    .table_kf.active {display: table-footer-group;}
+</style>
+<div class="page-header">
+    当前位置：<span class="text-primary">弹幕管理</span>
+</div>
+    <div class="page-content">
+        <div class="page-toolbar">
+                {ifp 'sale.coupon'}
+                    {if $data['isopendanmu']==1}
+                        <a class='btn btn-danger btn-sm' href="{php echo webUrl('sale/danmu/closetask')}"><i class='fa fa-close'></i> 关闭功能</a>
+                    {else}
+                        <a class='btn btn-warning btn-sm' href="{php echo webUrl('sale/danmu/opentask')}"><i class='fa fa-plus'></i> 开启功能</a>
+                    {/if}
+                    <a class='btn btn-primary btn-sm' href="{php echo webUrl('sale/danmu/add')}"><i class='fa fa-plus'></i> 添加记录</a>
+                {/if}
+        </div>
+        <form action="" method="post">
+            {if count($recordlist)>0}
+            <table class="table table-hover table-responsive">
+                <thead class="navbar-inner">
+                <tr>
+                    <th>头像</th>
+                    <th>昵称</th>
+                    <th>来源类型</th>
+                    <th>时间</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                {loop $recordlist $item}
+                <tr>
+                    <td>
+                       <img src="{php echo tomedia($item['headimgurl'])}" style="width:40px;height:40px;padding:1px;border:1px solid #ccc;" onerror="this.src='../addons/ewei_shopv2/static/images/nopic.png'" />
+                    </td>
+                    <td>
+                       {$item['nickname']}
+                    </td>
+                    <td>
+                        {if $item[type]==0}
+                        下单
+                        {elseif $item[type]==1}
+                        充值
+                        {elseif $item[type]==2}
+                        会员
+                        {elseif $item[type]==3}
+                        分销
+                        {/if}
+                    </td>
+                    <td>
+                         {php echo date("Y-m-d ", $item['createtime'])}
+                    </td>
+                   
+                    <td  style="overflow:visible;position:relative">
+                     
+                        <a  class='btn btn-default btn-sm btn-operation btn-op' href="{php echo webUrl('sale.danmu.edit', array('id' => $item['id'],'page'=>$page))}">
+                             <span data-toggle="tooltip" data-placement="top" data-original-title=" {ifp 'sale.coupon'}编辑{else}查看{/if}">
+                                <i class='icow icow-bianji2'></i>
+                           </span>
+                            </a>
+                      
+                        <a  class='btn btn-default btn-sm btn-operation btn-op' data-toggle='ajaxRemove' href="{php echo webUrl('sale.danmu.delete', array('id' => $item['id']))}" data-confirm='确认要删除吗?？'>
+                            <span data-toggle="tooltip" data-placement="top" data-original-title="删除">
+                                <i class='icow icow-shanchu1'></i>
+                           </span>
+                        </a>
+                      
+                    </td>
+                </tr>
+                {/loop}
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td style="text-align: right" colspan="8">
+                            {$pager}
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            {else}
+            <div class='panel panel-default'>
+                <div class='panel-body' style='text-align: center;padding:30px;'>
+                    暂时没有弹幕记录!
+                </div>
+            </div>
+            {/if}
+        </form>
+    </div>
+{template '_footer'}
+
+<!--efwww_com-->

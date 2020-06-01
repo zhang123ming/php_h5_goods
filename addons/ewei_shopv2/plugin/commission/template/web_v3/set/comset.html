@@ -1,0 +1,35 @@
+<div id="commission19" class="commission form-group groupaward" >
+    <div class="groupaward_item">
+         <label class="col-lg control-label">新客户开拓奖</label>
+        &nbsp;&nbsp;<input type="text"  name="data[newMemberAward]"  style="width: 100px;display: inline-block;" class="form-control" value="{$data['newMemberAward']}"  />元
+    </div>
+    <div class="groupaward_item">
+         <label class="col-lg control-label">个人业绩奖</label>
+        &nbsp;&nbsp;当月总收益达到&nbsp;&nbsp;<input type="text"  name="data[monthTotalcommission][]"  style="width: 100px;display: inline-block;" class="form-control" value="{$data['monthTotalcommission'][0]}"  />元
+        &nbsp;&nbsp;奖励比例&nbsp;<input type="number"  name="data[awardRate][]"  style="width: 80px;padding:0;display: inline-block;text-align: center;" class="form-control" value="{$data[awardRate][0]}"  />%
+       <button type='button' class="btn btn-default" onclick='addGroupAward()' style="margin-bottom:5px"><i class='fa fa-plus'></i>添加奖励比例</button>
+    </div>
+    <?php
+         unset($data['monthTotalcommission'][0]);
+         unset($data['awardRate'][0]);
+    ?>
+    {loop $data['monthTotalcommission'] $k  $v}
+    <div class="groupaward_item">
+        <label class="col-lg control-label"></label>
+        &nbsp;&nbsp;当月总收益达到&nbsp;&nbsp;<input type="text"  name="data[monthTotalcommission][]"  style="width: 100px;display: inline-block;" class="form-control" value="{$data['monthTotalcommission'][$k]}"  />元
+        &nbsp;&nbsp;奖励比例&nbsp;<input type="number"  name="data[awardRate][]"  style="width: 80px;padding:0;display: inline-block;text-align: center;" class="form-control" value="{$data[awardRate][$k]}"  />%
+        <button type='button' class="btn btn-default" onclick='deleteGroupAward(this)' style="margin-bottom:5px">删除奖励比例</button>
+    </div>
+    {/loop}
+    
+</div>
+<script type="text/javascript">
+    function addGroupAward(){
+        var content = ' <div class="groupaward_item"><label class="col-lg control-label"></label>&nbsp;&nbsp;当月总收益达到&nbsp;&nbsp;<input type="text"  name="data[monthTotalcommission][]"  style="width: 100px;display: inline-block;" class="form-control" value=""  />元&nbsp;&nbsp;奖励比例&nbsp;<input type="number"  name="data[awardRate][]"  style="width: 80px;padding:0;display: inline-block;text-align: center;" class="form-control" value=""  />%<button type="button" class="btn btn-default" onclick="deleteGroupAward(this)" style="margin-bottom:5px">删除奖励比例</button></div>'
+         $('.groupaward').append(content);
+    }
+    
+    function deleteGroupAward(obj) {
+          $(obj).parent().remove();
+      }
+</script>

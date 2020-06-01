@@ -1,0 +1,91 @@
+{template 'header'}
+{template 'common/slide'}
+<style>
+	body{
+	font:{$_W['styles']['fontsize']} {$_W['styles']['fontfamily']};
+	color:{$_W['styles']['fontcolor']};
+	padding:0;
+	margin:0;
+	background-image:url('{if !empty($_W['styles']['indexbgimg'])}{$_W['styles']['indexbgimg']}{/if}');
+	background-size:cover;
+	background-color:{if empty($_W['styles']['indexbgcolor'])}#E9E9E9{else}{$_W['styles']['indexbgcolor']}{/if};
+	{$_W['styles']['indexbgextra']}
+	}
+	a{color:{$_W['styles']['linkcolor']}; text-decoration:none;}
+	{$_W['styles']['css']}
+	.box{width:100%; margin-top:10px;}
+	.box .box-item{float:left; display:block; text-align:center; text-decoration:none; outline:none; width:47%; height:120px; color:#333; background:#FFF; margin:0 0 2% 2%; padding:2% 10px; overflow:hidden; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);}
+	.box .box-item i{display:inline-block;width:80px;height:80px;line-height:80px;font-size:40px;color:#666; background:#EEE; overflow: hidden; border:2px #FFF solid;}
+	.box .box-item span{color:{$_W['styles']['fontnavcolor']};display:block; width:90%; margin:0 5%; height:20px; line-height:20px; overflow:hidden; font-size:14px;}
+	.wenzhang{width: 100%;height: 30px;background-repeat: no-repeat;background-size: cover;background-size: 100% 100%;}
+	.rollingNews {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+}
+.tuijian{width: 100%;height: 30px;margin-left: auto;margin-right: auto;}
+.tuijian_pic{width: 15px;height: 15px;vertical-align: middle;border: rgba(0, 0, 255, 0) 1px solid;float: left;margin-top: 6px;margin-left: 2%;}
+.tuijian_txt{width: 78%;height: 35px;line-height: 35px;border: rgba(0, 0, 255, 0) 1px solid;margin-left: 26px;margin-top: -3px;text-align: left;overflow: hidden;}
+.tuijian_h1{margin-top: 6px;color: #797979;font-size: 13px;}
+.tuijian_pic1{width: 15px;height: 15px;vertical-align: middle;}
+.tuijian_pic img{-webkit-animation:ro2 1.5s .2s linear infinite;-moz-animation:ro2 1.5s .2s linear infinite;animation:ro2 1.5s .2s linear infinite;}
+</style>
+<script>
+	require(['jquery'],function($){
+		$('i').addClass("img-circle");
+	});
+$(function(){
+				var $this = $(".rollingNews");
+				var t=null;
+				$this.hover(function(){
+					clearInterval(t);
+				},function(){
+					t = setInterval(function(){
+					rollingNews( $this );
+				}, 4000 );
+			}).trigger("mouseleave");
+		});
+		function rollingNews(gg){
+			var $self = gg.find(".wenzhang");
+			var lineHeight = $self.find(".tuijian").eq(0).height();
+				$self.animate({"marginTop": -lineHeight +"px"}, 600 , function(){
+				$self.css({marginTop:0}).find(".tuijian").eq(0).appendTo($self);
+			})
+		};
+</script>
+<div class="rollingNews">
+	<div class="wenzhang">
+		{data module="site" func="site_article" cid="$_W['styles']['notice_cid']" assign="result" return="true" iscommend="true"}
+		{if empty($result['list'])}
+		<div class="tuijian">
+			<a href="#">
+				<div class="tuijian_pic">
+					<img class="tuijian_pic1" src="{$_W['siteroot']}app/themes/niling_themes_02/img/img.png">
+				</div>
+				<div class="tuijian_txt">
+					<p class="tuijian_h1">您尚未推荐文章，请推荐一篇</p>
+				</div>
+			</a>
+		</div>
+		{/if}
+		{loop $result['list'] $row}
+		<div class="tuijian">
+			<a href="{$row['linkurl']}">
+				<div class="tuijian_pic">
+					<img class="tuijian_pic1" src="{$_W['siteroot']}app/themes/niling_themes_02/img/img.png">
+				</div>
+				<div class="tuijian_txt">
+					<p class="tuijian_h1">{$row['title']}</p>
+				</div>
+			</a>
+		</div>
+		{/loop}
+	</div>
+</div>
+<div class="box clearfix">
+	{data func="site_navs" item="row"}
+	{$row['html']}
+	{/data}
+</div>
+{template 'footer'}

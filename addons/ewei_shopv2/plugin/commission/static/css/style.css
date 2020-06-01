@@ -1,0 +1,242 @@
+body,
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+/* 申请代理 */
+.agent-wrap {
+  padding-left: 3%;
+  padding-right: 3%;
+  overflow: hidden;
+}
+.agent-wrap .form-inline {
+  color: #999;
+}
+.agent-wrap .form-inline .form-group {
+  display: flex;
+  margin-bottom: 0.6rem;
+  border-bottom: 1px dashed #e8e8e8;
+}
+.agent-wrap .form-inline .form-group .sr-only {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: url("../img/user2.png") no-repeat center right;
+  background-size: 2rem 2rem;
+}
+.agent-wrap .form-inline .form-group .form-control {
+  height: 2rem;
+  margin-left: 2rem;
+  flex: 1 1 auto;
+  border: none;
+}
+.agent-wrap .info_sub {
+  display: block;
+  height: 44px;
+  width: 88%;
+  margin: 27px auto;
+  background: #10BDFF;
+  text-align: center;
+  font-size: 16px;
+  line-height: 44px;
+  color: #fff;
+  border-radius: 2.5rem;
+}
+/* 奖金记录 */
+.bonus-wrap {
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.bonus-wrap h2 {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+.bonus-wrap .bonus-list .bonus-item {
+  padding: 0.5rem;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 0.5rem;
+}
+.bonus-wrap .bonus-list .bonus-item .top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+  align-item: center;
+}
+.bonus-wrap .bonus-list .bonus-item .top h5 {
+  margin: 0;
+}
+.bonus-wrap .bonus-list .bonus-item .top span {
+  font-size: 12px;
+}
+.bonus-wrap .bonus-list .bonus-item .bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.bonus-wrap .bonus-list .bonus-item .bottom .right {
+  flex: 1 1 auto;
+  margin-left: 0.4rem;
+}
+.bonus-wrap .bonus-list .bonus-item .bottom .right p {
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+  font-size: 14px;
+}
+.bonus-wrap .bonus-list .bonus-item .bottom .left {
+  position: relative;
+  width: 7rem;
+  height: 3rem;
+  line-height: 4rem;
+  background-color: #e44764;
+  text-align: center;
+  color: #fff;
+  font-size: 26px;
+}
+.bonus-wrap .bonus-list .bonus-item .bottom .left:before {
+  content: "￥";
+  position: absolute;
+  display: block;
+  top: -1.25rem;
+  left: 0.2rem;
+  font-size: 20px;
+}
+.bonus-wrap .bonus-list .bonus-item .bottom .left div {
+  position: absolute;
+  height: 90%;
+  top: 0.2rem;
+}
+.bonus-wrap .bonus-list .bonus-item .bottom .left .l-dotted {
+  left: -0.2rem;
+  border-left: 0.4rem dotted #fff;
+}
+.bonus-wrap .bonus-list .bonus-item .bottom .left .r-dotted {
+  right: -0.2rem;
+  border-left: 0.4rem dotted #fff;
+}
+/* 全部订单 */
+.all-order {
+  overflow: hidden;
+}
+.all-order .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  padding: 0 0.3rem;
+  background-color: #ff900d;
+  color: #fff;
+}
+.all-order .top span {
+  display: block;
+  height: 1.2rem;
+  border-right: 2px solid #fff;
+}
+.all-order .top div p {
+  text-align: center;
+  font-size: 14px;
+}
+.all-order .middle {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 0 0;
+  border-bottom: 1px solid #eee;
+}
+.all-order .middle li {
+  padding-bottom: 0.6rem;
+  text-align: center;
+}
+.all-order .middle li h4 {
+  color: #ff900d;
+  font-size: 18px;
+  font-weight: 500;
+}
+.all-order .middle li p {
+  color: #999;
+}
+.all-order .middle li.bar {
+  height: 2rem;
+  border-right: 1px solid #eee;
+}
+.all-order .middle li.on {
+  border-bottom: 2px solid #ff900d;
+}
+.all-order .bottom {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+.all-order .bottom a {
+  margin-bottom: 0.5rem;
+  padding: 0 1rem;
+  height: 2rem;
+  line-height: 2rem;
+  border: 1px solid #eee;
+  border-radius: 1rem;
+  font-size: 14px;
+  color: #565656;
+}
+.all-order .bottom a.on {
+  background-color: #ff900d;
+  color: #fff;
+}
+.order-list li {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+.order-list li p {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 14px;
+}
+.order-list li p .red {
+  color: #c94e46;
+}
+.order-list li .content {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #eee;
+  padding-top: 0.5rem;
+  font-size: 14px;
+  color: #565656;
+}
+.order-list li .content .img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.order-list li .content .img img {
+  width: 100%;
+  height: 100%;
+}
+.order-list li .content div {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+.order-list li a {
+  margin-left: 5rem;
+  font-size: 14px;
+  color: #c94e46;
+}

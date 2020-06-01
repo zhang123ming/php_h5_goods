@@ -1,0 +1,36 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        {template 'common/header'}
+    </head>
+    <body>
+        <ol class="am-breadcrumb kp-breadcrumb">
+            {if isset($_W['styles']['index_url'])}
+            <li>
+                <a href="{if empty($_W['styles']['index_url'])||$_W['styles']['index_url']=='/'}{php echo url('home/home')}{else}{$_W['styles']['index_url']}{/if}">
+                    首页
+                </a>
+            </li>
+            {/if}
+            <li><a href="#">分类</a></li>
+            <li class="am-active">内容</li>
+        </ol>
+
+        <article class="am-article kp-article">
+            <div class="am-article-hd">
+                <h1 class="am-article-title">{$detail['title']}</h1>
+                <!--<p class="am-article-meta">{php echo date('Y-m-d',$detail['createtime'])} &nbsp;{if !empty($detail['author'])}{$detail['author']} &nbsp;{/if}<a href="#">文章来源</a> &nbsp;阅读：{$detail['click']}次</p>-->
+                <span id="post-date">
+			<span>{php echo date('Y-m-d',$detail['createtime'])}</span>
+			<span>{$detail['author']}</span>
+			{if !empty($detail['source'])}<a href="{$detail['source']}">文章来源</a>{/if}
+			{if !empty($subscribeurl)}<a href="{$subscribeurl}">{$_W['account']['name']}</a>{/if}
+			<span>阅读:{$detail['click']}次</span>
+		</span>
+            </div>
+            <hr data-am-widget="divider" style="" class="am-divider am-divider-default" />
+            <div class="am-article-bd">{$detail['content']}</div>
+        </article>
+        {template 'common/footer'}
+    </body>
+</html>

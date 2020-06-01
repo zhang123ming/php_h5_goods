@@ -1,0 +1,94 @@
+{template '_header'}
+
+<div class="page-header">
+    当前位置：<span class="text-primary">管理员权限设置</span>
+</div>
+<div class="page-content"> 
+        <form action="" method="get">   
+               <input type="hidden" name="c" value="site" />
+               <input type="hidden" name="a" value="entry" />
+               <input type="hidden" name="m" value="ewei_shopv2" />
+               <input type="hidden" name="do" value="web" />
+               <input type="hidden" name="r" value="bottledoctor.adminlist" />   
+        <div class="col-sm-6 pull-right">
+        <div class="input-group">
+            <div class="input-group-select">
+                <select name="category" class='form-control select2' style="width:150px;">
+                    <option value="" {if $_GPC['category'] == ''} selected{/if}>分类</option>
+                    {loop $categorys $category}
+                    <option value="{$category['id']}" {if $_GPC['category']==$category['id']}selected="selected"{/if}>{$category['name']}</option>
+                    {/loop}
+                </select>
+            </div>
+            <input type="text" class=" form-control" name='keyword' value="{$_GPC['keyword']}" placeholder="请输入关键词"> <span class="input-group-btn">
+            <button class="btn btn-primary" type="submit"> 搜索</button> </span>
+        </div>
+
+        </div>
+        </form>
+</div>
+
+{if count($list)>0}
+<form action="" method="post">
+    <table class="table table-hover table-responsive" style="background-color:#fff;">
+        <thead class="navbar-inner">
+            <tr>
+                <th style="width:200px;">ID</th>
+                <th style="width:400px;">会员</th>                 
+                <th style="width:400px;">权限</th>                
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody id="sort">
+            {loop $list $row}
+            <tr>
+                <td>{$row['id']}</td>
+                <td>
+                    {ifp 'bottledoctor.adminlist.edit'}
+                        <a href='javascript:;' data-toggle='ajaxEdit' data-href="{php echo webUrl('bottledoctor/adminlist/displayorder',array('id'=>$row['id']))}" ><img src="{$row['avatar']}" style='width:30px;height:30px;padding:1px;border:1px solid #ccc;border-radius: 50%'>{$row['nickname']}</a>
+                    {else}
+                        {$row['nickname']} 
+                    {/if}
+                </td>
+                        <td>
+                        {loop $row['categoryname'] $item}
+                        {$item['name']}, 
+                        {/loop}
+                        </td>
+                <td style="text-align:left;">
+                    {ifp 'bottledoctor.adminlist.view|bottledoctor.adminlist.edit'}
+                        <a href="{php echo webUrl('bottledoctor/adminlist/edit', array('id' => $row['id'],'categoryid'=>$row['categoryid']))}" class="btn btn-default btn-sm btn-op btn-operation" title="{ifp 'bottledoctor.adminlist.edit'}修改{else}查看{/if}">
+                             <span data-toggle="tooltip" data-placement="top" title="" data-original-title="{ifp 'bottledoctor.adminlist.edit'}修改{else}查看{/if}">
+                                    {ifp 'bottledoctor.adminlist.edit'}
+                                    <i class="icow icow-bianji2"></i>
+                                    {else}
+                                    <i class="icow icow-chakan-copy"></i>
+                                    {/if}
+                                 </span>
+                        </a>
+                    {/if}                    
+                </td>
+                </tr>
+                {/loop} 
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="6" style="text-align: right">{$pager}</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        {else}
+        <div class='panel panel-default'>
+            <div class='panel-body' style='text-align: center;padding:30px;'>
+                暂时没有任何消息
+            </div>
+        </div>
+            {/if}
+    </form>
+</div>
+
+    {template '_footer'}
+
+
+<!--yifuyuanma-->

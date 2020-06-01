@@ -1,0 +1,95 @@
+{if empty($diyitem['params']['style']) || $diyitem['params']['style']=='default1'}
+    <div class="headinfo commission" style="background-color: {$diyitem['style']['background']};">
+        <div class="userinfo" style="border-bottom: 0.5px solid {$diyitem['style']['textcolor']};">
+            <div class="fui-list">
+                <div class="fui-list-media"><img src="{$diyitem['params']['avatar']}"></div>
+                <div class="fui-list-info">
+                    <div class="title" style="color: {$diyitem['style']['textcolor']};font-size: {$diyitem['style']['fontsize']}px;">{$diyitem['params']['nickname']}</div>
+                    <div class="subtitle" style="color: {$diyitem['style']['textlight']};font-size: {$diyitem['style']['fontsize']}px;">&lt;{$diyitem['params']['levelname']}&gt;</div>
+                    {if empty($diyitem['params']['hideup'])}
+                    <div class="text" style="color: {$diyitem['style']['textcolor']};font-size: {$diyitem['style']['fontsize']}px;">{$diyitem['params']['upname']}: {$diyitem['params']['upmember']}</div>
+                    {/if}
+                    {if empty($diyitem['params']['hidecode'])}
+                    <div class="text" style="color: {$diyitem['style']['textcolor']};font-size: {$diyitem['style']['fontsize']}px;">{$diyitem['params']['texticode']}：{$diyitem['params']['mid']}</div>
+                    {/if}
+                </div>
+            </div>
+            {if !empty($diyitem['params']['seticon']) && !empty($diyitem['params']['setlink'])}
+                <a class="setbtn" href="{$diyitem['params']['setlink']}" data-nocache="true"><i class="icon {$diyitem['params']['seticon']}"></i></a>
+            {/if}
+
+        </div>
+        <div class="userblock">
+            <div class="line total">
+                <div class="title" style="color: {$diyitem['style']['textcolor']};font-size: {$diyitem['style']['fontsize']}px;">{$diyitem['params']['textsuccesswithdraw']}({$diyitem['params']['textyaun']})</div>
+                <div class="num" style="color: {$diyitem['style']['textcolor']};font-size: {$diyitem['style']['fontsize']}px;">{$diyitem['params']['successwithdraw']}</div>
+            </div>
+            <div class="line usable">
+                {if !empty($diyitem['params']['centernav'])}
+                    <a class="btn" style="font-size: {$diyitem['style']['fontsize']}px;" href="{$diyitem['params']['centernavlink']}" data-nocache="true">{$diyitem['params']['centernav']}</a>
+                {/if}
+                <div class="text">
+                    <div class="title" style="color: {$diyitem['style']['textcolor']};font-size: {$diyitem['style']['fontsize']}px;">{$diyitem['params']['textcanwithdraw']}({$diyitem['params']['textyaun']})</div>
+                    <div class="num" style="color: {$diyitem['style']['textcolor']};font-size: {$diyitem['style']['fontsize']}px;">{$diyitem['params']['canwithdraw']}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+{elseif $diyitem['params']['style']=='default2'}
+    <div class="headinfo-m" style="background: {$diyitem['style']['background']}; {if !empty($diyitem['style']['background'])}border: none;{/if}">
+        {if !empty($diyitem['params']['seticon']) && !empty($diyitem['params']['setlink'])}
+        <a class="setbtn" style="color: {$diyitem['style']['textcolor']}" href="{$diyitem['params']['setlink']}" data-nocache="true"><i class="icon {$diyitem['params']['seticon']}"></i></a>
+        {/if}
+        <div class="child">
+            <div class="title" style="color: {$diyitem['style']['textcolor']};font-size: {$diyitem['style']['fontsize']}px;">{$diyitem['params']['textsuccesswithdraw']}</div>
+            <div class="num" style="color: {$diyitem['style']['textlight']};font-size: {$diyitem['style']['fontsize']}px;">{$diyitem['params']['successwithdraw']}</div>
+            {if !empty($diyitem['params']['leftnav'])}
+            <a class="btn" style="color: {$diyitem['style']['textcolor']}; border-color: {$diyitem['style']['textcolor']};font-size: {$diyitem['style']['fontsize']}px;" href="{$diyitem['params']['leftnavlink']}" data-nocache="true">{$diyitem['params']['leftnav']}</a>
+            {/if}
+        </div>
+        <div class="child userinfo" style="color: {$diyitem['style']['textcolor']};">
+            <div class="face {$diyitem['style']['headstyle']}"><img src="{$diyitem['params']['avatar']}"></div>
+            <div class="name" style="font-size: {$diyitem['style']['fontsize']}px;">{$diyitem['params']['nickname']}</div>
+            <div class="level" style="font-size: {$diyitem['style']['fontsize']}px;">[{$diyitem['params']['levelname']}]</div>
+            {if empty($diyitem['params']['hideup'])}
+            <div class="level" style="font-size: {$diyitem['style']['fontsize']}px;">{$diyitem['params']['upname']}: {$diyitem['params']['upmember']}</div>
+            {/if}
+            <div class="text" style="color: {$diyitem['style']['textcolor']};font-size: {$diyitem['style']['fontsize']}px;">{$diyitem['params']['texticode']}：{$diyitem['params']['mid']}</div>
+        </div>
+        <div class="child">
+            <div class="title" style="color: {$diyitem['style']['textcolor']};font-size: {$diyitem['style']['fontsize']}px;">{$diyitem['params']['textcanwithdraw']}</div>
+            <div class="num" style="color: {$diyitem['style']['textlight']};font-size: {$diyitem['style']['fontsize']}px;">{$diyitem['params']['canwithdraw']}</div>
+            {if !empty($diyitem['params']['rightnav'])}
+            <a class="btn" style="color: {$diyitem['style']['textcolor']}; border-color: {$diyitem['style']['textcolor']};font-size: {$diyitem['style']['fontsize']}px;" href="{$diyitem['params']['rightnavlink']}" data-nocache="true">{$diyitem['params']['rightnav']}</a>
+            {/if}
+        </div>
+    </div>
+{elseif $diyitem['params']['style']=='default3'}
+<div style="background: {$diyitem['style']['background']}; {if !empty($diyitem['style']['background'])}border: none;{/if}">
+    {if empty($diyitem['params']['hideup'])}
+    <div style="color: {$diyitem['style']['textcolor']};font-size: {$diyitem['style']['fontsize']}px; border:none; text-align:center; padding-top:10px;">我的{$_W['shopset']['commission']['texts']['commission_superior']}: {$diyitem['params']['upmember']}</div>
+    <div style="color: {$diyitem['style']['textcolor']};font-size: {$diyitem['style']['fontsize']}px; border:none; text-align:center;">ID:{$diyitem['params']['upid']}</div>
+    {/if}  
+    <div class="headinfo-m" style="background: {$diyitem['style']['background']}; {if !empty($diyitem['style']['background'])}border: none;{/if}">      
+    {if !empty($diyitem['params']['seticon']) && !empty($diyitem['params']['setlink'])}
+    <a class="setbtn" style="color: {$diyitem['style']['textcolor']}" href="{$diyitem['params']['setlink']}" data-nocache="true"><i class="icon {$diyitem['params']['seticon']}"></i></a>
+    {/if}
+    <div class="child">
+        <div class="num" style="color: {$diyitem['style']['textlight']};font-size: {$diyitem['style']['fontsize']}px;">{if $diyitem['params']['monthcommissionvalue']>0}{$diyitem['params']['monthcommissionvalue']}{else}0{/if}</div>
+        <div class="title" style="color: {$diyitem['style']['textcolor']};font-size: {$diyitem['style']['fontsize']}px;padding-top:10px;">本月{php echo $this->set['texts']['commission']}</div>
+    </div>
+    <div class="child">
+        <div class="num" style="color: {$diyitem['style']['textlight']};font-size: {$diyitem['style']['fontsize']}px;">{if $diyitem['params']['daycommissionvalue']>0}{$diyitem['params']['daycommissionvalue']}{else}0{/if}</div>
+        <div class="title" style="color: {$diyitem['style']['textcolor']};font-size: {$diyitem['style']['fontsize']}px; padding-top:10px;">今日{php echo $this->set['texts']['commission']}</div>
+       
+    </div>
+    
+    <div class="child">
+        <div class="num" style="color: {$diyitem['style']['textlight']};font-size: {$diyitem['style']['fontsize']}px;">{if $diyitem['params']['allamountcommissionvalue']>0}{$diyitem['params']['allamountcommissionvalue']}{else}0{/if}</div>
+        <div class="title" style="color: {$diyitem['style']['textcolor']};font-size: {$diyitem['style']['fontsize']}px;padding-top:10px;">全部{php echo $this->set['texts']['commission']}</div>
+    </div>
+</div>
+</div>
+
+{/if}
+<!--yifuyuanma-->

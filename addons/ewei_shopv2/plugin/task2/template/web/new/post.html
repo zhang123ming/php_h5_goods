@@ -1,0 +1,87 @@
+{template '_header'}
+<style>
+    a{display: block;color: #337ab7;}
+    .widget {
+        border: 1px solid;
+        border-radius: 5px;
+        padding: 15px 20px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    .widget:hover{color: #fff;background-color: #337ab7;}
+</style>
+<div class="page-header">
+    <span class="text-primary">编辑任务</span>
+</div>
+<div class="page-content">
+    <form id="dataform" action="{php echo webUrl('task2.post',array('id'=>$id,'posttype'=>'basic'))}" method="post" class="form-horizontal form-validate" novalidate="novalidate">
+
+    <div id="post">
+        <div class="page-sub-toolbar">
+            <div class="col-sm-4">
+                {ifp 'task2.add'}
+                <span class="pull-left">
+                    <a class="btn btn-primary btn-sm" href="{php echo webUrl('task2.post')}">
+                        <i class="fa fa-plus"></i> 添加任务</a>
+                </span>
+                {/if}
+            </div>
+        </div>
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#basic" data-toggle="tab">基本设置</a></li>
+            <li {if $_GPC['tab']=='share'}class="active"{/if} ><a href="#tab_share" data-toggle="tab">分享关注</a></li>
+        </ul>
+        <div class="tab-content">
+            <div id="basic" class="tab-pane active">
+                {template '../../plugin/task2/template/web/new/post/basic'}
+            </div>
+            <div class="tab-pane {if $_GPC['tab']=='share'}active{/if}" id="tab_share"> 
+                {template '../../plugin/task2/template/web/new/post/share'}
+            </div>
+        </div>
+        <br><br>
+        <div class="form-group">
+            <label class="col-sm-2 control-label"></label>
+            <div class="col-sm-9 col-xs-12">
+                <button class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+    <script>
+         
+        $('input[name="stoptype"]').click(function () {
+            console.log(1); 
+            stopType();
+        });
+        //重复领取
+        $('input[name="repeattype"]').click(function () {
+            repeatType();
+        });
+       
+
+        function stopType () {
+            var stopType = $('input[name="stoptype"]');
+            $.each(stopType,function () {
+                var value = $(this).val();
+                $('#stoptype'+value).hide();
+                if($(this).is(':checked')){
+                    $('#stoptype'+value).show();
+                }
+            });
+        };
+
+        function repeatType () {
+        var repeatType = $('input[name="repeattype"]');
+        $.each(repeatType,function () {
+            var value = $(this).val();
+            $('#repeattype'+value).hide();
+            if($(this).is(':checked')){
+                $('#repeattype'+value).show();
+            }
+        });
+    };
+    </script>
+    </form>
+</div>
+{template '_footer'}

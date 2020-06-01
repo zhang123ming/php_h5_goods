@@ -1,0 +1,90 @@
+{template '_header'}
+{template 'commission/common'}
+<section class="all-order" style="overflow: auto;height:95%;">
+
+        <div class="head">
+             <div class="top">
+                <div>
+                    <p>我的推广{php echo $this->set['texts']['yuan']}</p>
+                    <p>￥{php echo number_format($member['commission_total']+$member['commissiona_total'],2)}</p>
+                </div>
+                <span></span>
+                <div>
+                    <p>全部订单总额</p>
+                    <p>￥{$getcount['countprice']}</p>
+                </div>
+                <span></span>
+                <div>
+                    <p>直属下级订单总额</p>
+                    <p>￥{$getcount['acountprice']}</p>
+                </div>
+             </div>
+             <ul class="middle">
+                {loop $alevels $k $item}
+                <li>
+                    <!-- <a href="#"> -->
+                        <h4>{if $item['level']=='92'}{$downlevelcount['level92']}{/if}{if $item['level']=='94'}{$downlevelcount['level94']}{/if}{if $item['level']=='96'}{$downlevelcount['level96']}{/if}</h4>
+                        <p>{$item['levelname']}</p>
+                    <!-- </a> -->
+                </li>
+                <li class="bar"></li>
+                {/loop}
+                
+               <!--  <li>
+                    <a href="#">
+                        <h4>5449</h4>
+                        <p>成员</p>
+                    </a>
+                </li>
+                <li class="bar"></li> -->
+                <li class="on">
+                    <a href="#">
+                        <h4>{$getcount['count']}</h4>
+                        <p>全部订单</p>
+                    </a>
+                </li>
+             </ul>
+             <div class="bottom">
+                <a href="{php echo mobileUrl('commission/all_order', NULL, true)}" {if $setstatus==''}class="on"{/if}>所有订单({$getcount['count']})</a>
+                <a href="{php echo mobileUrl('commission/all_order', array('status'=>0), true)}" {if $setstatus=='0'}class="on"{/if}>未付款({$getcount['count0']})</a>
+                <a href="{php echo mobileUrl('commission/all_order', array('status'=>1), true)}" {if $setstatus=='1'}class="on"{/if}>已付款({$getcount['count1']})</a>
+                <a href="{php echo mobileUrl('commission/all_order', array('status'=>2), true)}" {if $setstatus=='2'}class="on"{/if}>待收货({$getcount['count2']})</a>
+                <a href="{php echo mobileUrl('commission/all_order', array('status'=>3), true)}" {if $setstatus=='3'}class="on"{/if}>已确认收货({$getcount['count3']})</a>
+             </div>
+        </div>
+        {loop $list $key $value}
+        <ul class="order-list">
+            
+            <li>
+                <p><span>订单日期：{$value['createtime']} 付款日期：{$value['paytime']}</span><span class="red">
+                    {if $ctype==1&&$value['paytime']}
+                        已结算
+                    {else if $value['status']=="已完成"}已结算{else}待结算{/if}
+                    
+                </span></p>
+                <div class="content">
+                    <div class="img">
+                        <img src="{$value['buyer']['avatar']}" alt="">
+                    </div>
+                    <div class="center">
+                        <span>姓名: {$value['buyer']['nickname']}</span>
+                        <span>会员ID: {$value['buyer']['id']}</span>
+                        <span>金额: ￥{$value['price']}</span>
+                    </div>
+                    <div class="right">
+                        <span>推广{php echo $this->set['texts']['yuan']}: ￥{php echo ($value['commission']+$value['commissiona'])}</span>
+                        <span>类别: {$value['level']}顾客</span>
+                        <span>订单状态: {$value['status']}</span>
+                    </div>
+                </div>
+                <a href="{php echo mobileUrl('commission/goodsdetail',array('id'=>$value['id']),true)}">查看订单商品明细</a>
+            </li>
+            
+        </ul>
+        {/loop}
+
+    </section>
+    <div style="width:100%;height:50px;"></div>
+{php $this->footerMenus()}
+{template '_footer'}
+

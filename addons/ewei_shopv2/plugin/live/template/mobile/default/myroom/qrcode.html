@@ -1,0 +1,44 @@
+
+{template '_header'}
+{template 'commission/common'}
+<style>
+    .fui-cell-label{
+        align-self: flex-start;
+        line-height: normal;
+    }
+    /*.fui-uploader{*/
+    /*background: #f5f5f5;*/
+    /*border:0;*/
+    /*}*/
+    /*.fui-uploader.fui-uploader-sm:before {*/
+    /*height: .7rem;*/
+    /*width: 1px;*/
+    /*}*/
+    /*.fui-uploader.fui-uploader-sm:after {*/
+    /*width: .7rem;*/
+    /*height: 1px;*/
+    /*}*/
+    .fui-uploader.img-container-uploader.long:after{
+        display: none;
+    }
+    .fui-uploader.img-container-uploader.long:before{
+        display: none;
+    }
+</style>
+<div class="fui-page fui-page-current">
+    <div class="fui-header">
+        <div class="fui-header-left">
+            <a class="back"></a>
+        </div>
+        <div class="title">直播间二维码</div>
+    </div>
+    <div class='fui-content'>
+        <div class='fui-cell-group'>
+            <div class="fui-cell ">
+                <img src="{$qrcode}" class="fui-images " style="margin:0 auto;width:100%;">
+            </div>
+        </div>
+    </div>
+
+</div>
+{template '_footer'}

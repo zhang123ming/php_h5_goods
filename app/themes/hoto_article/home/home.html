@@ -1,0 +1,217 @@
+{template 'com/common.func'}
+{if $_W['isajax'] && $_GPC['load'] == 'infinite'}
+	{data module="site" func="site_article" cid="$cid" limit="$_W['styles']['home_pagesize']" ishot='true' assign="result" return="true"}
+    <?php
+    foreach ($result['list'] as &$row) {
+    $row['createtime'] = format_date($row['createtime']);
+    }
+    ?>
+    {php die(json_encode($result['list']));}
+{/if}
+{template 'com/header'}
+<link rel="stylesheet" href="{$_W['siteroot']}app/themes/hoto_article/static/css/style.css">
+<style>
+.article_list {background-color: #fff;}
+.list_item {display: block;padding: 10px 10px 10px 10px;overflow: hidden;position: relative;text-decoration: none;-webkit-tap-highlight-color: transparent;}
+.list_item .cover {float: left;margin-right: 10px;}
+.list_item .cover .img {display: block;width: 108px;height: 60px;border-radius: 5px;}
+.list_item .cont {overflow: hidden;  text-align: left;}
+.list_item .cont .title {margin-top: 0;font-weight: 400;font-size: 16px;color: #000;width: 100%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;word-wrap: normal;}
+.list_item .cont .desc {margin-bottom: 0;font-size: 13px;color: #999;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;line-height: 1.3;}
+.list_item:last-child:after {border: 0;}
+.list_item:after {content: " ";position: absolute;bottom: 0;width: 100%;height: 1px;border-bottom: 1px solid #e2e2e2;-webkit-transform-origin: 0 100%;-ms-transform-origin: 0 100%;transform-origin: 0 100%;-webkit-transform: scaleY(.5);-ms-transform: scaleY(.5);transform: scaleY(.5);left: 10px;}
+:before, :after {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+</style>
+<body class="hPC">	
+	<div class="page" style="margin:0;">
+		<!-- 幻灯片 -->
+		{template 'com/slide'}
+		{template 'com/scrollnotice'}
+		<div class="content" style="width:100%; min-height:350px;margin-top: -30px;">
+			<div class="gun" style="width:100%; height:100px;">
+				<div id="slides">
+					<ul class="slides_container swiper-wrapper" id="ul1">
+						{php $num = 0;}
+						{data func="site_navs" item="row"}
+						{if $num%4==0}
+						<li class="swiper-slide">
+						{/if}
+							<a href="{$row[url]}" target="_blank">
+								<div class="tub">
+									{if $row['icon']}
+									<img class="tub1" src="{$_W['attachurl']}{$row['icon']}" alt="">
+									{else}	
+									<i class="fa {$row['css']['icon']['icon']}" style="{$row['css']['icon']['style']};"></i>
+									{/if}
+								</div>
+								<div class="tet"><span><h2>{$row['name']}</h2><br>{$row['description']}</span></div>
+							</a>
+						{php $num++;}
+						{if $num%4==0}
+						</li>
+						{/if}
+						{/data}
+					</ul>
+					<a href="javascript:;" class="prev">prev</a>
+					<a href="javascript:;" class="next" id="soso">next</a>
+				</div>
+			</div>
+			<ul class="neir" style="width:95%; margin-left:2%;border: rgba(37, 195, 137, 0) 1px solid;overflow:hidden; min-height:240px;padding-bottom: 20px;" id="ul2">
+				<li class="active">
+					<div class="newTit clearfix">
+						<h3>最新资讯</h3>
+						<!-- 所有功能，这里的标题全部动态改变填充 -->
+					</div>
+					<div class="row">
+						<div class="article_list article_list_0">
+							{if empty($_W['styles']['home_pagesize'])}
+								{php $_W['styles']['home_pagesize'] = 10}
+							{/if}
+							{data module="site" func="site_article" cid="$cid" limit="$_W['styles']['home_pagesize']" ishot='true' assign="result" return="true"}
+							{if empty($result['list'])}
+							<span style="text-align: center; display: block; padding-top: 20px; padding-bottom: 20px;">本分类下暂时没有文章，请稍后查看</span>
+							{/if}
+							{loop $result['list'] $row}
+							<a class="list_item js_post" href="{$row['linkurl']}">
+								<div class="cover">
+									{if $row['thumb']}<img src="{$row['thumb']}" class="img js_img" onerror="this.parentNode.removeChild(this)" />{/if}
+								</div>
+								<div class="cont">
+									<h2 class="title js_title">{php echo cutstr($row['title'],25,1);}</h2>
+									<p class="desc">
+										{php echo cutstr($row['description'],32,1);}
+									</p>
+									<span class="create_time">{php echo format_date($row['createtime']);}</span>
+								</div>
+							</a>
+							{/loop}
+						</div>
+					</div>
+					{if empty($_W['styles']['min_cid'])}
+					{php $min_cid = pdo_fetchcolumn("SELECT min(id) FROM ".tablename('site_category')."WHERE uniacid = :uniacid  LIMIT 1", array(':uniacid' => $_W['uniacid']))}
+					{else}
+					{php $min_cid = $_W['styles']['min_cid']}
+					{/if}
+					<div class="col-xs-12" style="margin-top:10px;">
+						<!-- <a href="{php echo url('site/site/list',array('cid' => $min_cid))}" class="new_color">
+							<button type="button" class="btn btn-default btn-block">查看更多</button>
+						</a> -->
+						<button type="button" class="btn btn-default btn-block more_limit" data-pagesize="{$_W['styles']['home_pagesize']}" data-page="1">点击加载更多</button>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script>
+		var mySwiper2 = new Swiper('#slides', {
+			pagination: false,
+			paginationClickable: true,
+		});
+		$('.prev').on('click',
+			function(e) {
+			e.preventDefault();
+			mySwiper2.swipePrev()
+		});
+		$('.next').on('click',
+			function(e) {
+			e.preventDefault();
+			mySwiper2.swipeNext()
+		});
+		$(function(){
+			$(".newTit .moreLink>a").click(function(){
+				if($(this).hasClass('on')){
+					$(this).removeClass('on').next().hide();
+				}else{
+					$(this).addClass('on').next().show();
+				}
+			});
+			$(".fixedBar a.aClick").click(function() {
+				$(".fixedBar .SubLinks").toggle();
+					return false;
+				});
+			});
+			function tagsFilter(obja,type){//obja是当前的a标签
+				var oText=obja.text();
+				var newTit=$('.newTit h3').text(oText);
+				$(".item_one").hide();
+				if(typeof type === 'number'){
+					$(".neir .row a[data-type="+type+"]").show();
+				}else if(type === 'all'){
+					$(".item_one").show();
+				}
+				$(".fixedBar .SubLinks").hide();
+				$(".newTit .moreLink>a").removeClass('on').next().hide();
+				$("html,body").stop().animate({scrollTop:$(".newTit").offset().top},1000);
+			}
+			$(function(){
+				var $this = $(".scrollNews");
+				var t=null;
+				$this.hover(function(){
+					clearInterval(t);
+				},function(){
+					t = setInterval(function(){
+					scrollNews( $this );
+				}, 4000 );
+			}).trigger("mouseleave");
+		});
+		function scrollNews(obj){
+			var $self = obj.find(".yy");
+			var lineHeight = $self.find(".tongzhi").eq(0).height();
+				$self.animate({"marginTop": -lineHeight +"px"}, 600 , function(){
+				$self.css({marginTop:0}).find(".tongzhi").eq(0).appendTo($self);
+			})
+		}
+		require(['jquery'], function($){
+		function addItems(data) {
+			var html = '', item;
+			for (var i=0; i<data.length; i++) {
+				item = data[i];
+				html += '<a class="list_item js_post" href="'+item['linkurl']+'">';
+				if(item['thumb']) {
+					html += '<div class="cover">';
+					html += '<img class="img js_img" src="'+item['thumb']+'" onerror="this.parentNode.removeChild(this)" />';
+					html += '</div>';
+				}
+				html += '<div class="cont">';
+				html += '<h2 class="title js_title">'+item['title']+'</h2>';
+				html += '<p class="desc">';
+				html += item['description'];
+				html += '</p>';
+				html += '<span class="create_time">'+item['createtime']+'</span>';
+				html += '</div>';
+				html += '</a>';
+			}
+			$('.article_list_0').append(html);
+		}
+		$('.more_limit').click(function(){
+			var t = this;
+			$(t).attr('disabled', true).html('加载中...');
+			var url = window.location.href+'&load=infinite';
+			var page = parseInt($(this).attr('data-page')) + 1;
+			var pagesize = parseInt($(this).attr('data-pagesize'));
+            url += '&page='+page;
+			$.ajax({
+				url: url,
+				dataType: 'json',
+				success:function(resp){
+					$(t).removeAttr('disabled').html('点击加载更多');
+					if (resp.length > 0) {
+						addItems(resp);
+						$(t).attr('data-page', page);
+						if (resp.length < pagesize) {
+							$(t).remove();
+						}
+					} else {
+						$(t).remove();
+					}
+				}
+			});
+		});
+	});
+	</script>
+	<style>.copyright{margin-bottom:47px!important;}</style>
+	<div class="footer clearfix">
+		<a href="tel:{$_W['styles']['index_tel']}"><i></i>电话咨询</a>
+		<a href="http://wpa.qq.com/msgrd?v=3&amp;uin={$_W['styles']['index_qq']}&amp;site=qq&amp;menu=yes"><i></i>QQ咨询</a>
+	</div>
+{template 'com/footer'}

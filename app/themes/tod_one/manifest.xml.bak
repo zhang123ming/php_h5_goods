@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest versionCode="0.6">
+	<identifie><![CDATA[tod_one]]></identifie>
+	<title><![CDATA[江风格]]></title>
+	<type><![CDATA[other]]></type>
+	<description><![CDATA[江风格模板介绍]]></description>
+	<author><![CDATA[tob]]></author>
+	<url><![CDATA[http://bbs.we7.cc/]]></url>
+	<sections><![CDATA[1]]></sections>
+	<settings>
+	</settings>
+</manifest>

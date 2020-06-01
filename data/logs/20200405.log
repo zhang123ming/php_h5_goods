@@ -1,0 +1,2594 @@
+2020-04-05 00:08:11 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wWgZ46zv93Z1UXPmHT7q03s]]></FromUserName>
+<CreateTime>1586016491</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 00:08:11 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wWgZ46zv93Z1UXPmHT7q03s',
+    'createtime' => '1586016491',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wWgZ46zv93Z1UXPmHT7q03s',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586016491',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 00:08:11 response :
+------------
+
+2020-04-05 00:08:32 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wWgZ46zv93Z1UXPmHT7q03s]]></FromUserName>
+<CreateTime>1586016511</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 00:08:32 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wWgZ46zv93Z1UXPmHT7q03s',
+    'createtime' => '1586016511',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wWgZ46zv93Z1UXPmHT7q03s',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586016511',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 00:08:32 response :
+------------
+
+2020-04-05 00:18:14 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wQAdX2IgR7LxL7A6o7-NqF4]]></FromUserName>
+<CreateTime>1586017094</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 00:18:14 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wQAdX2IgR7LxL7A6o7-NqF4',
+    'createtime' => '1586017094',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wQAdX2IgR7LxL7A6o7-NqF4',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586017094',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 00:18:14 response :
+------------
+
+2020-04-05 00:47:16 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wQ7qOhbjx1e-AxAKJYTqTrs]]></FromUserName>
+<CreateTime>1586018836</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 00:47:16 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wQ7qOhbjx1e-AxAKJYTqTrs',
+    'createtime' => '1586018836',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wQ7qOhbjx1e-AxAKJYTqTrs',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586018836',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 00:47:16 response :
+------------
+
+2020-04-05 00:55:29 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wQq-jgnsQyhNpqgF3gLxXYs]]></FromUserName>
+<CreateTime>1586019329</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 00:55:29 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wQq-jgnsQyhNpqgF3gLxXYs',
+    'createtime' => '1586019329',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wQq-jgnsQyhNpqgF3gLxXYs',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586019329',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 00:55:29 response :
+------------
+
+2020-04-05 00:59:04 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4weOx_T5ollbfqV7go74DpNw]]></FromUserName>
+<CreateTime>1586019544</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 00:59:04 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4weOx_T5ollbfqV7go74DpNw',
+    'createtime' => '1586019544',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4weOx_T5ollbfqV7go74DpNw',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586019544',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 00:59:04 response :
+------------
+
+2020-04-05 00:59:25 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4weOx_T5ollbfqV7go74DpNw]]></FromUserName>
+<CreateTime>1586019565</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 00:59:25 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4weOx_T5ollbfqV7go74DpNw',
+    'createtime' => '1586019565',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4weOx_T5ollbfqV7go74DpNw',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586019565',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 00:59:25 response :
+------------
+
+2020-04-05 01:01:12 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4weOx_T5ollbfqV7go74DpNw]]></FromUserName>
+<CreateTime>1586019672</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 01:01:12 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4weOx_T5ollbfqV7go74DpNw',
+    'createtime' => '1586019672',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4weOx_T5ollbfqV7go74DpNw',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586019672',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 01:01:12 response :
+------------
+
+2020-04-05 01:01:57 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4weOx_T5ollbfqV7go74DpNw]]></FromUserName>
+<CreateTime>1586019716</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 01:01:57 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4weOx_T5ollbfqV7go74DpNw',
+    'createtime' => '1586019716',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4weOx_T5ollbfqV7go74DpNw',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586019716',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 01:01:57 response :
+------------
+
+2020-04-05 06:05:18 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wTLQP-hghYQ8NAexzOApm8M]]></FromUserName>
+<CreateTime>1586037918</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2020-04-05 06:57:04 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wfDF1aUgcvbnxvFXpq6dk40]]></FromUserName>
+<CreateTime>1586041024</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 06:57:04 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wfDF1aUgcvbnxvFXpq6dk40',
+    'createtime' => '1586041024',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wfDF1aUgcvbnxvFXpq6dk40',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586041024',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 06:57:04 response :
+------------
+
+2020-04-05 07:57:47 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wQx69kwTwO8y9QEu-0rJR4s]]></FromUserName>
+<CreateTime>1586044666</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 07:57:47 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wQx69kwTwO8y9QEu-0rJR4s',
+    'createtime' => '1586044666',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wQx69kwTwO8y9QEu-0rJR4s',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586044666',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 07:57:47 response :
+------------
+
+2020-04-05 07:57:52 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wQx69kwTwO8y9QEu-0rJR4s]]></FromUserName>
+<CreateTime>1586044672</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 07:57:52 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wQx69kwTwO8y9QEu-0rJR4s',
+    'createtime' => '1586044672',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wQx69kwTwO8y9QEu-0rJR4s',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586044672',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 07:57:52 response :
+------------
+
+2020-04-05 09:09:18 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wbnhyXQBMVxpNhclRD6cI4U]]></FromUserName>
+<CreateTime>1586048958</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000565202004058680567759]]></EventKey>
+</xml>
+
+2020-04-05 09:09:18 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wbnhyXQBMVxpNhclRD6cI4U',
+    'createtime' => '1586048958',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000565202004058680567759',
+    'from' => 'oKdt4wbnhyXQBMVxpNhclRD6cI4U',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586048958',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000565202004058680567759',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2020-04-05 09:09:18 response :
+------------
+
+2020-04-05 09:51:11 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wUCQ_e2IjBTVTFG_78ZF4mQ]]></FromUserName>
+<CreateTime>1586051471</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000571202004052417259238]]></EventKey>
+</xml>
+
+2020-04-05 09:51:12 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wUCQ_e2IjBTVTFG_78ZF4mQ',
+    'createtime' => '1586051471',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000571202004052417259238',
+    'from' => 'oKdt4wUCQ_e2IjBTVTFG_78ZF4mQ',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586051471',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000571202004052417259238',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2020-04-05 09:51:12 response :
+------------
+
+2020-04-05 10:18:24 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wUXg-cKAP_D46lPeMj7LDUg]]></FromUserName>
+<CreateTime>1586053104</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000563202004056613280329]]></EventKey>
+</xml>
+
+2020-04-05 10:18:24 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wUXg-cKAP_D46lPeMj7LDUg',
+    'createtime' => '1586053104',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000563202004056613280329',
+    'from' => 'oKdt4wUXg-cKAP_D46lPeMj7LDUg',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586053104',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000563202004056613280329',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2020-04-05 10:18:24 response :
+------------
+
+2020-04-05 10:24:35 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wZYtXPQXQQN-9b7NlyDepNI]]></FromUserName>
+<CreateTime>1586053475</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000556202004050533833691]]></EventKey>
+</xml>
+
+2020-04-05 10:24:36 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wZYtXPQXQQN-9b7NlyDepNI',
+    'createtime' => '1586053475',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000556202004050533833691',
+    'from' => 'oKdt4wZYtXPQXQQN-9b7NlyDepNI',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586053475',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000556202004050533833691',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2020-04-05 10:24:36 response :
+------------
+
+2020-04-05 10:30:25 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wYDHgwZpq0I74Bpk78oG5eE]]></FromUserName>
+<CreateTime>1586053825</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000557202004054347367684]]></EventKey>
+</xml>
+
+2020-04-05 10:30:25 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wYDHgwZpq0I74Bpk78oG5eE',
+    'createtime' => '1586053825',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000557202004054347367684',
+    'from' => 'oKdt4wYDHgwZpq0I74Bpk78oG5eE',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586053825',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000557202004054347367684',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2020-04-05 10:30:25 response :
+------------
+
+2020-04-05 10:32:16 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wYDHgwZpq0I74Bpk78oG5eE]]></FromUserName>
+<CreateTime>1586053936</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 10:32:16 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wYDHgwZpq0I74Bpk78oG5eE',
+    'createtime' => '1586053936',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wYDHgwZpq0I74Bpk78oG5eE',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586053936',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 10:32:16 response :
+------------
+
+2020-04-05 10:37:23 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wTADXt35JjeY-twD1pM-lEk]]></FromUserName>
+<CreateTime>1586054243</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 10:37:23 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wTADXt35JjeY-twD1pM-lEk',
+    'createtime' => '1586054243',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wTADXt35JjeY-twD1pM-lEk',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586054243',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 10:37:23 response :
+------------
+
+2020-04-05 10:47:11 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wXP1xsmgbGy1umQm1uPIsfk]]></FromUserName>
+<CreateTime>1586054831</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 10:47:11 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wXP1xsmgbGy1umQm1uPIsfk',
+    'createtime' => '1586054831',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wXP1xsmgbGy1umQm1uPIsfk',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586054831',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 10:47:11 response :
+------------
+
+2020-04-05 10:51:23 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wVbPbykeP2sUSDGW6OxOkc0]]></FromUserName>
+<CreateTime>1586055083</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000568202004050101048334]]></EventKey>
+</xml>
+
+2020-04-05 10:51:23 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wVbPbykeP2sUSDGW6OxOkc0',
+    'createtime' => '1586055083',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000568202004050101048334',
+    'from' => 'oKdt4wVbPbykeP2sUSDGW6OxOkc0',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586055083',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000568202004050101048334',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2020-04-05 10:51:23 response :
+------------
+
+2020-04-05 10:58:15 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wa39vH9qA9PeXBML_TDBkvk]]></FromUserName>
+<CreateTime>1586055495</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 10:58:15 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wa39vH9qA9PeXBML_TDBkvk',
+    'createtime' => '1586055495',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wa39vH9qA9PeXBML_TDBkvk',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586055495',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 10:58:15 response :
+------------
+
+2020-04-05 11:02:50 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wV1NHNpt-VZLx4-wIIfDmjU]]></FromUserName>
+<CreateTime>1586055769</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000564202004051144268406]]></EventKey>
+</xml>
+
+2020-04-05 11:02:50 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wV1NHNpt-VZLx4-wIIfDmjU',
+    'createtime' => '1586055769',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000564202004051144268406',
+    'from' => 'oKdt4wV1NHNpt-VZLx4-wIIfDmjU',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586055769',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000564202004051144268406',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2020-04-05 11:02:50 response :
+------------
+
+2020-04-05 11:06:02 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wQNK7Lmp5vd6651F5otR07E]]></FromUserName>
+<CreateTime>1586055962</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000564202004055226448798]]></EventKey>
+</xml>
+
+2020-04-05 11:06:03 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wQNK7Lmp5vd6651F5otR07E',
+    'createtime' => '1586055962',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000564202004055226448798',
+    'from' => 'oKdt4wQNK7Lmp5vd6651F5otR07E',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586055962',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000564202004055226448798',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2020-04-05 11:06:03 response :
+------------
+
+2020-04-05 11:07:57 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wV1NHNpt-VZLx4-wIIfDmjU]]></FromUserName>
+<CreateTime>1586056077</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 11:07:57 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wV1NHNpt-VZLx4-wIIfDmjU',
+    'createtime' => '1586056077',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wV1NHNpt-VZLx4-wIIfDmjU',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586056077',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 11:07:57 response :
+------------
+
+2020-04-05 11:49:55 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4we6Q3M3sUrfrtD3LALlvuf8]]></FromUserName>
+<CreateTime>1586058595</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000562202004059171396072]]></EventKey>
+</xml>
+
+2020-04-05 11:49:55 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4we6Q3M3sUrfrtD3LALlvuf8',
+    'createtime' => '1586058595',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000562202004059171396072',
+    'from' => 'oKdt4we6Q3M3sUrfrtD3LALlvuf8',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586058595',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000562202004059171396072',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2020-04-05 11:49:55 response :
+------------
+
+2020-04-05 11:51:12 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4we6Q3M3sUrfrtD3LALlvuf8]]></FromUserName>
+<CreateTime>1586058671</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 11:51:12 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4we6Q3M3sUrfrtD3LALlvuf8',
+    'createtime' => '1586058671',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4we6Q3M3sUrfrtD3LALlvuf8',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586058671',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 11:51:12 response :
+------------
+
+2020-04-05 12:05:15 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wfaH-8718ewbVQYxQGD671M]]></FromUserName>
+<CreateTime>1586059515</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000569202004056474855568]]></EventKey>
+</xml>
+
+2020-04-05 12:05:15 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wfaH-8718ewbVQYxQGD671M',
+    'createtime' => '1586059515',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000569202004056474855568',
+    'from' => 'oKdt4wfaH-8718ewbVQYxQGD671M',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586059515',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000569202004056474855568',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2020-04-05 12:05:15 response :
+------------
+
+2020-04-05 12:50:43 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wVhZJCguL5lR06k8Fg2TqaM]]></FromUserName>
+<CreateTime>1586062243</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000561202004051677169495]]></EventKey>
+</xml>
+
+2020-04-05 12:50:44 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wVhZJCguL5lR06k8Fg2TqaM',
+    'createtime' => '1586062243',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000561202004051677169495',
+    'from' => 'oKdt4wVhZJCguL5lR06k8Fg2TqaM',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586062243',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000561202004051677169495',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2020-04-05 12:50:44 response :
+------------
+
+2020-04-05 12:51:13 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wVhZJCguL5lR06k8Fg2TqaM]]></FromUserName>
+<CreateTime>1586062273</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 12:51:13 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wVhZJCguL5lR06k8Fg2TqaM',
+    'createtime' => '1586062273',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wVhZJCguL5lR06k8Fg2TqaM',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586062273',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 12:51:13 response :
+------------
+
+2020-04-05 12:58:37 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wQpQssY8kiL2nfKnv7eETHk]]></FromUserName>
+<CreateTime>1586062717</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 12:58:37 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wQpQssY8kiL2nfKnv7eETHk',
+    'createtime' => '1586062717',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wQpQssY8kiL2nfKnv7eETHk',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586062717',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 12:58:37 response :
+------------
+
+2020-04-05 12:59:41 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wQpQssY8kiL2nfKnv7eETHk]]></FromUserName>
+<CreateTime>1586062781</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 12:59:41 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wQpQssY8kiL2nfKnv7eETHk',
+    'createtime' => '1586062781',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wQpQssY8kiL2nfKnv7eETHk',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586062781',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 12:59:41 response :
+------------
+
+2020-04-05 13:34:19 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wf-TMVw1lm6m8hbkuerh1mM]]></FromUserName>
+<CreateTime>1586064857</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000558202004059545474246]]></EventKey>
+</xml>
+
+2020-04-05 13:34:19 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wf-TMVw1lm6m8hbkuerh1mM',
+    'createtime' => '1586064857',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000558202004059545474246',
+    'from' => 'oKdt4wf-TMVw1lm6m8hbkuerh1mM',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586064857',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000558202004059545474246',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2020-04-05 13:34:19 response :
+------------
+
+2020-04-05 14:03:15 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wf-TMVw1lm6m8hbkuerh1mM]]></FromUserName>
+<CreateTime>1586066595</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 14:03:15 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wf-TMVw1lm6m8hbkuerh1mM',
+    'createtime' => '1586066595',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wf-TMVw1lm6m8hbkuerh1mM',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586066595',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 14:03:15 response :
+------------
+
+2020-04-05 14:38:29 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wSm9TUYMDHWtemM17hroP7Q]]></FromUserName>
+<CreateTime>1586068709</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000561202004057675504226]]></EventKey>
+</xml>
+
+2020-04-05 14:38:29 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wSm9TUYMDHWtemM17hroP7Q',
+    'createtime' => '1586068709',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000561202004057675504226',
+    'from' => 'oKdt4wSm9TUYMDHWtemM17hroP7Q',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586068709',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000561202004057675504226',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2020-04-05 14:38:29 response :
+------------
+
+2020-04-05 14:38:53 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wRtVy0ZipGipOuj1MKCLBVA]]></FromUserName>
+<CreateTime>1586068732</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000562202004053008362076]]></EventKey>
+</xml>
+
+2020-04-05 14:38:53 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wRtVy0ZipGipOuj1MKCLBVA',
+    'createtime' => '1586068732',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000562202004053008362076',
+    'from' => 'oKdt4wRtVy0ZipGipOuj1MKCLBVA',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586068732',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000562202004053008362076',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2020-04-05 14:38:53 response :
+------------
+
+2020-04-05 14:53:00 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wQn3-sXwOfcqACJBaGnfvcw]]></FromUserName>
+<CreateTime>1586069580</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000560202004058248680480]]></EventKey>
+</xml>
+
+2020-04-05 14:53:00 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wQn3-sXwOfcqACJBaGnfvcw',
+    'createtime' => '1586069580',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000560202004058248680480',
+    'from' => 'oKdt4wQn3-sXwOfcqACJBaGnfvcw',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586069580',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000560202004058248680480',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2020-04-05 14:53:00 response :
+------------
+
+2020-04-05 15:15:33 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wWv2690kVb_pF84RCgHE0jI]]></FromUserName>
+<CreateTime>1586070933</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000561202004057717638172]]></EventKey>
+</xml>
+
+2020-04-05 15:15:34 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wWv2690kVb_pF84RCgHE0jI',
+    'createtime' => '1586070933',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000561202004057717638172',
+    'from' => 'oKdt4wWv2690kVb_pF84RCgHE0jI',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586070933',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000561202004057717638172',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2020-04-05 15:15:34 response :
+------------
+
+2020-04-05 15:27:31 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wQWElVhvooGf8SlmAyc9sIw]]></FromUserName>
+<CreateTime>1586071651</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000570202004053989255637]]></EventKey>
+</xml>
+
+2020-04-05 15:27:31 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wQWElVhvooGf8SlmAyc9sIw',
+    'createtime' => '1586071651',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000570202004053989255637',
+    'from' => 'oKdt4wQWElVhvooGf8SlmAyc9sIw',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586071651',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000570202004053989255637',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2020-04-05 15:27:31 response :
+------------
+
+2020-04-05 15:42:54 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wSrAD8NR-Mf67wz8ImkzDTM]]></FromUserName>
+<CreateTime>1586072573</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000571202004054233453509]]></EventKey>
+</xml>
+
+2020-04-05 15:42:54 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wSrAD8NR-Mf67wz8ImkzDTM',
+    'createtime' => '1586072573',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000571202004054233453509',
+    'from' => 'oKdt4wSrAD8NR-Mf67wz8ImkzDTM',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586072573',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000571202004054233453509',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2020-04-05 15:42:54 response :
+------------
+
+2020-04-05 15:44:41 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wbnMQ7BR74Mh3dlUF9vAZqc]]></FromUserName>
+<CreateTime>1586072681</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2020-04-05 15:48:16 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wf8jGV71iERKExgWAkOCrgI]]></FromUserName>
+<CreateTime>1586072896</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000566202004058365561643]]></EventKey>
+</xml>
+
+2020-04-05 15:48:16 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wf8jGV71iERKExgWAkOCrgI',
+    'createtime' => '1586072896',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000566202004058365561643',
+    'from' => 'oKdt4wf8jGV71iERKExgWAkOCrgI',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586072896',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000566202004058365561643',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2020-04-05 15:48:16 response :
+------------
+
+2020-04-05 15:53:15 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wVUNejjyFlyegt1goRQvojo]]></FromUserName>
+<CreateTime>1586073195</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2020-04-05 15:53:16 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wVUNejjyFlyegt1goRQvojo',
+    'createtime' => '1586073195',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => '',
+    'from' => 'oKdt4wVUNejjyFlyegt1goRQvojo',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586073195',
+    'type' => 'text',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2020-04-05 15:53:16 response :
+------------
+
+2020-04-05 15:53:28 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wVUNejjyFlyegt1goRQvojo]]></FromUserName>
+<CreateTime>1586073207</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[我昨天买的药啥时候发货啊]]></Content>
+<MsgId>22707105876125623</MsgId>
+</xml>
+
+2020-04-05 15:53:28 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wVUNejjyFlyegt1goRQvojo',
+    'createtime' => '1586073207',
+    'msgtype' => 'text',
+    'content' => '我昨天买的药啥时候发货啊',
+    'msgid' => '22707105876125623',
+    'from' => 'oKdt4wVUNejjyFlyegt1goRQvojo',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586073207',
+    'type' => 'text',
+    'event' => NULL,
+    'redirection' => false,
+    'source' => NULL,
+  ),
+)
+
+2020-04-05 15:53:28 response :
+------------
+
+2020-04-05 16:15:06 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wYPFi6AmvQPQyYM_rjJCYcU]]></FromUserName>
+<CreateTime>1586074506</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000557202004059496278223]]></EventKey>
+</xml>
+
+2020-04-05 16:15:07 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wYPFi6AmvQPQyYM_rjJCYcU',
+    'createtime' => '1586074506',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000557202004059496278223',
+    'from' => 'oKdt4wYPFi6AmvQPQyYM_rjJCYcU',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586074506',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000557202004059496278223',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2020-04-05 16:15:07 response :
+------------
+
+2020-04-05 16:18:04 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wV8cDSMgWlk1uL_ocYP7fv0]]></FromUserName>
+<CreateTime>1586074684</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000570202004054024804305]]></EventKey>
+</xml>
+
+2020-04-05 16:18:05 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wV8cDSMgWlk1uL_ocYP7fv0',
+    'createtime' => '1586074684',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000570202004054024804305',
+    'from' => 'oKdt4wV8cDSMgWlk1uL_ocYP7fv0',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586074684',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000570202004054024804305',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2020-04-05 16:18:05 response :
+------------
+
+2020-04-05 16:25:33 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wRwXwlTFOU21sSSXICILXYU]]></FromUserName>
+<CreateTime>1586075133</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000553202004055105930239]]></EventKey>
+</xml>
+
+2020-04-05 16:25:33 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wRwXwlTFOU21sSSXICILXYU',
+    'createtime' => '1586075133',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000553202004055105930239',
+    'from' => 'oKdt4wRwXwlTFOU21sSSXICILXYU',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586075133',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000553202004055105930239',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2020-04-05 16:25:33 response :
+------------
+
+2020-04-05 16:27:34 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wXYYRXvqp2hxbsbg64WN5Tc]]></FromUserName>
+<CreateTime>1586075254</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000559202004055206278617]]></EventKey>
+</xml>
+
+2020-04-05 16:27:34 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wXYYRXvqp2hxbsbg64WN5Tc',
+    'createtime' => '1586075254',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000559202004055206278617',
+    'from' => 'oKdt4wXYYRXvqp2hxbsbg64WN5Tc',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586075254',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000559202004055206278617',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2020-04-05 16:27:34 response :
+------------
+
+2020-04-05 16:42:06 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wXYYRXvqp2hxbsbg64WN5Tc]]></FromUserName>
+<CreateTime>1586076126</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 16:42:06 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wXYYRXvqp2hxbsbg64WN5Tc',
+    'createtime' => '1586076126',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wXYYRXvqp2hxbsbg64WN5Tc',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586076126',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 16:42:06 response :
+------------
+
+2020-04-05 16:49:57 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4we49huuMkU-qqQsugrMRE_A]]></FromUserName>
+<CreateTime>1586076597</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000564202004053612500098]]></EventKey>
+</xml>
+
+2020-04-05 16:49:57 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4we49huuMkU-qqQsugrMRE_A',
+    'createtime' => '1586076597',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000564202004053612500098',
+    'from' => 'oKdt4we49huuMkU-qqQsugrMRE_A',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586076597',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000564202004053612500098',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2020-04-05 16:49:57 response :
+------------
+
+2020-04-05 17:14:15 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wdpQd1DqTDrbeFLag0IjFiA]]></FromUserName>
+<CreateTime>1586078054</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000554202004059299936818]]></EventKey>
+</xml>
+
+2020-04-05 17:14:15 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wdpQd1DqTDrbeFLag0IjFiA',
+    'createtime' => '1586078054',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000554202004059299936818',
+    'from' => 'oKdt4wdpQd1DqTDrbeFLag0IjFiA',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586078054',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000554202004059299936818',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2020-04-05 17:14:15 response :
+------------
+
+2020-04-05 17:31:17 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wai8grJ-NtbfMskuzKrbzZo]]></FromUserName>
+<CreateTime>1586079077</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 17:31:17 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wai8grJ-NtbfMskuzKrbzZo',
+    'createtime' => '1586079077',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wai8grJ-NtbfMskuzKrbzZo',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586079077',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 17:31:17 response :
+------------
+
+2020-04-05 17:38:48 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wUOLojaPe4gmRcPB2q9OmQg]]></FromUserName>
+<CreateTime>1586079528</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000560202004051440192022]]></EventKey>
+</xml>
+
+2020-04-05 17:38:48 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wUOLojaPe4gmRcPB2q9OmQg',
+    'createtime' => '1586079528',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000560202004051440192022',
+    'from' => 'oKdt4wUOLojaPe4gmRcPB2q9OmQg',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586079528',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000560202004051440192022',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2020-04-05 17:38:48 response :
+------------
+
+2020-04-05 17:47:01 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wdWC8GxDyrZ5Ps6I8HVN3rc]]></FromUserName>
+<CreateTime>1586080020</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000556202004055023622984]]></EventKey>
+</xml>
+
+2020-04-05 17:47:01 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wdWC8GxDyrZ5Ps6I8HVN3rc',
+    'createtime' => '1586080020',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000556202004055023622984',
+    'from' => 'oKdt4wdWC8GxDyrZ5Ps6I8HVN3rc',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586080020',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000556202004055023622984',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2020-04-05 17:47:01 response :
+------------
+
+2020-04-05 17:57:29 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wdWC8GxDyrZ5Ps6I8HVN3rc]]></FromUserName>
+<CreateTime>1586080649</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 17:57:29 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wdWC8GxDyrZ5Ps6I8HVN3rc',
+    'createtime' => '1586080649',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wdWC8GxDyrZ5Ps6I8HVN3rc',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586080649',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 17:57:29 response :
+------------
+
+2020-04-05 18:55:14 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wRX4aL_jSX4uJisTv1NUTp0]]></FromUserName>
+<CreateTime>1586084114</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[last_trade_no_4200000553202004056672185709]]></EventKey>
+</xml>
+
+2020-04-05 18:55:15 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wRX4aL_jSX4uJisTv1NUTp0',
+    'createtime' => '1586084114',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => 'last_trade_no_4200000553202004056672185709',
+    'from' => 'oKdt4wRX4aL_jSX4uJisTv1NUTp0',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586084114',
+    'type' => 'text',
+    'scene' => 'last_trade_no_4200000553202004056672185709',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2020-04-05 18:55:15 response :
+------------
+
+2020-04-05 18:55:28 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wf-TMVw1lm6m8hbkuerh1mM]]></FromUserName>
+<CreateTime>1586084128</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 18:55:28 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wf-TMVw1lm6m8hbkuerh1mM',
+    'createtime' => '1586084128',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wf-TMVw1lm6m8hbkuerh1mM',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586084128',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 18:55:28 response :
+------------
+
+2020-04-05 19:32:00 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wUbIrDeSlWeeDsNZBtt0tsw]]></FromUserName>
+<CreateTime>1586086319</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2020-04-05 20:09:28 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wZzEsy3DkySfUBY1PavWIKY]]></FromUserName>
+<CreateTime>1586088568</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 20:09:28 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wZzEsy3DkySfUBY1PavWIKY',
+    'createtime' => '1586088568',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wZzEsy3DkySfUBY1PavWIKY',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586088568',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 20:09:28 response :
+------------
+
+2020-04-05 20:10:49 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wZzEsy3DkySfUBY1PavWIKY]]></FromUserName>
+<CreateTime>1586088649</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2020-04-05 20:30:13 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wSm9TUYMDHWtemM17hroP7Q]]></FromUserName>
+<CreateTime>1586089812</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 20:30:13 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wSm9TUYMDHWtemM17hroP7Q',
+    'createtime' => '1586089812',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wSm9TUYMDHWtemM17hroP7Q',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586089812',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 20:30:13 response :
+------------
+
+2020-04-05 20:50:36 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wVhZJCguL5lR06k8Fg2TqaM]]></FromUserName>
+<CreateTime>1586091036</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 20:50:36 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wVhZJCguL5lR06k8Fg2TqaM',
+    'createtime' => '1586091036',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wVhZJCguL5lR06k8Fg2TqaM',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586091036',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 20:50:36 response :
+------------
+
+2020-04-05 20:50:37 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wVhZJCguL5lR06k8Fg2TqaM]]></FromUserName>
+<CreateTime>1586091037</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 20:50:37 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wVhZJCguL5lR06k8Fg2TqaM',
+    'createtime' => '1586091037',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wVhZJCguL5lR06k8Fg2TqaM',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586091037',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 20:50:37 response :
+------------
+
+2020-04-05 20:51:25 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wYFYSeP2wmoUqNNqQuHFrB8]]></FromUserName>
+<CreateTime>1586091085</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2020-04-05 20:53:21 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wVhZJCguL5lR06k8Fg2TqaM]]></FromUserName>
+<CreateTime>1586091201</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 20:53:21 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wVhZJCguL5lR06k8Fg2TqaM',
+    'createtime' => '1586091201',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wVhZJCguL5lR06k8Fg2TqaM',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586091201',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 20:53:21 response :
+------------
+
+2020-04-05 21:04:43 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wWgZ46zv93Z1UXPmHT7q03s]]></FromUserName>
+<CreateTime>1586091883</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 21:04:43 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wWgZ46zv93Z1UXPmHT7q03s',
+    'createtime' => '1586091883',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wWgZ46zv93Z1UXPmHT7q03s',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586091883',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 21:04:43 response :
+------------
+
+2020-04-05 22:43:21 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wUDw2D_r-geJ1vONUDy6YvA]]></FromUserName>
+<CreateTime>1586097801</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 22:43:21 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wUDw2D_r-geJ1vONUDy6YvA',
+    'createtime' => '1586097801',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wUDw2D_r-geJ1vONUDy6YvA',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586097801',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 22:43:21 response :
+------------
+
+2020-04-05 22:43:59 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wUDw2D_r-geJ1vONUDy6YvA]]></FromUserName>
+<CreateTime>1586097839</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 22:43:59 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wUDw2D_r-geJ1vONUDy6YvA',
+    'createtime' => '1586097839',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wUDw2D_r-geJ1vONUDy6YvA',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586097839',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 22:43:59 response :
+------------
+
+2020-04-05 22:44:04 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_93e9b49c2dea]]></ToUserName>
+<FromUserName><![CDATA[oKdt4wUDw2D_r-geJ1vONUDy6YvA]]></FromUserName>
+<CreateTime>1586097844</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>426751073</MenuId>
+</xml>
+
+2020-04-05 22:44:04 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_93e9b49c2dea',
+    'fromusername' => 'oKdt4wUDw2D_r-geJ1vONUDy6YvA',
+    'createtime' => '1586097844',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '426751073',
+    'from' => 'oKdt4wUDw2D_r-geJ1vONUDy6YvA',
+    'to' => 'gh_93e9b49c2dea',
+    'time' => '1586097844',
+    'type' => 'text',
+    'content' => 'http://yeshi.kaifa1688.cn/app/index.php?i=267&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2020-04-05 22:44:04 response :
+------------
+

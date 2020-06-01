@@ -1,0 +1,30 @@
+<link href="../app/themes/yihudong_3D/a/index1.css" rel="stylesheet" type="text/css">
+<div id="cover_layer"></div>
+    <top id="top">
+    <div class="top" id="top">
+    <div class="category" onClick="f()"><a href="#" >&nbsp;</a></div>
+         <a href="{$_W['account']['subscribeurl']}" ><div class="wechat"></div></a>
+    </div>
+    </top>
+<div class="mMasklay" id="mMasklay"  onClick="divDis()" style="height:1000px; display: none;"></div>
+
+<div class="mMenulay" id="mMenulay" style="display: none;">
+     <ul class="navlist">
+
+<dl>
+{data module="site" func="site_category"}
+<dt><a href="{$row['linkurl']}"> {$row['name']}</a></dt>
+{loop $row['children'] $item}
+<dd><a href="{$item['linkurl']}"> {$item['name']}</a></dd>
+{/loop}
+{/data}
+                    </dl>
+
+    </ul>
+
+ </div> 
+
+
+
+
+<script type="text/javascript" src="../app/themes/yihudong_3D/a/loginDiv.js"></script>

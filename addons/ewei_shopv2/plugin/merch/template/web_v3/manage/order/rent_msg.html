@@ -1,0 +1,53 @@
+<form action=""  method="post"  class="form-horizontal form-validate" enctype="multipart/form-data">
+<input type="hidden" name="id" value="{$item['id']}" />
+<input type="hidden" name="r" value="order.rent.rentMsg" />
+<div class="modal-dialog" style="width: 1000px;">
+	<div class="modal-content">
+		<div class="modal-header">
+			<button data-dismiss="modal" class="close" type="button">×</button>
+			<h4 class="modal-title">售后信息</h4>
+		</div>
+		<div class="modal-body">
+			
+			<div class="form-group">
+				<label class="col-lg control-label">联系人</label>
+				<div class="col-sm-9 col-xs-12">
+					{$message['name']}
+				</div>
+			</div>
+			<div class="form-group">
+                <label class="col-lg control-label">联系方式</label>
+                <div class="col-sm-9 col-xs-12">
+					{$message['mobile']}
+				</div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg control-label">处理状态</label>
+                <div class="col-sm-9 col-xs-12">
+	                <select name='statusa'  class='col-sm-9 col-xs-12'>
+	                	<option {if $item['statusa']<2} selected {/if} value='1'>未处理</option>
+	                    <option {if $item['statusa']==2} selected {/if} value='2'>已处理</option>
+	                </select> 
+	            </div>
+            </div>
+			<div class="form-group">
+				<label class="col-lg control-label">售后信息</label>
+				<div class="col-sm-9 col-xs-12 pull-left">
+                    {$message['reason']}
+                </div>
+			</div>
+			<div class="form-group">
+				<label class="col-lg control-label">售后回复</label>
+				<div class="col-sm-9 col-xs-12 pull-left">
+                    <textarea name="reply" class="form-control richtext" required rows="5" >{$message['reply']}</textarea>
+                </div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-primary" type="submit">提交</button>
+			<button data-dismiss="modal" class="btn btn-default" type="button">取消</button>
+		</div>
+	</div>
+	</form>
+
+<!--yifuyuanma-->

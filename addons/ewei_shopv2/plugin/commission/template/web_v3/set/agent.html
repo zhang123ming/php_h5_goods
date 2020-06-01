@@ -1,0 +1,14 @@
+<div class="form-group">
+    <label class="col-lg control-label">手机端审核</label>
+    <div class="col-sm-9 col-xs-12">
+    	{ifp 'commission.set.edit'}
+			<label class="radio-inline"><input type="radio"  name="data[selfbuy]" value="1" {if $data['isopenagent'] ==1} checked="checked"{/if} /> 开启</label>
+			<label class="radio-inline"><input type="radio"  name="data[selfbuy]" value="0" {if $data['isopenagent'] ==0} checked="checked"{/if} /> 关闭</label>
+			<span class='help-block'>
+		{else}
+			{if $data['isopenagent'] ==0}关闭{else}开启{/if}
+		{/if}
+    </div>
+</div>
+
+

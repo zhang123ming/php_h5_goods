@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://www.kuweimi.com" versionCode="0.8,1.0">
+	<application setting="true">
+		<name><![CDATA[企业门店官网DIY制作]]></name>
+		<identifie><![CDATA[zofui_sitetemp]]></identifie>
+		<version><![CDATA[1.2.1]]></version>
+		<type><![CDATA[business]]></type>
+		<ability><![CDATA[企业门店官网DIY制作]]></ability>
+		<description><![CDATA[企业门店官网DIY制作]]></description>
+		<author><![CDATA[酷微米社区]]></author>
+		<url><![CDATA[https://www.kuweimi.com]]></url>
+	</application>
+	<platform>
+		<subscribes>
+		</subscribes>
+		<handles>
+		</handles>
+		<rule embed="false" />
+		<card embed="false" />
+		<supports>
+			<item type="wxapp" />
+		</supports>
+	</platform>
+	<bindings>
+	</bindings>
+	<permissions>
+	</permissions>
+	<install><![CDATA[CREATE TABLE IF NOT EXISTS `ims_zofui_sitetemp_admin` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `uniacid` int(11) unsigned NOT NULL DEFAULT '0',
+  `openid` varchar(64) DEFAULT '',
+  PRIMARY KEY (`id`),
+  KEY `uniacid` (`uniacid`),
+  KEY `openid` (`openid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS `ims_zofui_sitetemp_article` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `uniacid` int(11) unsigned NOT NULL DEFAULT '0',
+  `content` mediumtext COMMENT '文章内容',
+  `title` varchar(2000) DEFAULT NULL,
+  `img` varchar(350) DEFAULT NULL COMMENT '封面图片',
+  `number` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '排序 越大越前',
+  `time` varchar(15) DEFAULT NULL COMMENT '时间',
+  `readed` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '阅读量',
+  `author` varchar(64) DEFAULT NULL COMMENT '作者',
+  `sortid` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '分类id',
+  PRIMARY KEY (`id`),
+  KEY `uniacid` (`uniacid`),
+  KEY `number` (`number`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS `ims_zofui_sitetemp_artsort` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `uniacid` int(11) unsigned NOT NULL DEFAULT '0',
+  `name` varchar(32) DEFAULT NULL,
+  `number` int(10) NOT NULL DEFAULT '0' COMMENT '排序序号 越大越前',
+  PRIMARY KEY (`id`),
+  KEY `uniacid` (`uniacid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS `ims_zofui_sitetemp_bar` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `uniacid` int(11) unsigned NOT NULL DEFAULT '0',
+  `data` text COMMENT '内容',
+  `createtime` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
+  `tempid` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '对应的模板id',
+  PRIMARY KEY (`id`),
+  KEY `uniacid` (`uniacid`),
+  KEY `tempid` (`tempid`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS `ims_zofui_sitetemp_copyright` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `status` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '0开启 1关闭',
+  `content` text,
+  PRIMARY KEY (`id`),
+  KEY `uniacid` (`status`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS `ims_zofui_sitetemp_form` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `uniacid` int(11) unsigned NOT NULL DEFAULT '0',
+  `data` mediumtext COMMENT '内容',
+  `createtime` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
+  `isread` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '0未读 1已读',
+  PRIMARY KEY (`id`),
+  KEY `uniacid` (`uniacid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS `ims_zofui_sitetemp_page` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `uniacid` int(11) unsigned NOT NULL DEFAULT '0',
+  `params` mediumtext COMMENT '内容',
+  `createtime` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
+  `name` varchar(800) DEFAULT NULL COMMENT '备注页面名称',
+  `tempid` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '所属模板id',
+  PRIMARY KEY (`id`),
+  KEY `uniacid` (`uniacid`),
+  KEY `tempid` (`tempid`)
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS `ims_zofui_sitetemp_smtp` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `uniacid` int(11) unsigned NOT NULL DEFAULT '0',
+  `type` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '0网易 1QQ',
+  `account` varchar(64) DEFAULT NULL COMMENT '发送账户',
+  `pass` varchar(64) DEFAULT NULL COMMENT '授权码',
+  `name` varchar(64) DEFAULT NULL,
+  `sign` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `uniacid` (`uniacid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS `ims_zofui_sitetemp_temp` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `uniacid` int(11) unsigned NOT NULL DEFAULT '0',
+  `createtime` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
+  `name` varchar(800) DEFAULT NULL COMMENT '备注名称',
+  `number` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '排序 越大越前',
+  `img` varchar(500) DEFAULT NULL COMMENT '图标',
+  `isact` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '0未使用 1使用中',
+  `issystem` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '是否系统模板 0不是 1是 系统模板不能删除修改',
+  `issetsystem` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '是否平台自己设置的系统模板 0不是 1是的',
+  PRIMARY KEY (`id`),
+  KEY `uniacid` (`uniacid`),
+  KEY `number` (`number`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+]]></install>
+	<uninstall><![CDATA[DROP TABLE IF EXISTS `ims_zofui_sitetemp_admin`;
+DROP TABLE IF EXISTS `ims_zofui_sitetemp_article`;
+DROP TABLE IF EXISTS `ims_zofui_sitetemp_artsort`;
+DROP TABLE IF EXISTS `ims_zofui_sitetemp_bar`;
+DROP TABLE IF EXISTS `ims_zofui_sitetemp_copyright`;
+DROP TABLE IF EXISTS `ims_zofui_sitetemp_form`;
+DROP TABLE IF EXISTS `ims_zofui_sitetemp_page`;
+DROP TABLE IF EXISTS `ims_zofui_sitetemp_smtp`;
+DROP TABLE IF EXISTS `ims_zofui_sitetemp_temp`;
+]]></uninstall>
+	<upgrade><![CDATA[]]></upgrade>
+</manifest>

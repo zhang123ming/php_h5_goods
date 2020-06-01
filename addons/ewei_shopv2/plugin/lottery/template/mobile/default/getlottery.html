@@ -1,0 +1,50 @@
+{template '_header'}
+<script>document.title = "抽奖说明"; </script>
+
+<link rel="stylesheet" href="../addons/ewei_shopv2/plugin/lottery/static/style/lottery.css?{php echo time();}" />
+
+<div class='fui-page  fui-page-current'>
+
+    <div class="fui-content">
+
+        <div class="lottery-head">
+            <?php
+            $uniacid=$_GPC['i'];
+            $sql="SELECT data from ". tablename('ewei_shop_lottery_default') ." WHERE uniacid=$uniacid";
+            $thumb=pdo_fetch($sql);
+            $data=unserialize($thumb[data]);
+            ?>
+            <img src="{if $data[thumb]}{$data[thumb]}{else}../addons/ewei_shopv2/plugin/lottery/static/images/lottery_banner.png{/if}" style="height: 10rem;width: 100%;">
+        </div>
+        <div class="lottery-title"><span class="title-left">所有抽奖</span></div>
+        {if !empty($lotteryList)}
+ 
+       {loop $lotteryList $lottery}
+        <div class="lottery-item">
+            <div class="item-icon">
+                <img src="{$lottery[lottery_icon]}" >
+            </div>
+            <div class="item-content">
+                <p class="item-title">{$lottery[lottery_title]}</p>
+                <p class="item-time">
+                    开始时间:{php echo date('m-d H:i',$lottery[start_time])}
+                    结束时间:{php echo date('m-d H:i',$lottery[end_time])}
+                </p>
+            </div>
+            <div class="item-btn"><a  href="{php echo mobileUrl('lottery/index/lottery_info',array('id'=>$lottery[lottery_id]),true);}" class="btn btn-danger btn-xs" data-nocache="true">去抽奖</a></div>
+        </div>
+        {/loop}
+
+        {else}
+        <div class="lottery-content">
+            {$set_info}
+        </div>
+        {/if}
+    </div>
+
+</div>
+
+{template '_footer'}
+
+
+<!--yifuyuanma-->

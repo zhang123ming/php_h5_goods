@@ -1,0 +1,60 @@
+{template '_header'}
+<link rel="stylesheet" type="text/css" href="../addons/ewei_shopv2/template/mobile/default/static/css/index.css"/>
+<style>
+    .fui-mask {
+        opacity: 1;
+    }
+</style>
+<div class='fui-page order-success-page pay'>
+	<div class="fui-header">
+        <div class="fui-header-left">
+            <a class="back" href="{php echo mobileUrl('order')}"></a>
+        </div>
+        <div class="title">
+            {if $_GPC['result']=='seckill_refund'}
+            支付失败
+            {else}
+            支付成功
+            {/if}
+
+        </div>
+        <div class="fui-header-right" data-nomenu="true">&nbsp;</div>
+    </div>
+	<div class='fui-content'>
+		<div class="fui-list-group result-list">
+            <div class="fui-list order-status">
+
+                <div class="fui-list-inner">
+                    <div class="title">
+                        您已经支付成功                                                
+                     </div>
+                    <div class="text">金额: ¥ {$order['price']}<span></span></div>
+                   	{if $order['price'] > 0}
+                    <div class="text">您获得一张优惠券，请前往个人中心查看<span></span></div>
+                    {/if}
+                </div>
+                <div class="fui-list-media">
+                                        <i class="icon icon-money"></i>
+                    
+                </div>
+            </div>
+        </div>
+	<div class='row'>
+        <div class='col-50'>
+        <a class="btn btn-default external" href="{php echo mobileUrl('member',array('id'=>$member['id']))}" >个人中心</a>
+        </div>
+        <div class='col-50'>
+            {if $order['isnewstore']==1}
+            {else}
+                <a class="btn btn-default external" href="{php echo mobileUrl()}" >返回首页</a>
+            {/if}
+        </div>
+    </div>
+	</div>
+	
+	
+	
+	
+	
+</div>
+{template '_footer'}

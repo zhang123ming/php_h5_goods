@@ -1,0 +1,129 @@
+<footer data-am-widget="footer" class="am-footer am-footer-default" data-am-footer="{  }">
+    <div class="am-footer-miscs ">
+        <div class="am-footer-switch">由 
+            <span class="am-footer-ysp" data-rel="mobile"
+                  data-am-modal="{target: '#am-switch-mode'}">
+                @{$_W['styles']['copyright']}
+            </span>
+            提供技术支持
+        </div>
+    </div>
+</footer>
+
+<div id="am-footer-modal" class="am-modal am-modal-no-btn am-switch-mode-m am-switch-mode-m-default">
+    <div class="am-modal-dialog">
+        <div class="am-modal-hd am-modal-footer-hd">
+            <a href="javascript:void(0)" data-dismiss="modal" class="am-close am-close-spin "
+               data-am-modal-close>&times;</a>
+        </div>
+        <div class="am-modal-bd">您正在浏览的是
+            <span class="am-switch-mode-owner"><a href="{$_W['styles']['website']}" title="风软科技" target="_blank" class="">{$_W['styles']['copyright']}</a></span>
+            <span class="am-switch-mode-slogan">为您当前手机订制的移动网站。</span>
+        </div>
+    </div>
+</div>
+
+<div data-am-widget="gotop" class="am-gotop am-gotop-fixed">
+    <a href="#top" title="回到顶部">
+        <span class="am-gotop-title">回到顶部</span>
+        <i class="am-gotop-icon am-icon-chevron-up"></i>
+    </a>
+</div>
+
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="//cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
+<!--<![endif]-->
+<!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+<script src="//cdn.amazeui.org/amazeui/2.7.2/js/amazeui.min.js"></script>
+
+<?php
+$_share['title'] = !empty($_share['title']) ? $_share['title'] : $_W['account']['name'];
+$_share['imgUrl'] = !empty($_share['imgUrl']) ? $_share['imgUrl'] : '';
+if(isset($_share['content'])){
+$_share['desc'] = $_share['content'];
+unset($_share['content']);
+}
+$_share['desc'] = !empty($_share['desc']) ? $_share['desc'] : '';
+$_share['desc'] = preg_replace('/\s/i', '', str_replace('	', '', cutstr(str_replace('&nbsp;', '', ihtmlspecialchars(strip_tags($_share['desc']))), 60)));
+if(empty($_share['link'])) {
+$_share['link'] = '';
+$query_string = $_SERVER['QUERY_STRING'];
+if(!empty($query_string)) {
+parse_str($query_string, $query_arr);
+$query_arr['u'] = $_W['member']['uid'];
+$query_string = http_build_query($query_arr);
+$_share['link'] = $_W['siteroot'].'app/index.php?'. $query_string;
+}
+}
+?>
+<script type="text/javascript">
+    $(function(){
+    wx.config(jssdkconfig);
+            var $_share = {php echo json_encode($_share); };
+    if (typeof sharedata == 'undefined') {
+        sharedata = $_share;
+    } else {
+        sharedata['title'] = sharedata['title'] || $_share['title'];
+        sharedata['desc'] = sharedata['desc'] || $_share['desc'];
+        sharedata['link'] = sharedata['link'] || $_share['link'];
+        sharedata['imgUrl'] = sharedata['imgUrl'] || $_share['imgUrl'];
+    }
+    if (sharedata.imgUrl == '') {
+        var _share_img = $('body img:eq(0)').attr("src");
+        if (_share_img == "") {
+            sharedata['imgUrl'] = window.sysinfo.attachurl + 'images/global/wechat_share.png';
+        } else {
+            sharedata['imgUrl'] = util.tomedia(_share_img);
+        }
+    }
+    if (sharedata.desc == '') {
+        var _share_content = util.removeHTMLTag($('body').html());
+        if (typeof _share_content == 'string') {
+            sharedata.desc = _share_content.replace($_share['title'], '')
+        }
+    }
+    wx.ready(function () {
+    wx.onMenuShareAppMessage(sharedata);
+            wx.onMenuShareTimeline(sharedata);
+            wx.onMenuShareQQ(sharedata);
+            wx.onMenuShareWeibo(sharedata);
+    });
+    {if $controller == 'site' && $action == 'site'}
+    $('#category_show').click(function () {
+        $('.head .order').toggleClass('hide');
+        return false;
+    });
+    //文章点击和分享加积分
+    {if !empty($_GPC['u'])}
+    var url = "{php echo url('site/site/handsel/', array('id' => $detail['id'], 'action' => 'click', 'u' => $_GPC['u']), true);}";
+    $.post(url, function(dat){});
+    {/if}
+    sharedata.success = function(){
+    var url = "{php echo url('site/site/handsel/', array('id' => $detail['id'], 'action' => 'share'));}";
+            $.post(url, function(dat){});
+    }
+    {/if}
+            if ($('.js-quickmenu') != null && $('.js-quickmenu') != ''){
+    var h = $('.js-quickmenu .nav-home').height() + 20 + 'px';
+            $('body').css("padding-bottom", h);
+            $('body .mui-content').css("bottom", h);
+    } else{
+    $('body').css("padding-bottom", 0);
+            $('body .mui-content').css("bottom", "0");
+    }
+
+    if ($('.nav-menu-app') != null && $('.nav-menu-app') != ''){
+    var h = $('.nav-menu-app').height() + 'px';
+            $('body').css("padding-bottom", h);
+            $('.mui-content').css('bottom', h);
+    } else{
+    $('body').css("padding-bottom", "0");
+            $('.mui-content').css('bottom', "0");
+    }
+    });
+</script>

@@ -1,0 +1,91 @@
+{template '_header'}
+<link rel="stylesheet" type="text/css" href="../addons/ewei_shopv2/template/mobile/default/static/css/coupon-new.css?v=2017030302">
+<div class='fui-page fui-page-current'>
+    <div class="fui-header">
+		<div class="fui-header-left">
+			<a class="back"></a>
+		</div>
+		<div class="title">主播资料</div> 
+		<div class="fui-header-right">&nbsp;</div>
+    </div>
+    <div class='fui-content navbar' >
+		<input type="hidden" id="logid" value="{$logid}" />
+		<input type="hidden" id="couponid" value="" />
+		<div class='fui-cell-group'>
+			<div class='fui-cell'>
+				<div class='fui-cell-label'>当前{$_W['shopset']['trade']['moneytext']}</div>
+				<div class='fui-cell-info'>￥{php echo number_format($credit,2)}</div>
+			</div>
+			<div class='fui-cell'>
+				<div class='fui-cell-label'>姓名</div>
+				<div class='fui-cell-info'><input type='text' class='fui-input' id='mobile' placeholder="请填对方手机账号" value=""></div>
+			</div>
+			<div class='fui-cell'>
+				<div class='fui-cell-label'>手机号</div>
+				<div class='fui-cell-info'><input type='number' class='fui-input' id='money' value="{$_GPC['money']}"></div>
+			</div>
+			<div class='fui-cell'>
+                <div class='fui-cell-label'>身份证正面</div>
+                <div class='fui-cell-info'>
+                   <ul class="fui-images fui-images-sm" id="images"></ul>
+                    <div class="fui-uploader fui-uploader-sm"
+                             data-max="1"
+                             data-count="0">
+                             <input type="file" name='idcard1' id='idcard1' multiple="" accept="image/*" >
+                </div>
+               </div>
+             </div>
+             <div class='fui-cell'>
+                <div class='fui-cell-label'>身份证反面</div>
+                <div class='fui-cell-info'>
+                   <ul class="fui-images fui-images-sm" id="images2"></ul>
+                    <div class="fui-uploader fui-uploader-sm"
+                             data-max="1"
+                             data-count="0">
+                             <input type="file" name='idcard2' id='idcard2' multiple="" accept="image/*" >
+                </div>
+               </div>
+             </div>
+		</div>
+		<a id='btn-next' onclick="check();"  class='btn btn-success block btn-pay task-btn-close'>下一步</a>
+
+    </div>
+	<script language='javascript'>
+		$('.fui-uploader').uploader({
+            uploadUrl: core.getUrl('util/uploader'),
+            removeUrl: core.getUrl('util/uploader/remove')
+        });
+		function check(id){
+			 var idcard1 = $('#images').find('li').data('filename');
+			 var idcard2 = $('#images2').find('li').data('filename');
+			 console.log(idcard1,idcard2);return
+			var mobile = $('#mobile').val();
+			var num = $('#money').val();
+			var total = parseFloat('{$credit}')
+			if (num<=1) {
+				FoxUI.toast.show('请输入转账数额',true);
+				return false;
+			}
+			if (num>total) {
+				FoxUI.toast.show('可转数额不可超过：'+total,true);
+				return false;
+			}
+			if (/^1[0-9]{10}$/g.test(mobile)) {
+				console.log(true)
+			}else{
+				FoxUI.toast.show('请输入正确的手机号',true);
+				return false;
+			}
+			$.post('{php echo mobileUrl("member/transfer/submit");}',{num:parseFloat(num),tomobile:mobile},function (data) {
+                	if (data.code==102) {
+                		FoxUI.toast.show(data.msg,true);
+                		window.location.href='{php echo mobileUrl("member/log");}'
+                	}else{
+                		FoxUI.toast.show(data.msg,true);
+                	}
+            },'json');
+		}
+</script>
+ {php $this->footerMenus()}
+</div> 
+{template '_footer'}

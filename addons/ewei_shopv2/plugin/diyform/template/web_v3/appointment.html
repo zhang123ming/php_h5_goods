@@ -1,0 +1,243 @@
+{template '_header'}
+<style>
+    .popover{
+        width:170px;
+        font-size:12px;
+        line-height: 21px;
+        color: #0d0706;
+    }
+    .popover span{
+        color: #b9b9b9;
+    }
+    .nickname{
+        display: inline-block;
+        max-width:200px;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+        vertical-align: middle;
+    }
+
+    .tooltip-inner{
+        border:none;
+    }
+</style>
+<div class="page-header">
+    当前位置：<span class="text-primary">信息管理 </span>
+</div>
+<div class="page-content">
+   <form action="./index.php" method="get" class="form-horizontal" role="form" id="form1">
+            <input type="hidden" name="c" value="site" />
+            <input type="hidden" name="a" value="entry" />
+            <input type="hidden" name="m" value="ewei_shopv2" />
+            <input type="hidden" name="do" value="web" />
+            <input type="hidden" name="r" value="diyform.appointment" />
+        <div class="page-toolbar m-b-sm m-t-sm">          
+            <div class="input-group">
+                        <div class="input-group-select">
+                            <select name='status' class='form-control' style="width:120px;"  >
+                                <option value=''>状态</option>
+                                <option value='0' {if $_GPC['status']=='0'}selected{/if}>未审核</option>
+                                <option value='1' {if $_GPC['status']=='1'}selected{/if}>已审核</option>
+                            </select>
+                        </div>                  
+                          <input type="text" class="form-control input-sm"  name="keyword" value="{$_GPC['keyword']}" placeholder="昵称/姓名/手机号/会员ID"/>
+                         <span class="input-group-btn">
+                            <button class="btn  btn-primary" type="submit"> 搜索</button>
+                             {ifp 'diyform.appointment.export'}
+                            <button type="submit" name="export" value="1" class="btn btn-success ">导出</button>
+                            {/if}
+                        </span>
+                </div>
+        </div>
+  </form>
+{if count($list)>0}
+        <div class='page-table-header'>
+            <input type="checkbox"/>
+            <div class="btn-group">
+                {ifp 'diyform.appointment.check'}
+                <a class='btn btn-default btn-sm btn-op btn-operation'  data-toggle='batch' data-href="{php echo webUrl('diyform/appointment/check',array('status'=>1))}"  data-confirm='确认要审核通过?'>
+                    <i class="icow icow-shenhetongguo"></i>审核通过
+                </a>
+                <a class='btn btn-default btn-sm btn-op btn-operation'  data-toggle='batch' data-href="{php echo webUrl('diyform/appointment/check',array('status'=>0))}" data-confirm='确认要取消审核?'>
+                    <i class="icow icow-yiquxiao"></i>取消审核</a>
+                {/if}                
+                {ifp 'diyform.appointment.delete'}
+                <a class="btn btn-default btn-sm btn-op btn-operation" type="button" data-toggle='batch-remove' data-confirm="确认要删除?" data-href="{php echo webUrl('diyform/appointment/delete')}">
+                    <i class='icow icow-shanchu1'></i> 删除
+                </a>
+                {/if}
+            </div>
+        </div>
+        <table class="table table-hover table-responsive">
+            <thead class="navbar-inner" >
+            <tr>
+                <th style="width:25px;"></th>
+                <th style='width:15%;'>用户</th>                
+                <th style='width:25%;'>自定义信息</th>
+                <th style='width:15%;'>创建时间</th>
+                <th style='width:15%;'>审核时间</th>
+                <th style='width:20%;'>备注</th>
+                <th style='width:80px;'>状态</th>
+                <th style='width:50px;'>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {loop $list $row}
+           <tr>
+                <td>
+                    <input type='checkbox' value="{$row['id']}"/>
+                }
+                </td>
+                <td style="overflow: visible">
+                    <div>
+                        {if !empty($row['member']['avatar'])}
+                            <img class="radius50" src='{php echo tomedia($row['member']['avatar'])}' style='width:30px;height:30px;padding1px;border:1px solid #ccc' onerror="this.src='../addons/ewei_shopv2/static/images/noface.png'"/>
+                        {/if}
+                        <span style="justify-content: center;align-items: flex-start;padding-left: 5px">
+                            <span class="nickname">
+                                {$row['member']['nickname']}
+                            </span>
+                        </span>
+                    </div>
+                </td>  
+               
+               <td> 
+                    {if $openbind}
+                      <table class='ordertable'>
+                        <tr>
+                          <td style="border: 0;">手机号码：{$row['mobile']}</td>
+                        </tr>
+                      </table> 
+                    {/if}      
+                    <table class='ordertable'>
+                        {php $datas = $row['diyfieldsdata']}
+                          {if $row['is_app'] == 1}
+                            {loop $row['diyformfields'] $key $value}
+                              <tr>                                  
+                                  <td style='width:80px'>{php echo $value['tp_name']}：</td>
+                                  <td style="border: 0;">
+                                      {template 'diyform/diyform'}
+                                  </td>
+                              </tr>
+                            {/loop}
+                          {else}
+                            {loop $row['diyformfields'] $k}                        
+                              {loop $k $key $value}
+                                  <tr>                           
+                                      <td style='width:80px'>{php echo $value['tp_name']}：</td>
+                                      <td style="border: 0;">
+                                      {template 'diyform/diyform'}
+                                      </td>
+                                  </tr>
+                              {/loop}
+                            {/loop}
+                          {/if} 
+                      
+                    </table>
+               </td>
+               <td>
+                   {php echo $row['createTime']} 
+               </td>
+               <td>
+                   {php echo $row['checktime']} 
+               </td>
+               <td>                   
+                   {php echo $row['remarks']}
+               </td>
+                <td>
+                    <span class='label {if $row['status']==1}label-primary{else}label-default{/if}'
+                        {ifp 'diyform.appointment.check'}
+                        data-toggle='ajaxSwitch' data-confirm ='确认要{if $row['status']==1}取消审核{else}审核通过{/if}?'
+                        data-switch-value='{$row['status']}'
+                        data-switch-value0='0|未审核|label label-default|{php echo webUrl('diyform/appointment/check',array('status'=>1,'id'=>$row['id']))}'  
+                        data-switch-value1='1|已审核|label label-primary|{php echo webUrl('diyform/appointment/check',array('status'=>0,'id'=>$row['id']))}'
+                        {/if}
+                        >
+                        {if $row['status']==1}已审核{else}未审核{/if}
+                    </span>
+                    <br/>
+                 </td>
+                <td  style="overflow:visible;">
+                {ifp 'diyform.appointment.edit'}
+                  <a class='btn btn-default btn-op btn-operation' href="{php echo webUrl('diyform/appointment/edit', array( 'id' => $row['id']))}">
+                  <span data-toggle="tooltip" data-placement="top" data-original-title=" {ifp 'diyform.appointment.edit'}编辑{else}查看{/if}">
+                      <i class="icow icow-bianji2"></i>
+                  </span>
+                  </a>
+                {/if}   
+                {ifp 'diyform.appointment.delete'}
+                        <a class="btn  btn-op btn-operation" data-toggle='ajaxRemove' href="{php echo webUrl('diyform/appointment/delete',array('id' => $row['id']));}"  data-confirm="确定要删除该记录吗？">
+                       <span data-toggle="tooltip" data-placement="top" title="" data-original-title="删除记录">
+                               <i class='icow icow-shanchu1'></i>
+                        </span>
+                        </a>
+                {/if}     
+                </td>
+            </tr>
+            {/loop}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td colspan="3">
+                        <div class="btn-group">
+                            {ifp 'diyform.appointment.edit'}
+                            
+                            <a class='btn btn-default btn-sm btn-op btn-operation'  data-toggle='batch' data-href="{php echo webUrl('diyform/appointment/check',array('status'=>1))}"  data-confirm='确认要审核通过?'>
+                                <i class="icow icow-shenhetongguo"></i>审核通过
+                            </a>
+                            <a class='btn btn-default btn-sm btn-op btn-operation'  data-toggle='batch' data-href="{php echo webUrl('diyform/appointment/check',array('status'=>0))}" data-confirm='确认要取消审核?'>
+                                <i class="icow icow-yiquxiao"></i>取消审核</a>
+                            {/if}
+                            {ifp 'diyform.appointment.delete'}
+                            <a class="btn btn-default btn-sm btn-op btn-operation" type="button" data-toggle='batch-remove' data-confirm="确认要删除?" data-href="{php echo webUrl('diyform/appointment/delete')}">
+                                <i class='icow icow-shanchu1'></i> 删除
+                            </a>
+                            {/if}
+                        </div>
+                    </td>
+                    <td colspan="5" class="text-right">{$pager}</td>
+                </tr>
+            </tfoot>
+        </table>
+        {else}
+            <div class='panel panel-default'>
+                <div class='panel-body' style='text-align: center;padding:30px;'>
+                     暂时没有任何记录!
+                </div>
+            </div>
+            {/if}
+</div>
+     <script language="javascript">
+			// require(['bootstrap'],function(){
+   //      $("[rel=pop]").popover({
+   //          trigger:'manual',
+   //          placement : 'right',
+   //          title : $(this).data('title'),
+   //          html: 'true', 
+   //          content : $(this).data('content'),
+   //          animation: false
+   //      }).on("mouseenter", function () {
+   //                  var _this = this;
+   //                  $(this).popover("show"); 
+   //                  $(this).siblings(".popover").on("mouseleave", function () {
+   //                      $(_this).popover('hide');
+   //                  });
+   //              }).on("mouseleave", function () {
+   //                  var _this = this;
+   //                  setTimeout(function () {
+   //                      if (!$(".popover:hover").length) {
+   //                          $(_this).popover("hide")
+   //                      }
+   //                  }, 100);
+   //              });
+ 
+	 
+	  //  });
+ 
+			   
+</script> 
+ 
+{template '_footer'}
+<!-- yi fu yuan ma wang -->

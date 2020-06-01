@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>立即订货</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 适配文档 -->
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <link rel="stylesheet" href="../addons/ewei_shopv2/static/btyStyle/lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="../addons/ewei_shopv2/static/btyStyle/css/style.css">
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+<style type="text/css">
+@font-face {font-family: "iconfont";
+  src: url('../addons/ewei_shopv2/static/btyStyle/bty_icon/iconfont02.eot?t=1474179952'); /* IE9*/
+  src: url('../addons/ewei_shopv2/static/btyStyle/bty_icon/iconfont02.eot?t=1474179952#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../addons/ewei_shopv2/static/btyStyle/bty_icon/iconfont02.woff?t=1474179952') format('woff'), /* chrome, firefox */
+  url('../addons/ewei_shopv2/static/btyStyle/bty_icon/iconfont02.ttf?t=1474179952') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../addons/ewei_shopv2/static/btyStyle/bty_icon/iconfont02.svg?t=1474179952#iconfont') format('svg'); /* iOS 4.1- */
+}
+@font-face {font-family: "iconfont";
+  src: url('../addons/ewei_shopv2/static/btyStyle/bty_icon/iconfont1.eot?t=1474179952'); /* IE9*/
+  src: url('../addons/ewei_shopv2/static/btyStyle/bty_icon/iconfont1.eot?t=1474179952#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../addons/ewei_shopv2/static/btyStyle/bty_icon/iconfont1.woff?t=1474179952') format('woff'), /* chrome, firefox */
+  url('../addons/ewei_shopv2/static/btyStyle/bty_icon/iconfont1.ttf?t=1474179952') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../addons/ewei_shopv2/static/btyStyle/bty_icon/iconfont1.svg?t=1474179952#iconfont') format('svg'); /* iOS 4.1- */
+}
+.hs {
+  font-family:"iconfont" !important;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
+.bty_icon{
+  height: 1.76rem;
+  line-height: 1.76rem;
+  margin-right:5px; 
+}
+.title1{width:100%;display:flex;height:auto;line-height: 48px;background-color: #F2F2F2;}
+.Allico{
+     height:48px;
+    width: 37px;
+    text-align: center;
+    font-size: 16px;
+    z-index: 2;
+    position: relative;
+    margin-right: 2px;
+}
+.hs-xuan:before { content: "\e739"; }
+.hs-wei:before { content: "\e651"; }
+.hs-xuanzhong:before { content: "\d622"; }
+.header{width:100%;height:1rem;background-color:#fff;position:fixed;left:0px;top:0px;background-color: #F7F7F7;border-bottom: 0.01rem solid #eee;}
+.header_title{text-align: center;line-height: 1rem;font-size: 16px;color: #666;}
+.back_icon{float:left;line-height: 1rem;margin-left: 5px;}
+.product_list li{padding:5px 0px;}
+.footer-nav ul {
+    align-items: flex-end;
+}
+.content{
+    position: fixed;
+    top: 1rem;
+    bottom: 1.28rem;
+    left: 0;
+    right: 0;
+    overflow: auto;
+}
+</style>
+<body style="position: absolute;top:0;bottom:0;left:0;right: 0;height: 100%; overflow-x: auto;">
+    <header class="header">
+    <div class="back_icon">
+      <a href="javascript:history.go(-1)" style="color: #999;font-size: 16px;">
+        <i class="mui-icon mui-icon-back"></i>
+      </a>
+    </div>
+    <div class="header_title">
+      <span >立即订货</span>
+    </div>
+  </header>
+    <article class="content" >
+    <div class="title1">
+        <div class="Allico"><i class="hs hs-wei" style="color:#e45050;"></i></div>
+        <a style="width:100%" href="#">
+          <div style="width:50%;height:48px;line-height:40px;position: relative;">
+            <span style="position: absolute;top: 3px;left: 10px;color:#656565 ">全选</span>
+          </div>
+        </a>
+      </div>
+        <ul class="product_list">
+            {loop $list $item}
+            {if $item['hasoption']!=1}
+            <!-- 单规格产品 -->
+            <li>
+        <div class="bty_icon" data-type="goodsid">
+          <i class="hs hs-wei" style="color:#e45050;"></i>
+        </div>
+                <div class="left"><img src="{php echo tomedia($item['thumb'])}" alt="" width="100%"></div>
+                <div class="center">
+                    <h3>{$item['title']}</h3>
+                    <p class="orange">￥<span>{$item['price']}</span></p>
+                </div>
+                <div class="right mui-text-right">
+                    <p>我的库存{$item['mstock']}件</p>
+                    <!-- 可限定最大值和最小值 不需要可以去掉 -->
+                    <div class="mui-numbox" style="height: 24px;line-height: 24px;" data-numbox-min="0" data-numbox-max="9999">
+                        <button class="jian mui-btn mui-btn-numbox-minus " type="button">-</button>
+                        <!-- <input id="test" class="mui-input-numbox" type="number" value="1"> -->
+                        <input type="text" id="test" class="mui-input-numbox num" data-price="{$item['price']}" data-type="goodsid" data-id="{$item['id']}" data-num="0" name="" value="0">
+                        <button class="jia mui-btn mui-btn-numbox-plus " type="button" disabled="">+</button>
+                    </div>
+                </div>
+            </li>
+            <!-- /单规格产品 -->
+            {else}
+            <!-- 多规格产品 -->
+            <li>
+         <div class="bty_icon" data-type="optionid">
+          <i class="hs hs-wei" style="color:#e45050;"></i>
+        </div>
+                <div class="left"><img src="{php echo tomedia($item['thumb'])}" alt="" width="100%"></div>
+                <div class="center">
+                    <h3>{$item['title']}</h3>
+                    <p class="orange">￥<span>{$item['price']}</span></p>
+                </div>
+                <div class="right mui-text-right">
+                    <p>我的库存{$item['mstock']}件</p>
+                    <button type="button" class="mui-btn mui-btn-unfold">展开规格</button>
+                </div>
+                <ul class="size_list" style="display: none;">
+                    {loop $item['options'] $option}
+                    <li>
+                        <span>规格：{$option['title']}</span>
+                        <span class="orange">￥{$option['mprice']}</span>
+                        <span>我的库存{$option['mstock']}件</span>
+                        <!-- 可限定最大值和最小值 不需要可以去掉 -->
+                        <div class="mui-numbox" style="height: 24px;line-height: 24px;" data-numbox-min="0" data-numbox-max="9999">
+            <button class="jian mui-btn mui-btn-numbox-minus " type="button">-</button>
+            <!-- <input id="test" class="mui-input-numbox" type="number" value="1"> -->
+            <input type="text" id="test" class="mui-input-numbox num" data-pid="{$item['id']}" data-type="optionid" data-price="{$option['mprice']}" data-id="{$option['id']}" data-num="0" name="" value="0">
+            <button class="jia mui-btn mui-btn-numbox-plus " type="button" disabled="">+</button>
+          </div>
+
+                    </li>
+                    {/loop}
+                </ul>
+            </li>
+            {/if}
+            {/loop}
+            <!-- /多规格产品 -->
+        </ul>
+    </article>
+    <section class="footer-nav">
+        <ul class="flex-jus">
+            <li class="left flex flex-ver">
+                <img src="../addons/ewei_shopv2/static/btyStyle/img/shopping-cart.png" alt="" width="100%">
+                <span class="badge">0</span>
+            </li>
+            <li class="middle">
+                <p class="orange">合计：￥<span id="total_price">0.00</span></p>
+            </li>
+            <li class="right">
+                <button id="btn-submit" >去进货</button>
+            </li>
+        </ul>
+    </section>
+    <input type="hidden" name="real_total"  value="0">
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="../addons/ewei_shopv2/static/btyStyle/lib/mui/js/mui.min.js"></script>
+<script>
+  var bty_icon = true;
+    $(function(){
+        $(".mui-btn-unfold").on("tap",function(){
+            $(this).html($(this).html() == "展开规格"?"收起规格":"展开规格");
+            $(this).parent().siblings('.size_list').toggle();
+        })
+    })
+</script>
+<script type="text/javascript">
+    $('#btn-submit').attr('disabled','true');
+    $('.jian').on("tap",function(){
+        var num = parseInt($(this).next().val());
+        var price = parseInt($(this).next().data('price'));
+        var total = parseInt($('#total_price').html());
+        var can_total = parseInt($('.badge').html());
+
+        if(num==1){
+          if($(this).next().data('type')!='optionid'){
+            $(this).parent().parent().parent().find('.hs').removeClass('hs-xuanzhong').addClass('hs-wei');
+          }else{
+            var bty_fig = 0;
+            $(this).parents('.size_list').find('.num').each(function(i){
+              bty_fig+=parseInt($(this).val());
+            });
+            if(bty_fig-1==0){
+              $(this).parent().parent().parent().parent().find('.hs').removeClass('hs-xuanzhong').addClass('hs-wei'); 
+            }
+          }
+        }
+            // num -=1;
+            total = (total -= price);
+            total_one = total*100;
+            str = total_one+'';
+            str_one = str.substr(-2);
+            append = total+'.'+str_one;
+            $(this).next().val(num);
+            num -=1;
+            can_total -=1;
+            $('.badge').html(can_total);
+            $(this).next().attr('data-num',num);
+            if(total==0){
+                total = '0.00';
+                $('#total_price').html(total);
+                $('#btn-submit').attr('disabled','true');
+                return false;
+            }else{
+                $('#btn-submit').removeAttr('disabled');
+            }
+            $('#total_price').html(append);
+            $('.badge').html(can_total);
+            return false;
+    });
+    $('.jia').on("tap",function(){
+        var num = parseInt($(this).prev().val());
+        var price = parseInt($(this).prev().data('price'));
+        var total = parseInt($('#total_price').html());
+        var can_total = parseInt($('.badge').html());
+         if($(this).prev().data('type')!='optionid'){
+            $(this).parent().parent().parent().find('.hs').removeClass('hs-wei').addClass('hs-xuanzhong');
+          }else{
+            $(this).parent().parent().parent().parent().find('.hs').removeClass('hs-wei').addClass('hs-xuanzhong');
+          }
+
+            total = (total += price);
+            total_one = total*100;
+            str = total_one+'';
+            str_one = str.substr(-2);
+            append = total+'.'+str_one;
+            $(this).prev().val(num);
+            num +=1
+            can_total +=1; 
+            $(this).prev().attr('data-num',num);
+            $('#total_price').html(append);
+            $('.badge').html(can_total);
+            $('#btn-submit').removeAttr('disabled');
+            return false;
+    });
+    $('.num').blur(function(){
+        var num = parseInt($(this).val());
+        var real_num = parseInt($(this).attr('data-num'));
+        var price = parseInt($(this).data('price'));
+        var total = parseInt($('#total_price').html());
+        var can_total = parseInt($('.badge').html());
+        var re = /^[0-9]+$/;
+        if($(this).data('type')=='optionid'){
+            var bty_fig = 0;
+            $(this).parents('.size_list').find('.num').each(function(i){
+              bty_fig+=parseInt($(this).val());
+            });
+            if(bty_fig==0){
+              $(this).parent().parent().parent().parent().find('.hs').removeClass('hs-xuanzhong').addClass('hs-wei'); 
+            }else{
+              $(this).parent().parent().parent().parent().find('.hs').removeClass('hs-wei').addClass('hs-xuanzhong'); 
+            }
+        }else{
+          if(num==0){
+            $(this).parents('li').children('.bty_icon').children('i').removeClass('hs-xuanzhong').addClass('hs-wei');
+          }else{
+            $(this).parents('li').children('.bty_icon').children('i').removeClass('hs-wei').addClass('hs-xuanzhong');
+          }
+        }
+    　　if (!re.test(num)) { 
+    　　　　 $(this).val(real_num);
+            return false;
+    　　}
+        if(num==real_num){
+            $(this).val(num);
+            return false;
+        }
+        if(num>real_num){
+            can_num = num-real_num;
+            price = price*can_num;
+            total = (total += price);
+            can_total +=can_num;
+        }else{
+            can_num = real_num-num;
+            price = price*can_num;
+            total = (total -= price);
+            can_total -=can_num;
+             
+        }
+        total_one = total*100;
+        str = total_one+'';
+        str_one = str.substr(-2);
+        append = total+'.'+str_one; 
+        $(this).attr('data-num',num);
+        if(total==0){
+            total = '0.00';
+            $('#total_price').html(total);
+            $('#btn-submit').attr('disabled');
+            return false;
+        }else{
+            $('#btn-submit').removeAttr('disabled');
+        }
+        $('#total_price').html(append);
+        $('.badge').html(can_total);
+    });
+    var fiag = true;
+    $('.select_guige').click(function(){
+        var ts = $(this);
+        var open = $(this).parent().parent().parent().next();
+        if(fiag){
+            open.css('display','block');
+            ts.html('收起规格');
+            fiag = !fiag;
+        }else{
+            open.css('display','none');
+            fiag = !fiag;
+            ts.html('选规格');
+        }
+        // $('.open_guige').
+    });
+    $('#btn-submit').click(function(){
+        var opthions = [];
+        $('.num').each(function(i){
+            if($('.num').eq(i).val()>0){
+                 var item = {
+                    id:$('.num').eq(i).attr('data-id'),
+                    price:$('.num').eq(i).attr('data-price'),
+                    num:$('.num').eq(i).val(),
+                    type:$('.num').eq(i).attr('data-type'),
+                    };
+                if(item.type=='optionid'){
+                    item['pid'] = $('.num').eq(i).attr('data-pid');
+                }
+                opthions.push(item);
+            }
+        });
+        if(opthions.length>0){
+            var string = JSON.stringify(opthions);
+            $.post("{php echo mobileUrl('member/myyuncang/submit')}",{opthions:string},function(res){
+                if(res.status==1){
+                    window.location.href="{php echo mobileUrl('member/myyuncang/confirm')}&id="+res.result.id;
+                }else{
+                 
+                    alert(res.result.message);
+                    return ;
+                }
+            },'json');
+            // 
+        }
+    });
+    $('.Allico').on('tap',function(){
+        if(bty_icon){
+          bty_icon = !bty_icon;
+          var total = 0;
+          $('.num').val(1);
+          $('.num').attr('data-num',1);
+          $('.jian').removeAttr('disabled');
+          $('.num').each(function(i){
+            total+=parseInt($('.num').eq(i).data('price'));
+          })
+           $('.badge').html($('.num').length);
+           $('#total_price').html(total.toFixed(2));
+           if(total==0){
+              $('#btn-submit').attr('disabled');
+              return false;
+            }else{
+                $('#btn-submit').removeAttr('disabled');
+            }
+          $('.hs').removeClass('hs-wei').addClass('hs-xuanzhong');
+        }else{
+          bty_icon = !bty_icon;
+          $('.num').val(0);
+          $('.num').attr('data-num',0);
+          $('.badge').html(0);
+          $('.hs').removeClass('hs-xuanzhong').addClass('hs-wei');
+          $('#total_price').html('0.00');
+          $('#btn-submit').attr('disabled','disabled');
+        }
+    });
+    $('.bty_icon').on('tap',function(){
+      var ts=$(this);
+      var str = /hs-wei/;
+      if($(this).data('type')=='optionid'){
+        if(str.test($(this).children().prop('className'))){
+          // $(this).next().next().next().next().find('.num').val(1);
+          $(this).siblings('.size_list').find('.num').val(1)
+          $(this).next().next().next().next().find('.num').attr('data-num',1);
+          $(this).next().next().next().next().find('.jian').removeAttr('disabled');
+          $(this).children().removeClass('hs-wei').addClass('hs-xuanzhong');
+          var total = parseInt($('#total_price').html());
+          var sum_number = parseInt($('.badge').html());
+          var num =0;
+          can_total = 0;
+          $(this).next().next().next().next().find('.num').each(function(i){
+            var price = parseInt(ts.next().next().next().next().find('.num').eq(i).data('price'));
+            var number = parseInt(ts.next().next().next().next().find('.num').eq(i).data('num'));
+            num += number;
+            can_total += (price*number);
+          });
+          $('#total_price').html((total+= can_total).toFixed(2));
+          $('.badge').html(sum_number+=num);
+          if($('#total_price').html()>0){
+             $('#btn-submit').removeAttr('disabled');
+          }else{
+             $('#btn-submit').attr('disabled','disabled');
+          }
+
+        }else{
+          var total = parseInt($('#total_price').html());
+          var sum_number = parseInt($('.badge').html());
+          num = 0;
+          can_total = 0;
+          $(this).next().next().next().next().find('.num').each(function(i){
+            var price = parseInt(ts.next().next().next().next().find('.num').eq(i).data('price'));
+            var number = parseInt(ts.next().next().next().next().find('.num').eq(i).val());
+            num += number;
+            can_total += (price*number);
+          });
+
+          $('#total_price').html((total-= can_total).toFixed(2));
+          $('.badge').html(sum_number-num);
+          $(this).next().next().next().next().find('.num').val(0);
+          $(this).next().next().next().next().find('.num').attr('data-num',0);
+          $(this).children().removeClass('hs-xuanzhong').addClass('hs-wei');
+          if($('#total_price').html()>0){
+             $('#btn-submit').removeAttr('disabled');
+          }else{
+             $('#btn-submit').attr('disabled','disabled');
+          }
+        }
+      }else{
+        if(str.test($(this).children().prop('className'))){
+          $(this).next().next().next().find('.num').val(1);
+          $(this).next().next().next().next().find('.num').attr('data-num',1);
+           $(this).next().next().next().find('.jian').removeAttr('disabled');
+          var price = parseInt($(this).next().next().next().find('.num').data('price'));
+          $(this).children().removeClass('hs-wei').addClass('hs-xuanzhong');
+          var total = parseInt($('#total_price').html());
+          var sum_number = parseInt($('.badge').html());
+          var can_total =(parseInt($(this).next().next().next().find('.num').val()*price)+total);
+          $('#total_price').html(can_total.toFixed(2));
+          $('.badge').html(sum_number+=parseInt($(this).next().next().next().find('.num').val()));
+          if($('#total_price').html()>0){
+             $('#btn-submit').removeAttr('disabled');
+          }else{
+             $('#btn-submit').attr('disabled','disabled');
+          }
+        }else{
+          var can_num = parseInt($(this).next().next().next().find('.num').val());
+          var price = parseInt($(this).next().next().next().find('.num').data('price'));
+          var total = parseInt($('#total_price').html());
+          var sum_number = parseInt($('.badge').html());
+          $('#total_price').html((total-(can_num*price)).toFixed(2));
+          $('.badge').html(sum_number-can_num);
+          if($('#total_price').html()>0){
+             $('#btn-submit').removeAttr('disabled');
+          }else{
+             $('#btn-submit').attr('disabled','disabled');
+          }
+          $(this).next().next().next().find('.num').val(0);
+          $(this).next().next().next().find('.num').attr('data-num',0);
+          $(this).children().removeClass('hs-xuanzhong').addClass('hs-wei');
+        }
+      }
+    });
+</script>
+</body>
+</html>

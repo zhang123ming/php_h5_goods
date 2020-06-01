@@ -1,0 +1,40 @@
+<div class="form-group ">
+    <label class="col-lg control-label">结算周期</label>
+    <div class="col-sm-9 col-xs-12">
+        {ifp 'groupaward.set.edit'}
+        <label class="radio radio-inline" >
+            <input type="radio" name="data[paytype]" value="1" {if $data['paytype']==1}checked{/if}/> 按月发放
+        </label>
+        <!-- <label class="radio radio-inline" >
+            <input type="radio" name="data[paytype]" value="3" {if $data['paytype']==3}checked{/if}/> 按年发放
+        </label> -->
+        <!-- <label class="radio radio-inline">
+            <input type="radio" name="data[paytype]" value="2" {if $data['paytype']==2}checked{/if}/> 按周发放
+        </label> -->
+
+        <span class="help-block">分红结算周期</span>
+        {else}
+        {if $data['paytype']==1 || empty($data['paytype'])}按月结算{/if}
+        {if $data['paytype']==2}按周结算{/if}
+         {if $data['paytype']==3}按年结算{/if}
+        {/if}
+    </div>
+</div>
+<div class="form-group" style="margin-bottom: 10px;">月度利润分红设置</div>
+{loop $levels $level}
+	<div class="form-group" style="margin-bottom: 10px;">
+		 <label class="col-lg control-label">{$level['levelname']}</label>
+		
+		&nbsp;&nbsp;月度利润分红比例&nbsp;<input type="number"  name="data[award{$level['level']}]"  style="width: 80px;padding:0;display: inline-block;text-align: center;" class="form-control" value="<?php echo $data['award'.$level['level']] ?>"  />%
+	</div>
+{/loop}
+<div class="form-group" style="margin-bottom: 10px;">
+	 <label class="col-lg control-label">合伙人返现基数设置</label>
+	
+	&nbsp;&nbsp;第一年最低返&nbsp;<input type="number"  name="data[fullback1]"  style="width: 80px;padding:0;display: inline-block;text-align: center;" class="form-control" value="<?php echo $data['fullback1'] ?>"  />&nbsp;/月
+	&nbsp;&nbsp;第二年最低返&nbsp;<input type="number"  name="data[fullback2]"  style="width: 80px;padding:0;display: inline-block;text-align: center;" class="form-control" value="<?php echo $data['fullback2'] ?>"  />&nbsp;/月
+	&nbsp;&nbsp;第三年后最低返&nbsp;<input type="number"  name="data[fullback3]"  style="width: 80px;padding:0;display: inline-block;text-align: center;" class="form-control" value="<?php echo $data['fullback3'] ?>"  />&nbsp;/月
+	&nbsp;&nbsp;当前季度最低推广&nbsp;<input type="number"  name="data[monthAgent]"  style="width: 80px;padding:0;display: inline-block;text-align: center;" class="form-control" value="<?php echo $data['monthAgent'] ?>"  />&nbsp;人
+	&nbsp;&nbsp;返还总额&nbsp;<input type="number"  name="data[totalFullback]"  style="width: 80px;padding:0;display: inline-block;text-align: center;" class="form-control" value="<?php echo $data['totalFullback'] ?>"  />&nbsp;元
+
+</div>

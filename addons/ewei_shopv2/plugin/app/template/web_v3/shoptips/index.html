@@ -1,0 +1,70 @@
+{template '_header'}
+
+<div class="page-header">
+    当前位置：
+    <span class="text-primary">公告列表</span>
+</div>
+
+<div class="page-content">
+<div class="page-toolbar m-b-sm m-t-sm">
+    <span class=''>
+        <a class="btn btn-primary btn-sm" href="{php echo webUrl('app/shoptips/add')}">添加新购物公告</a>
+    </span>
+</div>
+{if count($list)>0}
+<form action="" method="post">
+    <table class="table table-hover table-responsive">
+        <thead class="navbar-inner">
+            <tr>
+                <th style="width:50px;">ID</th>
+                <th style='width:80px'>显示顺序</th>                    
+                <th>标题</th>
+                <th style="width: 100px">状态</th>
+                <th style="width: 75px">操作</th>
+            </tr>
+        </thead>
+        <tbody id="sort">
+            {loop $list $row}
+            <tr>
+                <td>{$row['id']}</td>
+                <td>
+                    <a href='javascript:;' data-toggle='ajaxEdit' data-href="{php echo webUrl('app/shoptips/displayorder',array('id'=>$row['id']))}" >{$row['displayorder']}</a>
+                </td>
+
+                <td><img src='{php echo tomedia($row["thumb"])}' style='width:30px;height:30px;padding:1px;border:1px solid #ccc' onerror="this.src='../addons/ewei_shopv2/static/images/nopic.png'"/> {$row['title']}</td>
+                <td>
+                    <span class='label {if $row["status"]==1}label-primary{else}label-default{/if}' data-toggle='ajaxSwitch' data-switch-value='{$row["status"]}'
+                        data-switch-value0='0|隐藏|label label-default|{php echo webUrl("app/shoptips/enabled",array("status"=>1,"id"=>$row["id"]))}'
+                        data-switch-value1='1|显示|label label-primary|{php echo webUrl("app/shoptips/enabled",array("status"=>0,"id"=>$row["id"]))}'>
+                          {if $row['status']==1}显示{else}隐藏{/if}
+                    </span>
+                </td>
+                <td style="text-align:left;">
+                    <a href="{php echo webUrl('app/shoptips/edit', array('id' => $row['id']))}" class="btn btn-default btn-sm btn-op btn-operation" title="修改/查看">
+                        <span data-toggle="tooltip" data-placement="top" title="" data-original-title="修改/查看"><i class="icow icow-bianji2"></i></span>
+                    </a>
+                    
+                    <a data-toggle='ajaxRemove' href="{php echo webUrl('app/shoptips/delete', array('id' => $row['id']))}"class="btn btn-default btn-sm btn-op btn-operation" data-confirm="确认删除此公告?" title="删除">
+                         <span data-toggle="tooltip" data-placement="top" title="" data-original-title="删除">
+                            <i class="icow icow-shanchu1"></i>
+                         </span>
+                    </a>
+                </td>
+            </tr>
+                {/loop} 
+        </tbody>
+    </table>
+
+        {else}
+        <div class='panel panel-default'>
+            <div class='panel-body' style='text-align: center;padding:30px;'>
+                暂时没有任何购物公告
+            </div>
+        </div>
+        {/if}
+</form>
+
+</div>
+
+{template '_footer'}
+<!--OTEzNzAyMDIzNTAzMjQyOTE0-->

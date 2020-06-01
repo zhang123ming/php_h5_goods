@@ -1,0 +1,60 @@
+{template 'header'}
+<link rel="stylesheet" href="{$_W['siteroot']}app/themes/wq_wgw001/static/css/style.css">
+<div class="qzj_header">
+	<a href="{php echo url('home/home')}">
+	{if !empty($_W['styles']['hd_logo'])}
+	<img src="$_W['styles']['hd_logo']" />
+	{else}
+	<img src="{$_W['siteroot']}app/themes/wq_wgw001/static/images/pic_01.png" />
+	{/if}
+	</a>
+</div>
+<ul class="qzj_nav clearfix">
+	{php $num = 1;}
+	{data func="site_navs" item="row"}
+	{php if($num == 1) $on = 'on';}
+	{php if($num == 2) $on = '';}
+	{php if($num == 3) $on = '';}
+	{php if($num == 4) $on = '';}
+	{php if($num == 5) $on = '';}
+	<li><a class="{$on}" href="{$row[url]}">{$row['name']}</a></li>
+	{php $num++;}
+	{/data}
+</ul>
+{template 'slide'}
+<div class="qzj_box">
+	<h5>站点公告<a href="{$_W['siteroot']}app/index.php?i={$_W['account']['acid']}&c=site&a=site&cid={$_W['styles']['notice_cid']}">查看更多 ></a></h5>
+	<ul class="news_list">
+		{data module="site" func="site_article" cid="$_W['styles']['notice_cid']" limit="6" iscommend="true" assign="result" return="true"}
+		{if empty($result['list'])}
+		<span class="nopost">您尚未推荐文章，请推荐一篇</span>
+		{/if}
+		{loop $result['list'] $row}
+		<li>
+			<a href="{$row['linkurl']}">{$row['title']}<span>2017-02-10 ></span></a>
+		</li>
+		{/loop}
+	</ul>
+</div>
+<div class="qzj_box">
+	<h5>相关产品<a href="{$_W['siteroot']}app/index.php?i={$_W['account']['acid']}&c=site&a=site&cid={$_W['styles']['pro_cid']}">查看更多 ></a></h5>
+	<ul class="pic_list clearfix">
+		{data module="site" func="site_article" cid="$_W['styles']['pro_cid']" limit="12" ishot='true' assign="result" return="true"}
+		{if empty($result['list'])}
+			<span class="nopost">您还未添加演示模块，请添加后查看</span>
+		{/if}
+		{loop $result['list'] $row}
+		<li>
+			<a href="{$row['linkurl']}">
+				{if !empty($row['thumb'])}
+				<img src="{$row['thumb']}">
+				{else}	
+				<img src="{$_W['siteroot']}app/themes/wq_wgw001/static/images/nocover.png" />
+				{/if}
+				<span>{php echo cutstr($row['title'],15,1);}</span>
+			</a>
+		</li>
+		{/loop}
+	</ul>
+</div>
+{template 'com/footer'}

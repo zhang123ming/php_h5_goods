@@ -1,0 +1,8 @@
+<div class='menu-header'>{php echo $this->plugintitle}</div>
+<ul>
+    {ifp 'ticket'}<li {if $_W['routes']=='ticket'}class="active"{/if}><a href="{php echo webUrl('ticket')}">用户小票管理</a></li>{/if}
+    {ifp 'ticket.recharge'}<li  {if $_W['routes']=='ticket.recharge'}class="active"{/if}><a href="{php echo webUrl('ticket/rechargelog')}">小票充值记录</a></li>{/if}
+    {ifp 'ticket.log'}<li {if $_W['routes']=='ticket.log'}class="active"{/if}><a href="{php echo webUrl('ticket/log')}">小票操作记录</a></li>{/if}
+
+</ul>
+<!-- yi fu yuan ma wang -->

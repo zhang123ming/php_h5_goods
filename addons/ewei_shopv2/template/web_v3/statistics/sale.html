@@ -1,0 +1,212 @@
+{template '_header'}
+
+<div class="page-header">当前位置：<span class="text-primary">销售统计</span></div>
+<div class="page-content">
+    <form action="./index.php" method="get" class="form-horizontal table-search">
+            <input type="hidden" name="c" value="site" />
+            <input type="hidden" name="a" value="entry" />
+            <input type="hidden" name="m" value="ewei_shopv2" />
+            <input type="hidden" name="do" value="web" />
+            <input type="hidden" name="r"  value="statistics.sale" />
+
+        <div class="page-toolbar">
+            <div class="input-group">
+                <span></span>
+                 <span class="input-group-select">
+                    <select name='searchtime'  class='form-control'>
+                        <option value='default' {if $_GPC['searchtime']=='default'||!$_GPC['searchtime']}selected{/if}>默认搜索</option>
+                        <option value='timequantum' {if $_GPC['searchtime']=='timequantum'}selected{/if}>按时间段</option>
+                    </select>
+                </span>
+                 <span class="input-group-btn" id="timequantum" style="display:{if $_GPC['searchtime']=='timequantum'}{else}none;{/if}">
+                    {php echo tpl_form_field_daterange('time', array('starttime'=>date('Y-m-d H:i', $starttime),'endtime'=>date('Y-m-d H:i', $endtime)),true);}
+                </span>
+                <span class="input-group-select timeother">
+                    <select name="year" class='form-control'>
+                        {loop $years $y}
+                        <option value="{$y['data']}"  {if $y['selected']}selected="selected"{/if}>{$y['data']}年</option>
+                        {/loop}
+                    </select>
+                </span>
+                <span class="input-group-select timeother">
+                    <select name="month" class='form-control'>
+                        <option value=''>月份</option>
+                        {loop $months $m}
+                        <option value="{$m['data']}"  {if $m['selected']}selected="selected"{/if}>{$m['data']}月</option>
+                        {/loop}
+                    </select>
+                </span>
+                <span class="input-group-select timeother">
+                     <select name="day" class='form-control'>
+                         <option value=''>日期</option>
+                     </select>
+                </span>
+                <span class="input-group-select">
+                    <select name="type" class='form-control'>
+                        <option value='0' {if $_GPC['type']==0}selected="selected"{/if}>交易额</option>
+                        <option value='1' {if $_GPC['type']==1}selected="selected"{/if}>交易量</option>
+
+                    </select>
+                </span>
+                <span class="input-group-select">
+                    <select name="byType" class='form-control'>
+                        <option value='default' {if $_GPC['byType']=='default'}selected="selected"{/if}>按时间</option>
+                        <option value='store' {if $_GPC['byType']=='store'}selected="selected"{/if}>按门店</option>
+                        <option value='distributor' {if $_GPC['byType']=='distributor'}selected="selected"{/if}>按门店配送人</option>
+                    </select>
+                </span>
+                 <span class="input-group-select">
+                    <select name="status" class='form-control'>
+                        <option value='' {if $_GPC['status']==''}selected="selected"{/if}>全部订单</option>
+                        <option value='1' {if $_GPC['status']=='1'}selected="selected"{/if}>待发货</option>
+                        <option value='2' {if $_GPC['status']=='2'}selected="selected"{/if}>待收货</option>
+                        <option value='3' {if $_GPC['status']=='3'}selected="selected"{/if}>已完成</option>
+                    </select>
+                </span>
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="submit"> 搜索</button>
+                     {ifp 'statistics.sale.export'}
+                    <button type="submit" name="export" value='1' class="btn btn-success">导出</button>
+                    {/if}
+                </span>
+            </div>
+
+        </div>
+
+ </form>
+
+
+<div class="panel panel-default">
+    <div class='panel-heading'>
+        {if empty($type)}交易额{else}交易量{/if}：<span style="color:red; ">{$totalcount}</span>，
+        最高{if empty($type)}交易额{else}交易量{/if}：<span style="color:red; ">{$maxcount}</span> {if !empty($maxcount_date)}<span>({$maxcount_date}</span>){/if}
+    </div>
+    {if $_GPC['byType']=='distributor'}
+    <div class="panel-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th style="width:100px;">配送人</th>
+                    <th style="width:100px;">导出</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {loop $distributorlist $row}
+                <tr>
+                    <td>{$row[nickname]}</td>
+                    <td>
+                        {if $_GPC['searchtime']=='timequantum'}
+                        <a href="{php echo webUrl('statistics/sale/export',array('distributor'=>$row['openid'],'byType'=>$byType,'timestart'=>$timestart,'timeend'=>$timeend,'searchtime'=>$_GPC['searchtime'],'status'=>$status))}">导出</a>
+                        {else}
+                        <a href="{php echo webUrl('statistics/sale/export',array('distributor'=>$row['openid'],'byType'=>$byType,'year'=>$year,'month'=>$month,'day'=>$day,'status'=>$status))}">导出</a>
+                        {/if}
+                    </td>
+                </tr>
+                {/loop}
+            </tbody>
+        </table>
+    </div>
+    {else}
+    <div class="panel-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th style='width:100px;'>
+                        {if $_GPC['byType']=='store'}
+                        门店名称
+                        {else}
+                        {if empty($_GPC['month'])}月份{else}日期{/if}
+                        {/if}
+                    </th>
+                    
+                    <th style='width:100px;'>{if empty($type)}交易额{else}交易量{/if}</th>
+                    {if $_GPC['byType']=='store'}
+                     <th style="width: 80px;">导出</th>
+                    {/if}
+                    <th style="width: 100px;">所占比例</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {loop $list $row}
+                <tr>
+                    <td>{$row['data']}</td>
+                    <td>{$row['count']}</td>
+                    {if $_GPC['byType']=='store'}
+                     <td>
+                        {if $_GPC['searchtime']=='timequantum'}
+                        <a href="{php echo webUrl('statistics/sale/export',array('storeid'=>$row['storeid'],'byType'=>$byType,'timestart'=>$timestart,'timeend'=>$timeend,'searchtime'=>$_GPC['searchtime'],'status'=>$status))}" target="_blank">导出{$row['storeid']}</a>
+                        {else}
+                        <a href="{php echo webUrl('statistics/sale/export',array('storeid'=>$row['storeid'],'byType'=>$byType,'year'=>$year,'month'=>$month,'day'=>$day))}" target="_blank">导出{$row['storeid']}</a>
+                        {/if}
+                    </td>
+                    {/if}
+                    <td><span class="process-num" style="color:#000">{php echo empty($row['percent'])?'':$row['percent'].'%'}</span></td>
+                    <td>
+                       <div class="progress">
+                           <div style="width: {$row['percent']}%;" class="progress-bar progress-bar-info" ></div>
+                       </div>
+                    </td>
+                </tr>
+                {/loop}
+            </tbody>
+        </table>
+    </div>
+    {/if}
+</div>
+</div>
+<script language='javascript'>
+    {if $_GPC['searchtime']=='timequantum'}
+     $(".timeother").hide();
+    {else}
+    $(".timeother").show();
+    {/if}
+    $("select[name=searchtime]").change(function(){
+
+        var currentVal = $(this).val();
+        if (currentVal=='timequantum') {
+            $("#timequantum").show();
+            $(".timeother").hide();
+        }else{
+            $(".timeother").show();
+            $("#timequantum").hide();
+        }
+    })
+
+    function get_days(){
+          
+        var year = $('select[name=year]').val();
+        var month =$('select[name=month]').val();
+        var day  = $('select[name=day]');
+       day.get(0).options.length = 0 ;
+        if(month==''){
+	   day.append("<option value=''>日期</option");
+            return;
+        }
+       
+        day.get(0).options.length = 0 ;
+        day.append("<option value=''>...</option").attr('disabled',true);
+        $.post("{php echo webUrl('util/days')}",{year:year,month:month},function(days){
+             day.get(0).options.length = 0 ;
+             day.removeAttr('disabled');
+             days =parseInt(days);
+             day.append("<option value=''>日期</option");
+             for(var i=1;i<=days;i++){
+                 day.append("<option value='" + i +"'>" + i + "日</option");
+             }
+          
+             {if !empty($day)}
+                day.val( {$day});
+             {/if}
+        })
+    }
+    $('select[name=month]').change(function(){
+           get_days();
+    })
+    
+    get_days();
+ </script>
+{template '_footer'}
+
+<!--efwww_com-->

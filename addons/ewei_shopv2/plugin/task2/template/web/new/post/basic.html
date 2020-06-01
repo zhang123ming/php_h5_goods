@@ -1,0 +1,127 @@
+        <div class="form-group">
+        <label class="col-sm-2 control-label must">排序</label>
+        <div class="col-sm-9 col-xs-12">
+            <div class="input-group">
+    
+                <input type="text" class="form-control" name="displayorder"  value="{$task['displayorder']}" autocomplete="off">
+
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label must">任务名称</label>
+        <div class="col-sm-9 col-xs-12">
+            <div class="input-group">
+                <input type="hidden" name="type" value="shop" />
+                <input type="text" class="form-control" name="title"  value="{$task['title']}" autocomplete="off">
+
+                <span class="input-group-addon" style="padding: 0px;">
+                    <img src="{$task['image']}" id="showimg" width="34px" height="34px">
+                </span>
+                <input type="hidden" id="imagehidden" name="image" value="{$task['image']}">
+                <span class="input-group-addon btn" data-toggle="selectImg" data-input="#imagehidden" data-img="#showimg" data-full="1">选择图片</span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">副标题</label>
+        {ife 'task2' $task2[subtitle]}
+        <div class="col-sm-9 subtitle">
+            <textarea id="" name="subtitle" id="subtitle" rows="5"  class="form-control" data-parent=".subtitle" maxlength="100" data-rule-maxlength="100">{$task2['subtitle']}</textarea>
+            <div class="help-block">副标题的长度请控制在100字以内</div>
+        </div>
+        {else}
+        <div class='form-control-static'>{$task2['subtitle']}</div>
+        {/if}
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label must">回报率</label>
+        <div class="col-sm-9 col-xs-12 gimgs">
+           <input type="number" name="returnrate" value="{$task2[returnrate]}">%
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label must">二维码</label>
+        <div class="col-sm-9 col-xs-12 gimgs">
+            {php echo tpl_form_field_image2('qrcode',$task2[qrcode])}
+            <span class="help-block image-block">专属于入群二维码</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label must">商品图片</label>
+        <div class="col-sm-9 col-xs-12 gimgs">
+            {php echo tpl_form_field_multi_image2('thumbs',$piclist)}
+            <span class="help-block image-block">第一张为缩略图，建议为正方型图片，其他为详情页面图片，尺寸建议宽度为640，并保持图片大小一致</span>
+            <span class="help-block">您可以拖动图片改变其显示顺序 </span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">项目详情</label>
+        <div class="col-sm-9 col-xs-12">
+             <div class="">
+                {php echo tpl_ueditor('projectdetail',$task2['projectdetail'],array('height'=>'300'))}
+            </div>   
+        </div>
+    </div>
+     <div class="form-group">
+            <label class="col-sm-2 control-label">招商政策</label>
+            <div class="col-sm-8">
+                <div class="">
+                   
+                    {php echo tpl_ueditor('shopinpolicy',$task2['shopinpolicy'],array('height'=>'300'))}
+                   
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">企业介绍</label>
+            <div class="col-sm-8">
+                <div class="">
+                    {php echo tpl_ueditor('shopintroduce',$task2['shopintroduce'],array('height'=>'300'))}
+
+                </div>
+            </div>
+        </div>
+
+
+    <div class="form-group hide">
+        <label class="col-sm-2 control-label">接取方式</label>
+        <div class="col-sm-9 col-xs-12">
+            <label class="radio-inline">
+                <input type="radio" name="picktype" value="0" {if $task2['picktype'] == 0}checked{/if}>
+                手动接取 （必须先接任务再完成）</label><br>
+        </div>
+    </div>
+
+    <div id="stop">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">截止时间</label>
+            <div class="col-sm-9 col-xs-12">
+                <label class="radio-inline">
+                    <input type="radio" name="stoptype" value="0" {if $task2['stop_type'] == 0}checked{/if}>无限制
+                </label>
+               
+            </div>
+        </div>
+
+    </div>
+    <div id="repeat">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">重复领取</label>
+            <div class="col-sm-9 col-xs-12">
+                <label class="radio-inline">
+                    <input type="radio" name="repeattype" value="1" checked="checked">不可重复
+                </label>
+            </div>
+        </div>
+    </div>
+      <div class="form-group">
+        <label class="col-sm-2 control-label must">开放时间</label>
+        <div class="col-sm-9 col-xs-12">
+            {php echo tpl_form_field_daterange('opentime',array('starttime'=>substr($task2['starttime'],0,-3),'endtime'=>substr($task2['endtime'],0,-3)),true)}
+            <span class="help-block">在这个时间段内可以接任务，完成任务的截止时间与此时间段无关</span>
+        </div>
+    </div>

@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+<link rel="apple-touch-startup-image" href="images/apple-touch-startup-image-320x460.png" />
+<meta name="author" content="FamousThemes" />
+<meta name="description" content="GoMobile - A next generation web app theme" />
+<meta name="keywords" content="mobile web app, mobile template, mobile design, mobile app design, mobile app theme, mobile wordpress theme, my mobile app" />
+<title>{php if(isset($title)) $_W['page']['title'] = $title}{if !empty($_W['page']['title'])} {/if}{if !empty($_W['account']['name'])}{$_W['account']['name']}{/if}{if !empty($_W['page']['sitename'])} - {$_W['page']['sitename']}{/if}</title>
+<link type="text/css" rel="stylesheet" href="{$_W['siteroot']}app/themes/chengzi_bphweizhan/css/style.css">
+<link type="text/css" rel="stylesheet" href="{$_W['siteroot']}app/themes/chengzi_bphweizhan/colors/medical/medical.css">
+<link type="text/css" rel="stylesheet" href="{$_W['siteroot']}app/themes/chengzi_bphweizhan/css/idangerous.swiper.css">
+<link type="text/css" rel="stylesheet" href="{$_W['siteroot']}app/themes/chengzi_bphweizhan/css/swipebox.css">
+<link href='../../../fonts.googleapis.com/css@family=Lato_3A300' rel='stylesheet' type='text/css'>
+<!--<script type="text/javascript" src="{$_W['siteroot']}app/themes/chengzi_bphweizhan/js/swipe.js"></script>-->
+</head>
+<body>
+  <div id="header">
+      <div class="gohome"><a href="#"><img src="{$_W['siteroot']}app/themes/chengzi_bphweizhan/images/icons/home.png" alt="" title="" /></a></div>
+      <div class="gomenu"><a href="#" onclick="swiperParent.swipeTo(10);"><img src="{$_W['siteroot']}app/themes/chengzi_bphweizhan/images/icons/contact.png" alt="" title="" /></a></div>
+  </div>
+    
+  <div class="swiper-container swiper-parent">
+    <div class="swiper-wrapper">
+    
+        
+      <!--Menu page-->
+      <div class="swiper-slide sliderbg_menu">
+          <div class="swiper-container swiper-nested">
+                   <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                                  <div class="slide-inner">
+                                        <!--<div class="logo"><a href="#"><img src="{$_W['siteroot']}app/themes/chengzi_bphweizhan/images/logo.png" alt="" title="" border="0" /></a></div>-->
+                                        <!--幻灯片管理-->
+                                        <div>
+                                            {data func="site_slide_search" item="row" limit="4"}                                              
+                                            <a href="{$row['url']}">
+                                                <img src="{$row['thumb']}" style="height:auto;width:auto;width: 100%" alt="{$row['title']}"/>
+                                            </a>
+                                            <!--<p>{$row['title']}</p>-->
+                                            {/data}
+                                        </div>
+                                        <div class="menu">
+                                        <ul>
+                                        {data func="site_navs" item="row" }
+                                             <li><a href="{$row['url']}" onclick="#">                                                     
+                                                     {if !empty($row['icon'])}
+                                                        <img src="{$_W['attachurl']}{$row['icon']}" alt="" title="" />	
+                                                    {else}
+                                                        <img src="{$_W['siteroot']}app/themes/chengzi_bphweizhan/images/icons/about.png" alt="" title="" />  
+                                                    {/if}
+                                                     <span>{$row['name']}</span>
+                                                 </a>
+                                             </li>
+                                        {/data}
+<!--                                        <li><a href="#" onclick="swiperParent.swipeTo(1);"><img src="{$_W['siteroot']}app/themes/chengzi_bphweizhan/images/icons/about.png" alt="" title="" /><span>关于我们</span></a></li>
+                                        <li><a href="#" onclick="swiperParent.swipeTo(2);"><img src="{$_W['siteroot']}app/themes/chengzi_bphweizhan/images/icons/tools.png" alt="" title="" /><span>服务项目</span></a></li>
+                                        <li><a href="#" onclick="swiperParent.swipeTo(3);"><img src="{$_W['siteroot']}app/themes/chengzi_bphweizhan/images/icons/blog.png" alt="" title="" /><span>新闻动态</span></a></li>
+                                        <li><a href="#" onclick="swiperParent.swipeTo(5);"><img src="{$_W['siteroot']}app/themes/chengzi_bphweizhan/images/icons/docs.png" alt="" title="" /><span>产品展示</span></a></li>
+                                        <li><a href="#" onclick="swiperParent.swipeTo(6);"><img src="{$_W['siteroot']}app/themes/chengzi_bphweizhan/images/icons/photos.png" alt="" title="" /><span>案例展示</span></a></li>
+                                        <li><a href="#" onclick="swiperParent.swipeTo(7);"><img src="{$_W['siteroot']}app/themes/chengzi_bphweizhan/images/icons/videos.png" alt="" title="" /><span>视频展示</span></a></li>
+                                        <li><a href="#" onclick="swiperParent.swipeTo(8);"><img src="{$_W['siteroot']}app/themes/chengzi_bphweizhan/images/icons/clients.png" alt="" title="" /><span>成功客户</span></a></li>
+                                        <li><a href="#" onclick="swiperParent.swipeTo(9);"><img src="{$_W['siteroot']}app/themes/chengzi_bphweizhan/images/icons/twitter.png" alt="" title="" /><span>特别推荐</span></a></li>
+                                        <li><a href="#" onclick="swiperParent.swipeTo(10);"><img src="{$_W['siteroot']}app/themes/chengzi_bphweizhan/images/icons/contact.png" alt="" title="" /><span>联系我们</span></a></li>-->
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                        </div>
+                                 </div>
+                         </div>
+                   </div>
+                  <div class="swiper-scrollbar"></div>
+          </div> 
+      </div>
+      
+
+     <!--End of pages--> 
+
+    </div>
+    <div class="pagination">111111</div>
+  </div>
+<script type="text/javascript" src="{$_W['siteroot']}app/themes/chengzi_bphweizhan/js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="{$_W['siteroot']}app/themes/chengzi_bphweizhan/js/jquery.swipebox.js"></script>
+<script type="text/javascript" src="{$_W['siteroot']}app/themes/chengzi_bphweizhan/js/idangerous.swiper-2.1.min.js"></script>
+<script type="text/javascript" src="{$_W['siteroot']}app/themes/chengzi_bphweizhan/js/idangerous.swiper.scrollbar-2.1.js"></script>
+<script type="text/javascript" src="{$_W['siteroot']}app/themes/chengzi_bphweizhan/js/jquery.tabify.js"></script>
+<script type="text/javascript" src="{$_W['siteroot']}app/themes/chengzi_bphweizhan/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="{$_W['siteroot']}app/themes/chengzi_bphweizhan/js/code.js"></script>
+<script type="text/javascript" src="{$_W['siteroot']}app/themes/chengzi_bphweizhan/js/load.js"></script>
+<!--Twitter Feed-->
+<script type="text/javascript" src="{$_W['siteroot']}app/themes/chengzi_bphweizhan/js/twitter/jquery.tweet.js" charset="utf-8"></script>
+<!--<script type="text/javascript" charset="utf-8">
+var $ = jQuery.noConflict();  
+jQuery(function($){
+$(".tweet").tweet({
+  modpath: 'js/twitter/',
+  join_text: "auto",
+  username: "famousthemes",
+  count: 5,
+  auto_join_text_default: "we said,",
+  auto_join_text_ed: "we",
+  auto_join_text_ing: "we were",
+  auto_join_text_reply: "we replied",
+  auto_join_text_url: "we were checking out",
+  loading_text: "loading tweets..."
+});
+});
+</script>-->
+</body>
+</html>

@@ -1,0 +1,137 @@
+{template '_header'}
+<style>
+    .multi-item {margin-bottom: 18px;}
+    .input-group-addon{width: 100%;}
+    .fixsingle-input-group {width: 330px;}
+</style>
+<div class="page-header">
+    当前位置：<span class="text-primary">{if !empty($item)}编辑{else}新建{/if}商品组 <small>{if !empty($item)}(名称: {$item['name']}){/if}</small></span>
+</div>
+
+<div class="page-content">
+    <form {ife 'goods.group' $item}action="" method="post"{/if} class="form-validate form-horizontal ">
+
+        <div class="form-group">
+            <label class="col-lg control-label">商品组名称</label>
+            <div class="col-sm-9">
+                {ife 'goods.group' $item}
+                    <input type="text" class="form-control valid" name="name" value="{$item['name']}" data-rule-required="true" placeholder="请输入商品组名称" />
+                {else}
+                    <div class='form-control-static'>{$item['name']}</div>
+                {/if}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-lg control-label">商品组状态</label>
+            <div class="col-sm-9 col-xs-12">
+                {ife 'goods.group' $item}
+                    <label class="radio-inline">
+                        <input type="radio" name="enabled" value="1" {if $item['enabled']==1}checked="checked"{/if}> 启用
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="enabled" value="0" {if $item['enabled']==0 || empty($item)}checked="checked"{/if}> 禁用
+                    </label>
+                {else}
+                    <div class='form-control-static'>{if $item['enabled']==1}启用{else}禁用{/if}</div>
+                {/if}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-lg control-label">限制购买最大次数</label>
+            <div class="col-sm-9 col-xs-12">
+                {ife 'goods.group' $item}
+                    <div>
+                    <label class="radio-inline">
+                        <input type="radio" name="isbuylimit" id="enable" value="1" {if !empty($item['isbuylimit'])}checked="checked"{/if}> 启用
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="isbuylimit" id="disable" value="0" {if empty($item['isbuylimit'])}checked="checked"{/if}> 禁用
+                    </label>
+                    <span class="help-block">如果启用时月份为 0,则不限制按月购买次数</span>
+                    </div>
+                    
+                    <div class="col-sm-10 col-xs-12" id="memberbuy" {if empty($item['isbuylimit'])}style="display: none"{/if}>
+                        {loop $levels $item}
+                        <div class="input-group fixsingle-input-group" style="margin-top: 10px">
+                            <span class="input-group-addon">{$item['levelname']}</span>
+                            <input type="text" name="buylimit[{$item['id']}][count]" value="{$buylimit[$item['id']]['count']}" style="width: 80px" class="form-control">
+                            <span class="input-group-addon">次</span>
+                            <input type="text" name="buylimit[{$item['id']}][month]" value="{$buylimit[$item['id']]['count']}" style="width: 80px" class="form-control">
+                            <span class="input-group-addon">月</span>
+                        </div>
+                        {/loop}
+                    </div>
+                    
+                {else}
+                    <div class='form-control-static'>{if $item['enabled']==1}启用{else}禁用{/if}</div>
+                {/if}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-lg control-label">组内商品</label>
+            <div class="col-sm-9">
+                <div class="form-group" style="height: auto; display: block;">
+                    <div class="col-sm-12 col-xs-12">
+                        {ife 'goods.group' $item}
+                            <?php echo tpl_selector('goodsids',array('preview'=>true,'readonly'=>true, 'required'=>'true', 'multi'=>1,'url'=>webUrl('goods/query'),'items'=>$goods,'buttontext'=>'选择商品','placeholder'=>'请选择商品'))?>
+                        {else}
+                            <div class="input-group multi-img-details container ui-sortable">
+                                {loop $goods $item}
+                                <div data-name="goodsid" data-id="426" class="multi-item">
+                                    <img src="{php echo tomedia($item['thumb'])}" class="img-responsive img-thumbnail">
+                                    <div class="img-nickname">{$item['title']}</div>
+                                </div>
+                                {/loop}
+                            </div>
+                        {/if}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-lg control-label"></label>
+            <div class="col-sm-9">
+                {ife 'goods.group' $item}
+                <input type="submit" class="btn btn-primary" value="保存">
+                {/if}
+                <a class="btn btn-default" href="{php echo webUrl('goods/group')}">返回列表</a>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<script type="text/html" id="tpl_member_buy">
+    <div class="input-group fixsingle-input-group" style="margin-top: 10px">
+        <span class="input-group-addon">{levelname}</span>
+        <input type="text" name="buylimit[{id}][count]" value="" style="width: 80px" class="form-control">
+        <span class="input-group-addon">次</span>
+        <input type="text" name="buylimit[{id}][mount]" value="" style="width: 80px" class="form-control">
+        <span class="input-group-addon">月</span>
+    </div>
+</script>
+
+{ife 'goods.group' $item}
+    <script language="javascript">
+        require(['jquery.ui'],function(){
+            $('.multi-img-details').sortable();
+        })
+    </script>
+{/if}
+
+<script type="text/javascript">
+$('#enable').click(function(){
+    $('#memberbuy').show();
+});
+$('#disable').click(function(){
+    $('#memberbuy').hide();
+});
+</script>
+
+{template '_footer'}
+<!--www-efwww-com-->

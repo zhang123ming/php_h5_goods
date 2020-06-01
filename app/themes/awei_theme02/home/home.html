@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-cn" style="font-size: 25px;">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>{if !empty($title)}{$title}
+        -
+        {elseif !empty($_W['page']['title'])}{$_W['page']['title']} - {/if}{if !empty($_W['page']['sitename'])}{$_W['page']['sitename']}{else}{$_W['account']['name']}{/if}
+        {if IMS_FAMILY != 'x'}{/if}</title>
+<meta name="format-detection" content="telephone=no, address=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<!-- apple devices fullscreen -->
+<meta name="apple-touch-fullscreen" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="keywords" content="{if empty($_W['page']['keywords'])}{if IMS_FAMILY != 'x'}{/if}{else}{$_W['page']['keywords']}{/if}" />
+<meta name="description" content="{if empty($_W['page']['description'])}{if IMS_FAMILY != 'x'}{/if}{else}{$_W['page']['description']}{/if}" />
+<link rel="shortcut icon" href="{$_W['siteroot']}{$_W['config']['upload']['attachdir']}/{if !empty($_W['setting']['copyright']['icon'])}{$_W['setting']['copyright']['icon']}{else}images/global/wechat.jpg{/if}" />
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="{$_W['siteroot']}app/resource/js/app/util.js"></script>
+<script src="{$_W['siteroot']}app/resource/js/require.js"></script>
+<script src="{$_W['siteroot']}app/resource/js/app/config.js"></script>
+<script type="text/javascript" src="{$_W['siteroot']}app/resource/js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="{$_W['siteroot']}app/resource/js/lib/mui.min.js"></script>
+<script type="text/javascript" src="{$_W['siteroot']}app/resource/js/app/common.js"></script>
+<script src="themes/awei_theme02/js/TouchSlide.1.1.js"></script>
+{if defined('MUI')}
+<link href="{$_W['siteroot']}app/resource/css/mui.min.css" rel="stylesheet">
+{else}
+<link href="{$_W['siteroot']}app/resource/css/bootstrap.min.css" rel="stylesheet">
+{/if}
+<link href="{$_W['siteroot']}app/resource/css/common.min.css" rel="stylesheet">
+<link href="themes/awei_theme02/css/common.css" rel="stylesheet">
+</head><body>
+<div class="main">
+<div id="focus" class="focus">
+  <div class="bd">
+    <ul>
+      {data func="site_slide_search" item="row"}
+      <li><a href="{$row['url']}"><img _src="{$row['thumb']}"/></a></li>
+      {/data}
+    </ul>
+  </div>
+  <div class="hd">
+    <ul>
+    </ul>
+  </div>
+</div>
+<div class="list-div">
+{data func="site_navs" item="row"}
+  <div class="list-item">
+  <a href="{$row['url']}">
+    <div class="item-img"> <i class="{$row['css']['icon']['icon']}"></i> </div>
+    <div class="item-content">
+      <div class="item-title">{$row['name']}</div>
+      <div class="item-desc">{$row['description']}</div>
+    </div>
+	</a>
+  </div>
+  <div class="line"></div>
+  {/data}
+</div>
+<script type="text/javascript">
+    TouchSlide({ 
+        slideCell:"#focus",
+        titCell:".hd ul",
+        mainCell:".bd ul", 
+        effect:"left", 
+        autoPlay:true,
+        autoPage:true, 
+        switchLoad:"_src" 
+    });
+</script>
+		{if (($_GPC['a'] != 'card' || $_GPC['c'] != 'mc') && ($_GPC['a'] != 'token' || $_GPC['c'] != 'activity') && ($_GPC['a'] != 'goods' || $_GPC['c'] != 'activity') && ($_GPC['a'] != 'coupon' || $_GPC['c'] != 'activity') && $_GPC['m'] != 'paycenter')}
+			{data func="site_quickmenu"}{/data}
+		{/if}
+		<script>require(['bootstrap']);</script>
+</body>
+</html>

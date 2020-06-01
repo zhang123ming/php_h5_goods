@@ -1,0 +1,100 @@
+{template '_header'}
+
+<div class="page-header"> 当前位置：<span class="text-primary">批量添加会员信息</span>  </div>
+
+<div class="page-content">
+    <div class='alert alert-danger'>尽量在服务器空闲时间来操作，会占用大量内存与带宽，在获取过程中，请不要进行任何操作!</div>
+     <div class="summary_box">
+        <div class="summary_title">
+            <span class="title_inner">批量导入会员信息</span>
+        </div>
+        <div class="summary_lg">
+            功能介绍：可将外部会员信息导入到系统内!
+            <br>
+            <span>使用方法： 1. 将您获取到的会员信息文件转存为Excel格式,否则将无法识别</span>          
+            <br><span style="padding-left: 64px;">2. 确认上传即可</span>
+            <dl style="margin:5px 0;">
+                <dt style="float:left;font-weight:normal;">示例文件：</dt>
+                <dd style="float:left;"><a href="{php echo $excelurl}" >Excel示例文件下载</a>
+            </dl>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+
+    <form id="importform" class="form-horizontal form" action="" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label class="col-lg control-label must">EXCEL</label>
+            <div class="col-sm-5 goodsname"  style="padding-right:0;" >
+                <input type="file" name="excelfile" class="form-control" />
+            </div>
+        </div>       
+        <div class="form-group">
+            <label class="col-lg control-label"> </label>
+            <div class="col-sm-9">
+                <input id="btn_submit" type="submit"  value="确认导入" class="btn btn-primary" />
+            </div>
+        </div>
+    </form>
+</div> <!---->
+
+<script language='javascript'>
+    var total = {php echo $uploadnum};
+    var uploadStart = {php echo $uploadStart};
+    var len =0;
+    if(uploadStart ==1)
+    {
+        $("#dataform").attr("disabled", "true");
+        $("#btn_submit").val("正在获取中...").removeClass("btn-primary").attr("disabled", "true");
+        $("#btn_submit").val("已经获取  " + len + " / " + total + " 个宝贝, 请等待....");
+        fetch_next();
+    }
+
+    $('#importform').submit(function(e){
+
+        if(!$(":input[name=excelfile]").val()){
+            tip.msgbox.err("您还未选择Excel文件哦~");
+            return false;
+        }
+
+        var AllImgExt=".xls|.xlsx|";
+        var excelfile =$(":input[name=excelfile]").val()
+        var extName = excelfile.substring(excelfile.lastIndexOf(".")).toLowerCase();
+        if(AllImgExt.indexOf(extName+"|")==-1)
+        {
+            tip.msgbox.err("Excel文件类型不正确哦~");
+            return false;
+        }               
+    })
+
+    function fetch_next() {        
+        var postdata =  {
+            num: len,
+            totalnum: total
+        };
+        $.post("{php echo webUrl('member/import/fetch')}",
+            postdata,
+            function (data) {
+                $("#btn_submit").val("已经插入  " + len + " / " + total + " 个会员, 请等待....");
+                len++;
+                console.log(len)
+                if (len >= total) {
+                    $("#btn_submit").val("立即获取").addClass("btn-primary").removeAttr("disabled");
+                    if (confirm('会员已经获取成功, 是否跳转到会员列表页面?')) {                    
+                        location.href = "{php echo webUrl('member/list')}";
+                    }
+                    //console.log(e);
+                    else {
+                        location.reload();
+                    }
+                }
+                else {
+                    fetch_next();
+                }
+
+            }, "json");
+    }
+
+</script>
+{template '_footer'}
+
+<!--易/*福/*源/*码/*网-->

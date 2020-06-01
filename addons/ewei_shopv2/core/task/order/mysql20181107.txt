@@ -1,0 +1,582 @@
+2018-11-13 18:37:09:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_J_Ma7OS3JsesM8bRr2h-W6QfIbpMZvlZQ6kZ_592zLj2e5UPRP6OnLaINjJSaLslz3RnNOAbVvA3jbPyG-dPuZShvVoFXAthKTQ5p37C9HTQoq4i167knjpVvysWLYiAEAIXK'
+2018-11-13 18:37:09:'{"touser":"omcwNwVBrh0G4BIqQMsGcJSNZAAs","msgtype":"text","text":{"content":"亲爱的亿家康总店， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为银卡会员 , 特此通知!
+您即可享有银卡会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=118&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-13 18:37:10:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_J_Ma7OS3JsesM8bRr2h-W6QfIbpMZvlZQ6kZ_592zLj2e5UPRP6OnLaINjJSaLslz3RnNOAbVvA3jbPyG-dPuZShvVoFXAthKTQ5p37C9HTQoq4i167knjpVvysWLYiAEAIXK'
+2018-11-13 18:37:10:'{"touser":"omcwNwfT6NNNqVBdpwKefbhP1kNw","msgtype":"text","text":{"content":"买家购买的商品已经确认收货!
+
+订单号：
+SH20181105182916676848
+收货时间：2018-11-13 18:37
+商品详情：
+
+如尚经典调养修肤水(  单价: 39.9 数量: 1 总价: 39.90); 
+
+购买者信息:
+收件人: 宗贤本
+联系电话: 13922713139
+收货地址: 广东省广州市白云区 同和握山南街10号"}}'
+2018-11-14 18:26:19:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:26:19:'{"touser":"oLy3A1cktXYyCvB1QIr2IDT1Cw3Q","msgtype":"text","text":{"content":"亲爱的兰爱秀， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:26:23:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:26:23:'{"touser":"oLy3A1TGPuxBUpKJqFTYPLQym3Yw","msgtype":"text","text":{"content":"亲爱的小喏₂₀₁₈⁶⁶⁶， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:26:26:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:26:26:'{"touser":"oLy3A1fWYrQ8xCcRs9fd4bY60qlc","msgtype":"text","text":{"content":"亲爱的燕， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:26:29:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:26:29:'{"touser":"oLy3A1UTfWRYI6QYQHquq1NnG9Ls","msgtype":"text","text":{"content":"亲爱的桂花飘香， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:26:32:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:26:32:'{"touser":"oLy3A1Q5uzxJ2mKoXmNjI6VG_Dn8","msgtype":"text","text":{"content":"亲爱的励瑞红， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:26:34:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:26:34:'{"touser":"oLy3A1SMa31VWTnPjc5CjZEXuZ-4","msgtype":"text","text":{"content":"亲爱的落曰余晖， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:26:35:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:26:35:'{"touser":"oLy3A1f42hVlywQZOvw0qX1L5pro","msgtype":"text","text":{"content":"亲爱的殷三爷、， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:26:37:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:26:37:'{"touser":"oLy3A1cicJR8NSAOKJsO_YymKdTM","msgtype":"text","text":{"content":"亲爱的左手边的温暖， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:26:40:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:26:40:'{"touser":"oLy3A1TI3nitQXWAwusBfgrJFfsA","msgtype":"text","text":{"content":"亲爱的不忘初心，方得始终， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:26:42:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:26:42:'{"touser":"oLy3A1QJH0m8-iSUM7B-c9hn3IGs","msgtype":"text","text":{"content":"亲爱的美颜教室（掌起店）18257431291， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:26:45:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:26:45:'{"touser":"oLy3A1eAqHzKXb3NsZo-IcX-6sBc","msgtype":"text","text":{"content":"亲爱的杨佩懿， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:26:47:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:26:47:'{"touser":"oLy3A1VnSTIFP6pvy1IiRprFsd1M","msgtype":"text","text":{"content":"亲爱的纪芬， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:26:51:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:26:51:'{"touser":"oLy3A1UaqVaxm3rBRGinSEcC-sjM","msgtype":"text","text":{"content":"亲爱的六月， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:26:53:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:26:53:'{"touser":"oLy3A1QsrStd4cdIgxkVTrebKEJs","msgtype":"text","text":{"content":"亲爱的爱居美家不动产小王， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:26:57:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:26:57:'{"touser":"oLy3A1W42mCZZlTlik6mhbErsHJs","msgtype":"text","text":{"content":"亲爱的永往直前， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:27:01:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:27:01:'{"touser":"oLy3A1Uj1EqCTQBC7fyaFiRsrels","msgtype":"text","text":{"content":"亲爱的曼飞， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:27:04:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:27:04:'{"touser":"oLy3A1dZyxjLov4bjuSJVF5WzAYA","msgtype":"text","text":{"content":"亲爱的涵， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:27:06:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:27:06:'{"touser":"oLy3A1UUCZXtsSp-clD4hImxXOBY","msgtype":"text","text":{"content":"亲爱的能不能不爱了， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:27:09:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:27:09:'{"touser":"oLy3A1SU5Brhgsphdi9Lw-wvj1iI","msgtype":"text","text":{"content":"亲爱的雨落紫竹林， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:27:12:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:27:12:'{"touser":"oLy3A1WKg9vclxofKPkL01sTKIE0","msgtype":"text","text":{"content":"亲爱的张维娟， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:27:15:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:27:15:'{"touser":"oLy3A1U7gKO0Yj3Dyp2IdDWAm92M","msgtype":"text","text":{"content":"亲爱的声控， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:27:18:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:27:18:'{"touser":"oLy3A1csixR7ci2SxVVdWUqc6SDo","msgtype":"text","text":{"content":"亲爱的刘艺， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:27:21:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:27:21:'{"touser":"oLy3A1S5U8Uec0aFFvlWjmDo8XSE","msgtype":"text","text":{"content":"亲爱的勿忘我， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:27:25:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:27:25:'{"touser":"oLy3A1d8jDKVXSNgWK9cLyipPupU","msgtype":"text","text":{"content":"亲爱的美丽句点， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:27:28:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:27:28:'{"touser":"oLy3A1UQKcB169NedZtC9mtmC09g","msgtype":"text","text":{"content":"亲爱的神之谜。， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:27:31:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:27:31:'{"touser":"oLy3A1W-UAEwhiqJx74_DR5LSnCI","msgtype":"text","text":{"content":"亲爱的谜之神。， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:27:33:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:27:33:'{"touser":"oLy3A1T8mY4MyrZIjiiifnsSHEw4","msgtype":"text","text":{"content":"亲爱的于小琴， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:27:36:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:27:36:'{"touser":"oLy3A1bcw6Yf-3L_gvcpvbejzLBY","msgtype":"text","text":{"content":"亲爱的杨艳， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:27:39:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:27:39:'{"touser":"oLy3A1YxNVL3eZoYf4pgDaAtC1E8","msgtype":"text","text":{"content":"亲爱的缘来如此， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:27:41:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:27:41:'{"touser":"oLy3A1a0xGLEZ6gApkNXt3Ys3Jhw","msgtype":"text","text":{"content":"亲爱的我行我素， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:27:45:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:27:45:'{"touser":"oLy3A1ccgIYjbPvBoJajGiHv_pnU","msgtype":"text","text":{"content":"亲爱的风花雪月， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:27:48:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:27:48:'{"touser":"oLy3A1TzULvK9Oz-8IgP0HDo40CQ","msgtype":"text","text":{"content":"亲爱的飘雪， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:27:53:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:27:53:'{"touser":"oLy3A1Ycmn7ZMrXic_bNI7JDHnxs","msgtype":"text","text":{"content":"亲爱的无声的尊重， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:27:56:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:27:56:'{"touser":"oLy3A1S5iClKTtGiRY_kNa3Qc2Xk","msgtype":"text","text":{"content":"亲爱的美颜教室娟子13095955961， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:27:59:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:27:59:'{"touser":"oLy3A1SFETqR9B5CVgoELoFSXPN4","msgtype":"text","text":{"content":"亲爱的开心， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:28:02:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:28:02:'{"touser":"oLy3A1XM2528y7sSRShsP9Ma31B0","msgtype":"text","text":{"content":"亲爱的美颜教室蓝， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:28:05:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:28:05:'{"touser":"oLy3A1eSOMfhI_GwUbxjp1JbShgI","msgtype":"text","text":{"content":"亲爱的美颜教室＃静15250229580， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:28:09:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:28:09:'{"touser":"oLy3A1QQhT9ZOxThp6Uz7y2_ADqQ","msgtype":"text","text":{"content":"亲爱的李雅云， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:28:12:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:28:12:'{"touser":"oLy3A1YhDU7tRpqk00JgwUE6a-bA","msgtype":"text","text":{"content":"亲爱的hftjvcf@， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:28:16:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:28:16:'{"touser":"oLy3A1TSx-ZJHWj6S1QcyMoodN8U","msgtype":"text","text":{"content":"亲爱的－柏丽平， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:28:19:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:28:19:'{"touser":"oLy3A1WvoNNMqjyfwakHQIfMSTXM","msgtype":"text","text":{"content":"亲爱的海之蓝， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:28:21:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:28:21:'{"touser":"oLy3A1VwLO_OXPvUR6_IkDD-A6RM","msgtype":"text","text":{"content":"亲爱的一米阳光， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:28:25:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:28:25:'{"touser":"oLy3A1VhQqW5NNys1z4PovSqBfJE","msgtype":"text","text":{"content":"亲爱的@爱如空气@， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:28:28:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:28:28:'{"touser":"oLy3A1SWlsWlj35_EsAs6Vx2PP7A","msgtype":"text","text":{"content":"亲爱的似是而非， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:28:32:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:28:32:'{"touser":"oLy3A1c3WDBmQJ9Gc94FgbbYzCLQ","msgtype":"text","text":{"content":"亲爱的蒋蒋外婆， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:28:35:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:28:35:'{"touser":"oLy3A1b-XnmJQjIvUX_fEzoxLzBI","msgtype":"text","text":{"content":"亲爱的不知道， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 18:28:39:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ncp9-rO1Q800SLP4bOCdDmM2YXnIAuGpQPHkd7e0dxDOWWjaDz-Ii1dIsHfh4cJpLTzNBB5to0HVm-oxBvrEYKO-i8F0rHb-wx5RhHmJjJezWgTxheFZi76dnLIY4jFVRUKc2NIwF8rse9tZBPFdAEAMAQ'
+2018-11-14 18:28:39:'{"touser":"oLy3A1XcxfVJ5pkW1ep-ScezuMLA","msgtype":"text","text":{"content":"亲爱的萨日传奇， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 19:26:22:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_7g9XKxPmTpEelWcBSc-bORpg2dw-LtUuizGQOQctQ-FAmaQIid2RNT-ccgFmit4H49dV34h_G9M8QBfGcdNWxCbq_zd4qo1CSe8Rxc81ciZz1RaVO81rOZ9pOEXbu34KrTmJc4hSCpwqIH_ETPPjAEAXTT'
+2018-11-14 19:26:22:'{"touser":"oLy3A1VZIuUz05JVlFpuRtKZ0pnA","msgtype":"text","text":{"content":"亲爱的花香舞雨， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 19:26:25:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_7g9XKxPmTpEelWcBSc-bORpg2dw-LtUuizGQOQctQ-FAmaQIid2RNT-ccgFmit4H49dV34h_G9M8QBfGcdNWxCbq_zd4qo1CSe8Rxc81ciZz1RaVO81rOZ9pOEXbu34KrTmJc4hSCpwqIH_ETPPjAEAXTT'
+2018-11-14 19:26:25:'{"touser":"oLy3A1Uppivm_JW5gDVWKk-cRM2M","msgtype":"text","text":{"content":"亲爱的小刺猬， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 19:26:28:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_7g9XKxPmTpEelWcBSc-bORpg2dw-LtUuizGQOQctQ-FAmaQIid2RNT-ccgFmit4H49dV34h_G9M8QBfGcdNWxCbq_zd4qo1CSe8Rxc81ciZz1RaVO81rOZ9pOEXbu34KrTmJc4hSCpwqIH_ETPPjAEAXTT'
+2018-11-14 19:26:28:'{"touser":"oLy3A1aktTnJW44g8vxSlZudFGX4","msgtype":"text","text":{"content":"亲爱的刘萍， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 19:26:31:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_7g9XKxPmTpEelWcBSc-bORpg2dw-LtUuizGQOQctQ-FAmaQIid2RNT-ccgFmit4H49dV34h_G9M8QBfGcdNWxCbq_zd4qo1CSe8Rxc81ciZz1RaVO81rOZ9pOEXbu34KrTmJc4hSCpwqIH_ETPPjAEAXTT'
+2018-11-14 19:26:31:'{"touser":"oLy3A1bm_lbhR5QUmWOV_h7t6XWQ","msgtype":"text","text":{"content":"亲爱的亚亚， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 19:26:33:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_7g9XKxPmTpEelWcBSc-bORpg2dw-LtUuizGQOQctQ-FAmaQIid2RNT-ccgFmit4H49dV34h_G9M8QBfGcdNWxCbq_zd4qo1CSe8Rxc81ciZz1RaVO81rOZ9pOEXbu34KrTmJc4hSCpwqIH_ETPPjAEAXTT'
+2018-11-14 19:26:33:'{"touser":"oLy3A1Vw5Nt0Zj8GdTtQ14jCIIo4","msgtype":"text","text":{"content":"亲爱的a美颜教室YY， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 19:26:36:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_7g9XKxPmTpEelWcBSc-bORpg2dw-LtUuizGQOQctQ-FAmaQIid2RNT-ccgFmit4H49dV34h_G9M8QBfGcdNWxCbq_zd4qo1CSe8Rxc81ciZz1RaVO81rOZ9pOEXbu34KrTmJc4hSCpwqIH_ETPPjAEAXTT'
+2018-11-14 19:26:36:'{"touser":"oLy3A1dc90Rqey7LGJlGy4z-02tU","msgtype":"text","text":{"content":"亲爱的朱火菊， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 19:26:38:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_7g9XKxPmTpEelWcBSc-bORpg2dw-LtUuizGQOQctQ-FAmaQIid2RNT-ccgFmit4H49dV34h_G9M8QBfGcdNWxCbq_zd4qo1CSe8Rxc81ciZz1RaVO81rOZ9pOEXbu34KrTmJc4hSCpwqIH_ETPPjAEAXTT'
+2018-11-14 19:26:38:'{"touser":"oLy3A1SKTwH6T0APcAGD0AcnmzME","msgtype":"text","text":{"content":"亲爱的志向， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 19:26:40:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_7g9XKxPmTpEelWcBSc-bORpg2dw-LtUuizGQOQctQ-FAmaQIid2RNT-ccgFmit4H49dV34h_G9M8QBfGcdNWxCbq_zd4qo1CSe8Rxc81ciZz1RaVO81rOZ9pOEXbu34KrTmJc4hSCpwqIH_ETPPjAEAXTT'
+2018-11-14 19:26:40:'{"touser":"oLy3A1c8d89vikw0lxSci2hRZ9kg","msgtype":"text","text":{"content":"亲爱的田田， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 19:26:44:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_7g9XKxPmTpEelWcBSc-bORpg2dw-LtUuizGQOQctQ-FAmaQIid2RNT-ccgFmit4H49dV34h_G9M8QBfGcdNWxCbq_zd4qo1CSe8Rxc81ciZz1RaVO81rOZ9pOEXbu34KrTmJc4hSCpwqIH_ETPPjAEAXTT'
+2018-11-14 19:26:44:'{"touser":"oLy3A1TEkq29HwADwlFZM5bKxB4o","msgtype":"text","text":{"content":"亲爱的安于现状， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 19:26:48:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_7g9XKxPmTpEelWcBSc-bORpg2dw-LtUuizGQOQctQ-FAmaQIid2RNT-ccgFmit4H49dV34h_G9M8QBfGcdNWxCbq_zd4qo1CSe8Rxc81ciZz1RaVO81rOZ9pOEXbu34KrTmJc4hSCpwqIH_ETPPjAEAXTT'
+2018-11-14 19:26:48:'{"touser":"oLy3A1Tn4v7L-KUm6FfzbafCtUYk","msgtype":"text","text":{"content":"亲爱的触风华绝代， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 19:26:50:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_7g9XKxPmTpEelWcBSc-bORpg2dw-LtUuizGQOQctQ-FAmaQIid2RNT-ccgFmit4H49dV34h_G9M8QBfGcdNWxCbq_zd4qo1CSe8Rxc81ciZz1RaVO81rOZ9pOEXbu34KrTmJc4hSCpwqIH_ETPPjAEAXTT'
+2018-11-14 19:26:50:'{"touser":"oLy3A1ZWX3RIQ7mt7BK1PXXIZ5Vg","msgtype":"text","text":{"content":"亲爱的南花， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 19:26:52:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_7g9XKxPmTpEelWcBSc-bORpg2dw-LtUuizGQOQctQ-FAmaQIid2RNT-ccgFmit4H49dV34h_G9M8QBfGcdNWxCbq_zd4qo1CSe8Rxc81ciZz1RaVO81rOZ9pOEXbu34KrTmJc4hSCpwqIH_ETPPjAEAXTT'
+2018-11-14 19:26:52:'{"touser":"oLy3A1dYYZ07zTBCBNDBP9KPtRzo","msgtype":"text","text":{"content":"亲爱的我养了一头猪， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-14 19:26:57:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_7g9XKxPmTpEelWcBSc-bORpg2dw-LtUuizGQOQctQ-FAmaQIid2RNT-ccgFmit4H49dV34h_G9M8QBfGcdNWxCbq_zd4qo1CSe8Rxc81ciZz1RaVO81rOZ9pOEXbu34KrTmJc4hSCpwqIH_ETPPjAEAXTT'
+2018-11-14 19:26:57:'{"touser":"oLy3A1VpDM0ynPXOl6pYTYnxmVro","msgtype":"text","text":{"content":"亲爱的A000莉莉， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-15 19:02:07:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_rpoFdxEK3SCuO0dgm4Gf4EmBtUmFEcQ3EBgAbmdmUvoHXIdH4xGp6Roxo1cLhe0NxSSg0Jn25c1Ql8CUGxwa4FxxTDRonYta7k0YNixP2CR_FwCjaH0YByZX_eDGTY-AdBkdvn_r3f1ZHe1KKBCgAGABST'
+2018-11-15 19:02:07:'{"touser":"omcwNwYLjhvuiwB07ITGafARiinw","msgtype":"text","text":{"content":"亲爱的高玥珂~富民万灵预测准确率97％， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为银卡会员 , 特此通知!
+您即可享有银卡会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=118&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-15 19:02:08:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_rpoFdxEK3SCuO0dgm4Gf4EmBtUmFEcQ3EBgAbmdmUvoHXIdH4xGp6Roxo1cLhe0NxSSg0Jn25c1Ql8CUGxwa4FxxTDRonYta7k0YNixP2CR_FwCjaH0YByZX_eDGTY-AdBkdvn_r3f1ZHe1KKBCgAGABST'
+2018-11-15 19:02:08:'{"touser":"omcwNwfT6NNNqVBdpwKefbhP1kNw","msgtype":"text","text":{"content":"买家购买的商品已经确认收货!
+
+订单号：
+SH20181108112551278452
+收货时间：2018-11-15 19:02
+商品详情：
+
+如尚经典调养修肤水(  单价: 39.9 数量: 1 总价: 39.90); 
+
+购买者信息:
+收件人: 高春华
+联系电话: 13533065197
+收货地址: 广东省广州市白云区 嘉禾大山头六号"}}'
+2018-11-16 17:42:06:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ybd6Yodq_ZowiGj99vPT3PDlhmtpNMGq4rRvy4UK0qGfL0njupbTC91oA8W6JzrK_LfJPYrSxGrzQnfnWv83m-CuK9LIGeIfw3QuUk5w-qGfEoUZH_pB-CDeCQKezsyHkERGGNM8I_JvoOPZGMHhAHAAGB'
+2018-11-16 17:42:06:'{"touser":"omcwNwbmOpP7s3UdfXdZou0KjxtQ","msgtype":"text","text":{"content":"亲爱的朵朵， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为银卡会员 , 特此通知!
+您即可享有银卡会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=118&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-16 17:42:07:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ybd6Yodq_ZowiGj99vPT3PDlhmtpNMGq4rRvy4UK0qGfL0njupbTC91oA8W6JzrK_LfJPYrSxGrzQnfnWv83m-CuK9LIGeIfw3QuUk5w-qGfEoUZH_pB-CDeCQKezsyHkERGGNM8I_JvoOPZGMHhAHAAGB'
+2018-11-16 17:42:07:'{"touser":"omcwNwfT6NNNqVBdpwKefbhP1kNw","msgtype":"text","text":{"content":"买家购买的商品已经确认收货!
+
+订单号：
+SH20181107235840464780
+收货时间：2018-11-16 17:42
+商品详情：
+
+密媛人参阿胶膏(  单价: 398 数量: 1 总价: 398.00); 
+
+购买者信息:
+收件人: 宓小姐
+联系电话: 15099905423
+收货地址: 广东省深圳市福田区 沙头街道沙嘴中心街31号 美宜多"}}'
+2018-11-16 17:42:08:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_Ybd6Yodq_ZowiGj99vPT3PDlhmtpNMGq4rRvy4UK0qGfL0njupbTC91oA8W6JzrK_LfJPYrSxGrzQnfnWv83m-CuK9LIGeIfw3QuUk5w-qGfEoUZH_pB-CDeCQKezsyHkERGGNM8I_JvoOPZGMHhAHAAGB'
+2018-11-16 17:42:08:'{"touser":"omcwNwfT6NNNqVBdpwKefbhP1kNw","msgtype":"text","text":{"content":"买家购买的商品已经确认收货!
+
+订单号：
+SH20181109151811474626
+收货时间：2018-11-16 17:42
+商品详情：
+
+密媛理天使(  单价: 29.9 数量: 1 总价: 29.90); 
+
+购买者信息:
+收件人: 张梅花
+联系电话: 13006688007
+收货地址: 广东省深圳市宝安区 观澜镇观澜马坜老二新村西区30号。"}}'
+2018-11-18 17:20:08:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_B8GkDduMLtbsHPs-LU7Vc5BxACraMSb6d--wT7cj9qT53UtWZ13tUZXolwrAUQOe5tI0VF4lm7SNhEhpU5z5-iiE425au6qe2NkvKgOyjC_PGHabeeHYs6rv38369wkakvNti9VvZbFZhQXzBDChAGAHJI'
+2018-11-18 17:20:08:'{"touser":"oLy3A1ZIr-W9QvxoWfxy6ZpRHGl0","msgtype":"text","text":{"content":"亲爱的紫琳， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-18 17:20:11:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_B8GkDduMLtbsHPs-LU7Vc5BxACraMSb6d--wT7cj9qT53UtWZ13tUZXolwrAUQOe5tI0VF4lm7SNhEhpU5z5-iiE425au6qe2NkvKgOyjC_PGHabeeHYs6rv38369wkakvNti9VvZbFZhQXzBDChAGAHJI'
+2018-11-18 17:20:11:'{"touser":"oLy3A1SR4YTqI1lH3ccbZW1RcxKA","msgtype":"text","text":{"content":"亲爱的张， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-18 17:20:55:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_B8GkDduMLtbsHPs-LU7Vc5BxACraMSb6d--wT7cj9qT53UtWZ13tUZXolwrAUQOe5tI0VF4lm7SNhEhpU5z5-iiE425au6qe2NkvKgOyjC_PGHabeeHYs6rv38369wkakvNti9VvZbFZhQXzBDChAGAHJI'
+2018-11-18 17:20:55:'{"touser":"oLy3A1bD84JlLGr7-gWP-5TbsuZs","msgtype":"text","text":{"content":"亲爱的ℋ秀丽༊， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-18 17:25:04:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_B8GkDduMLtbsHPs-LU7Vc5BxACraMSb6d--wT7cj9qT53UtWZ13tUZXolwrAUQOe5tI0VF4lm7SNhEhpU5z5-iiE425au6qe2NkvKgOyjC_PGHabeeHYs6rv38369wkakvNti9VvZbFZhQXzBDChAGAHJI'
+2018-11-18 17:25:04:'{"touser":"oLy3A1dCzFxVj1e_0RM9vlF30ZqI","msgtype":"text","text":{"content":"亲爱的淑女ぅ不是姐的范er， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-18 17:25:07:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_B8GkDduMLtbsHPs-LU7Vc5BxACraMSb6d--wT7cj9qT53UtWZ13tUZXolwrAUQOe5tI0VF4lm7SNhEhpU5z5-iiE425au6qe2NkvKgOyjC_PGHabeeHYs6rv38369wkakvNti9VvZbFZhQXzBDChAGAHJI'
+2018-11-18 17:25:07:'{"touser":"oLy3A1Q8uhsoShl2ZpWMbqB6ub2k","msgtype":"text","text":{"content":"亲爱的逝去的青春， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-18 17:25:11:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_B8GkDduMLtbsHPs-LU7Vc5BxACraMSb6d--wT7cj9qT53UtWZ13tUZXolwrAUQOe5tI0VF4lm7SNhEhpU5z5-iiE425au6qe2NkvKgOyjC_PGHabeeHYs6rv38369wkakvNti9VvZbFZhQXzBDChAGAHJI'
+2018-11-18 17:25:11:'{"touser":"oLy3A1eWYAbZWaFZ--j772PbhI_8","msgtype":"text","text":{"content":"亲爱的青努， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-18 17:35:22:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_B8GkDduMLtbsHPs-LU7Vc5BxACraMSb6d--wT7cj9qT53UtWZ13tUZXolwrAUQOe5tI0VF4lm7SNhEhpU5z5-iiE425au6qe2NkvKgOyjC_PGHabeeHYs6rv38369wkakvNti9VvZbFZhQXzBDChAGAHJI'
+2018-11-18 17:35:22:'{"touser":"oLy3A1Rxvawa8En6rd5JBgzC6qtU","msgtype":"text","text":{"content":"亲爱的凉了海冷了天， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-18 17:35:24:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_B8GkDduMLtbsHPs-LU7Vc5BxACraMSb6d--wT7cj9qT53UtWZ13tUZXolwrAUQOe5tI0VF4lm7SNhEhpU5z5-iiE425au6qe2NkvKgOyjC_PGHabeeHYs6rv38369wkakvNti9VvZbFZhQXzBDChAGAHJI'
+2018-11-18 17:35:24:'{"touser":"oLy3A1WQTFZ83g4gBikacoACUNSQ","msgtype":"text","text":{"content":"亲爱的美容.美体.减肥.纹绣.美甲.艾灸， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-18 17:35:28:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_B8GkDduMLtbsHPs-LU7Vc5BxACraMSb6d--wT7cj9qT53UtWZ13tUZXolwrAUQOe5tI0VF4lm7SNhEhpU5z5-iiE425au6qe2NkvKgOyjC_PGHabeeHYs6rv38369wkakvNti9VvZbFZhQXzBDChAGAHJI'
+2018-11-18 17:35:28:'{"touser":"oLy3A1YViLEFjlDHOrBhu5QQLl9E","msgtype":"text","text":{"content":"亲爱的豆豆， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-18 17:36:09:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_B8GkDduMLtbsHPs-LU7Vc5BxACraMSb6d--wT7cj9qT53UtWZ13tUZXolwrAUQOe5tI0VF4lm7SNhEhpU5z5-iiE425au6qe2NkvKgOyjC_PGHabeeHYs6rv38369wkakvNti9VvZbFZhQXzBDChAGAHJI'
+2018-11-18 17:36:09:'{"touser":"oLy3A1W1OH53FrkAX6MSGm3Sh6Zo","msgtype":"text","text":{"content":"亲爱的， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-18 18:02:06:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_B8GkDduMLtbsHPs-LU7Vc5BxACraMSb6d--wT7cj9qT53UtWZ13tUZXolwrAUQOe5tI0VF4lm7SNhEhpU5z5-iiE425au6qe2NkvKgOyjC_PGHabeeHYs6rv38369wkakvNti9VvZbFZhQXzBDChAGAHJI'
+2018-11-18 18:02:06:'{"touser":"oLy3A1Q1QFC_MUjPZ5wHEChpZXsY","msgtype":"text","text":{"content":"亲爱的装鸵鸟的人， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为398会员 , 特此通知!
+您即可享有398会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=129&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-19 09:25:17:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_bnnd_995NNGq_GnjEzIANberVN8sQJVaKd4fBa2NqRATNGvMIvcW9vICHTpiYSZ-3VaGKxwlDgEM9rbtd5rVW70L-C1OIFcsJYQ05jvD3loSRID2y8QgWBJ06KJeJlwlqVBWQNZC00Jr10m3IAFfAGARJO'
+2018-11-19 09:25:17:'{"touser":"omcwNwecg_npwHLmtMbuwTNjjkJg","msgtype":"text","text":{"content":"亲爱的刘江勇13476726191， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为银卡会员 , 特此通知!
+您即可享有银卡会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=118&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-19 09:25:18:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_bnnd_995NNGq_GnjEzIANberVN8sQJVaKd4fBa2NqRATNGvMIvcW9vICHTpiYSZ-3VaGKxwlDgEM9rbtd5rVW70L-C1OIFcsJYQ05jvD3loSRID2y8QgWBJ06KJeJlwlqVBWQNZC00Jr10m3IAFfAGARJO'
+2018-11-19 09:25:18:'{"touser":"omcwNwfT6NNNqVBdpwKefbhP1kNw","msgtype":"text","text":{"content":"买家购买的商品已经确认收货!
+
+订单号：
+SH20181109104324364204
+收货时间：2018-11-19 09:25
+商品详情：
+
+如尚经典调养修肤水(  单价: 39.9 数量: 1 总价: 39.90); 
+
+购买者信息:
+收件人: 刘江勇
+联系电话: 13476726191
+收货地址: 广东省广州市白云区 嘉禾路望岗大山头二街6号"}}'
+2018-11-19 09:25:19:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_bnnd_995NNGq_GnjEzIANberVN8sQJVaKd4fBa2NqRATNGvMIvcW9vICHTpiYSZ-3VaGKxwlDgEM9rbtd5rVW70L-C1OIFcsJYQ05jvD3loSRID2y8QgWBJ06KJeJlwlqVBWQNZC00Jr10m3IAFfAGARJO'
+2018-11-19 09:25:19:'{"touser":"omcwNwcbjUhP2DO7MUuojT8Enn_M","msgtype":"text","text":{"content":"亲爱的明慧， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为银卡会员 , 特此通知!
+您即可享有银卡会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=118&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-19 09:25:19:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_bnnd_995NNGq_GnjEzIANberVN8sQJVaKd4fBa2NqRATNGvMIvcW9vICHTpiYSZ-3VaGKxwlDgEM9rbtd5rVW70L-C1OIFcsJYQ05jvD3loSRID2y8QgWBJ06KJeJlwlqVBWQNZC00Jr10m3IAFfAGARJO'
+2018-11-19 09:25:19:'{"touser":"omcwNwfT6NNNqVBdpwKefbhP1kNw","msgtype":"text","text":{"content":"买家购买的商品已经确认收货!
+
+订单号：
+SH20181109112550652408
+收货时间：2018-11-19 09:25
+商品详情：
+
+如尚经典调养修肤水(  单价: 39.9 数量: 1 总价: 39.90); 
+
+购买者信息:
+收件人: 李虹瑾
+联系电话: 13928738622
+收货地址: 广东省广州市白云区 人和镇和乐西街世联红璞 S1~812"}}'
+2018-11-19 18:21:25:'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx3ea587ec6ab21bee&secret=fcb28b993c80a5fb5d4c0f52db31ba67'
+2018-11-19 18:21:25:''
+2018-11-19 18:21:26:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_26_mqRgZ7SRovbvFkXwcs3Bru8JpMukeVJmQ2afxBG0-rW47FvTkmZnKs1lW8l2MeVgWQMmxbhsqBnVgY5qCnDPuGznzPDsi4IRCTryz9wStIAzK8ipq-6L9EEdwp-D4eMG_8VIPEr7y9zS_PPIfACAWWP'
+2018-11-19 18:21:26:'{"touser":"omcwNwaU6Huuu0WB2WBT9v2tfeAo","msgtype":"text","text":{"content":"亲爱的飞飞， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为银卡会员 , 特此通知!
+您即可享有银卡会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=118&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-19 18:21:26:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_26_mqRgZ7SRovbvFkXwcs3Bru8JpMukeVJmQ2afxBG0-rW47FvTkmZnKs1lW8l2MeVgWQMmxbhsqBnVgY5qCnDPuGznzPDsi4IRCTryz9wStIAzK8ipq-6L9EEdwp-D4eMG_8VIPEr7y9zS_PPIfACAWWP'
+2018-11-19 18:21:26:'{"touser":"omcwNwfT6NNNqVBdpwKefbhP1kNw","msgtype":"text","text":{"content":"买家购买的商品已经确认收货!
+
+订单号：
+SH20181110214815144006
+收货时间：2018-11-19 18:21
+商品详情：
+
+如尚经典调养修肤水(  单价: 39.9 数量: 1 总价: 39.90); 
+
+购买者信息:
+收件人: 高玥珂
+联系电话: 13533065197
+收货地址: 广东省广州市白云区 嘉禾路口大山头6号"}}'
+2018-11-19 18:21:27:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_26_mqRgZ7SRovbvFkXwcs3Bru8JpMukeVJmQ2afxBG0-rW47FvTkmZnKs1lW8l2MeVgWQMmxbhsqBnVgY5qCnDPuGznzPDsi4IRCTryz9wStIAzK8ipq-6L9EEdwp-D4eMG_8VIPEr7y9zS_PPIfACAWWP'
+2018-11-19 18:21:27:'{"touser":"omcwNwZbo1iwObjjzSgV2-0HSAmw","msgtype":"text","text":{"content":"亲爱的彭哥， 恭喜您成功升级！
+
+您会员等级从普通会员 升级为银卡会员 , 特此通知!
+您即可享有银卡会员的专属优惠及服务！
+<a href=\'http://s100.kemanduo.cc/app/index.php?i=118&c=entry&m=ewei_shopv2&do=mobile&r=member\'>点击进入查看充值订单详情</a>"}}'
+2018-11-19 18:21:27:'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=15_26_mqRgZ7SRovbvFkXwcs3Bru8JpMukeVJmQ2afxBG0-rW47FvTkmZnKs1lW8l2MeVgWQMmxbhsqBnVgY5qCnDPuGznzPDsi4IRCTryz9wStIAzK8ipq-6L9EEdwp-D4eMG_8VIPEr7y9zS_PPIfACAWWP'
+2018-11-19 18:21:27:'{"touser":"omcwNwfT6NNNqVBdpwKefbhP1kNw","msgtype":"text","text":{"content":"买家购买的商品已经确认收货!
+
+订单号：
+SH20181111185211409524
+收货时间：2018-11-19 18:21
+商品详情：
+
+如尚经典调养修肤水(  单价: 39.9 数量: 1 总价: 39.90); 
+
+购买者信息:
+收件人: 彭宣真
+联系电话: 18620252467
+收货地址: 广东省广州市白云区 嘉禾望岗乐寿北街47号维客佳店"}}'

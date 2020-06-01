@@ -1,0 +1,52 @@
+{template 'common/header'}
+<link href="{$_W['siteroot']}app/themes/xx_w/css/xui.css" rel="stylesheet">
+<style>
+	.x-item {
+		position: relative;
+		display: block;
+		font-size: 14px;
+		line-height:50px;
+		padding-left:10px;
+		color: #000;
+		padding-right:30px;
+		overflow: hidden;
+		white-space: nowrap;
+		-o-text-overflow: ellipsis;
+		text-overflow: ellipsis;
+	}
+	.x-item:before{
+		content: " ";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		height: 1px;
+		border-top: 1px solid #E6E6E6;
+	}
+	.x-item:after{
+		content: " ";
+		display: inline-block;
+		height: 10px;
+		width: 10px;
+		border-width: 1px 1px 0 0;
+		border-color: #C8C8CD;
+		border-style: solid;
+		-webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+		transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+		position: relative;
+		top: -2px;
+		position: absolute;
+		top: 50%;
+		margin-top: -4px;
+		right: 10px;
+	}
+
+</style>
+<div class="x-list">
+	{data module="site" func="site_article" cid="$cid" assign="result" return="true"}
+	{loop $result['list'] $index $row}
+	<a class="x-item" href="{$row['linkurl']}">{$row['title']}</a>
+	{/loop}
+</div>
+<div class="pager-position">{$result['pager']}</div>
+{template 'common/footer'}

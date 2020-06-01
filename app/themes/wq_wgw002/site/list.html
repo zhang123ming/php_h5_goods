@@ -1,0 +1,42 @@
+{template 'com/header'}
+<div class="wx_list_main">
+	{if !empty($_W['page']['footer'])}
+		{php $mbcs = explode(",",$_W['page']['footer'])}
+		{if !empty($mbcs[0])}
+			{php $_W['styles']['demopost_cid'] = $mbcs[0]}
+		{/if}
+		{if !empty($mbcs[1])}
+			{php $_W['styles']['multi_id'] = $mbcs[1]}
+		{/if}		
+	{/if}
+	<ul class="wechat_list" style="margin-bottom: 10px;">
+		{if empty($_W['styles']['list_pagesize'])}
+			{php $_W['styles']['list_pagesize'] = 10}
+		{/if}
+		{data module="site" func="site_article" cid="$cid" limit="$_W['styles']['list_pagesize']" assign="result" return="true"}
+		{if empty($result['list'])}
+			<span class="nopost">本分类下暂时没有文章，请稍后查看</span>
+		{/if}
+		{loop $result['list'] $row}
+		<li class="animated">
+			<span class="date">{php echo date("Y-m-d H:i:s", $row['createtime']);}</span>
+			<a href="{$row['linkurl']}{if !empty($_W['styles']['multi_id']) && $_W['styles']['multi_id']!='no'}&t={$_W['styles']['multi_id']}{/if}">
+				<h4>{$row['title']}</h4>
+				<span class="time">{php echo date("Y-m-d", $row['createtime']);}</span>
+				{if !empty($row['thumb'])}
+				<img src="{$row['thumb']}" class="tspic">
+				{/if}
+				{if !empty($row['description'])}
+				<p class="desc">{php echo cutstr($row['description'],50,1);}...</p>
+				{/if}
+				<span class="more">查看全文</span>
+			</a>
+		</li>
+		{/loop}
+	</ul>
+	<div class="pager-position">{$result['pager']}</div>
+</div>
+
+<a href="{if $_W['styles']['home_page'] =='1'}{php echo url('home/home')}{else}{$_W['styles']['home_page']}{/if}" class="backhome"><i class="fa fa-home"></i></a>
+
+{template 'com/footer'}

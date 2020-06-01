@@ -1,0 +1,41 @@
+{template '_header'}
+<div class="page-header">
+    <span class="text-primary">任务概述</span>
+</div>
+<div class="page-content">
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="ibox float-e-margins" style="border: 1px solid #e7eaec">
+                <div class="ibox-title">
+                    主动任务
+                    <a class="pull-right" href="{php echo webUrl('task2.record')}">更多统计 </a>
+                </div>
+                <div class="ibox-content">
+
+                    <div class="row">
+                        <div class="col-md-3 text-center">
+                            已领取
+                            <h2 class="no-margins"><span class="today-price small">{$task2S[0]}</span></h2>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            已完成
+                            <h2 class="no-margins"><span class="today-price small">{$task2S[1]}</span></h2>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            已失败
+                            <h2 class="no-margins"><span class="today-price small">{$task2S[2]}</span></h2>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            待完成
+                            <h2 class="no-margins"><span class="today-price small">{$task2S[3]}</span></h2>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+{template '_footer'}

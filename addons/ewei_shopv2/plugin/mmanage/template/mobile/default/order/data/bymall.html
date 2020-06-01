@@ -1,0 +1,94 @@
+{template 'mmanage/common'}
+
+<div class='fui-page fui-page-current order-detail-page'>
+    <div class="fui-header fui-header-success">
+        <div class="fui-header-left">
+            <a class="back btn-back" href="{php echo mobileUrl('mmanage/')}"></a>
+        </div>
+        <div class="title">销售统计</div>
+        <div class="fui-header-right"></div>
+    </div>
+    <!-- 顶部tab -->
+    
+    <div class='fui-content navbar'>
+        <div class="fui-cell-group" id="diydate" style="display:{if $_GPC['date']=='diy'}block{else}none{/if};">
+            <div class="fui-cell">
+                <div class="fui-cell-label">开始时间</div>
+                <div class="fui-cell-info">
+                    <input type="datetime-local" id="beginTime" class="fui-input" value="{$_GPC['beginTime']}"/>
+                </div>
+            </div>
+            <div class="fui-cell">
+                <div class="fui-cell-label">结束时间</div>
+                <div class="fui-cell-info">
+                    <input type="datetime-local" id="endTime" class="fui-input" value="{$_GPC['endTime']}"/>
+                </div>
+            </div>
+        </div>
+        <!-- 搜索框 -->
+        <div class="fui-search">
+            <div class="inner">
+                <i class="icon icon-search"></i>
+                <div class="select">
+                    <select id="date" onchange="selectDate();">
+                        <option value="">订单日期</option>
+                        <option value="today" {if $_GPC['date']=='today'}selected{/if}>今天</option>
+                        <option value="yestoday" {if $_GPC['date']=='yestoday'}selected{/if}>昨天</option>
+                        <option value="month" {if $_GPC['date']=='month'}selected{/if}>本月</option>
+                        <option value="preMonth" {if $_GPC['date']=='preMonth'}selected{/if}>上月</option>
+                        <option value="diy" {if $_GPC['date']=='diy'}selected{/if}>自定义</option>
+                    </select>
+                </div>
+
+                <input value="{$_GPC['keyword']}" placeholder="输入商品关键字" id="keywords" />
+            </div>
+            <div class="fui-search-btn" onclick="search();">搜索</div>
+        </div>
+        <!-- 订单列表 -->
+        {loop $list $row}
+        <div class="fui-list-group">
+            <div class="fui-list goods-list">
+                <div class="fui-list-media">
+                    <img class="round" src="{$row['thumb']}" onerror="this.src='../addons/ewei_shopv2/static/images/nopic100.jpg';" />
+                </div>
+                <div class="fui-list-inner">
+                    <div class="title">{$row['title']}</div>
+                    <div class="subtitle">
+                        <div class="total">{if $row['optionname']}规格: {$row['optionname']}{/if}</div>
+                    </div>
+                </div>
+                <div class="fui-list-angle auto">￥<span class="marketprice">{$row['marketprice']}<br> x{$row['count']}</span></div>
+            </div>
+            
+
+            <div class="fui-list-group-title text-right">
+                <small class="status">小计:<span class="text-success">￥{$row['priceTotal']}</span></small>
+            </div>
+
+            <div class="fui-list-group-title text-right big">
+                <!--a class="btn btn-default btn-sm" href="{php echo mobileUrl('mmanage/order/detail')}&id={$row['id']}">查看详情</a-->
+            </div>
+        </div>
+        {/loop}
+    </div>  
+</div>
+<script type="text/javascript">
+function selectDate() {
+    var date = $("#date").val();
+    if(date=="diy"){
+        $("#diydate").css('display','block');
+    }else{
+        $("#diydate").css('display','none');    
+    }
+    //window.location.href='{php echo mobileUrl('mmanage/order/data/bymall')}&date='+date+'&keyword='+key;
+}
+function search() {
+    var key = $("#keywords").val();
+    var date = $("#date").val();
+    var beginTime = $("#beginTime").val();
+    var endTime = $("#endTime").val();
+    window.location.href='{php echo mobileUrl('mmanage/order/data/bymall')}&date='+date+'&beginTime='+beginTime+'&endTime='+endTime+'&keyword='+key;
+}
+</script>
+{template '_footer'}
+<!--yi fu yuan ma-->

@@ -1,0 +1,253 @@
+<?php defined('IN_IA') or exit('Access Denied');?><?php (!empty($this) && $this instanceof WeModuleSite) ? (include $this->template('_header', TEMPLATE_INCLUDEPATH)) : (include template('_header', TEMPLATE_INCLUDEPATH));?>
+<script>document.title = "<?php  echo $this->set['texts']['center']?>"; </script>
+<style>
+    .fui-cell-group .fui-cell .fui-cell-icon{
+        width: auto;
+    }
+    .fui-cell-group .fui-cell .fui-cell-icon img{
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+    .fui-cell-group .fui-cell.no-border{
+        /*padding-top: 0;*/
+    }
+    .fui-cell-group .fui-cell.no-border .fui-cell-info{
+        font-size: .6rem;
+        color: #999;
+    }
+    .verify-pop {
+    position: fixed;
+}
+
+.verify-pop .qrcode {
+    width: 250px;
+    margin-left: -125px;
+    border-radius: 0.5rem;
+    height: auto;
+    overflow: hidden;
+}
+
+.verify-pop.pop .qrcode {
+    width: 70%;
+    height: 15rem;
+    margin-left: -35%;
+    overflow: hidden;
+    display: block;
+}
+
+.verify-pop.pop .qrcode .inner {
+    padding: 0.5rem;
+    height: 12rem;
+}
+
+.verify-pop.pop .qrcode .inner .title {
+    text-align: center;
+    font-size: 1rem;
+    height: 1.5rem;
+}
+
+.verify-pop.pop .qrcode .inner .text {
+    width: 100%;
+    word-wrap: break-word;
+    font-size: 0.7rem;
+    color: #ef4f4f;
+    line-height: 1rem;
+    height: 10rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.fui-cell-info .title{
+    font-size: .7rem;
+    line-height: 1.5;
+}
+.fui-cell-info .subtitle{
+    font-size: .6rem;
+    line-height: 1.5;
+    color: #999;
+}
+.fui-list.goods-selected{
+    background: #f9f9f9;
+}
+.fui-cell-group{
+    margin: 0.3rem;
+    border-radius: 5px;
+}
+</style>
+<div class='fui-page  fui-page-current'>
+    <div class="fui-header">
+        <div class="fui-header-left">
+            <a class="back"></a>
+        </div>
+        <div class="title"><?php  echo $this->set['texts']['withdraw']?></div>
+
+    </div>
+    <div class='fui-content' >
+        <div class='fui-cell-group'>
+
+            <div class='fui-cell no-border'style="padding-top: 1rem">
+                <div class='fui-cell-info' style="font-size: .7rem;color: #666;">可提现<?php  echo $this->set['texts']['commission']?></div><span style='font-size:1rem;color: #ff8000;' id='current'><?php  echo $credit3;?></span>
+            </div>
+            <div class='fui-cell no-border'style="padding-top: 1rem">
+                <div style="font-size: 0.7rem;color: #666; padding-right:15px;">本次提现<?php  echo $this->set['texts']['commission']?></div>
+                <div><input type='number' id='input' class='fui-input' style='font-size:0.7rem;' placeholder="请输入..." required="required"/></div>
+            </div>
+        </div>
+        <div class='fui-cell-group'>
+            <div class="fui-cell">
+                <div class="fui-cell-label" style="width: 120px;"><span class="re-g">提现方式</span></div>
+            </div>
+            <?php  if(!empty($type_array['0'])) { ?>
+            <div class="fui-cell applyradio">
+                <div class="fui-cell-icon"><img src="<?php echo EWEI_SHOPV2_STATIC;?>images/ye.png" alt=""></div>
+                <div class="fui-cell-info">
+                    <?php  echo $this->set['texts']['withdraw']?>到余额
+                </div>
+                <div class="fui-cell-remark noremark"><input name="1" type="radio" class="fui-radio fui-radio-danger"   data-type="0" <?php  if(!empty($type_array[0]['checked']) ) { ?>checked="cheched  "id="applytype"<?php  } ?>></div>
+            </div>
+            <?php  } ?>
+            <?php  if(!empty($type_array['1'])) { ?>
+            <div class="fui-cell applyradio">
+                <div class="fui-cell-icon"><img src="<?php echo EWEI_SHOPV2_STATIC;?>images/wx.png" alt=""></div>
+                <div class="fui-cell-info">
+                    <?php  echo $this->set['texts']['withdraw']?>到微信钱包
+                </div>
+                <div class="fui-cell-remark noremark"><input   name="1" type="radio" class="fui-radio fui-radio-danger"  data-type="1" <?php  if(!empty($type_array[1]['checked']) ) { ?>checked="cheched  "id="applytype"<?php  } ?>></div>
+            </div>
+            <?php  } ?>
+            <?php  if(!empty($type_array['2'])) { ?>
+            <div class="fui-cell applyradio">
+                <div class="fui-cell-icon"><img src="<?php echo EWEI_SHOPV2_STATIC;?>images/zfb.png" alt=""></div>
+                <div class="fui-cell-info">
+                    <?php  echo $this->set['texts']['withdraw']?>到支付宝
+                </div>
+                <div class="fui-cell-remark noremark"><input  name="1"  type="radio" class="fui-radio fui-radio-danger" data-type="2"  <?php  if(!empty($type_array[2]['checked']) ) { ?>checked="cheched  "id="applytype"<?php  } ?>></div>
+            </div>
+            <?php  } ?>
+            <?php  if(!empty($type_array['2'])) { ?>
+                    <div class="fui-cell ab-group" <?php  if(empty($type_array[2]['checked']) || empty($type_array[3]['checked']) ) { ?> style="display: none;"<?php  } ?>>
+                    <div class="fui-cell-label" style="width: 120px;">姓名</div>
+                    <div class="fui-cell-info"><input type="text" id="realname" name="realname" placeholder="请输入姓名" class='fui-input' value="<?php  echo $last_data['realname'];?>" max="25"/></div>
+                </div>
+                <?php  } ?>
+
+                <?php  if(!empty($type_array['2'])) { ?>
+                <div class="fui-cell alipay-group" <?php  if(empty($type_array[2]['checked'])) { ?>style="display: none;"<?php  } ?>>
+                <div class="fui-cell-label" style="width: 120px;">支付宝帐号</div>
+                <div class="fui-cell-info"><input type="text" id="alipay" name="alipay" placeholder="请输入支付宝账号" class='fui-input' value="<?php  echo $last_data['alipay'];?>" max="25"/></div>
+            </div>
+
+            <div class="fui-cell alipay-group" <?php  if(empty($type_array[2]['checked'])) { ?>style="display: none;"<?php  } ?>>
+            <div class="fui-cell-label" style="width: 120px;">确认帐号</div>
+            <div class="fui-cell-info"><input type="text" id="alipay1" name="alipay1"placeholder="请确认帐号" class='fui-input' value="<?php  echo $last_data['alipay'];?>" max="25"/></div>
+        </div>
+        <?php  } ?>
+        <?php  if(!empty($type_array['3'])) { ?>
+            <div class="fui-cell applyradio">
+                <div class="fui-cell-icon"><img src="<?php echo EWEI_SHOPV2_STATIC;?>images/yinhangka.png" alt=""></div>
+                <div class="fui-cell-info">
+                    <?php  echo $this->set['texts']['withdraw']?>到银行卡
+                </div>
+                <div class="fui-cell-remark noremark"><input  name="1"  type="radio"class="fui-radio fui-radio-danger" data-type="3"  <?php  if(!empty($type_array[3]['checked']) ) { ?>checked="cheched  "id="applytype"<?php  } ?>></div>
+            </div>
+        <?php  } ?>
+
+            <?php  if(!empty($type_array['3'])) { ?>
+            <div class="fui-cell ab-group2" <?php  if(empty($type_array[3]['checked']) || empty($type_array[3]['checked']) ) { ?>style="display: none;"<?php  } ?>>
+            <div class="fui-cell-label" style="width: 120px;">姓名</div>
+            <div class="fui-cell-info"><input type="text" id="realname2" name="realname" placeholder="请输入姓名" class='fui-input' value="<?php  echo $last_data['realname'];?>" max="25"/></div>
+            </div>
+            <?php  } ?>
+            <?php  if(!empty($type_array['3'])) { ?>
+            <div class="fui-cell bank-group" <?php  if(empty($type_array[3]['checked'])) { ?>style="display: none;"<?php  } ?>>
+                <div class="fui-cell-label" style="width: 120px;"><span class="re-g">选择银行</span></div>
+                <div class="fui-cell-info">
+
+                    <select id="bankname">
+                        <?php  if(is_array($banklist)) { foreach($banklist as $key => $value) { ?>
+                        <option value="<?php  echo $bankname;?>" <?php  if(!empty($last_data) && $last_data['bankname'] == $value['bankname']) { ?>selected<?php  } ?>><?php  echo $value['bankname'];?></option>
+                        <?php  } } ?>
+                    </select>
+                </div>
+                <div class="fui-cell-remark"></div>
+            </div>
+
+            <div class="fui-cell bank-group" <?php  if(empty($type_array[3]['checked'])) { ?>style="display: none;"<?php  } ?>>
+                <div class="fui-cell-label" style="width: 120px;">银行卡号</div>
+                <div class="fui-cell-info"><input type="text" id="bankcard" name="bankcard"placeholder="请输入银行卡号" class='fui-input' value="<?php  echo $last_data['bankcard'];?>" max="25"/></div>
+            </div>
+
+            <div class="fui-cell bank-group" <?php  if(empty($type_array[3]['checked'])) { ?>style="display: none;"<?php  } ?>>
+                <div class="fui-cell-label" style="width: 120px;">确认卡号</div>
+                <div class="fui-cell-info"><input type="text" id="bankcard1" name="bankcard1`" placeholder="请确认卡号" class='fui-input' value="<?php  echo $last_data['bankcard'];?>" max="25"/></div>
+            </div>
+            <?php  } ?>
+
+        </div>
+        <?php  if($set['open_withdrawprotocol']==1) { ?>
+        <div class="fui-cell-group">
+                <div class="fui-cell small ">
+                    <div class="fui-cell-info" style="height:1rem;line-height: 1rem;">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" class="fui-radio fui-radio-success" id="agree"  /> 我已经阅读并了解了<a id="btn-apply" style="color:#337ab7;">【<?php  echo $set['paytitle']?>】</a>
+                        </label>
+
+                    </div>
+                </div>
+
+        </div>
+        <div class="pop-apply-hidden" style="display: none;">
+            <div class="verify-pop pop">
+                <div class="close"><i class="icon icon-roundclose" style="font-size: 1.5rem;"></i></div>
+                <div class="qrcode" style="width:90%;height:auto;max-height:30rem;margin-left: -45%;">
+                    <div class="inner" style="height: auto;">
+                        <div class="title" style="font-size: 15px;"><?php  echo $set['paytitle']?></div>
+                        <div class="text" style="height: auto;max-height: 24rem;"><?php  echo $set['paycontent']?></div>
+                    </div>
+                    <div class="inner-btn" style="padding: 0.5rem;">
+                        <div class="btn btn-warning" style="width: 100%; margin: 0;">我已阅读</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php  } ?>
+        <a class='btn btn-warning mtop block btn-submit <?php  if(!$cansettle) { ?>disabled<?php  } ?>' <?php  if(!$cansettle) { ?>stop=1<?php  } ?> data-type="1" style="background:<?php  echo $pluginset['subject']['background']?>;margin:0.3rem;" >确认</a>
+
+            <div class='fui-cell-group' style="background: transparent;padding-top: 1rem;padding-bottom: 1rem; ">
+                <div class='fui-cell no-border'>
+                    <div class='fui-cell-info'>详细说明：</div>
+                </div>
+                <?php  if(!empty($set_array['charge'])) { ?>
+                <div class='fui-cell no-border charge-group' >
+                    <div class='fui-cell-info'>佣金提现<?php  echo $this->set['texts']['commission_charge']?> <?php  echo $set_array['charge'];?>% (<span id="deduct" class="text-warning">0</span>)</div>
+                </div>
+                <?php  } ?>
+                <div class='fui-cell no-border charge-group'>
+                    <div class='fui-cell-info'>本次提现实际到账佣金 <span class="text-warning" id="realmoney"></span></div>
+                </div>
+                <?php  if($set['withdrawtype']) { ?>
+                <div class='fui-cell no-border charge-group'>
+                    <div class='fui-cell-info'>注意：提现是<span class="text-warning"><?php  echo $set['withdrawtype'];?></span>的倍数</div>
+                </div>
+                <?php  } ?>
+                <?php  if($set['cashnum']) { ?>
+                <div class='fui-cell no-border charge-group'>
+                    <div class='fui-cell-info'>提醒：每月可提现次数为<span class="text-warning"><?php  echo $set['cashnum'];?></span>次</div>
+                </div>
+                <?php  } ?>
+            </div>
+    </div>
+    <script language='javascript'>
+        require(['../addons/ewei_shopv2/plugin/commission/static/js/withdraw2.js'], function (modal) {
+            modal.init({
+                withdraw:<?php  echo floatval($withdraw)?>,
+                ismultiple:<?php  echo $ismultiple;?>,
+                charge:<?php  echo $charge_num;?>,
+                withdrawtype:<?php  echo floatval($withdrawtype)?>,
+                open_withdrawprotocol:'<?php  echo $set["open_withdrawprotocol"]?>',
+                uniacid:'<?php  echo $_W['uniacid']?>'
+            });
+        });
+    </script>
+</div>
+
+<?php (!empty($this) && $this instanceof WeModuleSite) ? (include $this->template('_footer', TEMPLATE_INCLUDEPATH)) : (include template('_footer', TEMPLATE_INCLUDEPATH));?>

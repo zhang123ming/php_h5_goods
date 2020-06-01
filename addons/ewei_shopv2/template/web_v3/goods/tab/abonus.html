@@ -1,0 +1,46 @@
+    <div class="region-goods-details row">
+        <div class="region-goods-left col-sm-2">
+            区域代理
+        </div>
+        <div class="region-goods-right col-sm-10">
+             <div class="form-group">
+                <label class="col-sm-2 control-label">省级分红</label>
+                <div class="col-sm-6 col-xs-12">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="1" name="abonus[bonus]" {if $abonus['bonus']==1}checked{/if} />启用独立区域代理分红
+                    </label>
+                     <span class="help-block">如果勾选，该商品按照以下参数进行区域分红</span>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">省级分红</label>
+                <div class="col-sm-6 col-xs-12">
+                    <div class="input-group">
+                        <input type="text" name="abonus[bonus1]" placeholder="请填写数值" class="form-control" value="{php echo $abonus['bonus1']}" />
+                    </div>
+                </div>
+            </div>
+             <div class="form-group">
+                <label class="col-sm-2 control-label">市级分红</label>
+                <div class="col-sm-6 col-xs-12">
+                    <div class="input-group">
+                        <input type="text" name="abonus[bonus2]" placeholder="请填写数值" class="form-control" value="{php echo $abonus['bonus2']}" />
+                    </div>
+                </div>
+            </div>
+             <div class="form-group">
+                <label class="col-sm-2 control-label">区级分红</label>
+                <div class="col-sm-6 col-xs-12">
+                    <div class="input-group">
+                        <input type="text" name="abonus[bonus3]" placeholder="请填写数值" class="form-control" value="{php echo $abonus['bonus3']}" />
+                        
+                    </div>
+                     <span class="help-block">填写示例：若值为：10，表示该商品对应区域分红为10元； <br>若值为：10%，表示该商品对应的区域分红按价格的10%进行结算</span>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+<!--www-efwww-com-->

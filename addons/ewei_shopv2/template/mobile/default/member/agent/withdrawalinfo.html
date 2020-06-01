@@ -1,0 +1,171 @@
+{template '_header'}
+{template 'commission/common'}
+<div class='fui-page  fui-page-current'>
+    <div class="fui-header">
+		<div class="fui-header-left">
+			<a class="back" onclick='location.back()'></a>
+		</div>
+		<div class="title">代理信息</div>
+		<div class="fui-header-right">&nbsp;</div>
+	</div>
+
+	<div class='fui-content' style='margin-top:5px;'>
+		<style type="text/css">
+			.fui-list-inner {font-size: 0.75rem;}
+			.fui-cell-group .fui-cell {padding: 0.7rem 0.5rem;}
+			.fui-cell-group .fui-cell .fui-cell-label {padding-left: 0;}
+			.fui-list-media img {width: 2.5rem; height: 2.5rem;}
+			#file-avatar {opacity: 0; position: absolute; top:0; left: 0; bottom: 0; right: 0; z-index: 9; background: red; width: 100%;}
+		</style>
+			<div class="fui-list-group">			
+				<div class="fui-list">
+					<div class="fui-cell-label">会员ID:</div>
+					<div class="fui-input">
+						{ifp 'member.list.edit'}
+						{php echo tpl_form_field_editor(array('name'=>'data[id]', 'value'=>$member['id']))}
+						{else}
+							<div class='form-control-static'>{$member['id']}</div>
+						{/if}
+					</div>
+				</div>
+			</div>	
+
+			<div class="fui-cell-group">
+				<div class="fui-cell must ">
+					<div class="fui-cell-label ">真实姓名</div>
+					<div class="fui-cell-info"><input type="text" class='fui-input' id='realname' data-wechat="{$member['nickname_wechat']}" placeholder="请输入您的真实姓名"  value="{$member['realname']}" /></div>
+				</div>
+			</div>
+			<div class="fui-cell-group">
+				<div class="fui-cell must">
+					<div class="fui-cell-label">手机号</div>
+					<div class="fui-cell-info"><input type="text" maxlength="11" class='fui-input' name="mobile"  value="{$member['mobile']}"  id='mobile' oninput="value=value.replace(/[^\d]/g,'')"  data-wechat="{$member['nickname_wechat']}" placeholder="请输入您的手机号"  /></div>
+					
+				</div>
+			</div>
+			<div class="fui-cell-group">
+				<div class="fui-cell must ">
+					<div class="fui-cell-label ">开户银行</div>
+					<div class="fui-cell-info"><input type="text" class='fui-input' id='number' data-wechat="{$member['nickname_wechat']}" placeholder="请输入您的开户银行"  value="{$member['number']}" /></div>
+				</div>
+			</div>
+			<div class="fui-cell-group">
+				<div class="fui-cell must ">
+					<div class="fui-cell-label ">开户支行</div>
+					<div class="fui-cell-info"><input type="text" class='fui-input' id='opening' data-wechat="{$member['nickname_wechat']}" placeholder="请输入您的开户行"  value="{$member['opening']}" /></div>
+				</div>
+			</div>
+			<div class="fui-cell-group">
+				<div class="fui-cell must ">
+					<div class="fui-cell-label ">银行卡号</div>
+					<div class="fui-cell-info"><input type="text" class='fui-input'  oninput="value=value.replace(/[^\d]/g,'')" id='bankcard' data-wechat="{$member['nickname_wechat']}" placeholder="请输入您的银行卡号"  value="{$member['bankcard']}" /></div>
+				</div>
+			</div>
+			<div class="fui-cell-group">
+				<div class="fui-cell must ">
+					<div class="fui-cell-label ">公司</div>
+					<div class="fui-cell-info"><input type="text" class='fui-input' id='branch_name' data-wechat="{$member['nickname_wechat']}" placeholder="请输入您所在的公司"  value="{$member['branch_name']}" /></div>
+				</div>
+			</div>
+			<div class="fui-cell-group">
+				<div class="fui-cell must ">
+					<div class="fui-cell-label ">部门</div>
+					<div class="fui-cell-info"><input type="text" class='fui-input' id='detp_name' data-wechat="{$member['nickname_wechat']}" placeholder="请输入您所在的部门"  value="{$member['detp_name']}" /></div>
+				</div>
+			</div>
+			<div class="fui-cell-group">
+				<div class="fui-cell must ">
+					<div class="fui-cell-label ">组</div>
+					<div class="fui-cell-info"><input type="text" class='fui-input' id='group_name' data-wechat="{$member['nickname_wechat']}" placeholder="请输入您所在的组"  value="{$member['group_name']}" /></div>
+				</div>
+			</div>
+			<!--<p align="senter" style="color:#FF0000;">* 代理佣金月结，每月20日打款到银行卡</p>-->
+			
+
+		<div style="padding-top: 1rem;">
+
+			<div id='bindsubmit' class='btn btn-success block'>保存</div>
+		</div>
+	</div>
+	<script language='javascript'>
+		require(['biz/member/info'], function (modal) {
+		  	modal.initFace({});
+		  	modal.initPost({new_area: {php echo $new_area}, address_street: {php echo $address_street}});
+		});
+	</script>
+	<script language='javascript' type="text/javascript">
+
+        $('#bindsubmit').click(function() {
+
+            if ($('#bindsubmit').attr('stop')) {
+                return
+            }
+            if ($('#realname').isEmpty()) {
+                FoxUI.toast.show('真实姓名不能为空');
+                return
+            }
+            if (!$('#mobile').isMobile()) {
+                FoxUI.toast.show('请输入11位手机号码');
+                return
+            }
+
+            if ($('#bankcard').isEmpty()) {
+                FoxUI.toast.show('银行卡号不能为空');
+                return
+            }
+
+            if ($('#opening').isEmpty()) {
+                FoxUI.toast.show('开户行不能为空');
+                return
+            }
+            if ($('#number').isEmpty()) {
+                FoxUI.toast.show('开户银行不能为空');
+                return
+            }
+
+            if ($('#branch_name').isEmpty()) {
+                FoxUI.toast.show('所在公司不能为空');
+                return
+            }
+
+            if ($('#detp_name').isEmpty()) {
+                FoxUI.toast.show('所在部门不能为空');
+                return
+            }
+
+            if ($('#group_name').isEmpty()) {
+                FoxUI.toast.show('所在组不能为空');
+                return
+            }
+
+            $('#bindsubmit').html('正在绑定...').attr('stop', 1);
+            $.post("{php echo mobileUrl('member/agent/withdrawalinfo','',true)}", {
+                mobile: $('#mobile').val(),
+                bankcard: $('#bankcard').val(),
+                opening: $('#opening').val(),
+                number: $("#number").val(),
+                branch_name: $("#branch_name").val(),
+                detp_name: $("#detp_name").val(),
+                group_name: $("#group_name").val(),
+                realname: $("#realname").val(),
+
+            }, function(b) {
+            	if (b.status == '1') {
+                    alert("提交成功！");
+                	window.location.href = "{php echo mobileUrl('member/agent')}";
+                    return
+                }
+                if (b.status == 0) {
+                    FoxUI.toast.show(b.result.message);
+                    $('#bindsubmit').html('立即绑定').removeAttr('stop');
+                    return
+                }
+                alert("提交成功！");
+                window.location.href = "{php echo mobileUrl('member/agent')}";
+            }, 'json')
+        });
+    </script>
+    
+
+</div>
+{template '_footer'}

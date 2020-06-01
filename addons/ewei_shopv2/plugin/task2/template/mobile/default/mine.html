@@ -1,0 +1,50 @@
+{template '_header'}
+<link rel="stylesheet" type="text/css" href="../addons/ewei_shopv2/plugin/task/static/css/task.css?v={php echo time();}"/>
+<link rel="stylesheet" type="text/css" href="../addons/ewei_shopv2/plugin/task/static/css/iconfont.css?v={php echo time();}"/>
+
+<title>我的中心</title>
+<div class="fui-page">
+    <div class="fui-header">
+        <div class="fui-header-left">
+            <a class="back"></a>
+        </div>
+        <div class="title">我的中心</div>
+        <div class="fui-header-right">
+            <a href="{php echo mobileUrl('')}">首页</a>
+        </div>
+    </div>
+    <div class="fui-content">
+        <div class="taskhead" style="background: url({php echo tomedia($set);}) no-repeat;">
+            <img src="{$info['avatar']}" alt="" />
+            <div class="title">{$info['nickname']}</div>
+        </div>
+        <div class="tasktabs">
+            <a href="{php echo mobileUrl('task2.mine',array('type'=>'favorite'))}" class="external" style="{if $_GPC[type]=='favorite'}color: red;{/if}">
+                <i class="iconfont icon-jilu"></i>关注记录
+            </a>
+           <!--  <a href="{php echo mobileUrl('task2.mine',array('type'=>'mytask'));}" class="external" style="{if $_GPC[type]=='mytask'}color: red;{/if}">
+                <i class="iconfont icon-gift"></i>我的任务
+            </a> -->
+        </div>
+        {if empty($list)}
+        <div style="height: 7rem;line-height:7rem;width: 100%;text-align: center;color: #d0d0d0;font-size: 1rem">暂时没有任何项目</div>
+        {/if}
+        <div class="task-list-group">
+            {loop $list $li}
+            <div class="task-list">
+                <a href="{php echo mobileUrl('task2.detail',array('id'=>$li['taskid']))}" class="task-list-media">
+                    <img src="{$li['taskimage']}" alt="" />
+                </a>
+                <a href="{php echo mobileUrl('task2.detail',array('id'=>$li['taskid']))}" class="task-list-inner">
+                    <div class="title">{$li['tasktitle']}</div>
+                </a>
+                <div class="task-list-right">
+                    <a class="pickit" data-id="{$li['id']}" href="{php echo mobileUrl('task2.comment',array('taskid'=>$li[taskid]))}">去评价</a>
+                </div>
+                <div class="task-list-mask"></div>
+            </div>
+            {/loop}
+        </div>
+    </div>
+</div>
+{template '_footer'}

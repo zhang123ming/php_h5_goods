@@ -1,0 +1,45 @@
+{template 'common/header'}
+<link href="../app/themes/yihudong_3D/a/list.css" rel="stylesheet" type="text/css" />
+<style>
+{$_W['styles']['css']}
+</style>
+
+<div id="listhome1" >
+
+{template 'site/nav_top'}
+
+
+
+
+<div id="overlay"></div>
+
+
+<div class="Listpage">
+
+    <div id="todayList">
+<ul class="todayList">
+
+{data func="site_article" cid=$cid return="true" assign="result"}
+  {loop $result['list'] $row}    
+<li>
+<a href="{if !empty($row['linkurl'])}{$row['linkurl']}{else}{php echo $this->createMobileUrl('detail', array('name' => 'detail', 'id' => $row['id'], 'weid' => $_W['weid']))}{/if}">
+<div class="img">{if $row['thumb']}<img src="{$row['thumb']}"  class="pull-right thumb" onerror="this.parentNode.removeChild(this)"/>{/if}</div>
+<h2>{$row['title']}</h2>
+<p class="onlyheight">{$row['description']}</p>
+<div class="commentNum"></div>
+</a>
+</li>
+ {/loop}
+
+ 
+</ul>
+</div>
+
+
+</div>
+
+</div>
+
+
+
+{template 'common/footer'}

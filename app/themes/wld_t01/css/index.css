@@ -1,0 +1,84 @@
+
+@charset "utf-8";
+/* CSS Document */
+html{ font-size:62.5%!important;}
+body, div, ol, dl, dt, dd, ul, li, table, tr, td, h1, h2, h3, h4, h5, h6, p, form, input, button, img, strong, em { padding:0px; margin:0px; border:0px; font-style:normal;}
+li, dd, dt { list-style-type:none;}
+ol, ul, dl { list-style:none;}
+img { vertical-align:top; }
+a{ color:#231f20; text-decoration:none; outline:0;}
+::-webkit-input-placeholder { color:#ccc; } 
+input:-moz-placeholder { color:#ccc; }
+button::-moz-focus-inner, input::-moz-focus-inner { border:0 none; margin:0; padding:0;}
+input, select, option, button, textarea { font-size: 100%; vertical-align:middle; outline:0 none; border-radius:0px; border:none;}
+
+.clear{ clear:both; height:0; width:100%;}
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+.clearfix{zoom: 1; clear:both;}
+.left{ float:left;}
+.right{ float:right;}
+body { font-family:"Microsoft Yahei","Tahoma","SimSun";	font-size:0.7em;color:#333; -webkit-tap-highlight-color:rgba(0, 0, 0, 0); margin:0 auto;}
+
+html,body {
+    height: 100%;
+}
+
+@media screen and (max-width: 1080px){
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+}
+@media screen and (min-width: 1081px){
+    .swiper-container {
+        width: 530px;
+        height: 100%;
+        margin: 0 auto;
+    }
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.swiper-slide {
+    width:100%;
+    height:100%;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.list_d{
+    z-index:999;
+    position: absolute;
+    top: 68%;
+    left: 0;
+	width:100%;
+}
+.list_d a{text-decoration:none;}
+
+.btn_music {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: url('../images/play.png') no-repeat center center;
+    background-size: 100% auto;
+    position: absolute;
+    z-index: 100;
+    left: 15px;
+    top: 20px;
+}
+.btn_music.on {
+    background-image: url("../images/stop.png");
+}

@@ -1,0 +1,419 @@
+{template '_header'}
+<div class="page-header">当前位置：<span class="text-primary">基本设置</span></div>
+<div class="page-content">
+    <form class="form-horizontal form-validate"  role="form" method="post" enctype="multipart/form-data" >
+        <div class="form-group">
+            <label class="col-lg control-label">条件</label>
+            <div class="col-sm-9 col-xs-12" >
+                {ife 'sale.coupon' $item}
+                <label class="radio-inline coupon-radio">
+                    <input type="radio" name="type" value="0" {if $item['type'] == 0}checked="true"{/if} onclick="$('.selectgoods').hide();$('.pay_money').show();" /> 购买满
+                </label>
+                <label class="radio-inline coupon-radio">
+                    <input type="radio" name="type" value="1" {if $item['type'] == 1}checked="true"{/if} onclick="$('.selectgoods').show();$('.pay_money').hide();" /> 购买指定商品
+                </label>
+
+                {else}
+                    <div class='form-control-static'>
+                    {if $item['limitgoodtype']==0}不添加商品限制
+                        {else if $item['limitgoodtype']==1}允许以下商品使用
+                    {/if}
+                </div>
+                {/if}
+            </div>
+        </div>
+        <div class="form-group pay_money">
+             <label class="col-lg control-label must">购物满</label>
+            <div class="col-sm-9 col-xs-12">
+                {ifp 'lottery.edit'}
+                <input type="number" class="form-control valid" name="pay_money" value="0" placeholder="0" aria-invalid="false" aria-describedby="pay_money-error">
+                {else}
+                <div class='form-control-static'>{$set['keyword']}</div>
+                {/if}
+            </div>
+        </div>
+
+        <div class="form-group selectgoods" {if $item['type']!=1&&$item['type']!=2}style="display:none"{/if}>
+
+            {ife 'sale.coupon' $item}
+                <div class="" >
+                    <label class="col-lg control-label">选择商品</label>
+                    <div class="col-sm-9 col-xs-12">
+                        <div class="">
+                            <?php echo tpl_selector('goodsid',array(
+                            'preview'=>true,
+                            'readonly'=>true,
+                            'multi'=>0,
+                            'value'=>$item['title'],
+                            'url'=>webUrl('sale/coupon/querygoods'),
+                            'items'=>$goods,
+                            'buttontext'=>'选择商品',
+                            'placeholder'=>'请选择商品')
+                            )
+                            ?>
+                        </div>
+                        <span class='help-block'>添加限制的商品必须已上架,并且不属于砍价商品.</span>
+                    </div>
+                </div>
+            {else}
+                {if !empty($goods)}
+                    {loop $goods $item}
+                        <a href="{php echo tomedia($item['thumb'])}" target='_blank'>
+                            <img src="{php echo tomedia($item['thumb'])}" style='width:100px;border:1px solid #ccc;padding:1px' />
+                        </a>
+                    {/loop}
+                {else}
+                    暂无商品
+                {/if}
+            {/if}
+
+        </div>
+
+        <div class="form-group">
+       
+            <div class="col-sm-12">
+                <div class='recharge-items'>
+
+                        {loop $data['enoughs'] $item}
+                        <div class="input-group recharge-item" style="margin-top:5px"> 
+                            <span class="input-group-addon">单笔订单满</span>
+                            <input type="text" class="form-control" name='enough[]' value='{$item['enough']}' />
+                            <span class="input-group-addon">元 立减</span>
+                            <input type="text" class="form-control"  name='give[]' value='{$item['give']}' />
+                            <span class="input-group-addon">元</span>
+                            <div class='input-group-btn'>
+                            <button class='btn btn-danger' type='button' onclick="removeConsumeItem(this)"><i class='fa fa-remove'></i></button>
+                            </div>
+                             
+                        </div>
+                         {/loop}
+                         </div>  
+                         
+                       <div style="margin-top:5px"> 
+                       <button type='button' class="btn btn-default" onclick='addRebateReward()' style="margin-bottom:5px"><i class='fa fa-plus'></i> 增加返利奖项</button>
+                       </div>
+                       </div>
+                   </div>  
+        
+
+
+      
+
+        {ifp 'lottery.setting.edit|lottery.setting.add'}
+        <div class="form-group">
+            <label class="col-lg control-label"></label>
+            <div class="col-sm-10 col-xs-12">
+                <button type="submit" class="btn btn-primary">提交</button>
+                 <input type="hidden" name="reward_data" value="">
+                <input type="hidden" name="reward_rank" value="">
+            </div>
+        </div>
+        {/if}
+    </form>
+</div>
+
+<!-- 奖励Modal -->
+<div class="modal fade" id="rewardgoodsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" >选择商品</h4>
+            </div>
+            <div class="modal-body">
+                {template 'lottery/post/select_goods'}
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+      var currank = 0;
+      var countrank = {php echo $count ? $count-1:0;};
+      //选择奖励类型
+      function select_change(obj) {
+          var select_item = $(obj).val();
+          currank = $(obj).data('id');
+          $('#reward_show'+currank).empty();
+          var div_item = '';
+
+
+          if(select_item==1){
+              div_item = '<div class="row"><div class="col-sm-4 col-xs-4"><input type="number" class="form-control" name="reccredit" placeholder="请输入金额">'
+                      +'</div><div class="col-sm-4 col-xs-4"><a class="btn btn-primary" onclick="addReward(this,1);">添加奖励</a>'
+                      +'</div></div>';
+          }
+         
+          if(select_item==4){
+              div_item = '<div class="row"><div class="col-sm-4 col-xs-4"><a class="btn btn-primary" onclick="addReward(this,4);">添加特惠商品</a></div></div>';
+          }
+          
+          $('#reward_show'+currank).append(div_item);
+
+      }
+        //添加奖励等级
+      function addRebateReward() {
+
+          var icon = $('input[name="reward_title_icon"]').val();
+          var div_content = '<div class="panel panel-primary" data-rank="'+countrank+'"   onclick="rankclick(this);"><div class="panel-heading"><div class="pull-right" style="padding:0;margin:0;margin-top:-8px;"><button type="button" class="btn btn-warning" id="btn-add-time" onclick="delrank(this);">删除奖励</button>'+
+                  '</div></div><div class="panel-body" ><div class="form-group">'+
+                  '<label class="col-lg control-label">奖品设置</label><div class="col-lg col-xs-12">'+
+                  '<select class="input-sm form-control input-s-sm inline" data-id="'+countrank+'" onchange="select_change(this);">'+
+                  '<option value="0">请选择</option>'+
+                  '<option value="1">奖金</option>'+
+                  '<option value="4">商品</option>'+
+        
+                  '</select>'+
+                  '</div>'+
+                   '<div class="col-sm-7 col-xs-10 " data-id="'+countrank+'"  id="reward_show'+countrank+'">'+
+                  '</div>'+
+                  '</div>'+
+                  '<hr/>'+
+                  '<div class="form-group" style="border-bottom:1px solid #f2f2f2;">'+
+                  '<label class="col-lg control-label" ></label>'+
+                  '<div class="col-sm-7">'+
+                  '<div class="form-control-static" ><b>奖品信息</b></div>'+
+                  '</div>'+
+                  '<div class="col-lg">'+
+                  '<b>操作</b>'+
+                  '</div></div>'+
+                  '<div id="selected_rec_reward'+countrank+'">'+
+                  '</div></div></div>';
+
+          $('.panel').attr('class','panel panel-default');
+          $('.recharge-items').append(div_content);
+          currank = countrank;
+          countrank++;
+
+          // buildpan();
+          return;
+      }
+        //更新奖励等级
+      function updateRewardrank() {
+          var rank_div = $('div[data-rank="'+currank+'"]');
+          if(rank_div.length<=0){
+              tip.msgbox.err('请先选中要修改的奖励模块');
+              return;
+          }
+          var reward_title = $('input[name="reward_title"]').val();
+          if(reward_title==''){
+              tip.msgbox.err('标题不能为空');
+              return;
+          }
+
+          var probability = $('input[name="probability"]').val();
+          if(probability==''){
+              tip.msgbox.err('概率不能为空');
+              return;
+          }
+          var icon = $('input[name="reward_title_icon"]').val();
+          rank_div.find('div[class="panel-heading"]').html(reward_title+'('+probability+'%)'+
+                  '<div class="pull-right" style="padding:0;margin:0;margin-top:-8px;"><button type="button" class="btn btn-warning" id="btn-add-time" onclick="delrank(this);">删除奖励</button>'+
+                  '</div>');
+          rank_div.data('title',reward_title);
+          rank_div.data('icon',icon);
+          rank_div.data('probability',probability);
+          setTimeout(function () {
+              buildpan();
+          },100);
+          return;
+
+      }
+      function rankclick(obj) {
+          currank = $(obj).data('rank');
+          $('.panel').attr('class','panel panel-default');
+          $(obj).attr('class','panel panel-primary');
+          return;
+      }
+
+      function delrank(obj) {
+        
+          $(obj).parent().parent().parent().remove();
+          buildpan();
+          return;
+      }
+        //添加奖励
+      function addReward(obj,datatype) {
+          currank = $(obj).parent().parent().parent().data('id');
+          $('.panel').attr('class','panel panel-default');
+          $('div[data-rank="'+currank+'"]').attr('class','panel panel-primary');
+        
+          if(datatype==1){
+              var reccredit = $('#reward_show'+currank+' input[name="reccredit"]').val();
+
+              reccredit = parseInt(reccredit);
+              if(reccredit>0){
+                  var rec_credit = $('#rec_credit'+currank);
+
+                  var btn_data = '<div class="form-group rec_reward_data"  data-rank="'+currank+'" data-type="1" data-value="'+reccredit+'" id="rec_credit'+currank+'" style="border-bottom:1px solid #f2f2f2;">'+
+                          '<label class="col-lg control-label"></label>'+
+                          '<div class="col-sm-7" style="padding-top: 8px;padding-bottom: 20px;">金额<span class="pull-right label label-success"  style="margin-right: 10px;">'+reccredit+'</span></div>'+
+                          '<div class="col-lg">'+
+                          '&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="del_data(this);" class="btn btn-danger  btn-sm btn-delete-time">删除</button>'+
+                          '</div></div>';
+                      $('#selected_rec_reward'+currank).empty();
+                      $('#selected_rec_reward'+currank).append(btn_data);
+              }
+          }
+    
+          if(datatype==4){
+              $('#selected_goods').empty();
+              $('#reward_show'+currank+' input[name="reward_type"]').val('rec');
+              $('#rewardgoodsModal').modal('show');
+              $("#select-good-list").html('<div class="tip">正在进行搜索...</div>');
+              $.ajax("{php echo webUrl('rebate/select/query')}", {
+                  type: "get",
+                  dataType: "html",
+                  cache: false,
+                  data: {title:'', type:'good',page:1,psize:5}
+              }).done(function (html) {
+                  $("#select-good-list").html(html);
+              });
+          }
+      }
+      //添加特惠商品奖励
+      $(function(){
+          $(".select-btn").click(function(){
+              type = $(this).data("type");
+              var kw = $.trim($("#select-"+type+"-kw").val());
+              $("#select-"+type+"-list").html('<div class="tip">正在进行搜索...</div>');
+              $.ajax("{php echo webUrl('rebate/select/query')}", {
+                  type: "get",
+                  dataType: "html",
+                  cache: false,
+                  data: {title:kw, type:type,page:1,psize:5}
+              }).done(function (html) {
+                  $("#select-"+type+"-list").html(html);
+              });
+          });
+      });
+      //分页函数
+      function select_page(url,pindex,obj) {
+          if(pindex==''||pindex==0){
+              return;
+          }
+          var who_type = url.indexOf("good");
+          type = 'good';
+          if(!who_type){
+              type = 'coupon';
+          }
+          var kw = $.trim($("#select-"+type+"-kw").val());
+          $("#select-"+type+"-list").html('<div class="tip">正在进行搜索...</div>');
+          $.ajax("{php echo webUrl('lottery/select/query')}", {
+              type: "get",
+              dataType: "html",
+              cache: false,
+              data: {title:kw, type:type,page:pindex,psize:5}
+          }).done(function (html) {
+              $("#select-"+type+"-list").html(html);
+          });
+      }
+    
+      //选择指定商品
+      function goods_select(obj,data){
+          $('#error').html('');
+
+          var spec= $('#spc_'+data.id).find("option:selected");
+          var spec_id = 0;
+          var spec_name = '无规格';
+          if(spec.length>0){
+              spec_id = spec.data('specs');
+              spec_name = spec.data('title');
+          }
+          var goods = '<div class="form-group rec_reward_data"   id="rec_goods'+currank+'_'+data.id+'_'+spec_id+'" data-rank="'+currank+'" data-img="'+data.img+'" data-type="4" data-goodsid="'+data.id+'" data-goodsname="'+data.name+'"  data-goodsec="'+spec_id+'" data-specname="'+spec_name+'" style="border-bottom:1px solid #f2f2f2;">'+
+                  '<label class="col-lg control-label"></label>'+
+                  '<div class="col-sm-7" style="padding-top: 8px;padding-bottom: 20px;"><img src="'+data.img+'" width="30px" height="30px">'+data.name+'['+spec_name+']</div>'+
+                  '<div class="col-lg">'+
+                  '&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="del_data(this);" class="btn btn-danger  btn-sm btn-delete-time">删除</button>'+
+                  '</div></div>';
+          $('#selected_rec_reward'+currank).empty();
+          $('#selected_rec_reward'+currank).append(goods);
+
+          $('#rewardgoodsModal').modal('hide');
+      }
+      //删除数据
+      function del_data(obj) {
+          $(obj).parent().parent().remove();
+      }
+
+
+       $('form').submit(function(){
+
+  
+        if($('.rec_reward_data').length < $('#rec-rank .panel').length){
+            tip.msgbox.err('有未选择奖励的奖项');
+            $('form').attr('stop',1);
+            return false;
+        }
+        var rec_reward = [];
+        $('.rec_reward_data').each(function () {
+            var obj = $(this);
+            var type = obj.data('type');
+            var d = {};
+            d.rank = obj.data('rank');
+            if(type==1){
+                d.type=1;
+                d.num=obj.data('value');
+            }else if(type==2){
+                d.type=2;
+                d.num=obj.data('value');
+                d.total=obj.data('total');
+                d.moneytype=obj.data('moneytype');
+            }else if(type==3){
+                d.type=3;
+                d.num=obj.data('value');
+                d.total=obj.data('total');
+                if(d.num<1){
+                    tip.msgbox.err('微信企业付款需支付1元以上!');
+                    $('form').attr('stop',1);
+                    return false;
+                }
+            }else if(type==4){
+                d.type=4;
+                d.goods_id=obj.data('goodsid');
+                d.img=obj.data('img');
+                d.goods_name = obj.data('goodsname');
+                d.goods_price = obj.data('goodsprice');
+                var goods_spec = obj.data('goodsec');
+                if(goods_spec>0){
+                    d.goods_spec = goods_spec;
+                    d.goods_specname = obj.data('specname');
+                }else{
+                    d.goods_spec = 0;
+                    d.goods_specname = '无规格';
+                }
+                d.goods_total = obj.data('goodsnum');
+                d.goods_totalcount = obj.data('goodstotal');
+            }else if(type==5){
+                d.type=5;
+                d.coupon_id=obj.data('couponid');
+                d.img=obj.data('img');
+                d.coupon_name=obj.data('couponname');
+                d.coupon_num=obj.data('couponnum');
+                d.coupon_total=obj.data('coupontotal');
+
+            }
+            rec_reward.push(d);
+        });
+        var reward_rank = [];
+        $('#rec-rank .panel').each(function () {
+            var obj = $(this);
+            var d = {};
+            d.rank = obj.data('rank');
+            d.title = obj.data('title');
+            d.icon = obj.data('icon');
+            d.probability = obj.data('probability');
+            reward_rank.push(d);
+        });
+        $('input[name="reward_data"]').val( JSON.stringify(rec_reward));
+        $('input[name="reward_rank"]').val( JSON.stringify(reward_rank));
+        $('form').removeAttr('stop');
+        return true;
+
+    });
+  </script>
+
+
+
+{template '_footer'}
+
+<!--yifuyuanma-->

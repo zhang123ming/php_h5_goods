@@ -1,0 +1,67 @@
+SET NAMES 'utf8';;
+ SELECT `value` FROM `ims_core_cache` WHERE `key` = :__key_1  LIMIT 1;
+select uniacid,refund from `ims_ewei_shop_groups_set`;
+SELECT id,status FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and status = 0 and createtime + 86400 <= 1542727008 ;
+SELECT * FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and heads = 1 and status = 1 and success = 0 ;
+SELECT id,status FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and status = 0 and createtime + 86400 <= 1542727008 ;
+SELECT * FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and heads = 1 and status = 1 and success = 0 ;
+SELECT id,status FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and status = 0 and createtime + 86400 <= 1542727008 ;
+SELECT * FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and heads = 1 and status = 1 and success = 0 ;
+SELECT id,status FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and status = 0 and createtime + 86400 <= 1542727008 ;
+SELECT * FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and heads = 1 and status = 1 and success = 0 ;
+SELECT id,status FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and status = 0 and createtime + 86400 <= 1542727008 ;
+SELECT * FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and heads = 1 and status = 1 and success = 0 ;
+SELECT id,status FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and status = 0 and createtime + 86400 <= 1542727008 ;
+SELECT * FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and heads = 1 and status = 1 and success = 0 ;
+SELECT id,status FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and status = 0 and createtime + 86400 <= 1542727008 ;
+SELECT * FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and heads = 1 and status = 1 and success = 0 ;
+SELECT id,status FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and status = 0 and createtime + 86400 <= 1542727008 ;
+SELECT * FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and heads = 1 and status = 1 and success = 0 ;
+SELECT id,status FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and status = 0 and createtime + 86400 <= 1542727008 ;
+SELECT * FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and heads = 1 and status = 1 and success = 0 ;
+SELECT id,status FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and status = 0 and createtime + 86400 <= 1542727008 ;
+SELECT * FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and heads = 1 and status = 1 and success = 0 ;
+SELECT id,status FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and status = 0 and createtime + 86400 <= 1542727008 ;
+SELECT * FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and heads = 1 and status = 1 and success = 0 ;
+SELECT id,status FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and status = 0 and createtime + 86400 <= 1542727008 ;
+SELECT * FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and heads = 1 and status = 1 and success = 0 ;
+SELECT id,status FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and status = 0 and createtime + 86400 <= 1542727008 ;
+SELECT * FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and heads = 1 and status = 1 and success = 0 ;
+SELECT id,status FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and status = 0 and createtime + 86400 <= 1542727008 ;
+SELECT * FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and heads = 1 and status = 1 and success = 0 ;
+SELECT id,status FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and status = 0 and createtime + 86400 <= 1542727008 ;
+SELECT * FROM`ims_ewei_shop_groups_order` where uniacid = :uniacid and heads = 1 and status = 1 and success = 0 ;
+SET NAMES 'utf8';;
+ SELECT `value` FROM `ims_core_cache` WHERE `key` = :__key_1  LIMIT 1;
+select uniacid,refund from `ims_ewei_shop_groups_set`;
+select id,orderno,openid,credit,creditmoney,price,freight,status,pay_type,teamid,apppay,isborrow,borrowopenid from `ims_ewei_shop_groups_order`
+            where  uniacid=34 and status = 1 and success = -1 and refundtime = 0 and canceltime + 86400 <= 1542727008 ;
+select id,orderno,openid,credit,creditmoney,price,freight,status,pay_type,teamid,apppay,isborrow,borrowopenid from `ims_ewei_shop_groups_order`
+            where  uniacid=29 and status = 1 and success = -1 and refundtime = 0 and canceltime + 3600 <= 1542727008 ;
+select id,orderno,openid,credit,creditmoney,price,freight,status,pay_type,teamid,apppay,isborrow,borrowopenid from `ims_ewei_shop_groups_order`
+            where  uniacid=4 and status = 1 and success = -1 and refundtime = 0 and canceltime + 3600 <= 1542727008 ;
+select id,orderno,openid,credit,creditmoney,price,freight,status,pay_type,teamid,apppay,isborrow,borrowopenid from `ims_ewei_shop_groups_order`
+            where  uniacid=49 and status = 1 and success = -1 and refundtime = 0 and canceltime + 3600 <= 1542727008 ;
+select id,orderno,openid,credit,creditmoney,price,freight,status,pay_type,teamid,apppay,isborrow,borrowopenid from `ims_ewei_shop_groups_order`
+            where  uniacid=91 and status = 1 and success = -1 and refundtime = 0 and canceltime + 3600 <= 1542727008 ;
+select id,orderno,openid,credit,creditmoney,price,freight,status,pay_type,teamid,apppay,isborrow,borrowopenid from `ims_ewei_shop_groups_order`
+            where  uniacid=142 and status = 1 and success = -1 and refundtime = 0 and canceltime + 3600 <= 1542727008 ;
+select id,orderno,openid,credit,creditmoney,price,freight,status,pay_type,teamid,apppay,isborrow,borrowopenid from `ims_ewei_shop_groups_order`
+            where  uniacid=136 and status = 1 and success = -1 and refundtime = 0 and canceltime + 3600 <= 1542727008 ;
+select id,orderno,openid,credit,creditmoney,price,freight,status,pay_type,teamid,apppay,isborrow,borrowopenid from `ims_ewei_shop_groups_order`
+            where  uniacid=104 and status = 1 and success = -1 and refundtime = 0 and canceltime + 3600 <= 1542727008 ;
+select id,orderno,openid,credit,creditmoney,price,freight,status,pay_type,teamid,apppay,isborrow,borrowopenid from `ims_ewei_shop_groups_order`
+            where  uniacid=152 and status = 1 and success = -1 and refundtime = 0 and canceltime + 3600 <= 1542727008 ;
+select id,orderno,openid,credit,creditmoney,price,freight,status,pay_type,teamid,apppay,isborrow,borrowopenid from `ims_ewei_shop_groups_order`
+            where  uniacid=151 and status = 1 and success = -1 and refundtime = 0 and canceltime + 3600 <= 1542727008 ;
+select id,orderno,openid,credit,creditmoney,price,freight,status,pay_type,teamid,apppay,isborrow,borrowopenid from `ims_ewei_shop_groups_order`
+            where  uniacid=172 and status = 1 and success = -1 and refundtime = 0 and canceltime + 3600 <= 1542727008 ;
+select id,orderno,openid,credit,creditmoney,price,freight,status,pay_type,teamid,apppay,isborrow,borrowopenid from `ims_ewei_shop_groups_order`
+            where  uniacid=183 and status = 1 and success = -1 and refundtime = 0 and canceltime + 3600 <= 1542727008 ;
+SET NAMES 'utf8';;
+ SELECT `value` FROM `ims_core_cache` WHERE `key` = :__key_1  LIMIT 1;
+select uniacid,receive from `ims_ewei_shop_groups_set`;
+SELECT `key` FROM `ims_account_wechats` WHERE uniacid=:uniacid;
+select id from `ims_ewei_shop_groups_order` where uniacid=29 and status=2 and sendtime + 864000 <=unix_timestamp() ;
+select id from `ims_ewei_shop_groups_order` where uniacid=91 and status=2 and sendtime + 604800 <=unix_timestamp() ;
+select id from `ims_ewei_shop_groups_order` where uniacid=142 and status=2 and sendtime + 86400 <=unix_timestamp() ;

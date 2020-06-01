@@ -1,0 +1,202 @@
+{template '_header'}
+<style>
+    .table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+        border:none !important;
+    }
+    .wb-container{
+    	background: #FFF;
+    }
+    .region-goods-details {
+		background: #f8f8f8;
+		margin:10px 0;
+		padding: 0 10px;
+	}
+	.region-goods-left{
+		text-align: center;
+		font-weight: bold;
+		color: #333;
+		font-size: 14px;
+		padding: 20px 0;
+	}
+	.region-goods-rigth{
+		border-left: 3px solid white;
+		padding: 10px 10px;
+	}
+
+	.control-label {
+	    padding-top: 7px;
+	    margin-bottom: 0;
+	    text-align: right;
+	}
+	.form-group {
+	    margin-bottom: 30px;
+	    overflow: hidden;
+	}
+	.time_input{width:40%;}
+	.time_box{clear:both;}
+	.time_and{float:left;width:19%;line-height:32px;text-align: center;}
+	.form-horizontal{overflow:hidden;}
+
+	.station_list{width: 80%;}
+</style>
+
+<form action="" method="post" enctype="multipart/form-data" class="form-horizontal form-validate" >
+	<div class="region-goods-details row">
+	 <div class="region-goods-left col-sm-2">
+         路线参数
+     </div>
+     <div class="region-goods-rigth col-sm-10">
+     	<div class="form-group">
+            <label class="col-sm-2 control-label">路线名称</label>
+            <div class="col-sm-9 col-xs-12">
+                <input type="text" required name="route_name" id="route_name" class="form-control" value="{$route['route_name']}" />
+            </div>
+        </div>
+
+
+     	<div class="form-group">
+            <label class="col-sm-2 control-label">路线总长度/公里</label>
+            <div class="col-sm-9 col-xs-12">
+                <input type="text" required name="route_length" id="route_length" class="form-control" value="{$route['route_length']}" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">运行时间(首、末班车)</label>
+            <div class="col-sm-9 col-xs-12">
+                <div class="time_box">
+					<input class="form-control time_input" style="float:left;" type="text" required name="first_run_time" id="first_run_time" class="form-control" value="{$route['first_run_time']}" placeholder="例: 7:30" /><div class="time_and">至</div><input class="time_input form-control" type="text" required name="last_run_time" id="last_run_time" style="float:right;" class="form-control" value="{$route['last_run_time']}" placeholder="例: 20:00"/>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">站点停靠时长/分钟</label>
+            <div class="col-sm-9 col-xs-12">
+                <input type="text" required name="shop_time" id="shop_time" class="form-control" value="{$route['shop_time']}" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">启用路线</label>
+            <div class="col-sm-9 col-xs-12">
+		        <label class="radio-inline"><input type="radio" name="status" value="0"  {if empty($route['status'])}checked="true"{/if}/> 启用</label>
+		        <label class="radio-inline"><input type="radio" name="status" value="1" {if $route['status'] == 1}checked="true"{/if}   /> 禁用</label>
+		    </div>
+        </div>
+     </div>
+</div>
+<div class="region-goods-details row">
+ <div class="region-goods-left col-sm-2">
+     添加站点
+ </div>
+ <div class="region-goods-rigth col-sm-10">
+ <div id="table-parent">
+
+	<table class="table">
+		<tbody  class="station_body">
+            <div style="overflow: hidden;display: none;">
+            	{php echo tpl_form_field_coordinates('map',array('lng'=>'','lat'=>''))}
+            </div>
+            {loop $stations $row}
+				<tbody style="overflow: hidden;" class="station_body">
+					<tr>
+						<td class="station_list">
+							<div class="form-group">
+					            <label class="col-sm-2 control-label">站点名称</label>
+					            <div class="col-sm-9 col-xs-12">
+					                <input type="text" name="station_name[]" id="station_name" class="form-control" value="{$row['station_name']}" />
+					            </div>
+					            
+					        </div>	
+						</td>
+						
+						<td style="width:10%;" rowspan="4">
+							<input name="station_id[]" type="hidden" class="form-control" value="{$row['id']}"/>
+							<a href="javascript:;" class='btn btn-default btn-sm' onclick="deleteParam(this)"  title="删除"><i class='fa fa-times'></i></a>
+						</td>
+					</tr>
+					<tr>
+						<td class="station_list">
+							<div class="form-group">
+					            <label class="col-sm-2 control-label">站点距离</label>
+					            <div class="col-sm-9 col-xs-12">
+					                <input type="text" name="station_length[]" id="station_length" class="form-control" value="{$row['station_length']}" />
+					            </div>
+					            <div class="col-sm-9 col-xs-12" style="float:right;">
+									<span class="help-block" >单位 : 公里 (从上一站到本站的距离 , 起始站点距离填0)</span>
+					            </div>
+					        </div>	
+						</td>
+					</tr>
+					<tr>
+						<td class="station_list">
+							<div class="form-group">
+					            <label class="col-sm-2 control-label">路程时长</label>
+					            <div class="col-sm-9 col-xs-12">
+					                <input type="text" name="reach_time[]" id="reach_time" class="form-control" value="{$row['reach_time']}" />
+					            </div>
+					            <div class="col-sm-9 col-xs-12" style="float:right;">
+									<span class="help-block" >单位 : 分钟 (从上一站到本站所花时间 , 起始站点填0)</span>
+					            </div>
+					        </div>	
+						</td>
+					</tr>
+					<tr>
+						<td class="station_list">
+						    <div class="form-group">
+						        <label class="col-sm-2 control-label">地理位置</label>
+						        <div class="col-sm-9 col-xs-12">
+						            {php echo tpl_form_field_coordinates('map',array('lng'=>$row['lng'],'lat'=>$row['lat']))}
+						        </div>
+						    </div>	
+						</td>
+					</tr>
+					<tr style="border-bottom: solid 5px white;">
+						<td class="station_list">
+							<div class="form-group">
+					            <label class="col-sm-2 control-label">位置名称</label>
+					            <div class="col-sm-9 col-xs-12">
+					                <input type="text" name="addresss[]" id="addresss" class="form-control" value="{$row['address']}" />
+					            </div>
+					        </div>	
+						</td>
+					</tr>
+				</tbody>
+            {/loop}		       
+		</tbody>
+	</table>
+
+ </div>
+     <a href="javascript:;" id='add-param' onclick="addParam()" class="btn btn-default"  title="添加参数"><i class='fa fa-plus'></i> 添加参数</a>
+ </div>
+</div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label"></label>
+        <div class="col-sm-9 subtitle">
+            <input type="submit" value="保存路线" class="btn btn-primary"/>
+			<a class="btn btn-default" href="{php echo webUrl('routes/routes',array('goodsfrom'=>$_GPC['goodsfrom'], 'page'=>$_GPC['page']))}">返回列表</a>
+        </div>
+    </div>
+
+</form>
+<script language="javascript">
+	var tableParent = document.getElementById("table-parent");
+    function addParam() {
+        var url = "{php echo webUrl('routes/routes/tpl')}";
+//        return false;
+        $.ajax({
+            "url": url,
+            success: function(data) {
+               var newdata = document.createElement('table')
+               newdata.className = "table"
+               newdata.innerHTML = data;
+               tableParent.appendChild(newdata)
+            }
+        });
+        return;
+    }
+    function deleteParam(o) {
+        $(o).parents('.table').remove();
+    }
+</script>
+{template '_footer'}

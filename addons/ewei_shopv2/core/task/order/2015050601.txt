@@ -1,0 +1,1 @@
+UPDATE `ims_ewei_shop_goods` SET `total` = :total_7 WHERE `uniacid` = :__uniacid_8 AND `id` = :__id_9

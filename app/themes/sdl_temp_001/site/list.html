@@ -1,0 +1,76 @@
+{template 'common/header'}
+<style>
+.category{display:block; overflow:hidden; background:#c9caca;border-bottom:1px #DDD solid;}
+.category a{display:inline-block; overflow:hidden; height:30px; width:33.33%; text-align:center; color:#333; font-size:16px; float:left; padding:5px;}
+.list li{width:95%;margin-left:2.5%;margin-bottom:10px;}
+.list{margin-top:5px;}
+.list li{display:block; padding:5px; background:#FFF; border:1px #DDD solid; border-radius:3px;color:#333; overflow:hidden; text-decoration:none !important; position:relative;}
+ .title{font-size:18px; margin-bottom:10px;}
+ .createtime{font-size:12px; color:#999;}
+.head{height:40px; line-height:40px; background:#717d82; padding:0 5px; color:#FFF;}
+.head .bn{display:inline-block; height:30px; line-height:30px; padding:0 10px; margin-top:4px; font-size:20px; background:transparent; color:#FFF; text-decoration:none;}
+.head .bn.pull-left{border-right:1px solid #ccc;}
+.head .bn.pull-right{position:absolute; right:5px; top:0; border-left:1px solid #ccc;}
+.head .title{font-size:14pt;display:block;padding-left:10px;font-weight:bolder;margin-right:49px;text-align:center;height:40px;line-height:40px;text-overflow:ellipsis;white-space:nowrap;overflow: hidden;}
+.head .order{background:#717d82; position:absolute; z-index:9999; right:0;}
+.head .order li > a{display:block; padding:0 10px; min-width:100px; height:35px; line-height:35px; font-size:16px; color:#FFF; text-decoration:none; border-top:1px #EEE solid;}
+.head .order li.fa-caret-up{font-size:20px;color:#717d82;position:absolute;top:-11px;right:16px;}
+.pager-position{width:100%;margin:0 auto;text-align:center;}
+.list li img{display:none;}
+body{background:#F7F7F7}
+.list .title{width:100%; text-align:center;padding-top: 10px;}
+.btootom{width:95%;margin-left:2.5%;border-top:1px solid #ccc; text-align:left;padding-top: 10px;padding-bottom: 5px;}
+.btootom span{margin-right:8px;color:#888889;font-size:12px;}
+.cont{width:90%;margin-left:5%;word-wrap:break-word; word-break:normal;font-size:12px;line-height: 18px;}
+.jjjj{ width:80px;height:30px;text-align:center;color:#fff;margin-left:4.5%;margin-bottom:10px;margin-top:10px;background:#E85C4A;border-radius:5px;}
+.mm:active{ text-decoration: none;}
+a:hover {text-decoration: none;}
+.ms{color:#04be02!important} 
+.jjjj{ -webkit-appearance: none; border:0}
+</style>
+<div class="head">
+	<a href="javascript:history.go(-1);" class="bn pull-left"><i class="fa fa-reply"></i></a>
+	<span class="title">{$title}</span>
+	<a href="javascript:;" id="category_show" class="bn pull-right"><i class="fa fa-reorder"></i></a>
+	<ul class="list-unstyled order hide">
+		<li class="fa fa-caret-up"></li>
+		{data module="site" func="site_category"}
+			<li>
+				<a href="{$row['linkurl']}">
+					{$row['name']}
+				</a>
+				
+			</li>
+		{/data}
+	</ul>
+</div>
+<div class="category">
+	{data module="site" func="site_category" parentid="$cid"}
+	<a href="{$row['linkurl']}">{$row['name']}</a>
+	{/data}
+</div>
+<ul class="list list-unstyled">
+
+	{data module="site" func="site_article" cid="$cid" assign="result" return="true"}
+	{loop $result['list'] $row}
+	<li>
+	
+			{if $row['thumb']}<img src="{$row['thumb']}" class="pull-right thumb" onerror="this.parentNode.removeChild(this)" />{/if}
+		
+				
+		
+			<div class="title">{php echo cutstr($row['title'],25,1);}</div>
+			<div class="cont">{$row['description']}</div>
+				<a href="{$row['linkurl']}" class="mm"><button class="jjjj">阅读全文</button></a>
+			<div class="btootom">
+			<span style="margin-left:5px;">作者：{$row['author']}</span>
+			<a href="{$row['source']}" class="ms"><span style="color:#04be02!important;">文章来源</span></a>
+			<span>{php echo date('Y-m-d H:i:s', $row['createtime'])}</span>
+			</div>
+		
+		
+	</li>
+	{/loop}
+</ul>
+<div class="pager-position">{$result['pager']}</div>
+{template 'common/footer'}

@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+        <meta name="format-detection" content="telephone=no" />
+        <title>{if empty($this->merch_user)}{$_W['shopset']['shop']['name']}{else}{php echo $this->merch_user['merchname']}{/if}</title>
+        <!-- <link rel="stylesheet" type="text/css" href="../addons/ewei_shopv2/plugin/commission/static/css/style.css"> -->
+        <link rel="stylesheet" type="text/css" href="../addons/ewei_shopv2/static/js/dist/foxui/css/foxui.min.css?v=0.2">
+        <!-- <link rel="stylesheet" type="text/css" href="../addons/ewei_shopv2/template/mobile/default/static/css/style.css?v=2.0.9"> -->
+
+        <link rel="stylesheet" type="text/css" href="{php echo EWEI_SHOPV2_LOCAL}static/fonts/iconfont.css?v=2017070719">
+        <!--<link rel="stylesheet" href="//at.alicdn.com/t/font_82607_e93d131lklr6n7b9.css">-->
+        <script src="./resource/js/lib/jquery-1.11.1.min.js"></script>
+       <script src='//res.wx.qq.com/open/js/jweixin-1.2.0.js'></script>
+        <script src="{php echo EWEI_SHOPV2_LOCAL}static/js/app/clipboard.min.js"></script>
+        <!-- <script src="{php echo EWEI_SHOPV2_LOCAL}static/js/dist/foxui/js/foxui.min.js"></script> -->
+        <!-- <script src="{php echo EWEI_SHOPV2_LOCAL}static/js/require.js"></script> -->
+        <!-- <script src="{php echo EWEI_SHOPV2_LOCAL}static/js/myconfig-app.js"></script> -->
+        <!-- <script language="javascript">require(['core'],function(modal){modal.init({siteUrl: "{$_W['siteroot']}",baseUrl: "{php echo mobileUrl('ROUTES')}"})});</script> -->
+        <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=ZQiFErjQB7inrGpx27M1GR5w3TxZ64k7&s=1"></script>
+    
+
+        {if !empty($_W['shopset']['shop']['loading'])}
+        <style>.fui-goods-group.block .fui-goods-item .image {background-image: url("{php echo tomedia($_W['shopset']['shop']['loading'])}");}</style>
+        {/if}
+
+        {if !is_mobile() && !is_weixin() && !is_h5app()}
+        <style type="text/css">
+            body {
+                position: absolute;;
+                max-width: 750px;  margin:auto;
+            }
+            .fui-navbar {
+                max-width:750px;
+            }
+            .fui-navbar,.fui-footer  {
+                max-width:750px;
+            }
+            .fui-page.fui-page-from-center-to-left,
+            .fui-page-group.fui-page-from-center-to-left,
+            .fui-page.fui-page-from-center-to-right,
+            .fui-page-group.fui-page-from-center-to-right,
+            .fui-page.fui-page-from-right-to-center,
+            .fui-page-group.fui-page-from-right-to-center,
+            .fui-page.fui-page-from-left-to-center,
+            .fui-page-group.fui-page-from-left-to-center {
+                -webkit-animation: pageFromCenterToRight 0ms forwards;
+                animation: pageFromCenterToRight 0ms forwards;
+            }
+        </style>
+        {/if}
+
+        {if is_h5app()}
+            <style>
+                .page-shop-goods_category .fui-header, .fui-page-group.statusbar .fui-statusbar, .fui-header, .page-goods-list .fui-header {background-color: {$_W['shopset']['wap']['headerbgcolor']};}
+                .fui-header a.back:before {border-color: {$_W['shopset']['wap']['headericoncolor']};}
+                .fui-header .title {color: {$_W['shopset']['wap']['headercolor']};}
+                .fui-header a, .fui-header i {color: {$_W['shopset']['wap']['headericoncolor']};}
+                {if is_ios()}.head-menu-mask, .fui-mask, .fui-mask-m, .order-list-page .fui-tab {top: 3.2rem;}.head-menu{top: 3.65rem}{/if}
+            </style>
+        {/if}
+
+        <style>.danmu {display: none;opacity: 0;}</style>
+    </head>
+
+    <body ontouchstart>
+        
+        <div class='fui-page-group {if is_ios()}statusbar{/if}'>
+            {if $_W['account']['istest']==1}
+            <div style="position: fixed;top: 0;background: rgba(255,153,0,1);height: 30px;z-index: 1000;text-align: center;width: 100%;color: red;font-size: 18px;line-height: 30px;">系统测试中，请勿进行资金操作！</div>
+            {/if}
+            {if is_h5app()}
+            <div class="fui-statusbar"></div>
+            {/if}
+<script type="text/javascript">
+    document.title = '代理申请';
+</script>
+<script type="text/javascript" src="../addons/ewei_shopv2/static/js/dist/foxui/js/foxui.min.js"></script>
+
+<link rel="stylesheet" href="../addons/ewei_shopv2/plugin/commission/static/css/style.css">
+
+<section class="agent-wrap">
+    <div class="top">
+        <img src="../addons/ewei_shopv2/plugin/commission/static/img/agent_bg.jpg" alt="" width="100%">
+    </div>
+    <div class="form-inline">
+        <div id="distpicker1">
+            <div class="form-group">
+                <label class="sr-only" for="realname"></label>
+                <input type="text" class="form-control" id='realname' placeholder="请填写真实姓名，用于结算" value="{$member['realname']}">
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="mobile" style="background-image: url(../addons/ewei_shopv2/plugin/commission/static/img/phone.png);"></label>
+                <input type="tel" class="form-control" id='mobile' placeholder="请填写手机号码方便联系" value="{$member['mobile']}" />
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="province" style="background-image: url(../addons/ewei_shopv2/plugin/commission/static/img/weixin.png);"></label>
+                <select style="background-color: #ddd;color: #999;" class="form-control" name="province" id="province">
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="city" style="background-image: url(../addons/ewei_shopv2/plugin/commission/static/img/weixin.png);"></label>
+                <select style="background-color: #ddd;color: #999;" class="form-control" name="city" id="city">
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="district" style="background-image: url(../addons/ewei_shopv2/plugin/commission/static/img/weixin.png);"></label>
+                <select style="background-color: #ddd;color: #999;" class="form-control" name="district" id="district">
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="agentlevel" style="background-image: url(../addons/ewei_shopv2/plugin/commission/static/img/industry.png);"></label>
+                <select style="background-color: #ddd;color: #999;" class="form-control" id="agentlevel">                        
+                    {loop $aglevels $aglevel}
+                    <option value="{$aglevel['level']}" class='fui-cell-info'>{$aglevel['levelname']}</option>
+                    {/loop}                        
+                </select>
+            </div>
+        </div>
+        <button class="info_sub" style="border: none">提交申请</button>
+    </div>
+</section>
+<script src="../addons/ewei_shopv2/plugin/commission/static/js/data111.js"></script>
+<script src="../addons/ewei_shopv2/plugin/commission/static/js/dis111.js"></script>
+{if $isTO>0}
+<script type="text/javascript">
+     FoxUI.message.show({
+        icon: 'icon icon-info text-warning',
+        content: "您的申请已经提交，请等待审核!",
+        buttons: [{
+            text: '先去商城逛逛',
+            extraClass: 'btn-danger',
+            onclick: function() {
+                location.href = core.getUrl('')
+            }
+        }]
+    })
+    $('.agent-wrap').hide();
+</script>
+{/if}
+<script type="text/javascript">
+     $("#distpicker1").distpicker({
+            autoSelect: false
+     });
+     $('.info_sub').click(function(){
+        var realname = $('#realname').val(),mobile = $('#mobile').val(),province = $('#province').val(),city = $('#city').val(),district=$('#district').val(),agentlevel=$('#agentlevel').val();
+        if(!realname){
+            FoxUI.toast.show('真实姓名不能为空!');
+            return false;
+        }
+        if(!province){
+            FoxUI.toast.show('请选择省份!');
+            return false;
+        }
+        if(!city){
+            FoxUI.toast.show('请选择市级!');
+            return false;
+        }
+        if(!district){
+            FoxUI.toast.show('请选择区级!');
+            return false;
+        }
+        if (!agentlevel) {
+            FoxUI.toast.show('请选择申请等级!');
+            return false;
+        }
+        if(agentlevel<=0){
+            FoxUI.toast.show('已是最高等级!');
+            return false;
+        }
+        var data = {
+            'realname':realname,
+            'mobile':mobile,
+            'province':province,
+            'city':city,
+            'district':district,
+            'agentlevel':agentlevel
+        };
+        $.post('{php echo mobileUrl('commission/agentTo/submit')}',data,function(res){
+            FoxUI.message.show({
+                icon: 'icon icon-info text-warning',
+                content: "您的申请已经提交，请等待审核!",
+                buttons: [{
+                    text: '先去商城逛逛',
+                    extraClass: 'btn-danger',
+                    onclick: function() {
+                        location.href = core.getUrl('')
+                    }
+                }]
+            })
+            $('.agent-wrap').hide();
+        },'json');
+         
+     });
+</script>

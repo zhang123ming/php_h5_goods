@@ -1,0 +1,7 @@
+a:2:{s:4:"data";s:1655:"a:18:{s:2:"id";s:4:"7982";s:3:"uid";s:6:"120756";s:4:"name";s:13:"cy163_salesjl";s:5:"title";s:18:"社群团购接龙";s:4:"logo";s:58:"images/2017/12/02/15122001815a2257f58f61f_dSKU7FfJMaAk.jpg";s:4:"type";s:1:"1";s:6:"status";s:1:"1";s:10:"plugin_pid";s:1:"0";s:11:"install_dir";s:0:"";s:11:"description";s:106:"&lt;p&gt;&lt;span style=&quot;font-family: 新宋体; word-wrap: break-word; font-size: 20px;&quot;&gt;&lt";s:7:"package";s:0:"";s:15:"package_support";s:1:"1";s:6:"bought";b:1;s:9:"branch_id";s:4:"9845";s:6:"member";s:5:"cy163";s:7:"version";a:7:{s:2:"id";s:5:"64262";s:9:"branch_id";s:4:"9845";s:7:"version";s:3:"4.6";s:11:"description";s:172:"1、优化团队奖
+2、团长二维码页面提示优化
+3、自发接龙显示用户认证信息，同时没有认证的关闭个人主页功能
+4、其他细节优化";s:10:"createtime";s:16:"2018-03-13 10:58";s:13:"cloud_setting";s:1:"0";s:6:"status";s:1:"3";}s:8:"username";s:5:"cy163";s:8:"branches";a:1:{i:9845;a:14:{s:2:"id";s:4:"9845";s:4:"name";s:9:"普通版";s:5:"price";s:4:"3000";s:10:"package_id";s:1:"0";s:7:"private";s:1:"1";s:12:"displayorder";s:1:"0";s:4:"show";s:1:"1";s:6:"status";s:1:"1";s:11:"app_support";s:1:"2";s:13:"upgrade_price";i:0;s:13:"wxapp_support";s:1:"1";s:14:"webapp_support";s:1:"1";s:22:"system_welcome_support";s:1:"1";s:7:"version";a:5:{s:2:"id";s:5:"64262";s:7:"version";s:3:"4.6";s:11:"description";s:172:"1、优化团队奖
+2、团长二维码页面提示优化
+3、自发接龙显示用户认证信息，同时没有认证的关闭个人主页功能
+4、其他细节优化";s:13:"cloud_setting";s:1:"0";s:10:"createtime";s:10:"1520909896";}}}}";s:6:"secret";s:32:"U1hjlHtYvntFq3XrYROFlToTsjNsRRn1";}

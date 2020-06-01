@@ -1,0 +1,55 @@
+{template 'common/header'}
+{template 'common/top'}
+<header data-am-widget="header" class="am-header am-header-default">
+	<div class="am-header-left am-header-nav">
+	<a href="javascript:history.go(-1);">
+		<i class="am-header-icon am-icon-angle-left"></i>
+	</a>
+	</div>
+	<h1 class="am-header-title">{$title}</h1>
+
+	<nav data-am-widget="menu" class="am-menu  am-menu-offcanvas1" data-am-menu-offcanvas> 
+		<a href="javascript: void(0)" class="am-menu-toggle">
+          <i class="am-menu-toggle-icon am-icon-bars"></i>
+    	</a>
+    	<div class="am-offcanvas" >
+      		<div class="am-offcanvas-bar am-offcanvas-bar-flip">
+      		<ul class="am-menu-nav am-avg-sm-1">
+				{data module="site" func="site_category"}
+				<li {if $row['children']} class="am-parent"{/if}><a href="{$row['linkurl']}">{$row['name']}</a>
+					{if $row['children']}
+					 <ul class="am-menu-sub am-collapse  am-avg-sm-2 ">
+					 	{loop $row['children'] $rows}
+                  			<li><a href="{$rows['linkurl']}">{$rows['name']}</a></li>
+						{/loop}
+					 </ul>
+					 {/if}
+				</li>
+				{/data}
+      		</ul>
+      		</div>
+      	</div>
+	</nav>
+</header>
+<div data-am-widget="list_news" class="am-list-news am-list-news-default" >
+	<ul class="am-list">
+		{data module="site" func="site_article" cid="$cid" assign="result" return="true"}
+		{loop $result['list'] $row}
+		<li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-right">
+			<div class=" am-u-sm-8 am-list-main">
+	            <h3 class="am-list-item-hd"><a href="{$row['linkurl']}" class="">{php echo cutstr($row['title'],25,1);}</a></h3>
+	            <div class="am-list-item-text">{php echo date('Y-m-d H:i:s', $row['createtime'])}</div>
+	        </div>
+	        {if $row['thumb']}
+	        <div class="am-u-sm-4 am-list-thumb">
+            <a href="{$row['linkurl']}" class="">
+              <img src="{$row['thumb']}" alt="{$row['title']}"/>
+            </a>
+          	</div>
+          	{/if}
+        </li>
+		{/loop}
+	</ul>
+</div>
+<div class="pager-position">{$result['pager']}</div>
+{template 'common/footer'}

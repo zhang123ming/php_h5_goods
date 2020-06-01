@@ -1,0 +1,100 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>授权登录</title>
+	<link rel="stylesheet" type="text/css" href="http://weizannew.1.y01.cn/addons/ewei_shopv2/static/js/dist/foxui/css/foxui.min.css?v=0.2">
+    <script src="./resource/js/lib/jquery-1.11.1.min.js"></script>
+    <script src='//res.wx.qq.com/open/js/jweixin-1.2.0.js'></script>
+    <link href="{php echo EWEI_SHOPV2_LOCAL}static/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="{php echo EWEI_SHOPV2_LOCAL}static/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="{php echo EWEI_SHOPV2_LOCAL}static/css/animate.css" rel="stylesheet">
+    <link href="{php echo EWEI_SHOPV2_LOCAL}static/css/v3.css?v=4.1.0" rel="stylesheet">
+    <link href="{php echo EWEI_SHOPV2_LOCAL}static/css/common_v3.css?v=3.0.1" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{php echo EWEI_SHOPV2_LOCAL}static/fonts/v3/iconfont.css?v=2016070717">
+    <link rel="stylesheet" type="text/css" href="{php echo EWEI_SHOPV2_LOCAL}static/fonts/iconfont.css?v=2016070717">
+    <script src="{php echo EWEI_SHOPV2_LOCAL}static/fonts/v3/iconfont.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script> 
+    <script src="{php echo EWEI_SHOPV2_LOCAL}static/js/dist/jquery/jquery.gcjs.js"></script>
+    <script src="./resource/js/app/util.js"></script>
+</head>
+<body>
+	<form class="form-horizontal form-validate" method="post" name="myform" action="http://s100.kemanduo.cc/app/index.php">
+	<div class="page-content" style="height:100%;">
+		<input type="hidden" name="i" value="4">
+		<input type="hidden" name="c" value="entry">
+		<input type="hidden" name="m" value="ewei_shopv2">
+		<input type="hidden" name="do" value="mobile">
+		<input type="hidden" name="r" value="api.oauth.authorize">
+		<input type="hidden" name="response_type" value="code">
+		<input type="hidden" name="client_id" value="{$clientInfo['client_id']}">
+		<input type="hidden" name="redirect_uri" value="{$clientInfo['redirect_uri']}">
+		<input type="hidden" name="state" value="{$state}">
+		<input type="hidden" name="isAgree" id="isAgree" value="">
+		<div class="form-group">
+	        <label class="col-lg control-label">帐号：</label>
+	        <div class="col-sm-9 col-xs-12">
+	            <input type="text" name="username" class="form-control valid" value="" placeholder="请输入账号" onblur="isusername()">
+	            <span id="usernameerror" class="help-block" style="display: none;color:red;">请填写帐号！</span>
+	        </div>
+	    </div>
+	    <div style="width:100%;"></div>
+	    <div class="form-group">
+	        <label class="col-lg control-label">密码：</label>
+	        <div class="col-sm-9 col-xs-12">
+	            <input type="password" name="pass" class="form-control valid" value="" placeholder="请输入密码" onblur="ispass()">
+	            <span id="passerror" class="help-block" style="display: none;color:red;">请填写密码！</span>
+	        </div>
+	    </div>
+		<div class="form-group">
+	        <label class="col-lg control-label"></label>
+	        <div class="col-sm-9 col-xs-12" >
+	            <input type="submit" value="提交" class="btn btn-primary" onclick="return check()" style="width:90px;height:35px;">
+	        </div>
+        </div>
+	</div>
+	</form>
+</body>
+<script type="text/javascript">
+	function isusername(){
+    	var username = $("input[name='username']").val();
+	    if (username==''){
+	    	$("input[name='username']").css('border-color','red');
+	        $("#usernameerror").show();
+	    } else {
+	    	$("input[name='username']").css('border-color','#EFEFEF');
+	    	$("#usernameerror").hide();
+	    }
+	}
+	function ispass(){
+    	var pass = $("input[name='pass']").val();
+	    if (pass==''){
+	    	$("input[name='pass']").css('border-color','red');
+	        $("#passerror").show();
+	    } else {
+	    	$("input[name='pass']").css('border-color','#EFEFEF');
+	    	$("#passerror").hide();
+	    }
+	}
+	function check(){
+		var username = $("input[name='username']").val();
+		if (username==''){
+			$("input[name='username']").css('border-color','red');
+	        $("#usernameerror").show();
+	        return false;
+		}
+		var pass = $("input[name='pass']").val();
+		if (pass==''){
+	    	$("input[name='pass']").css('border-color','red');
+	        $("#passerror").show();
+	        return false;
+	    }
+	    if(confirm('是否同意授权！')){
+	    	document.myform.submit();
+	    } else {
+	    	$("#isAgree").val('1');
+	    	document.myform.submit();
+	    }
+		return false;
+	}
+</script>
+</html>

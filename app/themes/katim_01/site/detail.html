@@ -1,0 +1,55 @@
+{template 'common/header'}
+{template 'common/top'}
+<style type="text/css">
+.header h1{text-align: center; color: #3bb7e9; font-size: 2rem;}
+.am-paragraph {width: 98%; margin:0 auto;}
+.am-paragraph img{clear: both; display: block; margin: auto; max-width: 98%;}
+.src{display:-webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; color: #cacaca}
+.left{display: block; text-align: left; width: 50%; padding-left:1rem;}
+.right{display: block; text-align: right; width: 50%; padding-right:1rem;}
+.time{text-align: center;padding: 10px 0; border-top: 1px solid #c5c5c5; color: #cacaca; margin: 0;}
+</style>
+<header data-am-widget="header" class="am-header am-header-default">
+	<div class="am-header-left am-header-nav">
+	<a href="javascript:history.go(-1);">
+		<i class="am-header-icon am-icon-angle-left"></i>
+	</a>
+	</div>
+	<h1 class="am-header-title">详情信息</h1>
+
+	<nav data-am-widget="menu" class="am-menu  am-menu-offcanvas1" data-am-menu-offcanvas> 
+		<a href="javascript: void(0)" class="am-menu-toggle">
+          <i class="am-menu-toggle-icon am-icon-bars"></i>
+    	</a>
+    	<div class="am-offcanvas" >
+      		<div class="am-offcanvas-bar am-offcanvas-bar-flip">
+      		<ul class="am-menu-nav am-avg-sm-1">
+				{data module="site" func="site_category"}
+				<li {if $row['children']} class="am-parent"{/if}><a href="{$row['linkurl']}">{$row['name']}</a>
+					{if $row['children']}
+					 <ul class="am-menu-sub am-collapse  am-avg-sm-2 ">
+					 	{loop $row['children'] $rows}
+                  			<li><a href="{$rows['linkurl']}">{$rows['name']}</a></li>
+						{/loop}
+					 </ul>
+					 {/if}
+				</li>
+				{/data}
+      		</ul>
+      		</div>
+      	</div>
+	</nav>
+</header>
+<div class="header">
+<h1>{$detail['title']}</h1>
+<div class="src">
+<span class="left">{if !empty($detail['source'])}<a href="{$detail['source']}">文章来源</a>{/if}</span>
+<span class="right">文章热度：{$detail['click']}</span>
+</div>
+<p class="time"><time datetime="{php echo date("Y-m-d", $detail['createtime']);}" pubdate>{php echo date("Y-m-d", $detail['createtime']);}</time></p>
+</div>
+<article data-am-widget="paragraph" class="am-paragraph am-paragraph-default" data-am-paragraph="{ tableScrollable: true, pureview: true }">
+	{$detail['content']}
+</article>
+</div>
+{template 'common/footer'}

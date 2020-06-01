@@ -1,0 +1,33 @@
+{template 'header'}
+<link rel="stylesheet" href="{$_W['siteroot']}app/themes/wq_wgw001/static/css/style.css">
+<div class="qzj_header">
+	<a href="{php echo url('home/home')}">
+	{if !empty($_W['styles']['hd_logo'])}
+	<img src="$_W['styles']['hd_logo']" />
+	{else}
+	<img src="{$_W['siteroot']}app/themes/wq_wgw001/static/images/pic_01.png" />
+	{/if}
+	</a>
+</div>
+<ul class="qzj_nav clearfix">
+	{php $num = 1;}
+	{data func="site_navs" item="row"}
+	{php if($num == 1) $on = 'on';}
+	{php if($num == 2) $on = '';}
+	{php if($num == 3) $on = '';}
+	{php if($num == 4) $on = '';}
+	{php if($num == 5) $on = '';}
+	<li><a class="{$on}" href="{$row[url]}">{$row['name']}</a></li>
+	{php $num++;}
+	{/data}
+</ul>
+<div class="qzj_post">
+	<div class="header">
+		<h1>{$detail['title']}</h1>
+	    	<span id="post-date">{php echo date("Y-m-d", $detail['createtime']);}</span> <a id="post-name" href="{if !empty($_W['account']['subscribeurl'])}{$_W['account']['subscribeurl']}{else}javascript:;{/if}">{if !empty($detail['author'])}{$detail['author']}{else}{$_W['account']['name']}{/if}</a>
+	</div>
+	<div class="text">
+		{$detail['content']}
+	</div>
+</div>
+{template 'com/footer'}

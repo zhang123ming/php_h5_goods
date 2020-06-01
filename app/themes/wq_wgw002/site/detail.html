@@ -1,0 +1,34 @@
+{template 'com/header'}
+<style>
+body{ background: #ffffff !important; }
+</style>
+<div class="post">
+	{if !empty($_W['page']['footer'])}
+		{php $mbcs = explode(",",$_W['page']['footer'])}
+		{if !empty($mbcs[0])}
+			{php $_W['styles']['demopost_cid'] = $mbcs[0]}
+		{/if}
+		{if !empty($mbcs[1])}
+			{php $_W['styles']['multi_id'] = $mbcs[1]}
+		{/if}		
+	{/if}
+	<h2>{$detail['title']}</h2>
+	<div class="date">{if empty($detail['source'])}<span class="copyright_logo">原创</span>{/if}<span>{php echo date("Y-m-d", $detail['createtime']);}</span><span style="color: #607fa6;"><a id="post-name" href="{if !empty($_W['account']['subscribeurl'])}{$_W['account']['subscribeurl']}{else}javascript:;{/if}">{if !empty($detail['author'])}{$detail['author']}{else}{$_W['account']['name']}{/if}</a></span></div>
+	<div class="main">
+		{$detail['content']}
+	</div>
+	<div class="meta"><span class="yue">阅读<em>{$detail['click']}</em></span></div>
+	{if !empty($_W['styles']['multi_id']) && !empty($_W['styles']['detail_cmt']) && $_W['styles']['multi_id'] !="no" && $_W['styles']['detail_cmt'] !="no" }
+	<div class="cmtbox">
+		{if $_W['styles']['detail_cmt'] =="1"}
+		<!-- UY BEGIN -->
+		<div id="uyan_frame"></div>
+		<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js"></script>
+		<!-- UY END -->
+		{else}
+		{$_W['styles']['detail_cmt']}
+		{/if}
+	</div>
+	{/if}
+</div>
+{template 'com/footer'}

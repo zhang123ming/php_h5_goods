@@ -1,0 +1,74 @@
+{template 'common/header'}
+{template 'common/slide'}
+<link href="{$_W['siteroot']}app/themes/xx_w/css/xui.css" rel="stylesheet">
+<link href="{$_W['siteroot']}app/themes/xx_w/css/home.css" rel="stylesheet">
+<style>
+	body{
+	font:{$_W['styles']['fontsize']} {$_W['styles']['fontfamily']};
+	color:{if !empty($_W['styles']['fontcolor'])}{$_W['styles']['fontcolor']}{/if};
+	background-image:url('{if !empty($_W['styles']['indexbgimg'])}{$_W['styles']['indexbgimg']}{/if}');
+	background-size:cover;
+	background-color:{if empty($_W['styles']['indexbgcolor'])}#F2F2F2{else}{$_W['styles']['indexbgcolor']}{/if};
+	{$_W['styles']['indexbgextra']}
+	}
+	a{color:{$_W['styles']['linkcolor']}; text-decoration:none;}
+	.carousel-indicators{  display: none;  }
+	.carousel-caption{  right:0;  left:0;  bottom:0;  background-color: rgba(0,0,0,0.2);  padding:5px 0;  line-height:30px;  }
+	{$_W['styles']['css']}
+</style>
+<div class="x-box">
+	<div class="x-row x-navs">
+	{if !empty($navs)}
+	{loop $navs $index $nav}
+	<a href="{$nav['url']}" class="x-a-3 x-item" >
+		<div class="x-pic">
+			{if !empty($nav['icon'])}
+				<img src="{$_W['attachurl']}{$nav['icon']}" class="x-img">
+			{else}
+				<div class="x-nav-icon " style="color:{$nav['css']['icon']['color']}">
+					<i class="x-i {$nav['css']['icon']['icon']}" ></i>
+				</div>
+			{/if}
+		</div>
+		<div class="x-title new">
+			{$nav['name']}
+		</div>
+	</a>
+	{/loop}
+	{/if}
+	</div>
+	{php $parentid = $_W['styles']['pid'] }
+	<div class="x-list">
+		{data module="site" func="site_category" parentid="$parentid" limit="6"}
+			<div class="x-cell x-flex">
+				<a class="x-list-name a-active" href="{$row['linkurl']}">
+					{if !empty($row['icon'])}
+					<div class="x-cell-img">
+						<img src="{$row['icon']}" >
+					</div>
+					{else}
+					<div class="x-cell-icon" style="background-color:{$row['css']['icon']['color']}">
+						<i class="x-i {$row['css']['icon']['icon']}" ></i>
+					</div>
+					{/if}
+					<div class="x-cell-name">
+						{$row['name']}
+					</div>
+				</a>
+				<div class="x-sub-list x-f1">
+					{php is_numeric($row['description']) ? $newId = $row['description'] : $newId = $row['id']}
+					{data func="site_article" cid=$newId assign="result" iscommend="true" limit=2 return="true"}
+					{loop $result['list'] $r}
+						<div class="x-sub-item">
+							<a class="x-sub-title a-active new" href="{$r['linkurl']}">
+								{$r['title']}
+							</a>
+						</div>
+					{/loop}
+				</div>
+			</div>
+		{/data}
+	</div>
+</div>
+
+{template 'common/footer'}

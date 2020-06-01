@@ -1,0 +1,322 @@
+ {template '_header'}
+ <style>
+    .trorder td{
+        border-top:none !important;
+     }
+ </style>
+
+<div class="page-header">
+    当前位置：<span class="text-primary">{$applytitle}提现申请</span>
+</div>
+
+<div class="page-content">
+    <form action="./index.php" method="get" class="form-horizontal  table-search" role="form" id="form1">
+        <input type="hidden" name="c" value="site" />
+        <input type="hidden" name="a" value="entry" />
+        <input type="hidden" name="m" value="ewei_shopv2" />
+        <input type="hidden" name="do" value="web" />
+        <input type="hidden" name="r" value="commission.apply" />
+        <input type="hidden" name="status" value="{$status}" />
+        <div class="page-toolbar m-b-sm m-t-sm">
+            <div class="col-sm-3">
+                <div class='input-group'>
+                    {php echo tpl_form_field_daterange('time', array('starttime'=>date('Y-m-d H:i', $starttime),'endtime'=>date('Y-m-d H:i', $endtime)),true);}
+
+                </div>
+
+            </div>
+            <div class="col-sm-3">
+                <div class="input-group">
+                    <input type="number" class="form-control"  name="psize" value="{$_GPC['psize']}" placeholder="请输入每页条数"/>
+                </div>
+            </div>
+
+            <div class="col-sm-6 pull-right">
+                <div class="input-group">
+                    <div class="input-group-select">
+                        <select name='timetype'   class='form-control' >
+                            <option value=''>不按时间</option>
+                            {if $status>=1}<option value='applytime' {if $_GPC['timetype']=='applytime'}selected{/if}>申请时间</option>{/if}
+                            {if $status>=2}<option value='checktime' {if $_GPC['timetype']=='checktime'}selected{/if}>审核时间</option>{/if}
+                            {if $status>=3}<option value='paytime' {if $_GPC['timetype']=='paytime'}selected{/if}>打款时间</option>{/if}
+                        </select>
+                    </div>
+                    <div class="input-group-select">
+                         <select name='agentlevel' class='form-control  input-sm select-md' style="width:100px;">
+                             <option value=''>等级</option>
+                             {loop $agentlevels $level}
+                             <option value='{$level['id']}' {if $_GPC['agentlevel']==$level['id']}selected{/if}>{$level['levelname']}</option>
+                             {/loop}
+                         </select>
+                    </div>
+                    <div class="input-group-select">
+                        <select name='searchfield'  class='form-control  input-sm select-md'   style="width:110px;"  >
+                            <option value='member' {if $_GPC['searchfield']=='member'}selected{/if}>会员信息</option>
+                            <option value='applyno' {if $_GPC['searchfield']=='applyno'}selected{/if}>提现单号</option>
+                        </select>
+                    </div>
+                    <input type="text" class="form-control input-sm"  name="keyword" value="{$_GPC['keyword']}" placeholder="请输入关键词"/>
+                    <span class="input-group-btn">
+                        <button class="btn  btn-primary" type="submit"> 搜索</button>
+                           {ifp 'commission.apply.export'}
+                                <button type="submit" name="export" value="1" class="btn btn-success ">导出</button>
+                            {/if}
+                    </span>
+                </div>
+
+            </div>
+        </div>
+    </form>
+
+    {if count($list)>0}
+    {php $col=7}
+    <table class="table ">
+        <thead class="navbar-inner">
+        <tr style="background: #f7f7f7">
+            <th>提现单号</th>
+            <th>分销等级</th>
+            <th style="width:230px;">提现方式</th>
+            <th>申请佣金</th>
+            <th>{if $status==3}实际到账{else}实际佣金{/if}</br>已发送金额 (微信红包)</th>
+            <th>提现手续费</th>
+            <th>手续费率</th>
+            {if $status==-1}
+            {php $col++}
+            <th>无效时间</th>
+            {elseif $status>=3}
+            {php $col++}
+            <th>打款时间</th>
+            {elseif $status>=2}
+            {php $col++}
+            <th>审核时间</th>
+            {elseif $status>=1}
+            {php $col++}
+            <th>申请时间</th>
+            {/if}
+        </tr>
+        <tr></tr>
+        </thead>
+        <tbody>
+        {loop $list $row}
+        <tr class="trorder" style="border-bottom: none">
+            <td colspan="{$col}" style="background: #f7f7f7">
+               提现单号： {$row['applyno']}
+            </td>
+        </tr>
+        <tr class="trorder" style="border-top: none;">
+            <td>
+                {ifp 'member.list.view'}
+                <a  href="{php echo webUrl('member/list/detail',array('id' => $row['mid']));}" target='_blank'>
+                    <img class="radius50" src='{php echo tomedia($row['avatar'])}' style='width:30px;height:30px;padding1px;border:1px solid #ccc'  onerror="this.src='../addons/ewei_shopv2/static/images/noface.png'"/> {$row['nickname']}<br />姓名：{$row['applyrealname']}
+                </a>
+                {else}
+                <img class="radius50" src='{php echo tomedia($row['avatar'])}' style='width:30px;height:30px;padding1px;border:1px solid #ccc' onerror="this.src='../addons/ewei_shopv2/static/images/noface.png'" /> {$row['nickname']}<br />姓名：{$row['applyrealname']}
+                {/if}
+                <br/>
+            </td>
+            <td>{$row['levelname']}</td>
+            <td>
+                {if $row['type']==0}
+                <i class="icow icow-yue text-warning"></i>余额
+                {else if $row['type']==1}
+               <i class="icow icow-weixinzhifu text-success"></i> 微信钱包
+                {else if $row['type']==2}
+               <i class="icow icow-zhifubaozhifu text-primary"></i>支付宝
+                <div>{$row['realname']}</div><div>{$row['alipay']}</div>
+                {else if $row['type']==3}
+                <i class="text-primary icow icow-icon"></i>银行卡
+                <div>{$row['bankname']}</div><div>{$row['bankcard']}</div>
+                {/if}
+            </td>
+            <td class="text-danger">{$row['commission']}</td>
+            {if $set['commissionsettletype']==1}
+                <td>{$row['commission']}</td>
+            {else}
+                <td class="text-danger">
+                    {if $row['deductionmoney'] > 0}
+                    {$row['realmoney']}
+                    {else}
+                    {$row['commission']}
+                    {/if}
+                    </br>
+                    {if (float)$row['sendmoney'] != 0}{$row['sendmoney']}{else}{/if}
+                </td>
+            {/if}
+
+            <td><a data-toggle='popover' data-content="
+                             手续费减免范围: <br/>{$row['beginmoney']}~{$row['endmoney']}
+                                " data-html="true" data-trigger="hover">{$row['deductionmoney']}</a></td>
+            <td>{$row['charge']}%</td>
+            <td >
+                {if $row['status']!=1}<a data-toggle='popover' data-content="
+                             {if $status>=1 && $row['status']!=1}申请时间: <br/>{php echo date('Y-m-d',$row['applytime'])}<br/>{php echo date('H:i',$row['applytime'])}{/if}
+                             {if $status>=2 && $row['status']!=2}<br/>审核时间: <br/>{php echo date('Y-m-d',$row['checktime'])}<br/>{php echo date('H:i',$row['checktime'])}{/if}
+                             {if $status>=3 && $row['status']!=3}<br/>付款时间: <br/>{php echo date('Y-m-d',$row['paytime'])}<br/>{php echo date('H:i',$row['paytime'])}{/if}
+                             {if $status==-1}<br/>无效时间: <br/>{php echo date('Y-m-d',$row['invalidtime'])}<br/>{php echo date('H:i',$row['invalidtime'])}{/if}
+
+                                " data-html="true" data-trigger="hover">{/if}
+                {if $status>=1}
+                {php echo date('Y-m-d',$row['applytime'])} {php echo date('H:i',$row['applytime'])}
+                {elseif $status>=2}
+                {php echo date('Y-m-d',$row['checktime'])} {php echo date('H:i',$row['applytime'])}
+                {elseif $status>=3}
+                {php echo date('Y-m-d',$row['paytime'])} {php echo date('H:i',$row['paytime'])}
+                {elseif $status==-1}
+                {php echo date('Y-m-d',$row['invalidtime'])} {php echo date('H:i',$row['invalidtime'])}
+                {/if}
+                {if $row['status']!=1}<i class="fa fa-question-circle"></i></a>{/if}
+            </td>
+        </tr>
+        <form {ifp 'commission.apply.check|commission.apply.pay|commission.apply.cancel'}action="" method='post'{/if} class='form-horizontal form-validate'>
+
+            <input type="hidden" name="c" value="site" />
+            <input type="hidden" name="a" value="entry" />
+            <input type="hidden" name="m" value="ewei_shopv2" />
+            <input type="hidden" name="do" value="web" />
+            <input type="hidden" name="r" value="commission.apply" />
+            <input type="hidden" name="id" value="{$row['id']}" />
+            <input type="hidden" name="commission" value="{$row['commission']}" />
+            <input type="hidden" name="status" value="{$row['status']}" />
+            <tr class="trorder" style="border-bottom:none">
+                <td colspan="{$col}" style="background: #f7f7f7;height:60px;">
+                   
+                        <!-- <div class="isshow" style="float:left;">
+                            <a class=' btn btn-success  btn-sm btn-op btn-operation' >
+                                  <span data-toggle="tooltip" data-placement="top" title="">
+                                        选择操作
+                                   </span>
+                            </a>
+                        </div> -->
+                        <!-- <div class="menu_list" style="display:none;position:absolute;float:left;margin-left:150px;"> -->
+                        <div class="menu_list" style="position:absolute;float:left;">
+                            {if $row['status']==1}
+                            {ifp 'commission.apply.refuse'}
+                            <input type="submit" name="submit_refuse" value="驳回申请" class="btn btn-danger" onclick='return refuse()'/>
+                            {/if}
+                            {ifp 'commission.apply.check'}
+                            <input type="submit" name="submit_check" value="提交审核" class="btn btn-primary" onclick='return check()'/>
+                            {/if}
+                            {/if}
+
+                            {if $row['status']==2}
+
+                            {ifp 'commission.apply.cancel'}
+                            <input type="submit" name="submit_cancel" value="重新审核" class="btn btn-default"  onclick='return cancel()'/>
+                            {/if}
+                            {ifp 'commission.apply.pay'}
+                            {if empty($row['type'])}
+                            <input type="submit" name="submit_pay" value="打款到余额账户" class="btn btn-primary"  style='margin-left:10px;' onclick='return pay_credit()'/>
+                            {else if $row['type'] == 1}
+                            <input type="submit" name="submit_pay" value="打款到微信钱包" class="btn btn-primary" style='margin-left:10px;' onclick='return pay_weixin()'/>
+                            {else if $row['type'] == 2}
+                            <input type="submit" name="submit_pay" value="确认打款到支付宝" class="btn btn-primary" style='margin-left:10px;' onclick='return pay_alipay()'/>
+                            {else if $row['type'] == 3}
+                            <input type="submit" name="submit_pay" value="确认打款到银行卡" class="btn btn-primary" style='margin-left:10px;' onclick='return pay_bank()'/>
+
+                            {/if}
+                            <input type="submit" name="submit_pay" value="手动处理" class="btn btn-warning" style='margin-left:10px;' onclick='return payed()'/>
+                            {/if}
+                            {/if}
+                            {if $row['status']==-1}
+                            {ifp 'commission.apply.cancel'}
+                            <input type="submit" name="submit_cancel" value="重新审核" class="btn btn-default"  onclick='return cancel()'/>
+                            {/if}
+
+                            {/if}
+                            {if $row['status']==3}
+                            <input type="button" class="btn btn-default" name="submit" onclick="history.go(-1)" value="返回" style='margin-left:10px;' /> 
+                            {/if}
+                        </div>
+                </td>
+            </tr>
+        </form>
+        <tr></tr>
+        {/loop}
+        </tbody>
+        <tfoot style="border: none;">
+            <tr>
+                <td colspan="{$col}">
+                    {if $_GPC['status']>0}
+                    <div style="float: left">
+                        <div style="float: left;">
+                            {if $_GPC['status']==3}实际到账：{else}实际佣金：{/if}
+                            <i class="icow icow-yue text-warning"></i>余额 <span class="text-danger">{php echo $count1?:0}</span>元&emsp;&emsp;
+                        </div>
+                        <div style="float: left;">
+                            <i class="icow icow-weixinzhifu text-success"></i>微信钱包 <span class="text-danger">{php echo $count2?:0}</span>元&emsp;&emsp;
+                        </div>
+                        <div style="float: left;">
+                            <i class="icow icow-zhifubaozhifu text-primary"></i>支付宝 <span class="text-danger">{php echo $count3?:0}</span>元&emsp;&emsp;
+                        </div>
+                        <div style="float: left;">
+                            <i class="text-primary icow icow-icon"></i>银行卡 <span class="text-danger">{php echo $count4?:0}</span>元&emsp;&emsp;
+                        </div>
+                    </div>
+                    {/if}
+                    <div style="float: right">{$pager}</div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+    {else}
+    <div class='panel panel-default'>
+        <div class='panel-body' style='text-align: center;padding:30px;'>
+            暂时没有任何{$applytitle}提现申请!
+        </div>
+    </div>
+    {/if}
+</div>
+<script type="text/javascript">
+    // $(".isshow").click(function(){
+    //     if($(this).next().css("display")=="none"){
+    //         $(this).next().show();
+    //     }else{
+    //         $(this).next().hide();
+    //     }
+    // });
+</script>
+
+
+<script language='javascript'>
+    function check() {
+        var pass = true;
+        if (!pass) {
+            return false;
+        }
+        $(':input[name=r]').val('commission.apply.check');
+        return confirm('确认已核实成功并要提交?\r\n(提交后还可以撤销审核状态, 申请将恢复到申请状态)');
+    }
+    function refuse() {
+        $(':input[name=r]').val('commission.apply.refuse');
+        return confirm('确认驳回申请?\r\n( 分销商可以重新提交提现申请)');
+    }
+    function cancel() {
+       $(':input[name=r]').val('commission.apply.cancel');
+        return confirm('确认撤销审核?\r\n( 所有状态恢复到申请状态)');
+    }
+    function pay_credit() {
+        $(':input[name=r]').val('commission.apply.pay');
+        return confirm('确认打款到此用户的余额账户?');
+    }
+    function pay_weixin() {
+        $(':input[name=r]').val('commission.apply.pay');
+        return confirm('确认打款到此用户的微信钱包?');
+    }
+    function pay_alipay() {
+        $(':input[name=r]').val('commission.apply.pay');
+        return confirm('确认打款到此用户的支付宝? 姓名:' + $("#realname").html() + ' 支付宝帐号:' + $("#alipay").html());
+    }
+
+    function pay_bank() {
+        $(':input[name=r]').val('commission.apply.pay');
+        return confirm('确认打款到此用户的银行卡? ' + $("#bankname").html() + ' 姓名: 卡号:' + $("#bankcard").html());
+    }
+
+    function payed() {
+        $(':input[name=r]').val('commission.apply.payed');
+        return confirm('选择手动处理 , 系统不进行任何打款操作!\r\n请确认你已通过线下方式为用户打款!!!\r\n是否进行手动处理 ');
+    }
+</script>
+
+{template '_footer'}
+<!-- yi fu yuan ma wang -->

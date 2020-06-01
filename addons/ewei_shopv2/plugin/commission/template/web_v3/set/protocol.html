@@ -1,0 +1,56 @@
+<div class="form-group">
+    <label class="col-lg control-label">选择协议</label>
+    <div class="col-sm-9 col-xs-12">
+    {ifp 'commission.set.edit'}
+    <label class="radio-inline"><input type="radio" class="protocoltype" name="data[protocoltype]"  value="0" {if empty($data['protocoltype'])} checked="checked"{/if} /> 申请协议</label>
+    <label class="radio-inline"><input type="radio" class="protocoltype" name="data[protocoltype]"  value="1" {if $data['protocoltype'] ==1} checked="checked"{/if} /> 提现协议</label>
+    {else}
+    {/if}
+    <span class="help-block"></span>
+    </div> 
+</div>
+<div class="form-group">
+    <label class="col-lg control-label">协议名称</label>
+    <div class="col-sm-9 col-xs-12">
+        {ifp 'commission.set.edit'}
+        <input type='text' class='form-control protocoltitle' name='{if $data['protocoltype']==0}data[applytitle]{else}data[paytitle]{/if}' value="{if $data['protocoltype']==0}{$data['applytitle']}{else}{$data['paytitle']}{/if}" />
+        {else}
+        <div class='form-control-static'>{$data['applytitle']}</div>
+        {/if}
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="col-lg control-label">协议内容</label>
+    <div class="col-sm-9 col-xs-12">
+        {ifp 'commission.set.edit'}
+        <div class="protocolbody0" {if empty($data['protocoltype'])} style="display: block;"{else} style="display: none;" {/if}>
+            {php echo tpl_ueditor('data[applycontent]',$data['applycontent'],array('height'=>200))}  
+        </div>
+        <div class="protocolbody1" {if empty($data['protocoltype'])} style="display: none;"{else} style="display: block;" {/if}>
+            {php echo tpl_ueditor('data[paycontent]',$data['paycontent'],array('height'=>200))}  
+        </div>
+        {else}
+        <textarea id='applycontent' style='display:none'>{$data['applycontent']}</textarea>
+        <a href='javascript:preview_html("#applycontent")' class="btn btn-default">查看内容</a>
+        {/if}
+    </div>
+</div>
+<script type="text/javascript">
+    $('.protocoltype').click(function(){
+        if($(this).val()==0){
+            $('.protocoltitle').attr('name','data[applytitle]');
+            $('.protocoltitle').val('{php echo $data['applytitle']}');
+            $('.protocolbody0').css('display','block');
+             $('.protocolbody1').css('display','none');
+        }else{
+            $('.protocoltitle').attr('name','data[paytitle]');
+            $('.protocoltitle').val('{php echo $data['paytitle']}');
+            $('.protocolbody0').css('display','none');
+            $('.protocolbody1').css('display','block');
+        }
+    });
+</script>
+
+
+<!-- yi fu yuan ma wang -->

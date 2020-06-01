@@ -1,0 +1,229 @@
+{template '_header'}
+<style type='text/css'>
+    .trhead td {  background:#efefef;text-align: center}
+    .trbody td {  text-align: center; vertical-align:top;border-left:1px solid #f2f2f2;overflow: hidden; font-size:12px;}
+    .trorder { background:#f8f8f8;border:1px solid #f2f2f2;text-align:left;}
+    .ops { border-right:1px solid #f2f2f2; text-align: center;}
+    .ops a,.ops span{
+        margin: 3px 0;
+    }
+    .table-top .op:hover{
+        color: #000;
+    }
+    .tables{
+        border:1px solid #e5e5e5;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .tables:hover{
+        border:1px solid #b1d8f5;
+    }
+    .table-row,.table-header,.table-footer,.table-top{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        -webkit-justify-content: center;
+        -webkit-align-content: space-around;
+        align-content: space-around;
+    }
+    .tables  .table-row>div{
+        padding: 14px 0 !important;
+    }
+    .tables  .table-row.table-top>div{
+        padding: 11px 0;
+    }
+    .tables    .table-row .ops.list-inner{
+        border-right:none;
+    }
+    .tables .list-inner{
+       border-right: 1px solid #efefef;
+        vertical-align: middle;
+    }
+    .table-row .goods-des .title{
+        width:180px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .table-row .goods-des{
+        width:300px;
+        border-right: 1px solid #efefef;
+        vertical-align: middle;
+    }
+    .table-row .list-inner{
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        text-align: center;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+    .saler>div{
+        width:130px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .table-row .list-inner.ops,  .table-row .list-inner.paystyle{
+        -webkit-flex-direction: column;
+        flex-direction: column;
+       -webkit-justify-content: center;
+       justify-content: center;
+    }
+    .table-header .others{
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        text-align: center;
+    }
+    .table-footer{
+        border-top: 1px solid #efefef;
+    }
+    .table-footer>div, .table-top>div{
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        height:100%;
+    }
+</style>
+
+<div class="page-header">
+    当前位置：<span class="text-primary">租用管理</span>
+    <span>记录总数:  <span class='text-danger'>{$total}</span></span>
+</div>
+<div class="page-content">
+    <form action="./merchant.php" method="get" class="form-horizontal table-search" role="form">
+        <input type="hidden" name="c" value="site" />
+        <input type="hidden" name="a" value="entry" />
+        <input type="hidden" name="m" value="ewei_shopv2" />
+        <input type="hidden" name="do" value="web" />
+        <input type="hidden" name="r" value="order.rent" />
+        <input type="hidden" name="status" value="{$status}" />
+
+        <div class="page-toolbar">
+            <div class="input-group">
+                <span class="input-group-select">
+                    <select name='searchtime'  class='form-control'   style="width:100px;padding:0 5px;"  >
+                        <option value=''>不按时间</option>
+                        <option value='create' {if $_GPC['searchtime']=='create'}selected{/if}>添加时间</option>
+                        <option value='begin' {if $_GPC['searchtime']=='begin'}selected{/if}>激活时间</option>
+                        <option value='end' {if $_GPC['searchtime']=='end'}selected{/if}>到期时间</option>
+                    </select>
+                </span>
+                <span class="input-group-btn">
+                    {php echo tpl_form_field_daterange('time', array('starttime'=>date('Y-m-d H:i', $starttime),'endtime'=>date('Y-m-d H:i', $endtime)),true);}
+                </span>
+                <input type="text" class="form-control input-sm"  name="keyword" value="{$_GPC['keyword']}" placeholder="请输入会员昵称/手机号/ID" />
+                <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit"> 搜索</button>
+                        <!-- <button type="submit" name="export" value="1" class="btn btn-success ">导出</button> -->
+                </span>
+            </div>
+
+        </div>
+
+    </form>
+
+
+    {if count($list)>0}
+    <div class="row">
+        <div class="col-md-12">
+            <div  class="">
+                <div class="table-header" style='background:#f8f8f8;height: 35px;line-height: 35px;padding: 0 20px'>
+                    <div style='border-left:1px solid #f2f2f2;width: 200px;text-align: left;'>设备MAC地址</div>
+                    <div class="others">用户</div>
+                    <div class="others">所属商家</div>
+                    <div class="others">周期</div>
+                    <div class="others">激活时间</div>
+                    <div class="others">创建时间</div>
+                    <div class="others">状态</div>
+                    <div class="others">到期时间</div>
+                    <div class="others">关联订单</div>
+                    <div class="others">操作</div>
+                </div>
+            {loop $list $item}
+            <div class="table-row"><div style='height:20px;padding:0;border-top:none;'>&nbsp;</div></div>
+                <div class="tables">
+                    <div class='table-row' style="margin:0  20px">
+                        <div class="goods-des" style='width:200px;text-align: left'>
+                            <div style="display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;margin: 10px 0">
+                               {if $item['macid']}{$item['macid']}{else}未绑定设备{/if}
+                            </div>
+
+                        </div>
+
+                        <div class="list-inner saler"   style='text-align: center;' >
+                            <div>
+                                {$item['nickname']}
+                                <br/>
+                                {$item['realname']}<br/>
+                                {$item['mobile']}
+                            </div>
+                        </div>
+                        <div class="list-inner paystyle"  style='text-align:center;' >
+                           {if !empty($item['merchname'])}{$item['merchname']}{else}总部{/if}
+                        </div>
+                        <div class="list-inner paystyle"  style='text-align:center;' >
+                           {if $item['periodtime']&&$item['status']==2}{$item['periodtime']}天{else}永久有效{/if}
+                        </div>
+                        <div  class="list-inner"  style='text-align:center' >
+                            {if $item['begintime']} {php echo date('Y-m-d H:i:s',$item['begintime'])}{else}未激活{/if}
+                        </div>
+                        <div class="list-inner paystyle"  style='text-align:center' >
+                            {php echo date('Y-m-d H:i:s',$item['createtime'])}
+                            
+                        </div>
+                        <div class="list-inner paystyle"  style='text-align:center' >
+                            {$item['status']}
+                        </div>
+                        <div class="list-inner paystyle"  style='text-align:center' >
+                            {if $item['endtime']} {php echo date('Y-m-d H:i:s',$item['endtime'])}{else}未激活{/if}
+                            
+                        </div>
+                        <div style='text-align:center'>
+                            <a href="{php echo merchUrl('order/list',array('searchfield'=>'ordersn','keyword'=>$item['ordersn']))}">{$item['ordersn']}</a>
+                        </div>
+                        <div  class='ops list-inner' style='line-height:20px;text-align:center' >
+                           <a class='btn btn-default btn-sm btn-op btn-operation' data-toggle='ajaxModal'  href="{php echo merchUrl('order/rent/edit', array('id' => $item['id']))}" >
+                            <span data-toggle="tooltip" data-placement="top" data-original-title="编辑">
+                                <i class='icow icow-bianji2'></i>
+                            </span>
+
+                            </a>
+                             {if !empty($item['message'])}
+                            <a class="btn {if $item['statusa']==2} btn-success {else}btn-danger{/if} btn-xs" data-toggle='ajaxModal' href="{php echo webUrl('order/rent/rentMsg', array('id' => $item['id']))}"  >售后{if $item['statusa']==2}已处理{else}待处理{/if}</a>
+                            {/if}
+                        </div>
+
+                    </div>
+
+            </div>
+            {/loop}
+                <div style="padding: 20px;text-align: right" >
+                        {$pager}
+                </div>
+            </div>
+        </div>
+    </div>
+    {else}
+    <div class="panel panel-default">
+        <div class="panel-body empty-data">暂时没有任何记录!</div>
+    </div>
+    {/if}
+</div>
+{template '_footer'}
+
+<!--efwww_com-->

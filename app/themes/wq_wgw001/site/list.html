@@ -1,0 +1,193 @@
+{template 'header'}
+<link rel="stylesheet" href="{$_W['siteroot']}app/themes/wq_wgw001/static/css/style.css">
+<div class="qzj_header">
+	<a href="{php echo url('home/home')}">
+	{if !empty($_W['styles']['hd_logo'])}
+	<img src="$_W['styles']['hd_logo']" />
+	{else}
+	<img src="{$_W['siteroot']}app/themes/wq_wgw001/static/images/pic_01.png" />
+	{/if}
+	</a>
+</div>
+<ul class="qzj_nav clearfix">
+	{php $num = 1;}
+	{data func="site_navs" item="row"}
+	{php if($num == 1) $on = 'on';}
+	{php if($num == 2) $on = '';}
+	{php if($num == 3) $on = '';}
+	{php if($num == 4) $on = '';}
+	{php if($num == 5) $on = '';}
+	<li><a class="{$on}" href="{$row[url]}">{$row['name']}</a></li>
+	{php $num++;}
+	{/data}
+</ul>
+<div class="qzj_list_main">
+	{if $cid==$_W['styles']['pro_cid']}
+	<div class="newTit clearfix">
+		<div class="fr moreLink">
+			<a href="javascript:;">产品筛选</a>
+			<ul>
+				<li><a href="javascript:;" onClick="tagsFilter($(this),'all')">全部产品</a></li>
+				{data module="site" func="site_category" parentid="$_W['styles']['pro_cid']"}
+				<li><a href="javascript:;" onClick="tagsFilter($(this),{$row['id']})"><span>{$row['name']}</span></a></li>
+				{/data}
+			</ul>
+		</div>
+		<h3>全部产品</h3>
+		<!-- 所有功能，这里的标题全部动态改变填充 -->
+		<div class="row">
+			<ul class="pic_list clearfix">
+			<!-- 所有功能 -->
+			{data module="site" func="site_article" cid="$_W['styles']['pro_cid']" limit="888" assign="result" return="true"}
+			{if empty($result['list'])}
+			<span class="nopost">您还未添加演示模块，请添加后查看</span>
+			{/if}
+			{loop $result['list'] $row}
+			<li class="item_one" data-type="{$row['ccate']}" style="display: block;">
+				<a href="{$row['linkurl']}">
+					{if !empty($row['thumb'])}
+					<img src="{$row['thumb']}">
+					{else}	
+					<img src="{$_W['siteroot']}app/themes/wq_wgw001/static/images/nocover.png" />
+					{/if}
+					<span>{php echo cutstr($row['title'],15,1);}</span>
+				</a>
+			</li>
+			{/loop}
+			</ul>
+		</div>
+	</div>
+	<script>
+		$(function(){
+			$(".newTit .moreLink>a").click(function(){
+				if($(this).hasClass('on')){
+					$(this).removeClass('on').next().hide();
+				}else{
+					$(this).addClass('on').next().show();
+				}
+			});
+			$(".fixedBar a.aClick").click(function() {
+				$(".fixedBar .SubLinks").toggle();
+					return false;
+				});
+			});
+			function tagsFilter(obja,type){//obja是当前的a标签
+				var oText=obja.text();
+				var newTit=$('.newTit h3').text(oText);
+				$(".item_one").hide();
+				if(typeof type === 'number'){
+					$(".item_one[data-type="+type+"]").show();
+				}else if(type === 'all'){
+					$(".item_one").show();
+				}
+				$(".fixedBar .SubLinks").hide();
+				$(".newTit .moreLink>a").removeClass('on').next().hide();
+				$("html,body").stop().animate({scrollTop:$(".newTit").offset().top},1000);
+			}
+			$(function(){
+				var $this = $(".scrollNews");
+				var t=null;
+				$this.hover(function(){
+					clearInterval(t);
+				},function(){
+					t = setInterval(function(){
+					scrollNews( $this );
+				}, 4000 );
+			}).trigger("mouseleave");
+		});
+	</script>
+	{elseif $cid==$_W['styles']['help_cid']}
+	<div class="newTit clearfix">
+		<div class="fr moreLink">
+			<a href="javascript:;">帮助筛选</a>
+			<ul>
+				<li><a href="javascript:;" onClick="tagsFilter($(this),'all')">全部帮助</a></li>
+				{data module="site" func="site_category" parentid="$_W['styles']['help_cid']"}
+				<li><a href="javascript:;" onClick="tagsFilter($(this),{$row['id']})"><span>{$row['name']}</span></a></li>
+				{/data}
+			</ul>
+		</div>
+		<h3>全部帮助</h3>
+		<!-- 所有功能，这里的标题全部动态改变填充 -->
+		<div class="row">
+			<ul class="help_list clearfix">
+			<!-- 所有功能 -->
+			{data module="site" func="site_article" cid="$_W['styles']['help_cid']" limit="888" assign="result" return="true"}
+			{if empty($result['list'])}
+			<span class="nopost">您还未添加帮助文章，请添加后查看</span>
+			{/if}
+			{loop $result['list'] $row}
+			<li class="item_one" data-type="{$row['ccate']}" style="display: block;">
+				<a href="{$row['linkurl']}">{$row['title']}</a>
+			</li>
+			{/loop}
+			</ul>
+		</div>
+	</div>
+	<script>
+		$(function(){
+			$(".newTit .moreLink>a").click(function(){
+				if($(this).hasClass('on')){
+					$(this).removeClass('on').next().hide();
+				}else{
+					$(this).addClass('on').next().show();
+				}
+			});
+			$(".fixedBar a.aClick").click(function() {
+				$(".fixedBar .SubLinks").toggle();
+					return false;
+				});
+			});
+			function tagsFilter(obja,type){//obja是当前的a标签
+				var oText=obja.text();
+				var newTit=$('.newTit h3').text(oText);
+				$(".item_one").hide();
+				if(typeof type === 'number'){
+					$(".item_one[data-type="+type+"]").show();
+				}else if(type === 'all'){
+					$(".item_one").show();
+				}
+				$(".fixedBar .SubLinks").hide();
+				$(".newTit .moreLink>a").removeClass('on').next().hide();
+				$("html,body").stop().animate({scrollTop:$(".newTit").offset().top},1000);
+			}
+			$(function(){
+				var $this = $(".scrollNews");
+				var t=null;
+				$this.hover(function(){
+					clearInterval(t);
+				},function(){
+					t = setInterval(function(){
+					scrollNews( $this );
+				}, 4000 );
+			}).trigger("mouseleave");
+		});
+	</script>
+	{else}
+	<ul class="newslist">
+	{if empty($_W['styles']['list_pagesize'])}
+		{php $_W['styles']['list_pagesize'] = 10}
+	{/if}
+	{data module="site" func="site_article" cid="$cid" limit="$_W['styles']['list_pagesize']" assign="result" return="true"}
+	{if empty($result['list'])}
+		<span class="nopost">本分类下暂时没有文章，请稍后查看</span>
+	{/if}
+	{loop $result['list'] $row}
+		<li class="green bounceInDown">
+			<p class="date">{php echo date("Y-m-d", $row['createtime']);}</p>
+			<dl>
+				<dt class="hfinfo">
+					<a href="{$row['linkurl']}" class="biaoti">
+						<p>{php echo cutstr($row['title'],25,1);}</p>
+						<p class="hfinfo_more">查看详情</p>
+					</a>
+				</dt>
+			</dl>
+		</li>
+	{/loop}
+	</ul>
+	<div class="pager-position">{$result['pager']}</div>
+	{/if}
+</div>
+
+{template 'com/footer'}

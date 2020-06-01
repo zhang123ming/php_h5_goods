@@ -1,0 +1,65 @@
+<script type="text/html" id="tpl_goods">
+    <%each list as item%>
+        <div class="fui-list" data-id1="<%item.id%>" data-can1="{ifp 'store.edit'}1{/if}">
+            <div class="fui-list-media batch-item">
+                <input type="checkbox" class="fui-radio fui-radio-success batch-item-check" name="checkbox" value="<%item.id%>" />
+            </div>
+            <div class="fui-list-media round">
+                <img src="<%item.thumb%>" class="round" onerror="this.src='../addons/ewei_shopv2/static/images/nopic100.jpg';" />
+                <%if item.merchid>0%>
+                    <div class="title">多商户</div>
+                <%/if%>
+            </div>
+            <div class="fui-list-inner">
+                <div class="title"><%item.storename%></div>
+                <div class="subtitle">
+                    <span class="price">￥<%item.orderAmount%></span>
+                </div>
+                <div class="subtitle">
+                    <span class="total">订单数量：<%item.orderNum%></span>
+                    <span class="total">粉丝数量：<%item.memberNum%></span>
+                </div>
+            </div>
+            <div class="fui-cell-group fui-cell-click">
+                <div class="fui-cell noactive">
+                    <div class="fui-cell-info">
+                        <input type="checkbox" class="fui-switch fui-switch-small fui-switch-success pull-right changeStatus" data-storeid="<%item.id%>" data-status="<%item.status%>"  <%if item.status==1%>checked="checked"<%/if%>  />
+                    </div>
+                </div>
+            </div>
+            {ifp 'store.edit|store.delete|store.restore|store.stock'}
+                <div class="fui-list-angle fundot-parent batch-hide" style="display:none;">
+                    <div class="fundot"><i class="icon icon-more"></i></div>
+                    <div class="funmenu">
+                        {ifp 'store.edit'}
+                            <a class="btn-goods" data-action="edit"><i class="icon icon-edit"></i><span>编辑</span></a>
+                        {/if}
+                        <%if status=='sale'||status=='out'%>
+                            {ifp 'store.edit'}
+                                <a class="btn-goods" data-action="status" data-status="0"><i class="icon icon-icondownload"></i><span>下架</span></a>
+                            {/if}
+                        <%/if%>
+                        <%if status=='stock'%>
+                            {ifp 'store.edit'}
+                                <a class="btn-goods" data-action="status" data-status="1"><i class="icon icon-top"></i><span>上架</span></a>
+                            {/if}
+                        <%/if%>
+                        <%if status!='cycle'%>
+                            {ifp 'store.delete'}
+                                <a class="btn-goods" data-action="delete"><i class="icon icon-delete"></i><span>删除</span></a>
+                            {/if}
+                        <%else%>
+                            {ifp 'store.restore'}
+                                <a class="btn-goods" data-action="restore"><i class="icon icon-refresh"></i><span>还原</span></a>
+                            {/if}
+                        <%/if%>
+                        <%if status=='sale'||status=='out'%>
+                            <a class="btn-goods" data-action="view"><i class="icon icon-enclosure"></i><span>查看</span></a>
+                        <%/if%>
+                    </div>
+                </div>
+            {/if}
+        </div>
+    <%/each%>
+</script>
+<!--yi fu yuan ma-->

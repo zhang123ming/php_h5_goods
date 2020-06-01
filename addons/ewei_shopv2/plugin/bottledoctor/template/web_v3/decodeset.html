@@ -1,0 +1,60 @@
+{template '_header'}
+<div class="page-header">
+    当前位置：<span class="text-primary">其它设置</small></span>
+</div>
+<div class="page-content">
+    <form  {ife 'bottledoctor.decodeset' $item}action="" method="post"{/if} class="form-horizontal form-validate" enctype="multipart/form-data" >              
+                <div class="form-group">
+                    <label class="col-lg control-label">开启二维码验证</label>
+                    <div class="col-sm-9 col-xs-12">
+                        {ife 'bottledoctor.decodeset' $item}
+                            <label class='radio-inline'>
+                                <input type='radio' name='enabled' value='1' {if $item['enabled']==1}checked{/if} /> 是
+                            </label>
+                            <label class='radio-inline'>
+                                <input type='radio' name='enabled' value='0' {if $item['enabled']==0}checked{/if} /> 否
+                            </label>
+                        {else}
+                            <div class='form-control-static'>{if empty($item['enabled'])}否{else}是{/if}</div>
+                        {/if}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg control-label">开启交流互动</label>
+                    <div class="col-sm-9 col-xs-12">
+                        {ife 'bottledoctor.decodeset' $item}
+                            <label class='radio-inline'>
+                                <input type='radio' name='communicationSet' value='1' {if $item['communicationSet']==1}checked{/if} /> 是
+                            </label>
+                            <label class='radio-inline'>
+                                <input type='radio' name='communicationSet' value='0' {if $item['communicationSet']==0}checked{/if} /> 否
+                            </label>
+                        {else}
+                            <div class='form-control-static'>{if empty($item['communicationSet'])}否{else}是{/if}</div>
+                        {/if}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg control-label">设置撤回时间(分)</label>
+                    <div class="col-sm-9 col-xs-12">
+                        {ife 'bottledoctor.decodeset' $item}
+                            <input type="text" name="timeSet" class="form-control" value="{$item['timeSet']}" data-rule-required='true'/>
+                        {else}
+                            <div class='form-control-static'>{$item['timeSet']}</div>
+                        {/if}
+                    </div>
+                </div>
+                <div class="form-group"></div>
+                <div class="form-group">
+                    <label class="col-lg control-label"></label>
+                    <div class="col-sm-9 col-xs-12">
+                            <input type="submit" value="提交" class="btn btn-primary"  />
+                    </div>
+                </div>
+
+    </form>
+</div>
+{template '_footer'}
+
+
+<!--yifuyuanma-->

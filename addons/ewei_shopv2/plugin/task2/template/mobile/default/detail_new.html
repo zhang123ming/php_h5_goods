@@ -1,0 +1,507 @@
+{template '_header'}
+<link rel="stylesheet" href="../addons/ewei_shopv2/static/js/dist/swiper/swiper.min.css">
+<style>
+    .showQrCode-modal{
+        left: 0;
+    bottom: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+     transform: translate3d(0, 100%, 0); 
+     -webkit-transition-property: -webkit-transform; 
+    transition-property: transform;
+    }
+    .fui-modal.showQrCode-modal.showQrCodein {
+    -moz-transition-duration: 300ms;
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+</style>
+<div class='fui-page fui-page-current  page-goods-detail' id='page-goods-detail-index'>
+
+    {if empty($err)}
+
+<!--参数已完成-->
+    {if count($params)>0}
+    <div class="fui-content">
+        <div class="fui-cell-group notop">
+            {if !empty($params)}
+            {loop $params $p}
+            <div class="fui-cell">
+                <div class="fui-cell-label md" >{$p['title']}</div>
+                <div class="fui-cell-info overflow md">{$p['value']}</div>
+            </div>
+            {/loop}
+
+            {else}
+            <div class="fui-cell">
+                <div class="fui-cell-info text-align">项目没有参数</div>
+            </div>
+            {/if}
+        </div>
+    </div>
+    {/if}
+
+
+<div class='fui-content' style="bottom: 2.2rem;">
+{if !empty($err)}
+<div class='content-empty'>
+    <i class='icon icon-search'></i><br/> 宝贝找不到了~ 您看看别的吧 ~<br/><a href="{php echo mobileUrl()}" class='btn btn-default-o external'>到处逛逛</a>
+</div>
+{else}
+<!--轮播已完成-->
+<div class='fui-swipe goods-swipe'>
+
+    <div class='fui-swipe-wrapper'>
+        {loop $thumbs $thumb}
+        <div class='fui-swipe-item' style="width: 100%;height: 320px;"><img src="{php echo tomedia($thumb)}"  data-lazy="{php echo tomedia($thumb)}" /></div>
+        {/loop}
+    </div>
+    <div class='fui-swipe-page'></div>
+</div>
+
+<div class="fui-cell-group fui-detail-group" >
+    <div class="fui-cell">
+        <div class="fui-cell-text name ">
+          项目名称: {$detail['title']}
+        </div>
+        <a class="fui-cell-remark share" id='btn-share'>
+        <i class="icon icon-share"></i>
+        <p>分享</p>
+        </a>
+    </div>
+    {if !empty($detail['subtitle'])}
+    <div class="fui-cell goods-subtitle">
+        <span class='text-danger'>项目特色：{$detail['subtitle']}</span>
+    </div>
+    {/if}
+     {if !empty($detail['returnrate'])}
+    <div class="fui-cell goods-subtitle">
+       <span class='text-danger'> 回报率：{$detail['returnrate']}%</span>
+    </div>
+    {/if}
+</div>
+
+<script>
+   function tab(id){
+        $("#tabnew [data-tab=tab"+id+"]").addClass("active").siblings().removeClass("active");
+        if(id==4){
+            console.log(1);
+            $("#comments-list-container").addClass("in").show();
+        }else{
+             $("#comments-list-container").removeClass("in").hide();
+        }
+        $(".detail-tab-panel .tab-panel[data-tab=tab"+id+"]").show().siblings().hide()
+   }
+</script>
+<div class="fui-tab fui-tab-danger detail-tab" id="tabnew">
+    <a data-tab="tab1" href="javascript:tab(1);" class="active">项目详情</a>
+    <a data-tab="tab2" href="javascript:tab(2);">公司介绍</a>
+    <a data-tab="tab3" href="javascript:tab(3);">招商政策</a>
+    <a data-tab="tab4" href="javascript:tab(4);">评价</a>
+</div>
+
+
+
+<div class="detail-tab-panel">
+    <div class="tab-panel show detail-block" data-tab="tab1">
+        <div class="content-block content-images">{$detail[projectdetail]}</div>
+    </div>
+    <div class="tab-panel" data-tab="tab2">
+        <div class="content-block content-images">{$detail[shopintroduce]}</div>
+    </div>
+    <div class="tab-panel" data-tab="tab3">
+        <div class="fui-cell-group">
+           {$detail[shopinpolicy]}
+        </div>
+    </div>
+    <div class="tab-panel comment-block" data-tab="tab4" id="comments-list-container">
+        <div class="fui-cell-group"> 
+             <div class='fui-cell-info' style="text-align: center;"><a href="{php echo mobileUrl('task2.comment',array('taskid'=>$_GPC[id]))}">点击去评论</a></div>
+         </div>
+        {if !$commentlist}
+        <div class='content-empty' style='display:none;'>暂时没有任何评价
+        </div>
+        {else}
+        <div class='container' id="comments-all">
+            <div class="fui-cell-group fui-comment-group">
+                {loop $commentlist $comment}
+                <div class="fui-cell">
+                    <div class="fui-cell-text comment ">
+                        <div class="info head">
+                            <div class='img'><img src='{$comment[headimgurl]}'/></div>
+                            <div class='nickname'>{$comment[nickname]}</div>
+
+                            <div class="date">{$comment[createtime]}</div>
+                        </div>
+                        <div class="remark">{$comment[content]}</div>
+                        {if count($comment[images])>0}
+                        <div class="remark img">
+                            {loop $comment[images] $img}
+                            <div class="img"><img src="{$img}" /></div>
+                            {/loop}
+                        </div>
+                        {/if}
+
+                        {if $comment[reply_content]}
+                        <div class="reply-content" style="background:#EDEDED;">
+                            掌柜回复：{$comment[reply_content]}
+                            {if count($comment[reply_images])>0}
+                            <div class="remark img">
+                                {loop  $comment[reply_images] $img}
+                                <div class="img"><img data-lazy="{$img}" /></div>
+                                {/loop}
+                            </div>
+                            {/if}
+                        </div>
+                        {/if}
+                        {if $comment[append_content] && $comment[replychecked]==0}
+                        <div class="remark reply-title">用户追加评价</div>
+                        <div class="remark">{$comment[append_content]}</div>
+                        {if count($comment[append_images])>0}
+                        <div class="remark img">
+                            {loop $comment[append_images] $img}
+                            <div class="img"><img data-lazy="{$img}" /></div>
+                            {/loop}
+                        </div>
+                        {/if}
+                        {if $comment[append_reply_content]}
+                        <div class="reply-content" style="background:#EDEDED;">
+                            掌柜回复：{$comment[append_reply_content]}
+                            {if count($comment[append_reply_images])>0}
+                            <div class="remark img">
+                                {loop $comment[append_reply_images] $img}
+                                <div class="img"><img data-lazy="{$img}" /></div>
+                               {/loop}
+                            </div>
+                            {/if}
+                        </div>
+                        {/if}
+                        {/if}
+                    </div>
+                </div>
+                {/loop}
+            </div>
+        </div>
+        {/if}
+    </div>
+</div>
+
+
+<!-- <div class="fui-cell-group">
+    <div class="fui-cell">
+        <div class="fui-cell-text text-center look-detail"><i class='icon icon-fold'></i> <span>上拉查看图文详情</span></div>
+    </div>
+</div> -->
+
+{/if}
+
+</div>
+
+
+<div class="fui-modal picker-modal ">
+    <div class="option-picker" style="height: 14rem;">
+    <div class="option-picker-inner">
+    <div class="option-picker-cell goodinfo">
+        <div class="closebtn"><i class="icon icon-guanbi1"></i></div>
+      
+        <div class="info info-titles"></div>
+    </div>
+    <div class="option-picker-options" style="height: 335.4px;">
+    <div class="fui-cell-group diyform-container">
+        <div class="fui-cell " >
+            <div class="fui-cell-label" style="padding-right: 15px;">
+                姓名            
+            </div>
+
+            <div class="fui-cell-info">
+
+                <input type="text" class="fui-input" required="required" id="reportname" name="reportname" placeholder="请输入姓名" value="">
+                
+            </div>
+        </div>
+        <div class="fui-cell " >
+            <div class="fui-cell-label" style="padding-right: 15px;">
+                手机          
+            </div>
+
+            <div class="fui-cell-info">
+                <input type="text" class="fui-input" required="required" id="reportmobile" name="reportmobile" placeholder="请输入联系方式" value="">
+            </div>
+        </div>
+    </div> 
+    </div>
+    <div class="fui-navbar">
+        <a href="javascript:;" class="nav-item btn confirmbtn" style="">确定</a>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+<div class="fui-modal showQrCode-modal">
+    <div class="option-picker" style="height:20rem;">
+    <div class="option-picker-inner">
+    <div class="option-picker-cell goodinfo">
+        <div class="closebtn"><i class="icon icon-guanbi1"></i></div>
+        <div class="img1"><img class="thumb"></div>
+        <div class="info info-price text-danger">
+         </div>
+        <div class="info info-total">
+           {$set[qrcode_desc]}
+        </div>
+        <div class="info info-titles"></div>
+    </div>
+    <div class="option-picker-options" style="height: 16rem;">
+    <div class="fui-cell-group diyform-container">
+        <div class="fui-cell-group diyform-container" style="text-align: center;">
+            <img  style="width:50%;"src="{php echo tomedia($detail[qrcode])}" alt="">
+        </div>
+    </div> 
+    </div>
+    </div>
+    </div>
+</div>
+
+<script>
+    $(".confirmbtn").click(function(){
+        var reportmobile=$("#reportmobile").val();
+        var reportname = $("#reportname").val();
+        var taskid={$detail[id]};
+        if (reportmobile.length!=11) {
+            alert('手机号码不正确')
+            return false;
+        }
+        if (!reportname) {
+
+            alert('请输入姓名')
+            return false;
+        }
+        $.ajax({
+            url:'{php echo mobileUrl('task2.saveuniversal')}',
+            type:'post',
+            data:{reportmobile:reportmobile,reportname:reportname,taskid:taskid},
+            success:function(data){
+                var data = eval("("+data+")");
+                if (data.status==1) {
+                     {if $member[level]==0}
+                        $(".picker-modal").removeClass('in');
+                        FoxUI.alert('需支付1元才可进群了解','已提交成功',function(){
+
+                            window.location.href="{$set[upgrade_link]}";
+                        })
+                    {else}
+                        showQrCode();
+                    {/if}
+                }
+
+                if(data.status==0){
+                    {if $member[level]==0}
+                        $(".picker-modal").removeClass('in');
+                        FoxUI.alert('需支付1元才可进群了解','已提交成功',function(){
+
+                            window.location.href="{$set[upgrade_link]}&backurl={$backurl}";
+                        })
+                    {else}
+                        showQrCode();
+                    {/if}
+                  
+                }
+            }
+
+        })
+
+
+    })
+
+</script>
+
+<!--底部按钮-->
+
+<div class="fui-navbar bottom-buttons">
+
+    <a  class="nav-item favorite-item {if $isFavorite}active{/if}" data-isfavorite="{php echo intval($isFavorite)}">
+        <span class="icon {if $isFavorite}icon-likefill{else}icon-like{/if}"></span>
+        <span class="label" >关注</span>
+    </a>
+    <a class="nav-item external" href="{php echo mobileUrl('');}">
+        <span class="icon icon-shop"></span>
+        <span class="label" >首页</span>
+    </a>
+    <a  class="nav-item btn buybtn" href="javascript:showpick();">提交申请</a>
+</div>
+
+
+
+{else}
+
+<div class='fui-content'>
+    <div class='content-empty'>
+        <i class='icon icon-searchlist'></i><br/> 项目已经下架，或者已经删除!<br/><a href="{php echo mobileUrl()}" class='btn btn-default-o external'>到处逛逛</a>
+    </div>
+</div>
+{/if}
+
+<!--分享弹层-->
+<div id='cover'>
+    <div class='fui-mask-m visible'></div>
+    <div class='arrow'></div>
+    <div class='content'>请点击右上角<br/>通过【发送给朋友]】</div>
+</div>
+
+</div>
+
+<script>
+    function showQrCode() {
+
+      $('.picker-modal').removeClass('in');
+      $('.showQrCode-modal').addClass('showQrCodein');
+    }
+
+    {if $showQrcode}
+        showQrCode();
+    {/if}
+
+    function showpick() {
+
+      $('.picker-modal').addClass('in')
+        console.log(1);
+    }
+
+    function dopick(){
+        var id='{$detail[id]}';
+        $.ajax({
+            url:"{php echo mobileUrl('task2.picktask')}",
+            type:'post',
+            data:{id:id},
+            success:function(data){
+                var data=eval('('+data+')');
+                if (data.status==1) {
+                    alert("接取成功");
+                }else{
+                    console.log(data.result.message)
+                }
+
+                showpick();
+
+            }
+
+        })
+
+    }
+     function toggle(taskid, isfavorite, callback) {
+
+        $.post("{php echo mobileUrl('task2.toggle')}",{id: taskid,isfavorite: isfavorite}, function(ret) {
+            if (ret.status == 0) {
+                if (ret.result.message == '请先登录!') {
+                   
+                    FoxUI.confirm("请先登录", "提示", function() {
+                        location.href = "{php echo mobileUrl('account/login')}"
+                    });
+                    if (callback) {
+                        callback(false)
+                    }
+                    return false
+                }
+                FoxUI.toast.show(ret.result.message);
+                return false
+            }
+            if (callback) {
+                var data=eval('('+ret+')');
+                console.log(data);
+                callback(data.result.isfavorite)
+            }
+        }, false, true)
+    };
+
+    $('.favorite-item').click(function() {
+            var self = $(this);
+
+            if (self.attr('submit') == '1') {
+                return
+            }
+            self.attr('submit', 1);
+            var isfavorite = self.attr('data-isfavorite') == '1';
+
+            var icon = self.find('.icon');
+            icon.addClass('icon-like').removeClass('icon-likefill');
+            self.removeClass('active');
+            isfavorite = self.attr('data-isfavorite') == '1' ? 0 : 1;
+            toggle('{$_GPC[id]}', isfavorite, function(is) {
+                self.removeAttr('submit').attr("data-isfavorite", is ? "1" : 0);
+                if (is) {
+                    icon.addClass('icon-likefill').removeClass('icon-like');
+                    self.addClass('active')
+                }
+            })
+        });
+
+
+    $(".closebtn").click(function(){
+
+         $(".picker-modal").removeClass('in');
+         $(".showQrCode-modal").removeClass('showQrCodein');
+    });
+
+    function ish5app () {
+        var userAgent = navigator.userAgent;
+        if (userAgent.indexOf('CK 2.0') > -1){
+            return true;
+        }
+        return false;
+    };
+    function isWeixin () {
+        var ua = navigator.userAgent.toLowerCase();
+        var isWX = ua.match(/MicroMessenger/i) == "micromessenger";
+        return isWX;
+    };
+
+    if (isWeixin()) {
+        $('#btn-share').click(function() {
+            $('#cover').fadeIn(200)
+        });
+        $('#cover').click(function() {
+            $('#cover').hide()
+        })
+    } else {
+        $('#btn-share').click(function() {
+            if (ish5app()) {
+                return
+            }
+            FoxUI.alert("请复制链接发送给好友")
+        })
+    }
+</script>
+<!-- <script type="text/javascript">
+    
+    wx.ready(function () {
+                wx.showOptionMenu();
+
+                window.shareData.success = "{$_W['shopshare']['way']}";
+                if(window.shareData.success){
+                    var success = window.shareData.success;
+                    window.shareData.success = function(){
+                        eval(success)
+                    };
+                }
+
+
+                wx.onMenuShareAppMessage({
+                    title: '{$detail[title]}', // 分享标题
+                    desc: '{$detail[subtitle]}', // 分享描述
+                    link: "{php echo mobileUrl('task2.detail',array(id=>$_GPC[id]),true)}", // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                    imgUrl: '', // 分享图标
+                    type: '', // 分享类型,music、video或link，不填默认为link
+                    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                    success: function () {
+                    // 用户确认分享后执行的回调函数
+                    },
+                    cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                    }
+                    });
+              
+            });
+</script> -->
+
+{template '_footer'}

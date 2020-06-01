@@ -1,0 +1,53 @@
+<div class='menu-header'>{php echo $this->plugintitle}</div>
+
+{ifp 'groupaward.partner|groupaward.level'}
+<ul>
+    {ifp 'groupaward.partner'}<li {if $_W['routes']=='groupaward.agent'}class="active"{/if}><a href="{php echo webUrl('groupaward/agent')}">代理商管理</a></li>{/if}
+    {ifp 'groupaward.level'}<li {if $_W['routes']=='groupaward.level'}class="active"{/if}><a href="{php echo webUrl('groupaward/level')}">代理商等级</a></li>{/if}
+</ul>
+{/if}
+
+<style type='text/css'>
+    .groupaward-list a {
+        position: relative;
+    }
+    .groupaward-list span  {
+        float:right;margin-right:20px;
+    }
+</style>
+{ifp 'groupaward.bonus.status0|groupaward.bonus.status1|groupaward.bonus.status2|groupaward.bonus.build'}
+
+
+{php $totals = $this->model->getTotals()}
+<div class='menu-header'>结算单</div>
+<ul class="groupaward-list">
+
+    {ifp 'groupaward.bonus.status0'}<li {if ($_W['routes']=='groupaward.bonus.status0') || ($_W['routes']=='groupaward.bonus.detail' && $data['status']==0)}class="active"{/if}><a href="{php echo webUrl('groupaward/bonus/status0')}">待确认 <span  class='text-cancel'  id="total0">-</span></a></li>{/if}
+    {ifp 'groupaward.bonus.status1'}<li {if ($_W['routes']=='groupaward.bonus.status1') || ($_W['routes']=='groupaward.bonus.detail' && $data['status']==1)}class="active"{/if}><a href="{php echo webUrl('groupaward/bonus/status1')}">待结算 <span  class='text-danger' id="total1">-</span></a></li>{/if}
+    {ifp 'groupaward.bonus.status2'}<li {if ($_W['routes']=='groupaward.bonus.status2') || ($_W['routes']=='groupaward.bonus.detail' && $data['status']==2)}class="active"{/if}><a href="{php echo webUrl('groupaward/bonus/status2')}">已结算 <span  class='text-success' id="total2">-</span></a></li>{/if}
+    {ifp 'groupaward.bonus.build'}<li {if $_W['routes']=='groupaward.bonus.build'}class="active"{/if}><a href="{php echo webUrl('groupaward/bonus/build')}">创建结算单</a></li>{/if}
+</ul>
+{/if}
+
+{ifp 'groupaward.cover|groupaward.notice|groupaward.set'}
+<div class="menu-header">设置</div>
+<ul>
+    {ifp 'groupaward.cover'}<li {if $_W['routes']=='groupaward.cover'}class="active"{/if}><a href="{php echo webUrl('groupaward/cover')}">入口设置</a></li>{/if}
+    {ifp 'groupaward.notice'}<li {if $_W['routes']=='groupaward.notice'}class="active"{/if}><a href="{php echo webUrl('groupaward/notice')}">通知设置</a></li>{/if}
+    {ifp 'groupaward.set'}<li {if $_W['routes']=='groupaward.set'}class="active"{/if}><a href="{php echo webUrl('groupaward/set')}">基础设置</a></li>{/if}
+</ul>
+
+{/if}
+
+<script>
+    $(function () {
+        $.ajax({type: "GET",async: false,url: "{php echo webUrl('groupaward/bonus/totals')}",dataType:"json",success: function(data){
+            var res = data.result;
+            $("#total0").text(res.total0);
+            $("#total1").text(res.total1);
+            $("#total2").text(res.total2);
+        }
+        });
+    });
+</script>
+<!--yifuyuanma-->
